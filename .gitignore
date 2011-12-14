@@ -4,5 +4,5 @@ git/tmp/undo/*
 
 .DS_Store
 
-vim/bundle/*
+vim/bundle
 !vim/bundle/ZenCoding.vim
