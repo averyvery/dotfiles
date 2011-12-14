@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/!svn/ver/2783/projects/html5
+END
+javascript.vim
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/2778/projects/html5/javascript.vim
+END
+css.vim
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/2778/projects/html5/css.vim
+END
+validate-html.sh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/2778/projects/html5/validate-html.sh
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/2783/projects/html5/INSTALL
+END
+validate-css.sh
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/2778/projects/html5/validate-css.sh
+END
+validate-js.sh
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/2778/projects/html5/validate-js.sh
+END
+html.vim
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/2778/projects/html5/html.vim
+END

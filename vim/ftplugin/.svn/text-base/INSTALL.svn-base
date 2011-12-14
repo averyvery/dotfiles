@@ -1,0 +1,19 @@
+# [HTML5 IDE for VIM installation instructions](http://svn.natalian.org/projects/html5/INSTALL)
+
+	mkdir -p ~/.vim/ftplugin
+	cd ~/.vim/ftplugin
+	svn co http://svn.natalian.org/projects/html5/ .
+	chmod +x *.sh
+	echo "filetype plugin on" >> ~/.vimrc
+
+In the editor [vim](http://www.vim.org/) whilst editing HTML, JavaScript or CSS type;
+
+	:make
+
+To see a list of possible errors with your code.
+
+	:help quickfix
+
+To learn about the error window.
+
+Questions? http://wiki.whatwg.org/wiki/IDE

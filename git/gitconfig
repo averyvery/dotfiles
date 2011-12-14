@@ -1,0 +1,10 @@
+[user]
+  name = Doug Avery
+  email = dougunderscorenelson@gmail.com
+[branch]  
+  autosetuprebase = always
+[color]
+  diff = true
+[core]
+  excludesfile = /Users/dougavery/.gitignore
+  editor = mvim -f

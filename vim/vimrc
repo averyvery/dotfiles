@@ -1,0 +1,354 @@
+" @group setup properties i barely understand
+
+filetype off
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect() 
+:Helptags
+filetype plugin indent on
+
+set nocompatible
+set modelines=0
+set encoding=utf-8
+set wildmode=longest:full
+set wildmenu
+set ttyfast
+set showbreak=↪
+set virtualedit=all
+set invmmta 
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+set relativenumber
+set undofile
+set nowrap
+
+let g:scrollfix=-1
+
+set nocompatible
+
+" The default for 'backspace' is very confusing to new users, so change it to a
+" more sensible value.	Add "set backspace&" to your ~/.vimrc to reset it.
+set backspace=indent,eol,start
+
+" Disable localized menus for now since only some items are translated (e.g.
+" the entire MacVim menu is set up in a nib file which currently only is
+" translated to English).
+set langmenu=none
+
+" Clipboard
+" http://stackoverflow.com/questions/677986/vim-copy-selection-to-os-x-clipboard
+set clipboard=unnamed
+
+" Plugins
+" filetype plugin on
+
+" Invisibles
+set list
+
+set undodir=~/.vim/tmp/undo// 
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+
+" @end
+
+" @group visuals
+
+" @group toggle the minimap
+
+function! ToggleMinimap()
+
+	if exists("s:isMini") && s:isMini == 0
+		let s:isMini = 1
+	else
+		let s:isMini = 0
+	end
+
+	if (s:isMini == 0)
+
+		" save current visible lines
+		let s:firstLine = line("w0")
+		let s:lastLine = line("w$")
+
+		" don't change window size
+		let c = &columns * 12
+		let l = &lines * 12
+		exe "set columns=" . c
+		exe "set lines=" . l
+
+		" make font small
+		set guifont=ProggyTinyTT:h1
+		
+		exe 'normal zR'
+
+		" highlight lines which were visible
+		let s:lines = ""                            
+		for i in range(s:firstLine, s:lastLine)
+			let s:lines = s:lines . "\\%" . i . "l"
+			if i < s:lastLine
+				let s:lines = s:lines . "\\|"
+			endif
+		endfor
+
+		exe 'match Visible /' . s:lines . '/'
+		hi Visible guifg=#ffffff guibg=#2b3c43
+		set cursorline
+		set noantialias
+
+		no h 10j
+		no t 10k
+
+		nmap <LeftRelease> :ToggleMinimap<CR> 
+		nmap <space> :ToggleMinimap<CR>
+
+	else
+
+		set guifont=Anonymous\ Pro:h14
+		hi clear Visible
+		set nocursorline
+		set antialias
+
+		no h j
+		no t k
+     
+		unmap <LeftRelease>
+		nmap <space> a<space><ESC>
+
+	endif
+
+endfunction
+
+command! ToggleMinimap call ToggleMinimap()
+
+nmap <d-space> :ToggleMinimap<CR>
+
+" @end
+
+colorscheme handcrafted
+set guioptions=aAcer                                                                  
+set guifont=Anonymous\ Pro:h14
+set linespace=1                 
+:set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
+:set laststatus=2 
+
+" @end
+                                                                                                                                              
+" @group buffers and windows
+
+nmap <right> :bn<cr>
+nmap <left> :bp<cr>
+nmap <s-f8> :vert sb #<cr>
+nmap <s-f7> <c-w>h
+nmap <s-f9> <c-w>l
+
+" @end
+
+" @group indenting and folding
+
+set foldmethod=marker
+set foldmarker=@group,@end								 
+set fillchars=stl:\ ,stlnc:j,vert:\|,fold:\ ,diff:-
+
+" Folds
+nmap <C-h> zj
+nmap <C-t> zk
+nmap <C-d> zc
+nmap <C-n> zo
+
+" http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
+nnoremap <M-h> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
+nnoremap <M-t> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^
+
+nnoremap j<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
+nnoremap j<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal j'm<CR>
+
+nnoremap y<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
+nnoremap y<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal y'm<CR>
+
+nnoremap ><M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
+nnoremap ><M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal >'m<CR>
+
+nnoremap <<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
+nnoremap <<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
+
+" @end
+
+" @group indents and tabs
+
+autocmd BufNewFile,BufRead *.css set filetype=css
+autocmd BufNewFile,BufRead *.scss set filetype=css
+autocmd BufNewFile,BufRead *.sass set filetype=css
+autocmd BufNewFile,BufRead *.html.erb set filetype=html
+autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
+autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
+autocmd BufNewFile,BufRead *.php setlocal filetype=html
+
+autocmd BufNewFile,BufRead /Users/dougavery/Sites/astro-UAT/* setlocal expandtab
+
+" Tabs
+set tabstop=2
+set shiftwidth=2
+set noexpandtab
+
+" Indents
+set autoindent
+
+" @end
+
+" @group expansion and completion
+
+" Zen Coding
+let g:user_zen_expandabbr_key = '<c-a>'
+" autocmd FileType css imap <buffer> <C-a> <esc>:call zencoding#expandAbbr(0)<esc>jjt-
+autocmd FileType css imap <buffer> <tab> <esc>:call zencoding#expandAbbr(0)<esc>"ajjt-F:w
+
+" Completion
+imap <C-tab> <C-p>
+imap <C-`> <C-n>
+
+" @end
+
+" @group switching modes
+
+" Remap escape insert mode
+imap ,, <Esc>
+imap ,. <Esc>
+imap ., <Esc>
+
+" Comma save
+map ,, :w<Enter>
+map ,. :w<Enter>
+
+" Sudo save
+map <leader>w :w !sudo tee %<Enter>
+
+" @end
+
+" @group insert mode controls 
+
+" @group movement
+
+imap <C-n> <right>
+imap <C-d> <left>
+imap <C-t> <up>
+imap <C-h> <down>
+imap <C-b> <s-left>
+imap <C-w> <s-right>
+imap <C-0> <C-[>0i
+imap <C-_> <C-[>-a
+cmap <C-n> <right>
+cmap <C-d> <left>
+cmap <C-t> <up>
+cmap <C-h> <down>
+cmap <C-b> <s-left>
+cmap <C-w> <s-right>
+cmap <C-0> <C-[>0i
+cmap <C-_> <C-[>-a
+
+" @end
+
+" @group deletion
+
+imap <C-M-d> <C-[>dxi
+imap <C-M-n> <C-[>nxi
+imap <C-M-w> <C-[>wjwi
+imap <C-M-b> <C-[>jbi
+imap <C-M-v> <C-[>jwi
+imap <C-M-S-v> <C-[>jji
+cmap <C-M-d> <C-[>dxi
+cmap <C-M-n> <C-[>nxi
+cmap <C-M-w> <C-[>wjwi
+cmap <C-M-b> <C-[>jbi
+cmap <C-M-v> <C-[>jwi
+cmap <C-M-S-v> <C-[>jji
+
+" @end
+
+" @end
+
+" @group add blank and spaces
+
+nmap <Enter> o<ESC>
+nmap <S-Enter> O<ESC>
+nmap <space> a<space><ESC>
+nmap <s-space> i<space><ESC>
+map <C-o> o<C-[>
+map <C-O> O<C-[>
+
+" @end
+
+" @group utility remaps
+
+map <S-u> <C-r>
+nnoremap <leader>u :GundoToggle<CR>
+
+" @end
+
+" @group project files & searching
+
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+au FocusLost * :wa
+
+map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+map <C-/> :vimgrep // **/*.<left><left><left><left><left><left><left>
+
+let g:NERDTreeWinPos="right"
+
+nmap <silent> <tab><tab> :PeepOpen<CR>
+nmap <silent> `` :NERDTree <CR>
+
+" @end
+
+" @group dvorak
+
+no d h
+no h j
+no <c-m-h> <s-l>
+no <s-h> 10j
+no t k
+no k t
+no <s-k> <s-t>
+no <c-m-t> <s-h>
+no <s-t> 10k
+no n l
+no <c-m-n> <s-m>
+no s :
+no <s-s> :!
+cmap <space><space> <esc>
+cmap ,, <esc>
+no j d
+no l n
+no L N
+		 
+" Added benefits
+no - $
+no _ ^
+
+" Bubbling
+no <c-m-t> :m-2<cr>
+no <c-m-h> :m+<cr>
+
+
+" @end
+
+" @group register stuff
+
+no <c-y> "_y
+no <c-p> "_p
+no <c-j> "_d
+
+" @end 
+
+" @group updating vimrc
+
+nmap <D-j> :source $MYVIMRC<CR>
+nmap <D-M-j> :tabedit $MYVIMRC<CR>
+
+" @end
