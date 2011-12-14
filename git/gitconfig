@@ -8,3 +8,9 @@
 [core]
   excludesfile = /Users/dougavery/.gitignore
   editor = mvim -f
+[alias]
+  ga = add -A
+  gc = commit
+  gl = pull
+  gp = push
+  gs = status
