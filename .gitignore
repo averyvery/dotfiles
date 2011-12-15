@@ -1,6 +1,9 @@
-git/tmp/backup/*
-git/tmp/swap/*
-git/tmp/undo/*
+git/tmp/backup
+!git/tmp/backup/.keep
+git/tmp/swap
+!git/tmp/swap/.keep
+git/tmp/undo
+!git/tmp/undo/.keep
 
 .DS_Store
 
