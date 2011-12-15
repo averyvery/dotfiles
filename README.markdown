@@ -9,6 +9,7 @@ Setup:
 - `ln -s ~/dotfiles/vim ~/.vim`
 
 Vim plugins (not included):
+
 - betterfolding
 - FuzzyFinder
 - gundo.vim

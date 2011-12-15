@@ -79,7 +79,9 @@ function! ToggleMinimap()
 		" make font small
 		set guifont=ProggyTinyTT:h1
 		
-		exe 'normal zR'
+		exe 'normal zR'                   
+
+		sign define wholeline linehl=ErrorMsg
 
 		" highlight lines which were visible
 		let s:lines = ""                            
@@ -87,6 +89,7 @@ function! ToggleMinimap()
 			let s:lines = s:lines . "\\%" . i . "l"
 			if i < s:lastLine
 				let s:lines = s:lines . "\\|"
+				exe ":sign place 1 name=wholeline line=" . i . " file=" . expand("%:p")
 			endif
 		endfor
 
@@ -98,12 +101,12 @@ function! ToggleMinimap()
 		no h 10j
 		no t 10k
 
-		nmap <LeftRelease> :ToggleMinimap<CR> 
+		nmap <LeftRelease> :ToggleMinimap<CR>
 		nmap <space> :ToggleMinimap<CR>
 
 	else
-
-		set guifont=Anonymous\ Pro:h14
+                                        
+		set guifont =Anonymous\ Pro:h14      
 		hi clear Visible
 		set nocursorline
 		set antialias
@@ -113,6 +116,43 @@ function! ToggleMinimap()
      
 		unmap <LeftRelease>
 		nmap <space> a<space><ESC>
+
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+		sign unplace 1
+
+		exe ":normal 0"
 
 	endif
 
@@ -184,6 +224,7 @@ autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
 autocmd BufNewFile,BufRead *.php setlocal filetype=html
 
 autocmd BufNewFile,BufRead /Users/dougavery/Sites/astro-UAT/* setlocal expandtab
+autocmd BufNewFile,BufRead /Users/dougavery/Sites/puma/* setlocal expandtab
 
 " Tabs
 set tabstop=2
