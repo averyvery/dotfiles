@@ -7,6 +7,7 @@ Setup:
 - `ln -s ~/dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh`
 - `ln -s ~/dotfiles/vim/vimrc ~/.vimrc`
 - `ln -s ~/dotfiles/vim ~/.vim`
+- `ln -s ~/dotfiles/Keybindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict`
 
 Vim plugins (not included):
 
@@ -17,16 +18,17 @@ Vim plugins (not included):
 - nerdtree
 - peepopen
 - scrollfix
-- snipmate.vim
 - sparkup
 - tabular
 - textile.vim
-- tpope-vim-fugitive-1ecd40d
+- UltiSnips
 - vim-autoclose
 - vim-css-color
+- vim-fugitive
 - vim-jshint
 - vim-markdown
 - vim-pathogen
 - vim-repeat
 - vim-unimpaired
+- vimwiki-1-2
 
