@@ -1,0 +1,18 @@
+= Evergreen =
+
+* S: Brush cat's teeth
+* S: Sit for 30
+* M: Brush cat's teeth
+* M: Sit for 30
+* T: Brush cat's teeth
+* T: Sit for 30
+* W: Brush cat's teeth
+* W: Sit for 30
+* T: Brush cat's teeth
+* T: Sit for 30
+* F: Brush cat's teeth
+* F: Sit for 30
+* S: Brush cat's teeth
+* S: Sit for 30
+* WEEK: Visit Shambhala
+

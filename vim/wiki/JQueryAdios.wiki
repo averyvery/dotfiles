@@ -1,0 +1,3 @@
+* Fix up the animation/intro
+* Fix the BG on iPhone
+* Fix up the scrolling

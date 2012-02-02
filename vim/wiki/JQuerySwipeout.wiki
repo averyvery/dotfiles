@@ -1,0 +1,8 @@
+'-webkit-transform': 'translate3d(' + current_x + 'px, 0, 0)'} 
+
+
+if (Math.abs(delta_y) < 15) {
+	e.preventDefault();
+}
+
+http://mckinney.com/javascripts/lib/mckinney/lib/slider.js?1327337323

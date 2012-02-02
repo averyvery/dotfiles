@@ -1,0 +1,28 @@
+= Work =
+
+* Opower 
+	* Picture in Profile header
+	* Badges
+	* Config
+	* Basic layouts for more pages?
+	* Finish JQuerySwipeout (scrolling)
+* Choice issues - https://vl.basecamphq.com/projects/8577275-choice-eoy-phx-projects/posts/55087707/comments#158709568
+
+= Home =
+
+* Adios - no eval?
+* Get 10-class card for Mele & me
+
+= Evergreen =
+
+* T: Brush cat's teeth
+* T: Sit for 60
+* F: Brush cat's teeth
+* F: Sit for 30
+* S: Brush cat's teeth
+* S: Sit for 30
+* WEEK: Visit Shambhala
+
+TodoTemplate
+WikiNotes
+

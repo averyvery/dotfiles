@@ -30,6 +30,10 @@ hi Comment  guifg=#39515c guibg=#111a1e gui=italic
 hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 
+" Ident Guides
+hi IndentGuidesOdd  guifg=#273b42 guibg=#1c2a30 ctermbg=3
+hi IndentGuidesEven guifg=#1e2d33 guibg=#152025 ctermbg=4
+
 hi Normal  guifg=#ffffff guibg=#111a1e gui=NONE
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE
 hi Character  guifg=#da6665 guibg=NONE gui=NONE
@@ -55,6 +59,7 @@ hi Title  guifg=#00ff00 guibg=NONE gui=bold
 hi Todo  guifg=#6fa3b4 guibg=#2d4249 gui=inverse,bold,italic
 hi Type  guifg=#f8ecae guibg=NONE gui=NONE
 hi Underlined  guifg=NONE guibg=NONE gui=underline
+
 hi rubyClass  guifg=#e4a246 guibg=NONE gui=NONE
 hi rubyFunction  guifg=#f8ecae guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
@@ -81,6 +86,8 @@ hi rubyRailsMethod  guifg=#ffb454 guibg=NONE gui=NONE
 hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE
 hi erubyComment  guifg=#6fa3b4 guibg=#2d4249 gui=italic
 hi erubyRailsMethod  guifg=#ffb454 guibg=NONE gui=NONE
+
+" HTML
 hi htmlTag  guifg=#8ecde4 guibg=NONE gui=NONE
 hi htmlEndTag  guifg=#8ecde4 guibg=NONE gui=NONE
 hi htmlTagName  guifg=#8ecde4 guibg=NONE gui=NONE
@@ -108,10 +115,13 @@ hi javaScriptConditional        guifg=#ff0007   gui=bold
 hi javaScriptRepeat             guifg=#ff0007   gui=bold
 hi javaScriptFunction           guifg=#ff0086   gui=bold
 
+" YAML
 hi yamlKey  guifg=#f8ecae guibg=NONE gui=NONE
 hi yamlAnchor  guifg=#8ecde4 guibg=NONE gui=NONE
 hi yamlAlias  guifg=#8ecde4 guibg=NONE gui=NONE
 hi yamlDocumentHeader  guifg=#add961 guibg=NONE gui=NONE
+
+" CSS
 hi cssURL  guifg=#8ecde4 guibg=NONE gui=NONE
 hi cssFunctionName  guifg=#ffb454 guibg=NONE gui=NONE
 hi cssColor  guifg=#da6665 guibg=NONE gui=NONE

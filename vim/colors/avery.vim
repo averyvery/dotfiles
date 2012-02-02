@@ -55,7 +55,6 @@ hi Function           guifg=#A6E22E
 hi Float              guifg=#AE81FF
 hi ColorColumn        guibg=#FF9900  ctermbg=42
 
-
 " Cursor settings
 hi CursorLine         guibg=#000000 ctermbg=0  
 hi Cursor          guifg=#000000 guibg=#F8F8F0

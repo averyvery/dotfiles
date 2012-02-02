@@ -15,9 +15,8 @@ set ttyfast
 set showbreak=↪
 set virtualedit=all
 set invmmta 
-set noerrorbells
-set novisualbell
-set t_vb=
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 set tm=500
 set relativenumber
 set undofile
@@ -50,6 +49,8 @@ set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 
+exe "cd ~/Sites/"
+
 " @end
 
 " @group visuals
@@ -75,26 +76,24 @@ function! ToggleMinimap()
 		let l = &lines * 12
 		exe "set columns=" . c
 		exe "set lines=" . l
+		
+		exe 'normal zR'
 
 		" make font small
 		set guifont=ProggyTinyTT:h1
-		
-		exe 'normal zR'                   
-
-		sign define wholeline linehl=ErrorMsg
 
 		" highlight lines which were visible
-		let s:lines = ""                            
+		let s:lines = ""
 		for i in range(s:firstLine, s:lastLine)
 			let s:lines = s:lines . "\\%" . i . "l"
 			if i < s:lastLine
 				let s:lines = s:lines . "\\|"
-				exe ":sign place 1 name=wholeline line=" . i . " file=" . expand("%:p")
 			endif
 		endfor
 
+		hi Visible guifg=#000000 guibg=#ffffff
 		exe 'match Visible /' . s:lines . '/'
-		hi Visible guifg=#ffffff guibg=#2b3c43
+		hi Visible guifg=#000000 guibg=#ffffff
 		set cursorline
 		set noantialias
 
@@ -105,52 +104,17 @@ function! ToggleMinimap()
 		nmap <space> :ToggleMinimap<CR>
 
 	else
-                                        
-		set guifont =Anonymous\ Pro:h14      
+
+		set guifont =Anonymous\ Pro:h14
 		hi clear Visible
 		set nocursorline
 		set antialias
 
 		no h j
 		no t k
-     
+		 
 		unmap <LeftRelease>
 		nmap <space> a<space><ESC>
-
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
-		sign unplace 1
 
 		exe ":normal 0"
 
@@ -160,19 +124,19 @@ endfunction
 
 command! ToggleMinimap call ToggleMinimap()
 
-nmap <d-space> :ToggleMinimap<CR>
+" nmap <esc> :ToggleMinimap<CR>
 
 " @end
 
 colorscheme handcrafted
-set guioptions=aAcer                                                                  
+set guioptions=Acer
 set guifont=Anonymous\ Pro:h14
-set linespace=1                 
+set linespace=1
 :set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
 :set laststatus=2 
 
 " @end
-                                                                                                                                              
+
 " @group buffers and windows
 
 nmap <right> :bn<cr>
@@ -183,11 +147,45 @@ nmap <s-f9> <c-w>l
 
 " @end
 
+@group reference
+
+nnoremap <F1> :call ToggleVimReference()<CR>
+
+let g:vim_reference_file = "~/dotfiles/vim/vim-reference"
+let g:vim_reference_width = 45
+
+function! ToggleVimReference()
+		if !exists("s:vim_reference_open") || s:vim_reference_open == 0
+				let s:vim_reference_open = 1
+				execute "botright vnew " . g:vim_reference_file
+				execute "vertical resize " . g:vim_reference_width
+		else
+				update
+				execute "bdelete " . g:vim_reference_file
+				let s:vim_reference_open = 0
+		endif
+endfunction
+
+let g:vimwiki_list = [{'path': '~/dotfiles/vim/wiki/', 'path_html': '~/Sites/vimwiki/'}]
+nmap <F11> :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
+
+@end
+
 " @group indenting and folding
 
 set foldmethod=marker
-set foldmarker=@group,@end								 
+set foldmarker=@group,@end
 set fillchars=stl:\ ,stlnc:j,vert:\|,fold:\ ,diff:-
+
+let g:indent_guides_auto_colors = 0
+
+function! StartUp()
+	if 0 == argc()
+		IndentGuidesToggle
+	end
+endfunction
+
+autocmd VimEnter * call StartUp()
 
 " Folds
 nmap <C-h> zj
@@ -215,13 +213,15 @@ nnoremap <<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'
 
 " @group indents and tabs
 
+autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
+autocmd BufNewFile,BufRead *.mustache setlocal filetype=html
 autocmd BufNewFile,BufRead *.css set filetype=css
+autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.scss set filetype=css
-autocmd BufNewFile,BufRead *.sass set filetype=css
+autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.html.erb set filetype=html
-autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
+autocmd BufEnter * if &filetype == "" | setlocal noexpandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
-autocmd BufNewFile,BufRead *.php setlocal filetype=html
 
 autocmd BufNewFile,BufRead /Users/dougavery/Sites/astro-UAT/* setlocal expandtab
 autocmd BufNewFile,BufRead /Users/dougavery/Sites/puma/* setlocal expandtab
@@ -238,10 +238,9 @@ set autoindent
 
 " @group expansion and completion
 
-" Zen Coding
-let g:user_zen_expandabbr_key = '<c-a>'
-" autocmd FileType css imap <buffer> <C-a> <esc>:call zencoding#expandAbbr(0)<esc>jjt-
-autocmd FileType css imap <buffer> <tab> <esc>:call zencoding#expandAbbr(0)<esc>"ajjt-F:w
+let g:sparkupExecuteMapping = '<c-a>'
+let g:UltiSnipsListSnippets = '<s-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
 
 " Completion
 imap <C-tab> <C-p>
@@ -253,15 +252,9 @@ imap <C-`> <C-n>
 
 " Remap escape insert mode
 imap ,, <Esc>
-imap ,. <Esc>
-imap ., <Esc>
 
 " Comma save
 map ,, :w<Enter>
-map ,. :w<Enter>
-
-" Sudo save
-map <leader>w :w !sudo tee %<Enter>
 
 " @end
 
@@ -311,17 +304,21 @@ cmap <C-M-S-v> <C-[>jji
 
 nmap <Enter> o<ESC>
 nmap <S-Enter> O<ESC>
-nmap <space> a<space><ESC>
-nmap <s-space> i<space><ESC>
 map <C-o> o<C-[>
 map <C-O> O<C-[>
+
+nmap <space> <c-f>zz
+nmap <s-space> <c-b>zz
 
 " @end
 
 " @group utility remaps
 
-map <S-u> <C-r>
+nmap <S-u> <C-r>
 nnoremap <leader>u :GundoToggle<CR>
+
+" Sudo save
+map <leader>w :w !sudo tee %<Enter>
 
 " @end
 
@@ -371,21 +368,13 @@ no L N
 " Added benefits
 no - $
 no _ ^
+no Y y$
 
 " Bubbling
 no <c-m-t> :m-2<cr>
 no <c-m-h> :m+<cr>
 
-
 " @end
-
-" @group register stuff
-
-no <c-y> "_y
-no <c-p> "_p
-no <c-j> "_d
-
-" @end 
 
 " @group updating vimrc
 

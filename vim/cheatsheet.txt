@@ -1,0 +1,17 @@
+Macros:
+- qa records macro to 'a'
+- @a replays it
+- "ap outputs it
+- "ay saves the output after you edit
+
+Movement:
+{}              Next/previous empty line
+()              Next/previous sentence
+HML             Top/center/bottom of screen (currently inoperative)
+*/#             Find next/previous instance of word
+g*/g#           Same without word boundaries
+[[, ]], [], ][  Go to opening and closing braces
+''              Go to last mark
+`               Goes to column AND row for mark
+C               Replace to end of line
+j               Joins line (currently inoperative)

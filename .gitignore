@@ -9,3 +9,4 @@ vim/tmp/undo
 
 vim/bundle
 !vim/bundle/ZenCoding.vim
+!vim/bundle/UltiSnips.vim/UltiSnips

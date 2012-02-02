@@ -1,0 +1,1 @@
+rvm --create --rvmrc 1.9.2@opower

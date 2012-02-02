@@ -165,19 +165,19 @@ source $ZSH/oh-my-zsh.sh
   alias c='clear'
   alias getpath='pwd|tr -d "\r\n"|pbcopy'
   alias ping='ping -oq'
+  alias ipcp='ipconfig getifaddr en1 | pbcopy'
 
   # misc
   alias restartfonts="atsutil databases -removeUser && atsutil server -shutdown && atsutil server -ping"
 
 # @end
 
-# @group getIP
+# @group ip
 
-  getIP () {
+  ip () {
     ifconfig en0 | grep netmask | awk '{print "lan: "$2}'
     ifconfig en1 | grep netmask | awk '{print "wifi: "$2}'
   }
-
 # @end
 
 # @group paths
@@ -189,9 +189,7 @@ source $ZSH/oh-my-zsh.sh
 
 # @group ruby
 
-  if [[ -s /Users/dougavery/.rvm/scripts/rvm ]]
-    then source /Users/dougavery/.rvm/scripts/rvm
-  fi
+	[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # @end
 
@@ -302,7 +300,7 @@ source $ZSH/oh-my-zsh.sh
 # @group initial display
 
   echo "IT'S A UNIX SYSTEM - I KNOW THIS!"
-  rvm="$(rvm list | fgrep '=>' | awk '{FS = "=>"; print $2}')"
+  rvm="$(rvm list | fgrep '=' | awk '{FS = "=>"; print $2}')"
   ip="$(ifconfig en1 | fgrep 'inet ' | awk '{print $2}')"
   echo "RUBY: $rvm  |  IP: $ip"
 
