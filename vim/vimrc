@@ -18,9 +18,11 @@ set invmmta
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 set tm=500
+set timeoutlen=500
 set relativenumber
 set undofile
 set nowrap
+set scrolloff=5
 
 let g:scrollfix=-1
 
@@ -307,8 +309,11 @@ nmap <S-Enter> O<ESC>
 map <C-o> o<C-[>
 map <C-O> O<C-[>
 
-nmap <space> <c-f>zz
-nmap <s-space> <c-b>zz
+" scrolling up and down
+" nmap <space> <c-f>zz
+" nmap <s-space> <c-b>zz
+nmap <space> a<space><esc>
+nmap <s-space> a<space><esc>d
 
 " @end
 
@@ -374,6 +379,14 @@ no Y y$
 no <c-m-t> :m-2<cr>
 no <c-m-h> :m+<cr>
 
+" @end
+
+" @group alternate treatments for other filetypes
+
+" autocmd BufNewFile,BufRead *.css imap , ,<CR>
+" autocmd BufNewFile,BufRead *.wiki setlocal colorscheme avery
+" autocmd BufNewFile,BufRead *.wiki setlocal guifont=Georgia
+" 
 " @end
 
 " @group updating vimrc

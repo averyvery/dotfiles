@@ -1,8 +1,12 @@
-'-webkit-transform': 'translate3d(' + current_x + 'px, 0, 0)'} 
-
-
-if (Math.abs(delta_y) < 15) {
-	e.preventDefault();
-}
-
-http://mckinney.com/javascripts/lib/mckinney/lib/slider.js?1327337323
+* swiping a too-narrow object left bounds it to the right side? 
+* right dragging is weird
+* is overflow hidden necessary?
+* better pattern: screen, pane, wrapper, child are all "DomObjects", with their own "bind", "measure" methods
+* awwwww yeahhhhh Slider.prototype.subscribe = function(hook, fn) {
+    if (this.hooks[hook] === undefined) {
+      this.hooks[hook] = [];
+    }
+    this.hooks[hook].push(fn);
+  };
+* 
+* http://mckinney.com/javascripts/lib/mckinney/lib/slider.js?1327337323
