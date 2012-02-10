@@ -8,5 +8,6 @@ vim/tmp/undo
 .DS_Store
 
 vim/bundle
-!vim/bundle/ZenCoding.vim
+vim/wiki
 !vim/bundle/UltiSnips.vim/UltiSnips
+!vim/bundle/vim-comments/
