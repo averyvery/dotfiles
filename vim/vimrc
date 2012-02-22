@@ -1,10 +1,46 @@
-" @group setup properties i barely understand
+" @group vundle
 
 filetype off
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect() 
-:Helptags
 filetype plugin indent on
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/L9'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'scrooloose/nerdtree'
+Bundle 'shemerey/vim-peepopen'
+Bundle 'skammer/vim-css-color'
+Bundle 'vim-scripts/vimwiki'
+Bundle 'SirVer/ultisnips'
+Bundle 'nathanaelkane/vim-indent-guides'
+
+let g:UltiSnipsSnippetDirectories=['snippets']
+
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
+" @end
+
+" @group setup properties i barely understand
+
+" runtime bundle/vim-pathogen/autoload/pathogen.vim
+" call pathogen#infect() 
+:Helptags
 
 set nocompatible
 set modelines=0

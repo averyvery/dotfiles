@@ -11,12 +11,12 @@ Setup:
 
 Vim plugins (not included):
 
+- nerdtree
+- peepopen
 - betterfolding
 - FuzzyFinder
 - gundo.vim
 - L9
-- nerdtree
-- peepopen
 - scrollfix
 - sparkup
 - tabular
