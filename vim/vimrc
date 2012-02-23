@@ -21,6 +21,7 @@ Bundle 'shemerey/vim-peepopen'
 Bundle 'skammer/vim-css-color'
 Bundle 'vim-scripts/vimwiki'
 Bundle 'SirVer/ultisnips'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 let g:UltiSnipsSnippetDirectories=['snippets']
