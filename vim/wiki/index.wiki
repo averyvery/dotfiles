@@ -1,17 +1,5 @@
-= Work =
-
-* Freebie store
-* OpowerMobile 
-* Stimson
-
-= Home =
-
-* Trackiffer can't return own version, duhhhhhhh
-* CSS system: CLASS vs CHILD
-* Finish JQuerySwipeout
-* Get 10-class card for Mele & me
-* Portfolio site?
-
+AndrewBall
 WikiNotes
-AddToBase
+FeaturePlugin
+ClassingSystem
 

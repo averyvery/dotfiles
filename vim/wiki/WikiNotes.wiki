@@ -1,1 +1,3 @@
 rvm --create --rvmrc 1.9.2@opower
+vmware password, translated to qwerty:
+Laoo,rpe1

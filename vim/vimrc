@@ -22,6 +22,8 @@ Bundle 'skammer/vim-css-color'
 Bundle 'vim-scripts/vimwiki'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'sickill/vim-pasta'
+" keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
 
 let g:UltiSnipsSnippetDirectories=['snippets']
@@ -188,7 +190,7 @@ nmap <s-f9> <c-w>l
 
 @group reference
 
-nnoremap <F1> :call ToggleVimReference()<CR>
+nnoremap ``` :call ToggleVimReference()<CR>
 
 let g:vim_reference_file = "~/dotfiles/vim/vim-reference"
 let g:vim_reference_width = 45
@@ -206,7 +208,7 @@ function! ToggleVimReference()
 endfunction
 
 let g:vimwiki_list = [{'path': '~/dotfiles/vim/wiki/', 'path_html': '~/Sites/vimwiki/'}]
-nmap <F11> :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
+nmap ` :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
 
@@ -256,6 +258,7 @@ autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
 autocmd BufNewFile,BufRead *.mustache setlocal filetype=html
 autocmd BufNewFile,BufRead *.css set filetype=css
 autocmd BufNewFile,BufRead *.css.php set filetype=css
+autocmd BufNewFile,BufRead *.less set filetype=css
 autocmd BufNewFile,BufRead *.scss set filetype=css
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.html.erb set filetype=html
@@ -284,6 +287,17 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 " Completion
 imap <C-tab> <C-p>
 imap <C-`> <C-n>
+
+function! s:SparkupNext()
+	" 1: empty tag, 2: empty attribute, 3: empty line
+	let n = search('><\/\|\(""\)\|^\s*$', 'Wp')
+	if n == 3
+		startinsert!
+	else
+		execute 'normal n'
+		startinsert
+	endif
+endfunction
 
 " @end
 

@@ -6,7 +6,7 @@
 [color]
   diff = true
 [core]
-  excludesfile = /Users/dougavery/.gitignore
+	excludesfile = /Users/davery/.gitignore
   editor = mvim -f
 [alias]
   a = add -A
@@ -14,3 +14,6 @@
   gl = pull
   gp = push
   gs = status
+[github]
+	user = averyvery
+	token = 08caab8c3d7ead1298e2f7a36364efa3
