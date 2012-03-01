@@ -7,7 +7,7 @@ vim/tmp/undo
 
 .DS_Store
 
-git/config 
+git/gitconfig 
 
 vim/bundle
 vim/wiki
