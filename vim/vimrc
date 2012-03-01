@@ -41,8 +41,6 @@ let g:UltiSnipsSnippetDirectories=['snippets']
 
 " @group setup properties i barely understand
 
-" runtime bundle/vim-pathogen/autoload/pathogen.vim
-" call pathogen#infect() 
 :Helptags
 
 set nocompatible
