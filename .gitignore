@@ -7,8 +7,6 @@ vim/tmp/undo
 
 .DS_Store
 
-git/gitconfig 
-
 vim/bundle
 vim/wiki
 !vim/bundle/UltiSnips.vim/UltiSnips
