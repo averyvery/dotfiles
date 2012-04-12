@@ -1,5 +1,12 @@
-AndrewBall
-WikiNotes
-FeaturePlugin
-ClassingSystem
+
+Laoo,rpe
+
+- KettlerRefactor
+- WikiNotes
+- FeaturePlugin
+- ClassingSystem
+- JobCriteria
+- HubotPlugin
+- FontFaceIcons
+- ShureNotes
 

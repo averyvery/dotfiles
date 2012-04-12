@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here
@@ -23,6 +23,9 @@ Bundle 'vim-scripts/vimwiki'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
+Bundle 'tpope/vim-commentary'
+Bundle 'wookiehangover/jshint.vim'
+Bundle 'markabe/bufexplorer'
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
 
@@ -43,6 +46,9 @@ let g:UltiSnipsSnippetDirectories=['snippets']
 
 :Helptags
 
+" http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
+autocmd BufWinEnter,BufNewFile * silent tabo
+
 set nocompatible
 set modelines=0
 set encoding=utf-8
@@ -51,11 +57,11 @@ set wildmenu
 set ttyfast
 set showbreak=↪
 set virtualedit=all
-set invmmta 
+set invmmta
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
-set tm=500
-set timeoutlen=500
+set tm=200
+set timeoutlen=200
 set relativenumber
 set undofile
 set nowrap
@@ -84,7 +90,7 @@ set clipboard=unnamed
 " Invisibles
 set list
 
-set undodir=~/.vim/tmp/undo// 
+set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 
@@ -115,7 +121,7 @@ function! ToggleMinimap()
 		let l = &lines * 12
 		exe "set columns=" . c
 		exe "set lines=" . l
-		
+
 		exe 'normal zR'
 
 		" make font small
@@ -144,14 +150,14 @@ function! ToggleMinimap()
 
 	else
 
-		set guifont =Anonymous\ Pro:h14
+		set guifont =Anonymous\ Pro:h12
 		hi clear Visible
 		set nocursorline
 		set antialias
 
 		no h j
 		no t k
-		 
+
 		unmap <LeftRelease>
 		nmap <space> a<space><ESC>
 
@@ -169,10 +175,10 @@ command! ToggleMinimap call ToggleMinimap()
 
 colorscheme handcrafted
 set guioptions=Acer
-set guifont=Anonymous\ Pro:h14
+set guifont=Anonymous\ Pro:h12
 set linespace=1
 :set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
-:set laststatus=2 
+:set laststatus=2
 
 " @end
 
@@ -180,15 +186,16 @@ set linespace=1
 
 nmap <right> :bn<cr>
 nmap <left> :bp<cr>
-nmap <s-f8> :vert sb #<cr>
-nmap <s-f7> <c-w>h
-nmap <s-f9> <c-w>l
+nmap <up> :vert sb #<cr>
+nmap <down> :clo<CR>
+nmap <tab> <C-w>w
+nmap <tab><tab> :BufExplorerVerticalSplit<CR>
 
 " @end
 
 @group reference
 
-nnoremap ``` :call ToggleVimReference()<CR>
+nnoremap <esc><esc> :call ToggleVimReference()<CR>
 
 let g:vim_reference_file = "~/dotfiles/vim/vim-reference"
 let g:vim_reference_width = 45
@@ -206,7 +213,8 @@ function! ToggleVimReference()
 endfunction
 
 let g:vimwiki_list = [{'path': '~/dotfiles/vim/wiki/', 'path_html': '~/Sites/vimwiki/'}]
-nmap ` :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
+" nmap <esc> :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
+nmap <esc> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
 
@@ -253,6 +261,7 @@ nnoremap <<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'
 " @group indents and tabs
 
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
+autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html
 autocmd BufNewFile,BufRead *.mustache setlocal filetype=html
 autocmd BufNewFile,BufRead *.css set filetype=css
 autocmd BufNewFile,BufRead *.css.php set filetype=css
@@ -263,8 +272,7 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html
 autocmd BufEnter * if &filetype == "" | setlocal noexpandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
 
-autocmd BufNewFile,BufRead /Users/dougavery/Sites/astro-UAT/* setlocal expandtab
-autocmd BufNewFile,BufRead /Users/dougavery/Sites/puma/* setlocal expandtab
+autocmd BufRead /Users/dougavery/Sites/prototype-astro/*.php setlocal filetype=html
 
 " Tabs
 set tabstop=2
@@ -284,7 +292,6 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 
 " Completion
 imap <C-tab> <C-p>
-imap <C-`> <C-n>
 
 function! s:SparkupNext()
 	" 1: empty tag, 2: empty attribute, 3: empty line
@@ -305,11 +312,11 @@ endfunction
 imap ,, <Esc>
 
 " Comma save
-map ,, :w<Enter>
+map <silent> ,, :w<Enter>:%s/\s\+$//<Enter>:w<Enter>
 
 " @end
 
-" @group insert mode controls 
+" @group insert mode controls
 
 " @group movement
 
@@ -386,15 +393,16 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-au FocusLost * :wa
+" au FocusLost * :wa
 
-map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
-map <C-/> :vimgrep // **/*.<left><left><left><left><left><left><left>
+map <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
+map <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 
 let g:NERDTreeWinPos="right"
 
-nmap <silent> <tab><tab> :PeepOpen<CR>
-nmap <silent> `` :NERDTree <CR>
+nmap <silent> ` :PeepOpen<CR>
+let NERDTreeMapOpenInTab='\t'
+nmap <silent> `` :NERDTree<CR>
 
 " @end
 
@@ -418,7 +426,7 @@ cmap ,, <esc>
 no j d
 no l n
 no L N
-		 
+
 " Added benefits
 no - $
 no _ ^
@@ -430,17 +438,29 @@ no <c-m-h> :m+<cr>
 
 " @end
 
-" @group alternate treatments for other filetypes
+" @group reload chrome
 
-" autocmd BufNewFile,BufRead *.css imap , ,<CR>
-" autocmd BufNewFile,BufRead *.wiki setlocal colorscheme avery
-" autocmd BufNewFile,BufRead *.wiki setlocal guifont=Georgia
-" 
+" Reload Google Chrome on Mac from Vim.
+" Adapted from:  https://github.com/gcollazo/BrowserRefresh-Sublime/
+function! ChromeReload()
+python << EOF
+from subprocess import call
+browser = """
+tell application "Google Chrome" to tell the active tab of its first window
+    reload
+end tell
+tell application "Google Chrome" to activate
+"""
+call(['osascript', '-e', browser])
+EOF
+endfunction
+
+nnoremap ,. :call ChromeReload()<CR>
+
 " @end
 
 " @group updating vimrc
 
-nmap <D-j> :source $MYVIMRC<CR>
-nmap <D-M-j> :tabedit $MYVIMRC<CR>
+nmap <esc><esc><esc> :tab drop $MYVIMRC<CR>:source $MYVIMRC<CR>
 
 " @end

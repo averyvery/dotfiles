@@ -182,7 +182,7 @@ source $ZSH/oh-my-zsh.sh
 
 # @group paths
 
-  export PATH="/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
+  export PATH="node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
   export EDITOR='mvim -w'
 
 # @end
