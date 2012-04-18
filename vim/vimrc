@@ -102,33 +102,35 @@ exe "cd ~/Sites/"
 
 " @end
 
-" @group session
-
-autocmd VimEnter * source ~/.vim_session
-
-"  @end
-
 " @group visuals
 
 colorscheme handcrafted
 set guioptions=Acer
 set guifont=Anonymous\ Pro:h12
 set linespace=1
-:set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
-:set laststatus=2
+
+set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
+set laststatus=2
+
+let g:Powerline_stl_path_style = 'relative'
+call Pl#Theme#RemoveSegment('scrollpercent')
+call Pl#Theme#RemoveSegment('fileformat')
+call Pl#Theme#RemoveSegment('fileencoding')
+call Pl#Theme#RemoveSegment('filetype')
 
 " @end
 
 " @group buffers and windows
 
-nmap <right> :bn<cr>
-nmap <left> :bp<cr>
+nmap <right> :bp<cr>
+nmap <left> :bn<cr>
 nmap <up> :vert sb #<cr>
 nmap <down> :sb #<CR>
 nmap <tab> <C-w>w
 nmap <tab><tab> :BufExplorer<CR>
-nmap <tab> <C-w>w
 nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
+nmap <esc> <C-w>c
+nmap <esc><esc> :bufdo bdelete<CR>
 
 " @end
 
@@ -160,7 +162,7 @@ nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 set foldmethod=marker
 set foldmarker=@group,@end
-set fillchars=stl:\ ,stlnc:j,vert:\|,fold:\ ,diff:-
+set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
 
 let g:indent_guides_auto_colors = 0
 
@@ -402,5 +404,18 @@ nnoremap <s-,><s-,> :call ChromeReload()<CR>
 
 nmap <Leader>v :vs $MYVIMRC<CR>
 nmap <Leader>vv :source $MYVIMRC<CR>
+
+" @end
+
+" @group session
+
+set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+source ~/.vim_session
+
+function! Clear()
+	:!rm ~/.vim_session
+endfunction
+
+nmap <esc><esc><esc> :call Clear()<CR>
 
 " @end
