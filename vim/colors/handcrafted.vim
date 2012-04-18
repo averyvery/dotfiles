@@ -12,8 +12,8 @@ let g:colors_name = "Handcrafted"
 
 hi Cursor  guifg=NONE guibg=#606060 gui=NONE
 hi Visual  guifg=NONE guibg=#2a312e gui=NONE
-hi CursorLine guifg=#aebec5 guibg=#ffffff gui=bold
-hi CursorColumn  guifg=NONE guibg=#111111 gui=NONE
+hi CursorLine guifg=NONE guibg=#080d0f gui=NONE
+hi CursorColumn  guifg=NONE guibg=NONE gui=NONE
 hi VertSplit  guifg=#46433e guibg=#46433e gui=NONE
 hi MatchParen  guifg=#e4a246 guibg=NONE gui=NONE
 hi StatusLine  guifg=#ffffff guibg=#46433e gui=bold

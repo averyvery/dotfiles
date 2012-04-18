@@ -24,7 +24,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
-Bundle 'wookiehangover/jshint.vim'
+" Bundle 'wookiehangover/jshint.vim'
 Bundle 'markabe/bufexplorer'
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -47,7 +47,10 @@ let g:UltiSnipsSnippetDirectories=['snippets']
 :Helptags
 
 " http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
-autocmd BufWinEnter,BufNewFile * silent tabo
+autocmd BufWinEnter,BufNewFile * silent tab
+
+" http://stuvel.eu/blog/57/highlighting-the-current-line-column-in-vim
+set cursorline cursorcolumn
 
 set nocompatible
 set modelines=0
@@ -66,6 +69,7 @@ set relativenumber
 set undofile
 set nowrap
 set scrolloff=5
+let mapleader = "\"
 
 let g:scrollfix=-1
 
@@ -98,80 +102,13 @@ exe "cd ~/Sites/"
 
 " @end
 
+" @group session
+
+autocmd VimEnter * source ~/.vim_session
+
+"  @end
+
 " @group visuals
-
-" @group toggle the minimap
-
-function! ToggleMinimap()
-
-	if exists("s:isMini") && s:isMini == 0
-		let s:isMini = 1
-	else
-		let s:isMini = 0
-	end
-
-	if (s:isMini == 0)
-
-		" save current visible lines
-		let s:firstLine = line("w0")
-		let s:lastLine = line("w$")
-
-		" don't change window size
-		let c = &columns * 12
-		let l = &lines * 12
-		exe "set columns=" . c
-		exe "set lines=" . l
-
-		exe 'normal zR'
-
-		" make font small
-		set guifont=ProggyTinyTT:h1
-
-		" highlight lines which were visible
-		let s:lines = ""
-		for i in range(s:firstLine, s:lastLine)
-			let s:lines = s:lines . "\\%" . i . "l"
-			if i < s:lastLine
-				let s:lines = s:lines . "\\|"
-			endif
-		endfor
-
-		hi Visible guifg=#000000 guibg=#ffffff
-		exe 'match Visible /' . s:lines . '/'
-		hi Visible guifg=#000000 guibg=#ffffff
-		set cursorline
-		set noantialias
-
-		no h 10j
-		no t 10k
-
-		nmap <LeftRelease> :ToggleMinimap<CR>
-		nmap <space> :ToggleMinimap<CR>
-
-	else
-
-		set guifont =Anonymous\ Pro:h12
-		hi clear Visible
-		set nocursorline
-		set antialias
-
-		no h j
-		no t k
-
-		unmap <LeftRelease>
-		nmap <space> a<space><ESC>
-
-		exe ":normal 0"
-
-	endif
-
-endfunction
-
-command! ToggleMinimap call ToggleMinimap()
-
-" nmap <esc> :ToggleMinimap<CR>
-
-" @end
 
 colorscheme handcrafted
 set guioptions=Acer
@@ -187,34 +124,35 @@ set linespace=1
 nmap <right> :bn<cr>
 nmap <left> :bp<cr>
 nmap <up> :vert sb #<cr>
-nmap <down> :clo<CR>
+nmap <down> :sb #<CR>
 nmap <tab> <C-w>w
-nmap <tab><tab> :BufExplorerVerticalSplit<CR>
+nmap <tab><tab> :BufExplorer<CR>
+nmap <tab> <C-w>w
+nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 
 " @end
 
 @group reference
-
-nnoremap <esc><esc> :call ToggleVimReference()<CR>
 
 let g:vim_reference_file = "~/dotfiles/vim/vim-reference"
 let g:vim_reference_width = 45
 
 function! ToggleVimReference()
 		if !exists("s:vim_reference_open") || s:vim_reference_open == 0
-				let s:vim_reference_open = 1
-				execute "botright vnew " . g:vim_reference_file
-				execute "vertical resize " . g:vim_reference_width
+			let s:vim_reference_open = 1
+			execute "botright vnew " . g:vim_reference_file
+			execute "vertical resize " . g:vim_reference_width
 		else
-				update
-				execute "bdelete " . g:vim_reference_file
-				let s:vim_reference_open = 0
+			update
+			execute "bdelete " . g:vim_reference_file
+			let s:vim_reference_open = 0
 		endif
 endfunction
 
 let g:vimwiki_list = [{'path': '~/dotfiles/vim/wiki/', 'path_html': '~/Sites/vimwiki/'}]
-" nmap <esc> :tab drop ~/dotfiles/vim/wiki/index.wiki<CR>
-nmap <esc> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
+
+nmap <backspace><backspace> :call ToggleVimReference()<CR>
+nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
 
@@ -312,7 +250,7 @@ endfunction
 imap ,, <Esc>
 
 " Comma save
-map <silent> ,, :w<Enter>:%s/\s\+$//<Enter>:w<Enter>
+map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:%s/\s\+$//<CR>:w<CR>
 
 " @end
 
@@ -455,12 +393,14 @@ call(['osascript', '-e', browser])
 EOF
 endfunction
 
-nnoremap ,. :call ChromeReload()<CR>
+nnoremap <s-,><s-,> :call ChromeReload()<CR>
+
 
 " @end
 
 " @group updating vimrc
 
-nmap <esc><esc><esc> :tab drop $MYVIMRC<CR>:source $MYVIMRC<CR>
+nmap <Leader>v :vs $MYVIMRC<CR>
+nmap <Leader>vv :source $MYVIMRC<CR>
 
 " @end
