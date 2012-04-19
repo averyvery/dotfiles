@@ -4,9 +4,9 @@ filetype off
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/
+set rtp+=~/.vim/snippets
 call vundle#rc()
-
-let g:UltiSnipsSnippetDirectories=['snippets']
 
 " let Vundle manage Vundle
 " required!
@@ -89,6 +89,8 @@ filetype plugin on
 " Invisibles
 autocmd BufWinEnter,BufNewFile * set list
 
+autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
+
 set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
@@ -125,7 +127,7 @@ nmap <tab> <C-w>w
 nmap <tab><tab> :BufExplorer<CR>
 nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 nmap <esc> <C-w>c
-nmap <esc><esc> :bufdo bdelete<CR>
+nmap <esc><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 
 " @end
 
@@ -243,7 +245,7 @@ endfunction
 imap ,, <Esc>
 
 " Comma save
-map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:%s/\s\+$//<CR>:w<CR>
+map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
 
 " @end
 
@@ -352,12 +354,16 @@ no n l
 no <c-m-n> <s-m>
 no s :
 no <s-s> :!
-cmap <space><space> <esc>
-cmap ,, <esc>
-smap ,, <esc>
 no j d
 no l n
 no L N
+
+cmap <space><space> <esc>
+cmap ,, <esc>
+
+let g:UltiSnipsRemoveSelectModeMappings = 0
+smap , <esc>
+
 
 " Added benefits
 no - $
@@ -395,7 +401,7 @@ nnoremap <s-,><s-,> :call ChromeReload()<CR>
 " @group updating vimrc
 
 nmap <Leader>v :vs $MYVIMRC<CR>
-nmap <Leader>vv :source $MYVIMRC<CR>:echo ".vimrc reloaded!"<CR>
+nmap <Leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
 
 " @end
 
@@ -405,7 +411,8 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 source ~/.vim_session
 
 function! Clear()
-	:!rm ~/.vim_session
+	echo 'Session cleared'
+	:silent !rm ~/.vim_session
 endfunction
 
 nmap <esc><esc><esc> :call Clear()<CR>
