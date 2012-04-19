@@ -4,6 +4,12 @@ snippet g "Group"
 /* @end */
 endsnippet
 
+snippet . "selector"
+${1} {
+	${2}
+}
+endsnippet
+
 # @group Positioning
 
 snippet ! "!important"
@@ -214,43 +220,43 @@ snippet ml0 "margin-left: 0"
 margin-left: ${1:0};
 endsnippet
 
-snippet p "padding"
+snippet pd "padding"
 padding: ${1:0}px;
 endsnippet
 
-snippet p0 "padding: 0"
+snippet pd0 "padding: 0"
 padding: ${1:0};
 endsnippet
 
-snippet pt "padding-top"
+snippet pdt "padding-top"
 padding-top: ${1:0}px;
 endsnippet
 
-snippet pt0 "padding-top: 0"
+snippet pdt0 "padding-top: 0"
 padding-top: ${1:0};
 endsnippet
 
-snippet pb "padding-bottom"
+snippet pdb "padding-bottom"
 padding-bottom: ${1:0}px;
 endsnippet
 
-snippet pb0 "padding-bottom: 0"
+snippet pdb0 "padding-bottom: 0"
 padding-bottom: ${1:0};
 endsnippet
 
-snippet pr "padding-right"
+snippet pdr "padding-right"
 padding-right: ${1:0}px;
 endsnippet
 
-snippet pr0 "padding-right: 0"
+snippet pdr0 "padding-right: 0"
 padding-right: ${1:0};
 endsnippet
 
-snippet pl "padding-left"
+snippet pdl "padding-left"
 padding-left: ${1:0}px;
 endsnippet
 
-snippet pl0 "padding-left: 0"
+snippet pdl0 "padding-left: 0"
 padding-left: ${1:0};
 endsnippet
 
@@ -425,6 +431,18 @@ endsnippet
 
 snippet tsn "text-shadow: none"
 text-shadow: none;
+endsnippet
+
+snippet td "text-decoration"
+text-decoration: ${1:none};
+endsnippet
+
+snippet tdn "text-decoration: none"
+text-decoration: ${1:none};
+endsnippet
+
+snippet tdu "text-decoration: underline"
+text-decoration: ${1:underline};
 endsnippet
 
 snippet lh "line-height"

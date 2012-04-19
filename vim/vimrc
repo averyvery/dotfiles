@@ -6,6 +6,8 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+let g:UltiSnipsSnippetDirectories=['snippets']
+
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
@@ -24,12 +26,10 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
-" Bundle 'wookiehangover/jshint.vim'
 Bundle 'markabe/bufexplorer'
+
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
-
-let g:UltiSnipsSnippetDirectories=['snippets']
 
 " Brief help
 " :BundleList          - list configured bundles
@@ -44,8 +44,6 @@ let g:UltiSnipsSnippetDirectories=['snippets']
 
 " @group setup properties i barely understand
 
-:Helptags
-
 " http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
 autocmd BufWinEnter,BufNewFile * silent tab
 
@@ -59,7 +57,7 @@ set wildmode=longest:full
 set wildmenu
 set ttyfast
 set showbreak=↪
-set virtualedit=all
+set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
@@ -69,11 +67,8 @@ set relativenumber
 set undofile
 set nowrap
 set scrolloff=5
-let mapleader = "\"
-
-let g:scrollfix=-1
-
 set nocompatible
+let mapleader="\\"
 
 " The default for 'backspace' is very confusing to new users, so change it to a
 " more sensible value.	Add "set backspace&" to your ~/.vimrc to reset it.
@@ -89,10 +84,10 @@ set langmenu=none
 set clipboard=unnamed
 
 " Plugins
-" filetype plugin on
+filetype plugin on
 
 " Invisibles
-set list
+autocmd BufWinEnter,BufNewFile * set list
 
 set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
@@ -200,6 +195,12 @@ nnoremap <<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'
 
 " @group indents and tabs
 
+" Tabs
+set tabstop=2
+set shiftwidth=2
+set noexpandtab
+set autoindent
+
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
 autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html
 autocmd BufNewFile,BufRead *.mustache setlocal filetype=html
@@ -211,16 +212,6 @@ autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.html.erb set filetype=html
 autocmd BufEnter * if &filetype == "" | setlocal noexpandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
-
-autocmd BufRead /Users/dougavery/Sites/prototype-astro/*.php setlocal filetype=html
-
-" Tabs
-set tabstop=2
-set shiftwidth=2
-set noexpandtab
-
-" Indents
-set autoindent
 
 " @end
 
@@ -363,6 +354,7 @@ no s :
 no <s-s> :!
 cmap <space><space> <esc>
 cmap ,, <esc>
+smap ,, <esc>
 no j d
 no l n
 no L N
@@ -403,7 +395,7 @@ nnoremap <s-,><s-,> :call ChromeReload()<CR>
 " @group updating vimrc
 
 nmap <Leader>v :vs $MYVIMRC<CR>
-nmap <Leader>vv :source $MYVIMRC<CR>
+nmap <Leader>vv :source $MYVIMRC<CR>:echo ".vimrc reloaded!"<CR>
 
 " @end
 
