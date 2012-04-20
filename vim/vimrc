@@ -1,7 +1,6 @@
 " @group vundle
 
 filetype off
-filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/
@@ -32,7 +31,7 @@ Bundle 'markabe/bufexplorer'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Brief help
-" :BundleList          - list configured bundles
+" :BundleList	       - list configured bundles
 " :BundleInstall(!)    - install(update) bundles
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
 " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
@@ -42,13 +41,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 "
 " @end
 
-" @group setup properties i barely understand
-
-" http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
-autocmd BufWinEnter,BufNewFile * silent tab
-
-" http://stuvel.eu/blog/57/highlighting-the-current-line-column-in-vim
-set cursorline cursorcolumn
+" @group weird settings
 
 set nocompatible
 set modelines=0
@@ -56,7 +49,8 @@ set encoding=utf-8
 set wildmode=longest:full
 set wildmenu
 set ttyfast
-set showbreak=↪
+set showbreak=↵
+set nowrap
 set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
@@ -65,10 +59,19 @@ set tm=200
 set timeoutlen=200
 set relativenumber
 set undofile
-set nowrap
 set scrolloff=5
 set nocompatible
 let mapleader="\\"
+
+" @end
+
+" @group setup properties i barely understand
+
+" http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
+autocmd BufWinEnter,BufNewFile * silent tab
+
+" http://stuvel.eu/blog/57/highlighting-the-current-line-column-in-vim
+set cursorline cursorcolumn
 
 " The default for 'backspace' is very confusing to new users, so change it to a
 " more sensible value.	Add "set backspace&" to your ~/.vimrc to reset it.
@@ -86,9 +89,6 @@ set clipboard=unnamed
 " Plugins
 filetype plugin on
 
-" Invisibles
-autocmd BufWinEnter,BufNewFile * set list
-
 autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
 
 set undodir=~/.vim/tmp/undo//
@@ -103,8 +103,8 @@ exe "cd ~/Sites/"
 
 colorscheme handcrafted
 set guioptions=Acer
-set guifont=Anonymous\ Pro:h12
-set linespace=1
+set guifont=Anonymous\ Pro:h11
+set linespace=2
 
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
 set laststatus=2
@@ -124,6 +124,7 @@ nmap <left> :bn<cr>
 nmap <up> :vert sb #<cr>
 nmap <down> :sb #<CR>
 nmap <tab> <C-w>w
+nmap <s-tab> <C-w>h
 nmap <tab><tab> :BufExplorer<CR>
 nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 nmap <esc> <C-w>c
@@ -155,53 +156,21 @@ nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
 
-" @group indenting and folding
-
-set foldmethod=marker
-set foldmarker=@group,@end
-set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
-
-let g:indent_guides_auto_colors = 0
-
-function! StartUp()
-	if 0 == argc()
-		IndentGuidesToggle
-	end
-endfunction
-
-autocmd VimEnter * call StartUp()
-
-" Folds
-nmap <C-h> zj
-nmap <C-t> zk
-nmap <C-d> zc
-nmap <C-n> zo
-
-" http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
-nnoremap <M-h> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
-nnoremap <M-t> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^
-
-nnoremap j<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
-nnoremap j<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal j'm<CR>
-
-nnoremap y<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
-nnoremap y<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal y'm<CR>
-
-nnoremap ><M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
-nnoremap ><M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal >'m<CR>
-
-nnoremap <<M-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
-nnoremap <<M-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
-
-" @end
-
 " @group indents and tabs
 
 " Tabs
-set tabstop=2
-set shiftwidth=2
+"
 set noexpandtab
+set shiftwidth=2
+set tabstop=2
 set autoindent
+
+" Invisibles
+set listchars=tab:\->,trail:~,extends:↳,precedes:↵
+" set listchars=tab:\->,trail:~,extends:↳,precedes:↵
+" set listchars=tab:\+-,trail:~,nbsp:☒,eol:✈
+
+autocmd BufWinEnter,BufNewFile * set list
 
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
 autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html
@@ -213,7 +182,7 @@ autocmd BufNewFile,BufRead *.scss set filetype=css
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.html.erb set filetype=html
 autocmd BufEnter * if &filetype == "" | setlocal noexpandtab shiftwidth=2 | endif
-autocmd BufNewFile,BufRead *.rb setlocal expandtab shiftwidth=2
+autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 
 " @end
 
@@ -405,6 +374,44 @@ nmap <Leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
 
 " @end
 
+" @group indenting and folding
+
+set foldmethod=marker
+set foldmarker=@group,@end
+set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
+
+let g:indent_guides_auto_colors = 0
+
+function! StartUp()
+	IndentGuidesToggle
+endfunction
+
+autocmd VimEnter * call StartUp()
+
+" Folds
+nmap <M-h> zj
+nmap <M-t> zk
+nmap <M-d> zc
+nmap <M-n> zo
+
+" http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
+nnoremap <C-h> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
+nnoremap <C-t> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^
+
+nnoremap j<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
+nnoremap j<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal j'm<CR>
+
+nnoremap y<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
+nnoremap y<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal y'm<CR>
+
+nnoremap ><C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
+nnoremap ><C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal >'m<CR>
+
+nnoremap <<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
+nnoremap <<C-t> :normal mm<CR> :call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
+
+" @end
+
 " @group session
 
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
@@ -418,3 +425,4 @@ endfunction
 nmap <esc><esc><esc> :call Clear()<CR>
 
 " @end
+

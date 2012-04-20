@@ -265,11 +265,19 @@ endsnippet
 # @group size
 
 snippet w "width"
-width: ${1:0}px,;
+width: ${1:0}px;
+endsnippet
+
+snippet w0 "width: 0"
+width: ${1:0};
 endsnippet
 
 snippet h "height"
 height: ${1:0}px;
+endsnippet
+
+snippet h0 "height: 0"
+height: ${1:0};
 endsnippet
 
 # @end
@@ -358,7 +366,7 @@ background-image: ${1:none};
 endsnippet
 
 snippet bgr "background-repeat"
-background-repeat: repeat-${x};
+background-repeat: repeat-${1:x};
 endsnippet
 
 snippet bgrn "background-repeat: no-repeat"
@@ -478,7 +486,7 @@ font-size: ${1:12}px;
 endsnippet
 
 snippet ff "font-family"
-font-family: ${1};
+font-family: ${1:sans-serif};
 endsnippet
 
 # @end

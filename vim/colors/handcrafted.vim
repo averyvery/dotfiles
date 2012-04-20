@@ -10,14 +10,14 @@ endif
 
 let g:colors_name = "Handcrafted"
 
-hi Cursor  guifg=NONE guibg=#606060 gui=NONE
+hi Cursor  guifg=NONE guibg=#4e5a61 gui=NONE
 hi Visual  guifg=NONE guibg=#2a312e gui=NONE
 hi CursorLine guifg=NONE guibg=#080d0f gui=NONE
 hi CursorColumn  guifg=NONE guibg=NONE gui=NONE
-hi VertSplit  guifg=#46433e guibg=#46433e gui=NONE
+hi VertSplit  guifg=#111a1e guibg=#111a1f gui=NONE
 hi MatchParen  guifg=#e4a246 guibg=NONE gui=NONE
-hi StatusLine  guifg=#ffffff guibg=#46433e gui=bold
-hi StatusLineNC  guifg=#ffffff guibg=#46433e gui=NONE
+hi StatusLine  guifg=#ffffff guibg=#111a1f gui=bold
+hi StatusLineNC  guifg=#ffffff guibg=#111a1f gui=NONE
 hi Pmenu  guifg=#f8ecae guibg=NONE gui=NONE
 hi PmenuSel  guifg=NONE guibg=#2a312e gui=NONE
 hi IncSearch  guifg=NONE guibg=#405357 gui=NONE
@@ -25,14 +25,14 @@ hi Search  guifg=NONE guibg=#405357 gui=NONE
 hi Directory  guifg=#da6665 guibg=NONE gui=NONE
 
 hi Folded  guifg=#39515c guibg=#111a1e gui=NONE
-hi LineNr  guifg=#39515c guibg=#111a1e gui=NONE
+hi LineNr  guifg=#1f2b30 guibg=#000000 gui=NONE
 hi Comment  guifg=#39515c guibg=#111a1e gui=italic
 hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 
 " Ident Guides
-hi IndentGuidesOdd  guifg=#273b42 guibg=#1c2a30 ctermbg=3
-hi IndentGuidesEven guifg=#1e2d33 guibg=#152025 ctermbg=4
+hi IndentGuidesEven  guifg=#395159 guibg=#000000 ctermbg=3
+hi IndentGuidesOdd guifg=#395159 guibg=#1E2A30 ctermbg=4
 
 hi Normal  guifg=#ffffff guibg=#111a1e gui=NONE
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE

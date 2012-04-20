@@ -1,119 +1,150 @@
 {
 
-    /* Non-destructive */    
-    "^d"  = "moveLeft:";
-    "^n"  = "moveRight:";
-    "^t"  = "moveUp:";
-    "^T" = ("moveUp:",
-             "moveUp:",
-             "moveUp:",
-             "moveUp:",
-             "moveUp:",
-             "moveUp:",
-             "moveUp:",
-             "moveUp:");
-    "^h"  = "moveDown:";
-    "^H" = ("moveDown:",
-             "moveDown:",
-             "moveDown:",
-             "moveDown:",
-             "moveDown:",
-             "moveDown:",
-             "moveDown:",
-             "moveDown:");
-    "^b"  = "moveWordLeft:";
-    "^w"  = "moveWordRight:";
-    "^0"  = "moveToBeginningOfLine:";
-    "^-"  = "moveToEndOfLine:";
+	/* Non-destructive */
+	"^d" = "moveLeft:";
+	"^n" = "moveRight:";
+	"^t" = "moveUp:";
+	"^T" = (
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:",
+		"moveUp:"
+	);
+	"^h" = "moveDown:";
+	"^H" = (
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+		"moveDown:",
+	"moveDown:"
+	);
+	"^b" = "moveWordLeft:";
+	"^w" = "moveWordRight:";
+	"^0" = "moveToBeginningOfLine:";
+	"^-" = "moveToEndOfLine:";
 
-    /* Selecting */
-    "^D"  = "moveLeftAndModifySelection:";
-    "^N"  = "moveRightAndModifySelection:";
-    "^B"  = "moveWordLeftAndModifySelection:";
-    "^W"  = "moveWordRightAndModifySelection:";
-    "^)"  = "moveToBeginningOfLineAndModifySelection:";
-    "^_"  = "moveToEndOfLineAndModifySelection:";
-  
-    /* Deleting */
-    "^~d"  = "deleteBackward:";
-    "^~n"  = "deleteForward:";
-    "^~b"  = "deleteWordBackward:";
-    "^~w"  = "deleteWordForward:";
-    "^~0"  = "deleteToBeginningOfLine:";
-    "^~-"  = "deleteToEndOfLine:";
+	/* Selecting */
+	"^D" = "moveLeftAndModifySelection:";
+	"^N" = "moveRightAndModifySelection:";
+	"^B" = "moveWordLeftAndModifySelection:";
+	"^W" = "moveWordRightAndModifySelection:";
+	"^)" = "moveToBeginningOfLineAndModifySelection:";
+	"^_" = "moveToEndOfLineAndModifySelection:";
 
-    /* Complete Text */
-    "^\U0009"  = "complete:";
+	/* Deleting */
+	"^~d" = "deleteBackward:";
+	"^~n" = "deleteForward:";
+	"^~b" = "deleteWordBackward:";
+	"^~w" = "deleteWordForward:";
+	"^~0" = "deleteToBeginningOfLine:";
+	"^~-" = "deleteToEndOfLine:";
 
-    /* Command Mode */
-    "^a"   = {
+	/* Command Mode */
+	"^a" = {
 
-      /* Selection */
-      "v"    = "selectWord:";
-      "V"    = "selectLine:";
+		/* Selection */
+		"v" = "selectWord:";
+		"V" = "selectLine:";
 
-      /* Text Changes */
-      ">"    = "indent:";
+		/* Text Changes */
+		">" = "indent:";
 
-      /* App commands */
-      "u"    = "undo:";
-      "U"    = "redo:";
-      "s"    = {
-        "w"    = "save:";
-        "q"    = "performClose:";
-      };
+		/* App commands */
+		"u" = "undo:";
+		"U" = "redo:";
+		"s" = {
+			"w" = "save:";
+			"q" = "performClose:";
+		};
 
-      /* Copy */
-      "y"    = "copy:";
-      "Y"    = ("selectLine:",
-                "copy:",
-                "moveRight:",
-                "moveLeft:");
+		/* Copy */
+		"y" = {
+			"y" = (
+				"selectLine:",
+				"copy:",
+				"moveRight:",
+				"moveLeft:"
+				);
+		};
 
-      /* Paste */
-      "p"    = "pasteAsPlainText:";
-      "P"    = ("moveToEndOfLine:",
-                "insertNewLine:",
-                "pasteAsPlainText:");
+		/* Paste */
+		"p" = "pasteAsPlainText:";
+		"P" = (
+			"moveToEndOfLine:",
+			"insertNewLine:",
+			"pasteAsPlainText:"
+		);
 
-      /* Mark Manipulation */
-      "m"    = "setMark:";
-      "'"    = "swapWithMark:";
-      "v"    = {
-        "m"    = "selectToMark:";
-      };
+		/* Mark Manipulation */
+		"m" = "setMark:";
+		"'" = "swapWithMark:";
+		"v" = {
+				"m" = "selectToMark:";
+		};
 
-      /* Cutting */
-      "j"    = {
-        "j"    = ("selectLine:",
-                  "cut:",
-                  "deleteBackward:",
-                  "moveRight:");
-        "b"    = ("moveWordLeftAndModifySelection:",
-                  "cut:");
-        "w"    = ("moveWordRightAndModifySelection:",
-                  "cut:");
-        "0"    = ("moveToBeginningOfLineAndModifySelection:",
-                  "cut:");
-        "-"    = ("moveToEndOfLineAndModifySelection:",
-                  "cut:");
-        "m"    = "deleteToMark:";
-      };
+		/* Cutting */
+		"j" = {
 
-      /* Deleting/Changing */
-      "c"    = {
-        "j"    = ("selectLine:",
-                  "deleteBackward:",
-                  "deleteBackward:",
-                  "moveRight:");
-        "b"    = "deleteWordBackward:";
-        "w"    = "deleteWordForward:";
-        "0"    = "deleteToBeginningOfLine:";
-        "-"    = "deleteToEndOfLine:";
-      };
+			"j" =
+				("selectLine:",
+				"cut:",
+				"deleteBackward:",
+				"moveRight:");
 
-      "x" = "deleteForward:";
+			"b" = (
+				"moveWordLeftAndModifySelection:",
+				"cut:"
+			);
 
-    };
+			"w" = (
+				"moveWordRightAndModifySelection:",
+				"cut:"
+			);
+
+			"0" = (
+				"moveToBeginningOfLineAndModifySelection:",
+				"cut:"
+			);
+
+			"-" = (
+				"moveToEndOfLineAndModifySelection:",
+				"cut:"
+			);
+
+			"m" = "deleteToMark:";
+
+		};
+
+		/* Deleting/Changing */
+		"c" = {
+
+				"j" = (
+					"selectLine:",
+					"deleteBackward:",
+					"deleteBackward:",
+					"moveRight:"
+				);
+
+				"b"    = "deleteWordBackward:";
+				"w"    = "deleteWordForward:";
+				"0"    = "deleteToBeginningOfLine:";
+				"-"    = "deleteToEndOfLine:";
+
+		};
+
+		"x" = "deleteForward:";
+
+	};
 
 }
