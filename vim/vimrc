@@ -31,10 +31,10 @@ Bundle 'markabe/bufexplorer'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Brief help
-" :BundleList	       - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
+" :BundleList				 - list configured bundles
+" :BundleInstall(!)		 - install(update) bundles
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :BundleClean(!)			 - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
@@ -354,7 +354,7 @@ python << EOF
 from subprocess import call
 browser = """
 tell application "Google Chrome" to tell the active tab of its first window
-    reload
+		reload
 end tell
 tell application "Google Chrome" to activate
 """
@@ -394,21 +394,57 @@ nmap <M-t> zk
 nmap <M-d> zc
 nmap <M-n> zo
 
-" http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
-nnoremap <C-h> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
-nnoremap <C-t> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^
+" Adapted from http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
+function! MoveIndent(forward, outerlevel, innerlevel)
+	let line = line('.')
+	let column = col('.')
+	let lastline = line('$')
+	let indent = indent(line)
+	let stepvalue = a:forward ? 1 : -1
+	while (line > 0 && line <= lastline)
+		let line = line + stepvalue
+		if (a:outerlevel && indent(line) < indent || a:innerlevel && indent(line) > indent || indent(line) == indent && !a:outerlevel && !a:innerlevel)
+			if (strlen(getline(line)) > 0)
+				exe line
+				exe "normal " column . "|"
+				return
+			endif
+		endif
+	endwhile
+endfunction
 
-nnoremap j<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
-nnoremap j<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal j'm<CR>
+function! IndentEnd()
+	call MoveIndent(1, 0, 0)
+endfunction
 
-nnoremap y<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
-nnoremap y<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal y'm<CR>
+function! IndentStart()
+	call MoveIndent(0, 0, 0)
+endfunction
 
-nnoremap ><C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
-nnoremap ><C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal >'m<CR>
+function! IndentOuter()
+	call MoveIndent(0, 1, 0)
+endfunction
 
-nnoremap <<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
-nnoremap <<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
+function! IndentInner()
+	call MoveIndent(1, 0, 1)
+endfunction
+
+function! BindIndentAction(key)
+	exe ":nnoremap " . a:key . "<C-h> ^mm :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
+	exe ":nnoremap " . a:key . "<C-t> ^mm :call IndentStart()<CR> :normal " . a:key . "'m<CR>"
+	exe ":nnoremap " . a:key . "<C-d> :call IndentOuter()<CR> :normal ^mm<CR> :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
+	exe ":nnoremap " . a:key . "<C-n> :normal ^hmmt<CR> :call IndentEnd()<CR> :normal t<CR> :normal " . a:key . "'m<CR>"
+endfunction
+
+nnoremap <C-h> :call IndentEnd()<CR>
+nnoremap <C-t> :call IndentStart()<CR>
+nnoremap <C-d> :call IndentOuter()<CR>
+nnoremap <C-n> :call IndentInner()<CR>
+
+call BindIndentAction('j')
+call BindIndentAction('y')
+call BindIndentAction('<')
+call BindIndentAction('>')
 
 " @end
 
