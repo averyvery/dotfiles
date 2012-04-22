@@ -7,4 +7,5 @@ Setup:
 - ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 - ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 - ln -s ~/dotfiles/vim ~/.vim
-- ln -s ~/dotfiles/Keybindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
+- ln -s ~/dotfiles/keybindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
+- ln -s ~/dotfiles/butler/Configuration.butleritems ~/Library/Application\ Support/Butler/Configuration.butleritems

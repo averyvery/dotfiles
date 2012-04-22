@@ -398,17 +398,17 @@ nmap <M-n> zo
 nnoremap <C-h> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^
 nnoremap <C-t> k:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^
 
-nnoremap j<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
+nnoremap j<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal j'm<CR>
 nnoremap j<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal j'm<CR>
 
-nnoremap y<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
+nnoremap y<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal y'm<CR>
 nnoremap y<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal y'm<CR>
 
-nnoremap ><C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
+nnoremap ><C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal >'m<CR>
 nnoremap ><C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal >'m<CR>
 
-nnoremap <<C-h> :normal mm<CR> :call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
-nnoremap <<C-t> :normal mm<CR> :call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
+nnoremap <<C-h> mm:call search('^'. matchstr(getline(line('.')), '\(\s*\)') .'\S')<CR>^ :normal <'m<CR>
+nnoremap <<C-t> mm:call search('^'. matchstr(getline(line('.')+1), '\(\s*\)') .'\S', 'b')<CR>^ :normal <'m<CR>
 
 " @end
 
