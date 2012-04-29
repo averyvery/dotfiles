@@ -1,13 +1,28 @@
+= Todo =
+
+Viget:
+	Plan June trip (either before the 14th or after the 28th) (7th is interlink)
+
+Open Sores:
+  Freeway - fix pattern match
+  Hieroglyph - tests
+
+Shure:
+  ToolTips
+	Product video
+	JS feature template?
 
 
-Laoo,rpe
+= Notes =
 
-- KettlerRefactor
+VMware password: Laoo,rpe
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+= Pages =
+
 - WikiNotes
 - FeaturePlugin
 - ClassingSystem
 - JobCriteria
-- HubotPlugin
-- FontFaceIcons
-- ShureNotes
 

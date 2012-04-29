@@ -26,6 +26,11 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
 Bundle 'markabe/bufexplorer'
+Bundle 'sjl/clam.vim'
+Bundle 'othree/javascript-syntax.vim'
+Bundle 'wookiehangover/jshint.vim'
+Bundle 'duff/vim-scratch'
+Bundle 'jpalardy/vim-slime'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -35,10 +40,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 " :BundleInstall(!)		 - install(update) bundles
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
 " :BundleClean(!)			 - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-"
+
 " @end
 
 " @group weird settings
@@ -50,7 +52,6 @@ set wildmode=longest:full
 set wildmenu
 set ttyfast
 set showbreak=↵
-set nowrap
 set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
@@ -62,6 +63,15 @@ set undofile
 set scrolloff=5
 set nocompatible
 let mapleader="\\"
+
+set wrap
+set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break character)
+"set linebreak          " soft-wrap lines only at certain characters (see :help breakat)
+
+" If you like line numbers, you may want this instead:
+"set number
+"set showbreak=------>\  " line up soft-wrap prefix with the line numbers
+"set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-number area
 
 " @end
 
@@ -95,7 +105,7 @@ set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 
-exe "cd ~/Sites/"
+" exe "cd ~/Sites/"
 
 " @end
 
@@ -134,24 +144,7 @@ nmap <esc><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 
 @group reference
 
-let g:vim_reference_file = "~/dotfiles/vim/vim-reference"
-let g:vim_reference_width = 45
-
-function! ToggleVimReference()
-		if !exists("s:vim_reference_open") || s:vim_reference_open == 0
-			let s:vim_reference_open = 1
-			execute "botright vnew " . g:vim_reference_file
-			execute "vertical resize " . g:vim_reference_width
-		else
-			update
-			execute "bdelete " . g:vim_reference_file
-			let s:vim_reference_open = 0
-		endif
-endfunction
-
-let g:vimwiki_list = [{'path': '~/dotfiles/vim/wiki/', 'path_html': '~/Sites/vimwiki/'}]
-
-nmap <backspace><backspace> :call ToggleVimReference()<CR>
+nmap <backspace><backspace> :Sscratch<CR>
 nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
@@ -160,28 +153,31 @@ nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 " Tabs
 "
-set noexpandtab
+set expandtab
 set shiftwidth=2
 set tabstop=2
 set autoindent
 
 " Invisibles
-set listchars=tab:\->,trail:~,extends:↳,precedes:↵
+set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
+" set listchars=tab:\->,trail:~,extends:↳,precedes:↵
 " set listchars=tab:\->,trail:~,extends:↳,precedes:↵
 " set listchars=tab:\+-,trail:~,nbsp:☒,eol:✈
 
 autocmd BufWinEnter,BufNewFile * set list
 
-autocmd BufNewFile,BufRead *.html.php setlocal filetype=html
-autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html
-autocmd BufNewFile,BufRead *.mustache setlocal filetype=html
-autocmd BufNewFile,BufRead *.css set filetype=css
-autocmd BufNewFile,BufRead *.css.php set filetype=css
-autocmd BufNewFile,BufRead *.less set filetype=css
-autocmd BufNewFile,BufRead *.scss set filetype=css
+autocmd BufNewFile,BufRead *.mustache setlocal filetype=html noexpandtab
+autocmd BufNewFile,BufRead *.css set filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.css.php set filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.less set filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.scss set filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.js set noexpandtab
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
-autocmd BufNewFile,BufRead *.html.erb set filetype=html
-autocmd BufEnter * if &filetype == "" | setlocal noexpandtab shiftwidth=2 | endif
+autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufNewFile,BufRead *.html.php setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufNewFile,BufRead *.html.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufNewFile,BufRead *.html setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 
 " @end
@@ -263,7 +259,7 @@ cmap <C-M-S-v> <C-[>jji
 " @group add blank and spaces
 
 nmap <Enter> o<ESC>
-nmap <S-Enter> O<ESC>
+nmap <S-Enter> i<Enter><ESC>
 map <C-o> o<C-[>
 map <C-O> O<C-[>
 
@@ -322,22 +318,19 @@ no <s-t> 10k
 no n l
 no <c-m-n> <s-m>
 no s :
-no <s-s> :!
+no - $
+no _ 0
 no j d
 no l n
 no L N
 
-cmap <space><space> <esc>
-cmap ,, <esc>
+" quick macros
+no <c-.> @q
 
-let g:UltiSnipsRemoveSelectModeMappings = 0
+" quick ultisnip exit
 smap , <esc>
 
-
-" Added benefits
-no - $
-no _ ^
-no Y y$
+let g:UltiSnipsRemoveSelectModeMappings = 0
 
 " Bubbling
 no <c-m-t> :m-2<cr>
@@ -395,7 +388,7 @@ nmap <M-d> zc
 nmap <M-n> zo
 
 " Adapted from http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
-function! MoveIndent(forward, outerlevel, innerlevel)
+function! MoveIndent(forward, out, in)
 	let line = line('.')
 	let column = col('.')
 	let lastline = line('$')
@@ -403,7 +396,7 @@ function! MoveIndent(forward, outerlevel, innerlevel)
 	let stepvalue = a:forward ? 1 : -1
 	while (line > 0 && line <= lastline)
 		let line = line + stepvalue
-		if (a:outerlevel && indent(line) < indent || a:innerlevel && indent(line) > indent || indent(line) == indent && !a:outerlevel && !a:innerlevel)
+		if (a:out && indent(line) < indent || a:in && indent(line) > indent || indent(line) == indent && !a:out && !a:in)
 			if (strlen(getline(line)) > 0)
 				exe line
 				exe "normal " column . "|"
@@ -430,8 +423,8 @@ function! IndentInner()
 endfunction
 
 function! BindIndentAction(key)
-	exe ":nnoremap " . a:key . "<C-h> ^mm :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
-	exe ":nnoremap " . a:key . "<C-t> ^mm :call IndentStart()<CR> :normal " . a:key . "'m<CR>"
+	exe ":nnoremap " . a:key . "<C-h> :normal ^mm<CR> :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
+	exe ":nnoremap " . a:key . "<C-t> :normal ^mm<CR> :call IndentStart()<CR> :normal " . a:key . "'m<CR>"
 	exe ":nnoremap " . a:key . "<C-d> :call IndentOuter()<CR> :normal ^mm<CR> :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
 	exe ":nnoremap " . a:key . "<C-n> :normal ^hmmt<CR> :call IndentEnd()<CR> :normal t<CR> :normal " . a:key . "'m<CR>"
 endfunction
@@ -441,17 +434,17 @@ nnoremap <C-t> :call IndentStart()<CR>
 nnoremap <C-d> :call IndentOuter()<CR>
 nnoremap <C-n> :call IndentInner()<CR>
 
-call BindIndentAction('j')
-call BindIndentAction('y')
-call BindIndentAction('<')
-call BindIndentAction('>')
+autocmd VimEnter * call BindIndentAction('j')
+autocmd VimEnter * call BindIndentAction('y')
+autocmd VimEnter * call BindIndentAction('<')
+autocmd VimEnter * call BindIndentAction('>')
 
 " @end
 
 " @group session
 
-set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-source ~/.vim_session
+" set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+" source ~/.vim_session
 
 function! Clear()
 	echo 'Session cleared'
@@ -462,3 +455,18 @@ nmap <esc><esc><esc> :call Clear()<CR>
 
 " @end
 
+" @group slime
+
+let g:slime_target = "screen"
+let b:slime_config = {"sessionname": "slime", "windowname": "0"}
+let autoreadargs={'autoread':1}
+map <c-g><c-g> :silent !echo -n > ~/screenlog.0<CR>:split ~/screenlog.0<CR>:setlocal autoread<CR>
+
+function! Screen()
+  let command = input("command: ")
+  call system("screen -S slime -p 0 -X stuff " . command . "\r")
+endfunction
+
+map <c-f><c-f> :call Screen()<CR>
+
+" @end

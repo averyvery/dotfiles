@@ -9,3 +9,4 @@ Setup:
 - ln -s ~/dotfiles/vim ~/.vim
 - ln -s ~/dotfiles/keybindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
 - ln -s ~/dotfiles/butler/Configuration.butleritems ~/Library/Application\ Support/Butler/Configuration.butleritems
+- ln -s ~/dotfiles/screen/screenrc ~/.screenrc

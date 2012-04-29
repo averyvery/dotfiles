@@ -63,8 +63,8 @@ source $ZSH/oh-my-zsh.sh
         __CURRENT_GIT_BRANCH_IS_DIRTY='1'
       fi
     fi
-      
-    
+
+
 
     if [ -n "$__CURRENT_GIT_BRANCH" ]; then
       local s="$PR_CYAN("
@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
   getBranch() {
     if [[ -n "$1" ]]; then
       branch=$1
-    else 
+    else
       st="$(git status 2>/dev/null)"
       arr=(${(f)st})
       __CURRENT_GIT_BRANCH="${arr[1][(w)4]}";
@@ -102,14 +102,14 @@ source $ZSH/oh-my-zsh.sh
     echo $branch
   }
 
-  remaster () { 
+  remaster () {
     branch=`getBranch $1`
-    git checkout master; pull; checkout $branch; rebase master; 
+    git checkout master; pull; checkout $branch; rebase master;
   }
 
-  mergepush () { 
+  mergepush () {
     branch=`getBranch $1`
-    git checkout master; merge $branch; push; checkout $branch; 
+    git checkout master; merge $branch; push; checkout $branch;
   }
 
   alias dcommit='git svn dcommit'
@@ -126,7 +126,7 @@ source $ZSH/oh-my-zsh.sh
   # git shortcuts
   alias git-wtf="git checkout master && git pull origin master && git checkout work && git rebase master && git checkout master && git merge work && git push origin master && git checkout work"
 
-# @end 
+# @end
 
 # @group completion and correction
 
@@ -139,7 +139,7 @@ source $ZSH/oh-my-zsh.sh
   setopt correctall
 
   setopt extended_glob
-  
+
 # @end
 
 # @group history
@@ -193,6 +193,12 @@ source $ZSH/oh-my-zsh.sh
 
 # @end
 
+# @group svim
+
+function svim { killall SCREEN; local dir=`pwd`; screen -S slime -L; cd $dir; }
+
+# @end
+
 # @group theme
 
 # @group setprompt
@@ -236,7 +242,7 @@ source $ZSH/oh-my-zsh.sh
 
   #   %m
 
-  # 
+  #
   #   RPROMPT=' $PR_CYAN◊$PR_SHIFT_IN$PR_HBAR$PR_CYAN$PR_HBAR$PR_SHIFT_OUT\
   # ($PR_GREEN%W$PR_CYAN)$PR_SHIFT_IN$PR_HBAR$PR_CYAN$PR_LRCORNER$PR_SHIFT_OUT$PR_NO_COLOUR'
 
@@ -256,7 +262,7 @@ source $ZSH/oh-my-zsh.sh
 # @group colors
 
   LS_COLORS='no=00:fi=00:di=09;33:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.png=01;35:*.mpg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:'
-   
+
   export LS_COLORS
 
   if [ -e /usr/share/terminfo/x/xterm-256color ]; then
