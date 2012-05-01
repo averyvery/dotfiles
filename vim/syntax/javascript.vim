@@ -159,7 +159,7 @@ syntax match   javaScriptParensErrC     contained "}"
 if main_syntax == "javascript"
   syntax sync clear
   syntax sync ccomment javaScriptComment minlines=200
-  syntax sync match javaScriptHighlight grouphere javaScriptBlock /{/
+  " syntax sync match javaScriptHighlight grouphere javaScriptBlock /{/
 endif
 
 " Define the default highlighting.

@@ -195,7 +195,7 @@ source $ZSH/oh-my-zsh.sh
 
 # @group svim
 
-function svim { killall SCREEN; local dir=`pwd`; screen -S slime -L; cd $dir; }
+function svim { killall SCREEN; local dir=`pwd`; screen -S vim -L; cd $dir; }
 
 # @end
 
