@@ -27,11 +27,12 @@ Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
 Bundle 'markabe/bufexplorer'
 Bundle 'sjl/clam.vim'
-Bundle 'wookiehangover/jshint.vim'
-Bundle 'duff/vim-scratch'
+" Bundle 'wookiehangover/jshint.vim'
+Bundle 'averyvery/vim-scratch'
 Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/Vicle'
+Bundle 'averyvery/Vicle'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/Tail-Bundle'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -52,7 +53,6 @@ set encoding=utf-8
 set wildmode=longest:full
 set wildmenu
 set ttyfast
-set showbreak=↵
 set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
@@ -60,19 +60,16 @@ au GUIEnter * set vb t_vb=
 set tm=200
 set timeoutlen=200
 set relativenumber
+set numberwidth=1
 set undofile
 set scrolloff=5
 set nocompatible
-let mapleader="\\"
-
+set lazyredraw
 set wrap
 set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break character)
-"set linebreak          " soft-wrap lines only at certain characters (see :help breakat)
+vsplit
 
-" If you like line numbers, you may want this instead:
-"set number
-"set showbreak=------>\  " line up soft-wrap prefix with the line numbers
-"set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-number area
+let mapleader="\\"
 
 " @end
 
@@ -117,6 +114,24 @@ set directory=~/.vim/tmp/swap//
 
 " @end
 
+" @group statusline
+
+set shortmess=a   " Use abbreviated messages
+set shortmess+=T  " Truncate messages in the middle if too long
+set shortmess+=I  " Disable intro message
+set shortmess+=t  " Truncate filename at start if too long
+set shortmess+=o  " Do not prompt to overwrite file
+set shortmess+=O
+
+set showcmd       " Display the command in the last line
+set showmode      " Display the current mode in the last line
+set report=1      " Always report the number of lines changed
+set ruler         " Display info on current position
+set laststatus=2  " Always show status line
+set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
+
+" @end
+
 " @group visuals
 
 colorscheme handcrafted
@@ -140,13 +155,16 @@ call Pl#Theme#RemoveSegment('filetype')
 nmap <right> :bp<cr>
 nmap <left> :bn<cr>
 nmap <up> :vert sb #<cr>
-nmap <down> :sb #<CR>
+nmap <down> :topleft new #<CR>
 nmap <tab> <C-w>w
 nmap <s-tab> <C-w>h
 nmap <tab><tab> :BufExplorer<CR>
 nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 nmap <esc> <C-w>c
 nmap <esc><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
+
+set splitright         " When splitting vertically, split to the right
+set splitbelow         " When splitting horizontally, split below
 
 " @end
 
@@ -175,11 +193,11 @@ set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
 autocmd BufWinEnter,BufNewFile * set list
 
 autocmd BufNewFile,BufRead *.mustache setlocal filetype=html noexpandtab
-autocmd BufNewFile,BufRead *.css set filetype=css noexpandtab
-autocmd BufNewFile,BufRead *.css.php set filetype=css noexpandtab
-autocmd BufNewFile,BufRead *.less set filetype=css noexpandtab
-autocmd BufNewFile,BufRead *.scss set filetype=css noexpandtab
-autocmd BufNewFile,BufRead *.js set noexpandtab
+autocmd BufNewFile,BufRead *.css setlocal filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.css.php setlocal filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.less setlocal filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.scss setlocal filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.js setlocal noexpandtab
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
@@ -219,6 +237,7 @@ imap ,, <Esc>
 
 " Comma save
 map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+" :JSLintUpdate<CR>
 
 " @end
 
@@ -371,16 +390,10 @@ nmap <Leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
 set foldmethod=marker
 set foldmarker=@group,@end
 set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
+set foldclose=all
 
 let g:indent_guides_auto_colors = 0
-
-function! StartUp()
-  IndentGuidesToggle
-  :normal zM
-endfunction
-
-" autocmd VimEnter * call StartUp()
-autocmd BufWinEnter,BufNewFile * call StartUp()
+autocmd BufWinEnter,BufNewFile * :IndentGuidesToggle
 
 " Folds
 nmap <M-h> zj
@@ -456,24 +469,68 @@ nmap <esc><esc><esc> :call Clear()<CR>
 
 " @end
 
-" @group command line
+" @group repl
+
+function! Repl()
+  let repl_command = ''
+  if &filetype == 'javascript'
+    let repl_command = 'node'
+  endif
+  if &filetype == 'ruby'
+    let repl_command = 'irb'
+  endif
+  if &filetype == 'php'
+    let repl_command = 'phpsh'
+  endif
+  call system("screen -S main -p 0 -X stuff " . repl_command . "\r")
+endfunction
+
+map <c-r><c-r> :call Repl()<CR>
+
+function! QuitRepl()
+  let repl_quit = ''
+  if &filetype == 'javascript'
+    let repl_quit = 'process.exit()'
+  endif
+  if &filetype == 'ruby'
+    let repl_quit = 'quit'
+  endif
+  if &filetype == 'php'
+    let repl_quit = 'q'
+  endif
+  call system("screen -S main -p 0 -X stuff " . repl_quit . "\r")
+endfunction
+
+map <c-l><c-l> :call QuitRepl()<CR>
 
 function! Screen()
-  let command = input("command: ")
-  call system("screen -S vim -p 0 -X stuff " . command . "\r")
+  let command = input('command: ')
+  call system('screen -S main -p 0 -X stuff ' . command . '\r')
 endfunction
 
 map <c-f><c-f> :call Screen()<CR>
 
-let g:vicle_session_name    = 'vim'
+let g:vicle_session_name    = 'main'
 let g:vicle_session_window  = '0'
-
 let g:vicle_history_active   = 1 " active history
 let g:vicle_edition_mode     = 1 " active edition mode
 let g:vicle_selection_string = "0v$y"  " yank current line
-
 let g:vicle_hcs             = '~~~your_command_separator~~~'
 
+function! g:preVicle()
+  call system('> ~/screenlog.0')
+  call system('echo "New log" >> ~/screenlog.0')
+endfunction
+
+function! g:postVicle()
+  " :topleft split ~/screenlog.0
+  " :setlocal autoread
+  :Tail ~/screenlog.0
+  exe "normal \<c-w>\<Down>"
+endfunction
+
+
+" http://stackoverflow.com/questions/6639863/vim-split-unless-open
 " map <c-g><c-g> :silent !echo -n > ~/screenlog.0<CR>:split ~/screenlog.0<CR>:setlocal autoread<CR>
 map <c-g><c-g> :split ~/screenlog.0<CR>:setlocal autoread<CR>
 
@@ -488,9 +545,12 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings = 1
 
+" http://stackoverflow.com/questions/4579300/vimgrep-and-the-quickfix-window-in-macvim
+let g:syntastic_auto_loc_list=1
+
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
-  \ 'active_filetypes': ['php'],
+  \ 'active_filetypes': ['js', 'php'],
   \ 'passive_filetypes': ['html', 'js']
   \ }
 

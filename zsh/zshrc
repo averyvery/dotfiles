@@ -182,7 +182,7 @@ source $ZSH/oh-my-zsh.sh
 
 # @group paths
 
-  export PATH="node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
+  export PATH="/usr/local/share/python:node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
   export EDITOR='mvim -w'
 
 # @end
@@ -195,7 +195,13 @@ source $ZSH/oh-my-zsh.sh
 
 # @group svim
 
-function svim { killall SCREEN; local dir=`pwd`; screen -S vim -L; cd $dir; }
+function s { killall SCREEN; local dir=`pwd`; cd ~; screen -S main -L; cd $dir; }
+
+# Autoload screen if we aren't in it.  (Thanks Fjord!)
+# if [[ $STY = '' ]] then screen -xR; fi
+# exec /usr/bin/clear
+
+# exec /usr/bin/screen
 
 # @end
 
