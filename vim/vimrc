@@ -57,8 +57,6 @@ set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
-set tm=200
-set timeoutlen=200
 set relativenumber
 set numberwidth=1
 set undofile
@@ -69,7 +67,31 @@ set wrap
 set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break character)
 vsplit
 
+" @end
+
+" @group timing
+
+set timeout
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=150
+
+autocmd InsertEnter * setlocal timeoutlen=150
+autocmd InsertLeave * setlocal timeoutlen=3000
+
+" @end
+
+" @group leader
+
 let mapleader="\\"
+
+nmap <leader>u :GundoToggle<CR>
+nmap <leader>w :w !sudo tee %<Enter>
+nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
+nmap <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
+nmap <Leader>v :vs $MYVIMRC<CR>
+nmap <leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
+nmap <leader>s :SyntasticCheck<CR>
 
 " @end
 
@@ -182,7 +204,7 @@ nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 set expandtab
 set shiftwidth=2
 set tabstop=2
-set autoindent
+set smartindent
 
 " Invisibles
 set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
@@ -301,12 +323,6 @@ nmap <s-space> a<space><esc>d
 " @group utility remaps
 
 nmap <S-u> <C-r>
-nnoremap <leader>u :GundoToggle<CR>
-
-" Sudo save
-map <leader>w :w !sudo tee %<Enter>
-
-" @end
 
 " @group project files & searching
 
@@ -318,10 +334,6 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-" au FocusLost * :wa
-
-map <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
-map <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 
 let g:NERDTreeWinPos="right"
 
@@ -378,22 +390,15 @@ no <c-m-h> :m+<cr>
 
 " @end
 
-" @group updating vimrc
-
-nmap <Leader>v :vs $MYVIMRC<CR>
-nmap <Leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
-
-" @end
-
 " @group indenting and folding
 
 set foldmethod=marker
 set foldmarker=@group,@end
 set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
-set foldclose=all
+" set foldclose=all
 
 let g:indent_guides_auto_colors = 0
-autocmd BufWinEnter,BufNewFile * :IndentGuidesToggle
+autocmd BufWinEnter,BufNewFile * :IndentGuidesEnable
 
 " Folds
 nmap <M-h> zj
@@ -553,7 +558,5 @@ let g:syntastic_mode_map = {
   \ 'active_filetypes': ['js', 'php'],
   \ 'passive_filetypes': ['html', 'js']
   \ }
-
-nnoremap <leader>s :SyntasticCheck<CR>
 
 " @end

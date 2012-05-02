@@ -5,30 +5,23 @@ Open Sores:
   Hieroglyph - -,?
   Hieroglyph - tests
   Hieroglyph - fontSquirrel?
-		So, follow up on that SVG/Font Squirrel thing we were talking about yesterday: http://www.fontsquirrel.com/forum/discussi…
-	Turns out SVG inclusion isn't part of the default "Optimal" package anymore. If you go to "Custom" and check SVG, you'll get an SVG version of the font.
-	Sorry, make that "Expert" instead of "Custom"
+    So, follow up on that SVG/Font Squirrel thing we were talking about yesterday: http://www.fontsquirrel.com/forum/discussi…
+  Turns out SVG inclusion isn't part of the default "Optimal" package anymore. If you go to "Custom" and check SVG, you'll get an SVG version of the font.
+  Sorry, make that "Expert" instead of "Custom"
 
 Shure:
   New views:
-    Discontinued
     Artists
-    Page
   Better toggling
-  Tickets:
-    Accessories
-    Discontinued
-
-Viget:
-  Khanh's review
+  Idea: Rename section to "s", block to "b"?
 
 Personal:
-	vim: remapping dd in jshint
+  vim: remapping dd in jshint
   Top/bottom of screen in vim
   Goals?
   Jenn wedding
-	let s:jshintrc_file = expand('~/.jshintrc')
-	jshint - not use the Quickfix window?
+  let s:jshintrc_file = expand('~/.jshintrc')
+  jshint - not use the Quickfix window?
 
 
 = Notes =
