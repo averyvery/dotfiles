@@ -1,32 +1,57 @@
 = Todo =
 
-Open Sores:
-  Freeway - wildcard routing not actually happening
-  Hieroglyph - -,?
-  Hieroglyph - tests
-  Hieroglyph - fontSquirrel?
-    So, follow up on that SVG/Font Squirrel thing we were talking about yesterday: http://www.fontsquirrel.com/forum/discussi…
-  Turns out SVG inclusion isn't part of the default "Optimal" package anymore. If you go to "Custom" and check SVG, you'll get an SVG version of the font.
-  Sorry, make that "Expert" instead of "Custom"
+Kettler ticket
 
 Shure:
-  New views:
-    Artists
-  Better toggling
+  Add swap JS to the parts page
+  New pages:
+    image downloadz
+    product comparison
+    news/events
   Idea: Rename section to "s", block to "b"?
+  Accessories table and access table mobile seem....similar
+  Same with shared discontinued mobile
+  Earphones/headphones type is screwy, img heights
+
+Viget:
+  Get time off for parents
+  Orientation docs - VMware, PHP, etc
+  Labshare idea?
+  OOCSS
+    PM - markup is never done
+    UX - all units have names and visual variations
+    DESIGNERS - watch for repeatable styles
+    DEVS - let us know where we can simplify markup
+
+Open Sores:
+  Freeway - wildcard routing not actually happening
 
 Personal:
-  vim: remapping dd in jshint
-  Top/bottom of screen in vim
-  Goals?
+  Gift for rachel
   Jenn wedding
-  let s:jshintrc_file = expand('~/.jshintrc')
-  jshint - not use the Quickfix window?
+
+Computer:
+  jitouch
+  boom
+  expandtext
 
 
 = Notes =
 
 VMware password: Laoo,rpe
+
+
+= VIM =
+
+* find char
+@: redo last ex
+BMW screen nav
+<C-a> in insert - paste last insert
+
+
+= ZSH =
+
+<C-i> search commands
 
 
 = Pages =

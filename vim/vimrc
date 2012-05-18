@@ -27,12 +27,13 @@ Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
 Bundle 'markabe/bufexplorer'
 Bundle 'sjl/clam.vim'
-" Bundle 'wookiehangover/jshint.vim'
+Bundle 'averyvery/jshint.vim'
 Bundle 'averyvery/vim-scratch'
-Bundle 'kien/ctrlp.vim'
 Bundle 'averyvery/Vicle'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/Tail-Bundle'
+Bundle 'vim-scripts/AnsiEsc.vim'
+Bundle 'vim-scripts/taglist.vim'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -59,13 +60,30 @@ set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 set relativenumber
 set numberwidth=1
-set undofile
 set scrolloff=5
 set nocompatible
 set lazyredraw
 set wrap
 set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break character)
-vsplit
+set clipboard=unnamed
+set langmenu=none
+set backspace=indent,eol,start
+filetype plugin on
+
+" http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
+autocmd BufWinEnter,BufNewFile * silent tab
+
+" http://www.reddit.com/r/vim/comments/t1lhc/cursorcolumn_cursorline_slowdown/
+autocmd CursorHold * setlocal cursorline cursorcolumn
+autocmd CursorMoved,InsertEnter *
+  \ if &l:cursorline | setlocal nocursorline nocursorcolumn | endif
+
+set undofile
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+
+autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
 
 " @end
 
@@ -73,11 +91,11 @@ vsplit
 
 set timeout
 set ttimeout
-set timeoutlen=1000
+set timeoutlen=500
 set ttimeoutlen=150
 
 autocmd InsertEnter * setlocal timeoutlen=150
-autocmd InsertLeave * setlocal timeoutlen=3000
+autocmd InsertLeave * setlocal timeoutlen=500
 
 " @end
 
@@ -92,58 +110,14 @@ nmap <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 nmap <Leader>v :vs $MYVIMRC<CR>
 nmap <leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
 nmap <leader>s :SyntasticCheck<CR>
-
-" @end
-
-" @group setup properties i barely understand
-
-" http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
-autocmd BufWinEnter,BufNewFile * silent tab
-
-" http://stuvel.eu/blog/57/highlighting-the-current-line-column-in-vim
-" http://briancarper.net/blog/590/cursorcolumn--cursorline-slowdown
-" set cursorline cursorcolumn
-
-" http://www.reddit.com/r/vim/comments/t1lhc/cursorcolumn_cursorline_slowdown/
-
-autocmd CursorHold * setlocal cursorline cursorcolumn
-autocmd CursorMoved,InsertEnter *
-  \ if &l:cursorline | setlocal nocursorline nocursorcolumn | endif
-
-" The default for 'backspace' is very confusing to new users, so change it to a
-" more sensible value.  Add "set backspace&" to your ~/.vimrc to reset it.
-set backspace=indent,eol,start
-
-" Disable localized menus for now since only some items are translated (e.g.
-" the entire MacVim menu is set up in a nib file which currently only is
-" translated to English).
-set langmenu=none
-
-" Clipboard
-" http://stackoverflow.com/questions/677986/vim-copy-selection-to-os-x-clipboard
-set clipboard=unnamed
-
-" Plugins
-filetype plugin on
-
-autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
-
-set undodir=~/.vim/tmp/undo//
-set backupdir=~/.vim/tmp/backup//
-set directory=~/.vim/tmp/swap//
-
-" exe "cd ~/Sites/"
+nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+nmap <silent> <leader>t :TlistToggle<CR>
+nmap <silent> <leader>b :BufExplorer<CR>
 
 " @end
 
 " @group statusline
-
-set shortmess=a   " Use abbreviated messages
-set shortmess+=T  " Truncate messages in the middle if too long
-set shortmess+=I  " Disable intro message
-set shortmess+=t  " Truncate filename at start if too long
-set shortmess+=o  " Do not prompt to overwrite file
-set shortmess+=O
 
 set showcmd       " Display the command in the last line
 set showmode      " Display the current mode in the last line
@@ -161,9 +135,6 @@ set guioptions=Acer
 set guifont=Anonymous\ Pro:h11
 set linespace=2
 
-set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04l,%04v]
-set laststatus=2
-
 let g:Powerline_stl_path_style = 'relative'
 call Pl#Theme#RemoveSegment('scrollpercent')
 call Pl#Theme#RemoveSegment('fileformat')
@@ -174,25 +145,19 @@ call Pl#Theme#RemoveSegment('filetype')
 
 " @group buffers and windows
 
-nmap <right> :bp<cr>
-nmap <left> :bn<cr>
-nmap <up> :vert sb #<cr>
-nmap <down> :topleft new #<CR>
+" nmap <right> :botright vnew #<cr>
+" nmap <left> :topleft vnew #<cr>
+nmap <up> :topleft new #<CR>
+nmap <down> :botright new #<cr>
 nmap <tab> <C-w>w
 nmap <s-tab> <C-w>h
-nmap <tab><tab> :BufExplorer<CR>
-nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 nmap <esc> <C-w>c
-nmap <esc><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
-
-set splitright         " When splitting vertically, split to the right
-set splitbelow         " When splitting horizontally, split below
 
 " @end
 
 @group reference
 
-nmap <backspace><backspace> :Sscratch<CR>
+nmap <left> :Sscratch<CR>
 nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
 
 @end
@@ -224,6 +189,7 @@ autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufNewFile,BufRead *.html.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufNewFile,BufRead *.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufNewFile,BufRead *.html setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
@@ -242,6 +208,7 @@ imap <C-tab> <C-p>
 function! s:SparkupNext()
   " 1: empty tag, 2: empty attribute, 3: empty line
   let n = search('><\/\|\(""\)\|^\s*$', 'Wp')
+
   if n == 3
     startinsert!
   else
@@ -249,17 +216,6 @@ function! s:SparkupNext()
     startinsert
   endif
 endfunction
-
-" @end
-
-" @group switching modes
-
-" Remap escape insert mode
-imap ,, <Esc>
-
-" Comma save
-map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
-" :JSLintUpdate<CR>
 
 " @end
 
@@ -281,8 +237,6 @@ cmap <C-t> <up>
 cmap <C-h> <down>
 cmap <C-b> <s-left>
 cmap <C-w> <s-right>
-cmap <C-0> <C-[>0i
-cmap <C-_> <C-[>-a
 
 " @end
 
@@ -312,19 +266,12 @@ nmap <S-Enter> i<Enter><ESC>
 map <C-o> o<C-[>
 map <C-O> O<C-[>
 
-" scrolling up and down
-" nmap <space> <c-f>zz
-" nmap <s-space> <c-b>zz
 nmap <space> a<space><esc>
 nmap <s-space> a<space><esc>d
 
 " @end
 
-" @group utility remaps
-
-nmap <S-u> <C-r>
-
-" @group project files & searching
+" @group file management and searches
 
 nnoremap / /\v
 vnoremap / /\v
@@ -335,25 +282,14 @@ set incsearch
 set showmatch
 set hlsearch
 
-let g:NERDTreeWinPos="right"
-
-nmap <silent> ` :PeepOpen<CR>
+imap ,, <Esc>
+map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
-nmap <silent> `` :NERDTree<CR>
-
-let g:ctrlp_working_path_mode = 0
-
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtClearCache()':       ['<c-r>'],
-  \ 'PrtSelectMove("j")':    ['<c-h>'],
-  \ 'PrtSelectMove("k")':    ['<c-t>'],
-  \ 'PrtCurLeft()':          ['<c-d>'],
-  \ 'PrtCurRight()':         ['<c-n>'],
-  \ 'AcceptSelection("vs")': ['<s-Enter>'],
-  \ 'PrtCurStart()':         ['<c-0>'],
-  \ 'PrtCurEnd()':           ['<c-->']
-  \ }
-
+nmap <silent> ` :PeepOpen<CR>
+nmap <silent> <right> :NERDTree<CR>
+" nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
+"
 " @end
 
 " @group dvorak
@@ -375,6 +311,11 @@ no _ 0
 no j d
 no l n
 no L N
+nmap <S-u> <C-r>
+
+" moving around on screen
+no B H
+no W L
 
 " quick macros
 no <c-.> @q
@@ -531,6 +472,7 @@ function! g:postVicle()
   " :topleft split ~/screenlog.0
   " :setlocal autoread
   :Tail ~/screenlog.0
+  :AnsiEsc
   exe "normal \<c-w>\<Down>"
 endfunction
 
@@ -541,7 +483,7 @@ map <c-g><c-g> :split ~/screenlog.0<CR>:setlocal autoread<CR>
 
 " @end
 
-" @group syntastic
+" @group syntastic & jshint
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -555,7 +497,7 @@ let g:syntastic_auto_loc_list=1
 
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
-  \ 'active_filetypes': ['js', 'php'],
+  \ 'active_filetypes': ['php'],
   \ 'passive_filetypes': ['html', 'js']
   \ }
 

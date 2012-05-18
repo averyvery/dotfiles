@@ -193,9 +193,10 @@ source $ZSH/oh-my-zsh.sh
 
 # @end
 
-# @group svim
+# @group vim
 
 function s { killall SCREEN; local dir=`pwd`; cd ~; screen -S main -L; cd $dir; }
+bindkey -v
 
 # Autoload screen if we aren't in it.  (Thanks Fjord!)
 # if [[ $STY = '' ]] then screen -xR; fi

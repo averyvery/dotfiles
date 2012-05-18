@@ -25,14 +25,14 @@ hi Search  guifg=NONE guibg=#405357 gui=NONE
 hi Directory  guifg=#da6665 guibg=NONE gui=NONE
 
 hi Folded  guifg=#39515c guibg=#111a1e gui=NONE
-hi LineNr  guifg=#1f2b30 guibg=#000000 gui=NONE
+hi LineNr  guifg=#395159 guibg=#111a1e gui=NONE
 hi Comment  guifg=#39515c guibg=#111a1e gui=italic
 hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 
 " Ident Guides
-hi IndentGuidesEven  guifg=#395159 guibg=#000000 ctermbg=3
-hi IndentGuidesOdd guifg=#395159 guibg=#1E2A30 ctermbg=4
+hi IndentGuidesEven  guifg=#1f2b30 guibg=#000000 ctermbg=3
+hi IndentGuidesOdd guifg=#1f2b30 guibg=#111a1e ctermbg=4
 
 hi Normal  guifg=#ffffff guibg=#111a1e gui=NONE
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE
