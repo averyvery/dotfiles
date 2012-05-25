@@ -34,6 +34,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/Tail-Bundle'
 Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'jtaby/Waldo'
+Bundle 'vim-scripts/genutils'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -58,8 +60,6 @@ set virtualedit=onemore
 set invmmta
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
-set relativenumber
-set numberwidth=1
 set scrolloff=5
 set nocompatible
 set lazyredraw
@@ -84,6 +84,15 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 
 autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
+
+" @end
+
+" @group numbers
+
+set relativenumber
+set numberwidth=1
+autocmd BufLeave * setlocal nonumber norelativenumber
+autocmd BufEnter * setlocal number relativenumber
 
 " @end
 
@@ -114,6 +123,8 @@ nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 nmap <silent> <leader>t :TlistToggle<CR>
 nmap <silent> <leader>b :BufExplorer<CR>
+nmap <leader>c :topleft cwindow<CR>
+nmap <D-F> <Plug>Waldo
 
 " @end
 
@@ -133,7 +144,11 @@ set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
 colorscheme handcrafted
 set guioptions=Acer
 set guifont=Anonymous\ Pro:h11
-set linespace=2
+set guifont=Inconsolata:h10
+set guifont=ProggyCleanTT:h13
+set guifont=DroidSansMono:h9
+" set noantialias
+set linespace=3
 
 let g:Powerline_stl_path_style = 'relative'
 call Pl#Theme#RemoveSegment('scrollpercent')
@@ -150,7 +165,6 @@ call Pl#Theme#RemoveSegment('filetype')
 nmap <up> :topleft new #<CR>
 nmap <down> :botright new #<cr>
 nmap <tab> <C-w>w
-nmap <s-tab> <C-w>h
 nmap <esc> <C-w>c
 
 " @end
@@ -158,7 +172,7 @@ nmap <esc> <C-w>c
 @group reference
 
 nmap <left> :Sscratch<CR>
-nmap <backspace> :vs ~/dotfiles/vim/wiki/index.wiki<CR>
+nmap <backspace> :topleft split ~/dotfiles/vim/wiki/index.wiki<CR>:setlocal nonumber<CR>
 
 @end
 
@@ -199,11 +213,12 @@ autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 " @group expansion and completion
 
 let g:sparkupExecuteMapping = '<c-a>'
-let g:UltiSnipsListSnippets = '<s-tab>'
+let g:UltiSnipsListSnippets = '<m-tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 
 " Completion
-imap <C-tab> <C-p>
+imap <S-tab> <C-p>
+
 
 function! s:SparkupNext()
   " 1: empty tag, 2: empty attribute, 3: empty line
@@ -288,7 +303,6 @@ let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
 nmap <silent> ` :PeepOpen<CR>
 nmap <silent> <right> :NERDTree<CR>
-" nmap <s-tab><s-tab> :BufExplorerVerticalSplit<CR>
 "
 " @end
 
@@ -411,7 +425,7 @@ function! Clear()
   :silent !rm ~/.vim_session
 endfunction
 
-nmap <esc><esc><esc> :call Clear()<CR>
+nmap <esc><esc> :call Clear()<CR>
 
 " @end
 

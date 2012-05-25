@@ -12,7 +12,7 @@ let g:colors_name = "Handcrafted"
 
 hi Cursor  guifg=NONE guibg=#4e5a61 gui=NONE
 hi Visual  guifg=NONE guibg=#2a312e gui=NONE
-hi CursorLine guifg=NONE guibg=#080d0f gui=NONE
+hi CursorLine guifg=NONE guibg=#0b1114 gui=NONE
 hi CursorColumn  guifg=NONE guibg=NONE gui=NONE
 hi VertSplit  guifg=#111a1e guibg=#111a1f gui=NONE
 hi MatchParen  guifg=#e4a246 guibg=NONE gui=NONE
@@ -31,8 +31,8 @@ hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 
 " Ident Guides
-hi IndentGuidesEven  guifg=#1f2b30 guibg=#000000 ctermbg=3
-hi IndentGuidesOdd guifg=#1f2b30 guibg=#111a1e ctermbg=4
+hi IndentGuidesEven  guifg=#24353d guibg=#0b1114 ctermbg=3
+hi IndentGuidesOdd guifg=#152025 guibg=#0b1114 ctermbg=4
 
 hi Normal  guifg=#ffffff guibg=#111a1e gui=NONE
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE

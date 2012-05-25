@@ -1,21 +1,29 @@
 = Todo =
 
-Kettler ticket
+Write brian regan post
+
+Personal:
+  Jenn wedding
 
 Shure:
-  Add swap JS to the parts page
-  New pages:
-    image downloadz
+  Standardize the damn headline stuff
+  Standardize on the normal "page" layout
+    Includes "coming soon", "images for download", so much more
+    "pages-hd" ugh
+  Discontinued views don't match current site
+    Headlines in wrong place
+    No pagination
+  Undeveloped pages:
     product comparison
     news/events
-  Idea: Rename section to "s", block to "b"?
-  Accessories table and access table mobile seem....similar
-  Same with shared discontinued mobile
-  Earphones/headphones type is screwy, img heights
+  onImgError
+  Aria roles
+  Microdata
+  Product Comparison Styles
+  Cleanup existing sections
 
 Viget:
-  Get time off for parents
-  Orientation docs - VMware, PHP, etc
+  Orientation docs - PHP, etc
   Labshare idea?
   OOCSS
     PM - markup is never done
@@ -26,11 +34,9 @@ Viget:
 Open Sores:
   Freeway - wildcard routing not actually happening
 
-Personal:
-  Gift for rachel
-  Jenn wedding
-
 Computer:
+  Self github hooks - CSS, lint
+  http://csslint.net/
   jitouch
   boom
   expandtext
@@ -38,7 +44,7 @@ Computer:
 
 = Notes =
 
-VMware password: Laoo,rpe
+VMware password: Laoo,rpe1
 
 
 = VIM =
@@ -48,6 +54,9 @@ VMware password: Laoo,rpe
 BMW screen nav
 <C-a> in insert - paste last insert
 
+gk and gj to move up and down the display lines of a document (incredibly useful where a long line has been wrapped over several display lines)
+gf open the file under the cursor (for example, an included file)
+
 
 = ZSH =
 
@@ -56,6 +65,7 @@ BMW screen nav
 
 = Pages =
 
+- EsteemPassChanges
 - WikiNotes
 - FeaturePlugin
 - ClassingSystem
