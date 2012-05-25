@@ -165,7 +165,6 @@ call Pl#Theme#RemoveSegment('filetype')
 nmap <up> :topleft new #<CR>
 nmap <down> :botright new #<cr>
 nmap <tab> <C-w>w
-nmap <esc> <C-w>c
 
 " @end
 
@@ -218,7 +217,6 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 
 " Completion
 imap <S-tab> <C-p>
-
 
 function! s:SparkupNext()
   " 1: empty tag, 2: empty attribute, 3: empty line
@@ -297,8 +295,10 @@ set incsearch
 set showmatch
 set hlsearch
 
-imap ,, <Esc>
+imap ,, <esc>
 map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+map <silent> <esc> :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
 nmap <silent> ` :PeepOpen<CR>
