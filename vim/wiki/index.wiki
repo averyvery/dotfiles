@@ -1,45 +1,58 @@
+ = Pages =
+
+ - MeditationInstruction
+ - SixObstaclesToMeditation
+ - SystemDesignLabshare
+ - GathasToLearn
+ - OoCssLabshare
+ - BuildADynamicHTTPServer
+ - EsteemPassChanges
+ - WikiNotes
+ - FeaturePlugin
+ - ClassingSystem
+ - JobCriteria
+
+
 = Todo =
 
-Write brian regan post
-
-Personal:
-  Jenn wedding
-
-Shure:
-  Standardize the damn headline stuff
-  Standardize on the normal "page" layout
-    Includes "coming soon", "images for download", so much more
-    "pages-hd" ugh
-  Discontinued views don't match current site
-    Headlines in wrong place
-    No pagination
-  Undeveloped pages:
-    product comparison
-    news/events
-  onImgError
-  Aria roles
-  Microdata
-  Product Comparison Styles
-  Cleanup existing sections
-
-Viget:
-  Orientation docs - PHP, etc
-  Labshare idea?
-  OOCSS
-    PM - markup is never done
-    UX - all units have names and visual variations
-    DESIGNERS - watch for repeatable styles
-    DEVS - let us know where we can simplify markup
+Self
+  Try sublime
+  Homeland
+  Cat sitting
+  How to work? Pomodoro? Public?
+  How to start lucid?
+  Meditation god dammit
+  Whale watching
 
 Open Sores:
+  http://keyamoon.com/icomoon/app/
+  Hieroglyph - show errors, actual "setup" feedback
+  Freebie - weird variable bug?
   Freeway - wildcard routing not actually happening
 
-Computer:
-  Self github hooks - CSS, lint
-  http://csslint.net/
-  jitouch
-  boom
-  expandtext
+Viget:
+  Non-rails projects with Guard
+  Labshare in august
+  Write brian regan post
+  VirtualHostX setup
+
+Shure:
+  Organize CSS
+  To refactor
+    Merge the tops of products/show and systems/show
+    Less markup
+      sites/index
+      sites/show
+  Mobile woes
+    Mobile tables are crap
+    http://www.shure.dev:3000/americas/products/accessories?mobile=1
+  Overall improvements
+    Microdata
+    Print css
+
+try rake ts:config
+then rake ts:start
+Ryan F.	rake ts:index
 
 
 = Notes =
@@ -49,7 +62,7 @@ VMware password: Laoo,rpe1
 
 = VIM =
 
-* find char
+* find word
 @: redo last ex
 BMW screen nav
 <C-a> in insert - paste last insert
@@ -62,12 +75,4 @@ gf open the file under the cursor (for example, an included file)
 
 <C-i> search commands
 
-
-= Pages =
-
-- EsteemPassChanges
-- WikiNotes
-- FeaturePlugin
-- ClassingSystem
-- JobCriteria
 

@@ -112,6 +112,8 @@ autocmd InsertLeave * setlocal timeoutlen=500
 
 let mapleader="\\"
 
+nmap <leader><space> :set nowrap<CR>
+nmap <leader><s-space> :set wrap<CR>
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
@@ -124,6 +126,14 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 nmap <silent> <leader>t :TlistToggle<CR>
 nmap <silent> <leader>b :BufExplorer<CR>
 nmap <leader>c :topleft cwindow<CR>
+
+function! Load()
+  echo 'Session loaded'
+  source ~/.vim_session
+endfunction
+
+nmap <leader>o :call Load()<CR>
+
 nmap <D-F> <Plug>Waldo
 
 " @end
@@ -143,10 +153,9 @@ set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
 
 colorscheme handcrafted
 set guioptions=Acer
-set guifont=Anonymous\ Pro:h11
-set guifont=Inconsolata:h10
-set guifont=ProggyCleanTT:h13
-set guifont=DroidSansMono:h9
+set guifont=Anonymous\ Pro:h12
+" set guifont=Anonymous\ Pro:h11
+" set guifont=DroidSansMono:h9
 " set noantialias
 set linespace=3
 
@@ -192,7 +201,6 @@ set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
 
 autocmd BufWinEnter,BufNewFile * set list
 
-autocmd BufNewFile,BufRead *.mustache setlocal filetype=html noexpandtab
 autocmd BufNewFile,BufRead *.css setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.css.php setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.less setlocal filetype=css noexpandtab
@@ -210,10 +218,11 @@ autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 " @end
 
 " @group expansion and completion
-
+"
 let g:sparkupExecuteMapping = '<c-a>'
-let g:UltiSnipsListSnippets = '<m-tab>'
+let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsListSnippets = '<m-tab>'
 
 " Completion
 imap <S-tab> <C-p>
@@ -295,8 +304,6 @@ set incsearch
 set showmatch
 set hlsearch
 
-imap ,, <esc>
-map <silent> ,, :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
 map <silent> <esc> :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
 
 let g:NERDTreeWinPos='right'
@@ -418,14 +425,13 @@ autocmd VimEnter * call BindIndentAction('>')
 " @group session
 
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-source ~/.vim_session
 
 function! Clear()
   echo 'Session cleared'
   :silent !rm ~/.vim_session
 endfunction
 
-nmap <esc><esc> :call Clear()<CR>
+" nmap <esc><esc> :call Clear()<CR>
 
 " @end
 
