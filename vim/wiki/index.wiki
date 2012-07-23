@@ -1,78 +1,81 @@
- = Pages =
-
- - MeditationInstruction
- - SixObstaclesToMeditation
- - SystemDesignLabshare
- - GathasToLearn
- - OoCssLabshare
- - BuildADynamicHTTPServer
- - EsteemPassChanges
- - WikiNotes
- - FeaturePlugin
- - ClassingSystem
- - JobCriteria
-
-
 = Todo =
 
-Self
-  Try sublime
-  Homeland
-  Cat sitting
-  How to work? Pomodoro? Public?
-  How to start lucid?
-  Meditation god dammit
-  Whale watching
+TODAY
+  Estimate any FED component tickets - shure
+  Add modules to the dashboard
+  Shure 404 page
+  Vol+, Vol-, Mute bindings
 
-Open Sores:
-  http://keyamoon.com/icomoon/app/
-  Hieroglyph - show errors, actual "setup" feedback
-  Freebie - weird variable bug?
-  Freeway - wildcard routing not actually happening
+WORK
+  How to add labels?
+  Outline Labshare
+  Start emvy skeleton
+  Shure:
+    Fix broken-ass configurations
+    Remove ALL div3/4 stuff from the site
+    Tablelist (esp. on product_types) sucks
+    BGs are effed?
+      http://shure.integration.vigetx.com/americas/products/microphones/pg
+      http://shure.integration.vigetx.com/americas/products/microphones/beta/sm57-beta
 
-Viget:
-  Non-rails projects with Guard
-  Labshare in august
-  Write brian regan post
-  VirtualHostX setup
+PERSONAL
+ - Goals + intermediate steps
+ - How to start lucid?
+ - Meditation god dammit
+ - Freeway - wildcard routing not actually happening
 
-Shure:
-  Organize CSS
-  To refactor
-    Merge the tops of products/show and systems/show
-    Less markup
-      sites/index
-      sites/show
-  Mobile woes
-    Mobile tables are crap
-    http://www.shure.dev:3000/americas/products/accessories?mobile=1
-  Overall improvements
-    Microdata
-    Print css
+IDEAS
+ - Play with coffeescript
+ - Play with Backbone?
+ - Use http://www.vim.org/scripts/script.php?script_id=3130 to bind start/end jumps?
+ - Better git mv
+ - Using box-sizing and border-width to pad
+ - just have to remember to give explicit widths to ie7 for any elements that use box-sizing
+ - rem: https://github.com/vigetlabs/penn-admissions/blob/master/assets/sass/_mixins.scss
+ - what's the advantage of using rems in the font-size mixin?
 
-try rake ts:config
-then rake ts:start
-Ryan F.	rake ts:index
-
+Doug Avery
+when i want to mess with vim plugins, i just fork them and add the fork to Vundle
+12:04
+Alex
+autoload/Powerline/Segments/fugitive.vim and autoload/Powerline/Functions/fugitive.vim
+12:04
+Doug Avery
+been pretty happy with that flow
+12:04
+Alex
+one creates, one loads it
 
 = Notes =
 
-VMware password: Laoo,rpe1
+Virtual Box password:
+Laoo,rpe1
 
-
-= VIM =
-
+make a habit out of committing from within Vim
+e end of word
+= to line up shit
 * find word
 @: redo last ex
 BMW screen nav
 <C-a> in insert - paste last insert
+:sh and ctrl-d
+:lcd -> change directory in JUST ONE WINDOW
+:tag -> search CTAGS
 
 gk and gj to move up and down the display lines of a document (incredibly useful where a long line has been wrapped over several display lines)
 gf open the file under the cursor (for example, an included file)
 
-
-= ZSH =
-
 <C-i> search commands
 
 
+= Pages =
+
+- ToRead
+- BirthdayPresents
+- AboutMe
+- PersonalValues
+- MeditationInstruction
+- SixObstaclesToMeditation
+- InspectorLabshare
+- GathasToLearn
+- JobCriteria

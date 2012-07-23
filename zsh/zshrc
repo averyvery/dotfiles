@@ -182,7 +182,7 @@ source $ZSH/oh-my-zsh.sh
 
 # @group paths
 
-  export PATH="/usr/local/share/python:node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
+  export PATH=":/usr/local/share/python:node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
   export EDITOR='mvim -w'
 
 # @end
@@ -314,13 +314,10 @@ bindkey -M vicmd ",," vi-movement-mode
 
 # @end
 
-# @group initial display
-
-  echo "IT'S A UNIX SYSTEM - I KNOW THIS!"
-  rvm="$(rvm list | fgrep '=' | awk '{FS = "=>"; print $2}')"
-  ip="$(ifconfig en1 | fgrep 'inet ' | awk '{print $2}')"
-  echo "RUBY: $rvm  |  IP: $ip"
-
 # @end
+
+# @group node
+
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # @end

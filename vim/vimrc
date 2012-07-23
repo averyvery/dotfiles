@@ -29,13 +29,14 @@ Bundle 'markabe/bufexplorer'
 Bundle 'sjl/clam.vim'
 Bundle 'averyvery/jshint.vim'
 Bundle 'averyvery/vim-scratch'
-Bundle 'averyvery/Vicle'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/Tail-Bundle'
+Bundle 'majutsushi/tagbar'
+Bundle 'mikewest/vimroom'
 Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'vim-scripts/taglist.vim'
+" Bundle 'int3/vim-taglist-plus'
 Bundle 'jtaby/Waldo'
 Bundle 'vim-scripts/genutils'
+Bundle 'tell-k/vim-browsereload-mac'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -118,10 +119,9 @@ nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 nmap <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
-nmap <Leader>v :vs $MYVIMRC<CR>
-nmap <leader>vv :echo ".vimrc reloaded!"<CR>:silent source $MYVIMRC<CR>
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
+
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 nmap <silent> <leader>t :TlistToggle<CR>
 nmap <silent> <leader>b :BufExplorer<CR>
@@ -140,40 +140,39 @@ nmap <D-F> <Plug>Waldo
 
 " @group statusline
 
-set showcmd       " Display the command in the last line
-set showmode      " Display the current mode in the last line
-set report=1      " Always report the number of lines changed
+" set showcmd       " Display the command in the last line
+" set showmode      " Display the current mode in the last line
+" set report=1      " Always report the number of lines changed
 set ruler         " Display info on current position
 set laststatus=2  " Always show status line
-set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
+" set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
 
 " @end
 
 " @group visuals
 
 colorscheme handcrafted
+colorscheme handcrafted
 set guioptions=Acer
-set guifont=Anonymous\ Pro:h12
-" set guifont=Anonymous\ Pro:h11
+" set guifont=Anonymous\ Pro:h12
+" set guifont=Anonymous\ Pro:h12
+" set guifont=Monaco:h10
 " set guifont=DroidSansMono:h9
+" set guifont=Anonymous\ Pro:h12
+" set guifont=DroidSansMono:h12
+" set guifont=Andale\ Mono:h12
+" set guifont=Monaco:h12
+set guifont=Menlo:h12
 " set noantialias
-set linespace=3
+set linespace=5
 
 let g:Powerline_stl_path_style = 'relative'
+call Pl#Theme#RemoveSegment('mode_indicator')
+call Pl#Theme#RemoveSegment('fugitive:branch')
 call Pl#Theme#RemoveSegment('scrollpercent')
 call Pl#Theme#RemoveSegment('fileformat')
 call Pl#Theme#RemoveSegment('fileencoding')
 call Pl#Theme#RemoveSegment('filetype')
-
-" @end
-
-" @group buffers and windows
-
-" nmap <right> :botright vnew #<cr>
-" nmap <left> :topleft vnew #<cr>
-nmap <up> :topleft new #<CR>
-nmap <down> :botright new #<cr>
-nmap <tab> <C-w>w
 
 " @end
 
@@ -218,7 +217,14 @@ autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 " @end
 
 " @group expansion and completion
-"
+
+" function! g:expandUltisnip()
+"   exec g:_uspy 'UltiSnips_Manager.expand()'
+"   exec '<esc>'
+" endfunction
+
+" imap <tab> <c-o>:call g:expandUltisnip()<CR><esc>
+
 let g:sparkupExecuteMapping = '<c-a>'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -304,7 +310,20 @@ set incsearch
 set showmatch
 set hlsearch
 
-map <silent> <esc> :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+" map <silent> <esc> :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
+" not really working
+function! Reload()
+  echo &filetype
+  if &filetype == 'javascript' || &filetype == 'html' || &filetype == 'css'
+    echo "Reloading Chrome"
+    call :ChromeReload()
+  endif
+endfunction
+
+let g:returnApp = "Google Chrome"
+
+nmap <silent> <esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:w<CR>
+nmap <silent> <s-esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:silent! w<CR>:ChromeReload<CR>
 
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
@@ -338,6 +357,8 @@ nmap <S-u> <C-r>
 no B H
 no W L
 
+no J "_dd
+
 " quick macros
 no <c-.> @q
 
@@ -349,6 +370,8 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " Bubbling
 no <c-m-t> :m-2<cr>
 no <c-m-h> :m+<cr>
+no <c-m-n> <<
+no <c-m-s> >>
 
 " @end
 
@@ -431,76 +454,6 @@ function! Clear()
   :silent !rm ~/.vim_session
 endfunction
 
-" nmap <esc><esc> :call Clear()<CR>
-
-" @end
-
-" @group repl
-
-function! Repl()
-  let repl_command = ''
-  if &filetype == 'javascript'
-    let repl_command = 'node'
-  endif
-  if &filetype == 'ruby'
-    let repl_command = 'irb'
-  endif
-  if &filetype == 'php'
-    let repl_command = 'phpsh'
-  endif
-  call system("screen -S main -p 0 -X stuff " . repl_command . "\r")
-endfunction
-
-map <c-r><c-r> :call Repl()<CR>
-
-function! QuitRepl()
-  let repl_quit = ''
-  if &filetype == 'javascript'
-    let repl_quit = 'process.exit()'
-  endif
-  if &filetype == 'ruby'
-    let repl_quit = 'quit'
-  endif
-  if &filetype == 'php'
-    let repl_quit = 'q'
-  endif
-  call system("screen -S main -p 0 -X stuff " . repl_quit . "\r")
-endfunction
-
-map <c-l><c-l> :call QuitRepl()<CR>
-
-function! Screen()
-  let command = input('command: ')
-  call system('screen -S main -p 0 -X stuff ' . command . '\r')
-endfunction
-
-map <c-f><c-f> :call Screen()<CR>
-
-let g:vicle_session_name    = 'main'
-let g:vicle_session_window  = '0'
-let g:vicle_history_active   = 1 " active history
-let g:vicle_edition_mode     = 1 " active edition mode
-let g:vicle_selection_string = "0v$y"  " yank current line
-let g:vicle_hcs             = '~~~your_command_separator~~~'
-
-function! g:preVicle()
-  call system('> ~/screenlog.0')
-  call system('echo "New log" >> ~/screenlog.0')
-endfunction
-
-function! g:postVicle()
-  " :topleft split ~/screenlog.0
-  " :setlocal autoread
-  :Tail ~/screenlog.0
-  :AnsiEsc
-  exe "normal \<c-w>\<Down>"
-endfunction
-
-
-" http://stackoverflow.com/questions/6639863/vim-split-unless-open
-" map <c-g><c-g> :silent !echo -n > ~/screenlog.0<CR>:split ~/screenlog.0<CR>:setlocal autoread<CR>
-map <c-g><c-g> :split ~/screenlog.0<CR>:setlocal autoread<CR>
-
 " @end
 
 " @group syntastic & jshint
@@ -520,5 +473,41 @@ let g:syntastic_mode_map = {
   \ 'active_filetypes': ['php'],
   \ 'passive_filetypes': ['html', 'js']
   \ }
+
+" @end
+
+" @group buffers and windows
+
+nmap <up> :topleft new #<CR>
+nmap <down> :botright new #<cr>
+nmap <tab> <C-w>w
+
+" @end
+
+" @group newstuff
+
+nmap <leader>t :TagbarToggle<CR>
+
+" @end
+
+" @group grep
+
+function! Grep()
+  let file = input('filetype: ')
+  execute 'normal :vimgrep // **/*.' . file . '<left><left><left><left><left><left><left><left>'
+endfunction
+
+" nmap <leader>g :call Grep()<CR>
+
+" @end
+
+" @group fugitive
+
+nnoremap <silent> <leader>=s :Gstatus<CR>
+nnoremap <silent> <leader>=d :Gdiff<CR>
+nnoremap <silent> <leader>=c :Gcommit<CR>
+nnoremap <silent> <leader>=b :Gblame<CR>
+nnoremap <silent> <leader>=l :Glog<CR>
+nnoremap <silent> <leader>=p :Git push<CR>
 
 " @end
