@@ -32,11 +32,10 @@ Bundle 'averyvery/vim-scratch'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'mikewest/vimroom'
-Bundle 'vim-scripts/AnsiEsc.vim'
-" Bundle 'int3/vim-taglist-plus'
+Bundle 'mileszs/ack.vim'
 Bundle 'jtaby/Waldo'
 Bundle 'vim-scripts/genutils'
-Bundle 'tell-k/vim-browsereload-mac'
+Bundle 'averyvery/vim-browsereload-mac'
 
 " keep vim indent guides LAST. It messes stuff up
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -119,6 +118,7 @@ nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 nmap <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
+nmap <leader>a :Ack --type=
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 

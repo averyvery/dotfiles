@@ -11,3 +11,4 @@ Setup:
 - ln -s ~/dotfiles/butler/Configuration.butleritems ~/Library/Application\ Support/Butler/Configuration.butleritems
 - ln -s ~/dotfiles/screen/screenrc ~/.screenrc
 - ln -s ~/dotfiles/jshint/jshintrc ~/.jshintrc
+- ln -s ~/dotfiles/ack/ackrc ~/.ackrc
