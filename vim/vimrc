@@ -13,28 +13,34 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'sjl/gundo.vim'
+
+" some basics
 Bundle 'vim-scripts/L9'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'vim-scripts/genutils'
+
+" file management
+Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shemerey/vim-peepopen'
-Bundle 'skammer/vim-css-color'
+
+" apps
 Bundle 'vim-scripts/vimwiki'
-Bundle 'SirVer/ultisnips'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'averyvery/vim-scratch'
+
+" languages
+Bundle 'averyvery/sparkup', {'rtp': 'vim/'}
+Bundle 'skammer/vim-css-color'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
-Bundle 'markabe/bufexplorer'
-Bundle 'sjl/clam.vim'
-Bundle 'averyvery/jshint.vim'
-Bundle 'averyvery/vim-scratch'
 Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'mikewest/vimroom'
+
+" tools
+Bundle 'sjl/gundo.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'Lokaltog/vim-powerline'
+
+" searching
 Bundle 'mileszs/ack.vim'
-Bundle 'jtaby/Waldo'
-Bundle 'vim-scripts/genutils'
 Bundle 'averyvery/vim-browsereload-mac'
 
 " keep vim indent guides LAST. It messes stuff up
@@ -50,11 +56,13 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 " @group weird settings
 
+set nrformats=
 set nocompatible
 set modelines=0
 set encoding=utf-8
-set wildmode=longest:full
-set wildmenu
+set history=5000
+" set wildmode=longest:full
+" set wildmenu
 set ttyfast
 set virtualedit=onemore
 set invmmta
@@ -122,8 +130,6 @@ nmap <leader>a :Ack --type=
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-nmap <silent> <leader>t :TlistToggle<CR>
 nmap <silent> <leader>b :BufExplorer<CR>
 nmap <leader>c :topleft cwindow<CR>
 
@@ -155,20 +161,28 @@ colorscheme handcrafted
 colorscheme handcrafted
 set guioptions=Acer
 " set guifont=Anonymous\ Pro:h12
-" set guifont=Anonymous\ Pro:h12
 " set guifont=Monaco:h10
 " set guifont=DroidSansMono:h9
 " set guifont=Anonymous\ Pro:h12
 " set guifont=DroidSansMono:h12
 " set guifont=Andale\ Mono:h12
 " set guifont=Monaco:h12
-set guifont=Menlo:h12
-" set noantialias
-set linespace=5
+" set guifont=Menlo:h12
+" set guifont=Panic\ Sans:h12
 
+" patched fonts
+" set guifont=Inconsolata:h14
+" set guifont=Mensch\ for\ Powerline:h12
+" set guifont=DroidSansMono:h12
+set guifont=Ubuntu\ Mono:h14
+
+" set noantialias
+" set linespace=6
+
+let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
 call Pl#Theme#RemoveSegment('mode_indicator')
-call Pl#Theme#RemoveSegment('fugitive:branch')
+" call Pl#Theme#RemoveSegment('fugitive:branch')
 call Pl#Theme#RemoveSegment('scrollpercent')
 call Pl#Theme#RemoveSegment('fileformat')
 call Pl#Theme#RemoveSegment('fileencoding')
@@ -176,17 +190,19 @@ call Pl#Theme#RemoveSegment('filetype')
 
 " @end
 
-@group reference
+" @group reference
 
 nmap <left> :Sscratch<CR>
 nmap <backspace> :topleft split ~/dotfiles/vim/wiki/index.wiki<CR>:setlocal nonumber<CR>
+nmap <s-backspace> :tabedit ~/dotfiles/vim/wiki/index.wiki<CR>
+" autocmd VimEnter * :e ~/dotfiles/vim/wiki/index.wiki
 
-@end
+" @end
 
 " @group indents and tabs
 
 " Tabs
-"
+
 set expandtab
 set shiftwidth=2
 set tabstop=2
@@ -218,32 +234,14 @@ autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
 
 " @group expansion and completion
 
-" function! g:expandUltisnip()
-"   exec g:_uspy 'UltiSnips_Manager.expand()'
-"   exec '<esc>'
-" endfunction
-
-" imap <tab> <c-o>:call g:expandUltisnip()<CR><esc>
-
 let g:sparkupExecuteMapping = '<c-a>'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsListSnippets = '<m-tab>'
 
 " Completion
-imap <S-tab> <C-p>
-
-function! s:SparkupNext()
-  " 1: empty tag, 2: empty attribute, 3: empty line
-  let n = search('><\/\|\(""\)\|^\s*$', 'Wp')
-
-  if n == 3
-    startinsert!
-  else
-    execute 'normal n'
-    startinsert
-  endif
-endfunction
+inoremap <S-esc> <C-p>
 
 " @end
 
@@ -251,37 +249,31 @@ endfunction
 
 " @group movement
 
-imap <C-n> <right>
-imap <C-d> <left>
-imap <C-t> <up>
-imap <C-h> <down>
-imap <C-b> <s-left>
-imap <C-w> <s-right>
-imap <C-0> <C-[>0i
-imap <C-_> <C-[>-a
-cmap <C-n> <right>
-cmap <C-d> <left>
-cmap <C-t> <up>
-cmap <C-h> <down>
-cmap <C-b> <s-left>
-cmap <C-w> <s-right>
+" imap <C-n> <right>
+" imap <C-d> <left>
+" imap <C-t> <up>
+" imap <C-h> <down>
+" imap <C-b> <s-left>
+" imap <C-w> <s-right>
+" imap <C-0> <C-[>0i
+" imap <C-_> <C-[>-a
 
 " @end
 
 " @group deletion
 
-imap <C-M-d> <C-[>dxi
-imap <C-M-n> <C-[>nxi
-imap <C-M-w> <C-[>wjwi
-imap <C-M-b> <C-[>jbi
-imap <C-M-v> <C-[>jwi
-imap <C-M-S-v> <C-[>jji
-cmap <C-M-d> <C-[>dxi
-cmap <C-M-n> <C-[>nxi
-cmap <C-M-w> <C-[>wjwi
-cmap <C-M-b> <C-[>jbi
-cmap <C-M-v> <C-[>jwi
-cmap <C-M-S-v> <C-[>jji
+" imap <C-M-d> <C-[>dxi
+" imap <C-M-n> <C-[>nxi
+" imap <C-M-w> <C-[>wjwi
+" imap <C-M-b> <C-[>jbi
+" imap <C-M-v> <C-[>jwi
+" imap <C-M-S-v> <C-[>jji
+" cmap <C-M-d> <C-[>dxi
+" cmap <C-M-n> <C-[>nxi
+" cmap <C-M-w> <C-[>wjwi
+" cmap <C-M-b> <C-[>jbi
+" cmap <C-M-v> <C-[>jwi
+" cmap <C-M-S-v> <C-[>jji
 
 " @end
 
@@ -289,10 +281,8 @@ cmap <C-M-S-v> <C-[>jji
 
 " @group add blank and spaces
 
-nmap <Enter> o<ESC>
-nmap <S-Enter> i<Enter><ESC>
-map <C-o> o<C-[>
-map <C-O> O<C-[>
+" nmap <Enter> o<ESC>
+" nmap <S-Enter> i<Enter><ESC>
 
 nmap <space> a<space><esc>
 nmap <s-space> a<space><esc>d
@@ -320,7 +310,7 @@ function! Reload()
   endif
 endfunction
 
-let g:returnApp = "Google Chrome"
+let g:returnApp = "Google Chrome Canary"
 
 nmap <silent> <esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:w<CR>
 nmap <silent> <s-esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:silent! w<CR>:ChromeReload<CR>
@@ -334,44 +324,34 @@ nmap <silent> <right> :NERDTree<CR>
 
 " @group dvorak
 
+" movement
 no d h
 no h j
-no <c-m-h> <s-l>
 no <s-h> 10j
 no t k
-no k t
-no <s-k> <s-t>
-no <c-m-t> <s-h>
 no <s-t> 10k
 no n l
-no <c-m-n> <s-m>
-no s :
-no - $
-no _ 0
+no S 0wc$
+
+" deletion
 no j d
+
+" search
 no l n
 no L N
-nmap <S-u> <C-r>
 
-" moving around on screen
-no B H
-no W L
+" 'til
+no k t
+no <s-k> <s-t>
 
-no J "_dd
+" finding use for - and _
+" no - :
+" no _ $
 
-" quick macros
-no <c-.> @q
+" with modifiers
 
-" quick ultisnip exit
-smap , <esc>
-
-let g:UltiSnipsRemoveSelectModeMappings = 0
-
-" Bubbling
-no <c-m-t> :m-2<cr>
-no <c-m-h> :m+<cr>
-no <c-m-n> <<
-no <c-m-s> >>
+" undo
+" nmap <S-u> <C-r>
 
 " @end
 
@@ -445,6 +425,15 @@ autocmd VimEnter * call BindIndentAction('>')
 
 " @end
 
+" @group bubbling
+
+no <c-m-t> :m-2<cr>
+no <c-m-h> :m+<cr>
+no <c-m-n> <<
+no <c-m-s> >>
+
+" @end
+
 " @group session
 
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
@@ -481,12 +470,6 @@ let g:syntastic_mode_map = {
 nmap <up> :topleft new #<CR>
 nmap <down> :botright new #<cr>
 nmap <tab> <C-w>w
-
-" @end
-
-" @group newstuff
-
-nmap <leader>t :TagbarToggle<CR>
 
 " @end
 

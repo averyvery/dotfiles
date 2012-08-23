@@ -36,3 +36,7 @@ Thumbs.db
 # Specific setting files #
 ######################
 .rvmrc
+
+# Just for WWF #
+######################
+paperclip.yml

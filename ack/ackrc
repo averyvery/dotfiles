@@ -1,4 +1,6 @@
 --type-add
 html=.haml
+--type-set
+erb=.erb
 --type-add
 css=.sass,.scss

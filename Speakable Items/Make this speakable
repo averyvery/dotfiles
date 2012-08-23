@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>BuiltInCommandID</key>
+	<integer>108</integer>
+	<key>alternativeSpokenFeedback</key>
+	<string>Define a phrase to associate with the selection</string>
+	<key>alternativeFeedback</key>
+	<string>...define a phrase to associate with the selection</string>
+	<key>DefaultCommandName</key>
+	<string>make this speakable</string>
+</dict>
+</plist>
