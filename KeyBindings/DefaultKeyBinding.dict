@@ -32,7 +32,7 @@
 	"^b" = "moveWordLeft:";
 	"^w" = "moveWordRight:";
 	"^0" = "moveToBeginningOfLine:";
-	"^-" = "moveToEndOfLine:";
+	"^\\$" = "moveToEndOfLine:";
 
 	/* Selecting */
 	"^D" = "moveLeftAndModifySelection:";
@@ -40,7 +40,7 @@
 	"^B" = "moveWordLeftAndModifySelection:";
 	"^W" = "moveWordRightAndModifySelection:";
 	"^)" = "moveToBeginningOfLineAndModifySelection:";
-	"^_" = "moveToEndOfLineAndModifySelection:";
+	"^\\$" = "moveToEndOfLineAndModifySelection:";
 
 	/* Deleting */
 	"^~d" = "deleteBackward:";
@@ -48,7 +48,7 @@
 	"^~b" = "deleteWordBackward:";
 	"^~w" = "deleteWordForward:";
 	"^~0" = "deleteToBeginningOfLine:";
-	"^~-" = "deleteToEndOfLine:";
+	"^~\\$" = "deleteToEndOfLine:";
 
 	/* Command Mode */
 	"^a" = {
@@ -117,7 +117,7 @@
 				"cut:"
 			);
 
-			"-" = (
+			"\\$" = (
 				"moveToEndOfLineAndModifySelection:",
 				"cut:"
 			);
@@ -139,7 +139,7 @@
 				"b"    = "deleteWordBackward:";
 				"w"    = "deleteWordForward:";
 				"0"    = "deleteToBeginningOfLine:";
-				"-"    = "deleteToEndOfLine:";
+				"\\$"    = "deleteToEndOfLine:";
 
 		};
 
