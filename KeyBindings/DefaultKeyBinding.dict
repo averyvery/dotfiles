@@ -40,7 +40,9 @@
 	"^B" = "moveWordLeftAndModifySelection:";
 	"^W" = "moveWordRightAndModifySelection:";
 	"^)" = "moveToBeginningOfLineAndModifySelection:";
-	"^\\$" = "moveToEndOfLineAndModifySelection:";
+	/*
+    "^\\$" = "moveToEndOfLineAndModifySelection:";
+  */
 
 	/* Deleting */
 	"^~d" = "deleteBackward:";

@@ -76,6 +76,8 @@ set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break chara
 set clipboard=unnamed
 set langmenu=none
 set backspace=indent,eol,start
+set guioptions=Acer
+
 filetype plugin on
 
 " http://stackoverflow.com/questions/3478755/macvim-open-file-in-existing-window
@@ -157,9 +159,23 @@ set laststatus=2  " Always show status line
 
 " @group visuals
 
-colorscheme handcrafted
-colorscheme handcrafted
-set guioptions=Acer
+if !has('gui_running')
+  " not sure why these aren't working
+  " set mouse=a
+  " set term=xterm
+
+  " http://stackoverflow.com/questions/3761770/iterm-vim-colorscheme-not-working
+  let &t_Co=256
+
+  set bg=dark
+  colorscheme solarized
+  syntax enable
+else
+  " For 8-color 16-color terminals or for gvim, just use the
+  " regular :colorscheme command.
+  colorscheme handcrafted
+endif
+
 " set guifont=Anonymous\ Pro:h12
 " set guifont=Monaco:h10
 " set guifont=DroidSansMono:h9
@@ -352,6 +368,10 @@ no <s-k> <s-t>
 
 " undo
 " nmap <S-u> <C-r>
+
+" only used for autocomplete
+inoremap <c-t> <up>
+inoremap <c-h> <down>
 
 " @end
 

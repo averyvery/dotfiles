@@ -1,17 +1,15 @@
 [[=]] Todo =
 
-PERSONAL:
-  - Thank the birthday bros
-  - Cash checks
-  - Dora's icons
-
-WORK/WORK
-  - Sections: Support, Downloads, Tools
-  - Sections: ES
-  - Sections: Mobile
-  - Publishing grafx from ryan
-  - Shure tickets
+SHURE:
   - [[ShureCleanup]]
+
+BD
+  - Paul's task
+
+PERSONAL:
+  - http://devot-ee.com/add-ons/support/freebie/viewthread/7004
+  - C the hard way
+  - Thank the birthday bros
 
 PROFDEV
   - finish vim book - 135

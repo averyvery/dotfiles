@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>STARCRAFT</appname>
+    <equal>com.blizzard.starcraft2</equal>
+  </appdef>
+
+  <item>
+    <name>Tilt to Click</name>
+    <identifier>private.tilt_to_click</identifier>
+    <block>
+      <only>STARCRAFT</only>
+      <appendix>(There is a limitation by behavoir of tilt wheel.</appendix>
+      <appendix>This setting does not support mouse drag.)</appendix>
+      <autogen>--ScrollWheelToKey-- ScrollWheel::DOWN,  KeyCode::VK_MOUSEKEY_BUTTON_LEFT</autogen>
+      <autogen>--ScrollWheelToKey-- ScrollWheel::UP, KeyCode::VK_MOUSEKEY_BUTTON_RIGHT</autogen>
+    </block>
+  </item>
+
+</root>
