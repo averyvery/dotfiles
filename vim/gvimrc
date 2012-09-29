@@ -3,23 +3,29 @@ if has("gui_macvim")
   macmenu &File.New\ Window key=<nop>
   macmenu &File.Close key=<nop>
   macmenu &File.Open\.\.\. key=<nop>
+  macmenu &Edit.Paste key=<nop>
+  macmenu &Edit.Copy key=<nop>
+  macmenu &Edit.Select\ All key=<nop>
+  macmenu &File.New\ Tab key=<nop>
+
+  map <mouseup> <nop>
+  map <mousedown> <nop>
 
   " remap cmd + w to close tab
-  " map <D-w> :tabclose<CR>
-  map <D-w> :clo<CR>
+  " map <D-w> :clo<CR>
 
   " remap cmd + n to new tab
   " map <D-n> :tabnew<CR>
   "
   " remap cmd + o to vsplit
-  map <D-o> :vsplit<CR><tab>`
+  " map <D-o> :vsplit<CR><tab>`
 
   " map cmd + enter to switch to full screen
-  map <D-Enter> :set invfu<CR>
+  " map <D-Enter> :set invfu<CR>
 
   " map cmd+1~9 to switch tab 1~9
-  for i in range(1, 9)
-    exec "nnoremap <D-".i."> ".i."gt"
-  endfor
+  " for i in range(1, 9)
+  "   exec "nnoremap <D-".i."> ".i."gt"
+  " endfor
 
 endif

@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 " some basics
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/genutils'
+Bundle 'tpope/vim-surround'
 
 " file management
 Bundle 'tpope/vim-fugitive'
@@ -52,6 +53,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
 " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
+runtime macros/matchit.vim
+
 " @end
 
 " @group weird settings
@@ -77,6 +80,8 @@ set clipboard=unnamed
 set langmenu=none
 set backspace=indent,eol,start
 set guioptions=Acer
+set ruler         " Display info on current position
+set laststatus=2  " Always show status line
 
 filetype plugin on
 
@@ -122,12 +127,9 @@ autocmd InsertLeave * setlocal timeoutlen=500
 
 let mapleader="\\"
 
-nmap <leader><space> :set nowrap<CR>
-nmap <leader><s-space> :set wrap<CR>
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
-nmap <C-/> :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 nmap <leader>a :Ack --type=
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
@@ -142,63 +144,29 @@ endfunction
 
 nmap <leader>o :call Load()<CR>
 
-nmap <D-F> <Plug>Waldo
-
 " @end
 
-" @group statusline
+" @group session
 
-" set showcmd       " Display the command in the last line
-" set showmode      " Display the current mode in the last line
-" set report=1      " Always report the number of lines changed
-set ruler         " Display info on current position
-set laststatus=2  " Always show status line
-" set statusline=Editing:\ %r%t%m\ %=Location:\ Line\ %l/%L\ \ Col:\ %c\ (%p%%)
+set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+
+function! Clear()
+  echo 'Session cleared'
+  :silent !rm ~/.vim_session
+endfunction
 
 " @end
 
 " @group visuals
 
-if !has('gui_running')
-  " not sure why these aren't working
-  " set mouse=a
-  " set term=xterm
-
-  " http://stackoverflow.com/questions/3761770/iterm-vim-colorscheme-not-working
-  let &t_Co=256
-
-  set bg=dark
-  colorscheme solarized
-  syntax enable
-else
-  " For 8-color 16-color terminals or for gvim, just use the
-  " regular :colorscheme command.
-  colorscheme handcrafted
-endif
-
-" set guifont=Anonymous\ Pro:h12
-" set guifont=Monaco:h10
-" set guifont=DroidSansMono:h9
-" set guifont=Anonymous\ Pro:h12
-" set guifont=DroidSansMono:h12
-" set guifont=Andale\ Mono:h12
-" set guifont=Monaco:h12
-" set guifont=Menlo:h12
-" set guifont=Panic\ Sans:h12
-
-" patched fonts
-" set guifont=Inconsolata:h14
-" set guifont=Mensch\ for\ Powerline:h12
-" set guifont=DroidSansMono:h12
 set guifont=Ubuntu\ Mono:h14
-
-" set noantialias
-" set linespace=6
 
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
+
+colorscheme handcrafted
+
 call Pl#Theme#RemoveSegment('mode_indicator')
-" call Pl#Theme#RemoveSegment('fugitive:branch')
 call Pl#Theme#RemoveSegment('scrollpercent')
 call Pl#Theme#RemoveSegment('fileformat')
 call Pl#Theme#RemoveSegment('fileencoding')
@@ -208,10 +176,8 @@ call Pl#Theme#RemoveSegment('filetype')
 
 " @group reference
 
-nmap <left> :Sscratch<CR>
-nmap <backspace> :topleft split ~/dotfiles/vim/wiki/index.wiki<CR>:setlocal nonumber<CR>
-nmap <s-backspace> :tabedit ~/dotfiles/vim/wiki/index.wiki<CR>
-" autocmd VimEnter * :e ~/dotfiles/vim/wiki/index.wiki
+nmap <leader>s :Scratch<CR>
+nmap <backspace> :e ~/dotfiles/vim/wiki/index.wiki<CR>
 
 " @end
 
@@ -226,9 +192,6 @@ set smartindent
 
 " Invisibles
 set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
-" set listchars=tab:\->,trail:~,extends:↳,precedes:↵
-" set listchars=tab:\->,trail:~,extends:↳,precedes:↵
-" set listchars=tab:\+-,trail:~,nbsp:☒,eol:✈
 
 autocmd BufWinEnter,BufNewFile * set list
 
@@ -237,6 +200,7 @@ autocmd BufNewFile,BufRead *.css.php setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.less setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.scss setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.js setlocal noexpandtab
+autocmd BufNewFile,BufRead *.json setlocal noexpandtab
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
 autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufNewFile,BufRead *.html.php setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
@@ -245,6 +209,7 @@ autocmd BufNewFile,BufRead *.erb setlocal filetype=html noexpandtab shiftwidth=1
 autocmd BufNewFile,BufRead *.html setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
 autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.c setlocal expandtab tabstop=4 shiftwidth=4
 
 " @end
 
@@ -258,50 +223,6 @@ let g:UltiSnipsListSnippets = '<m-tab>'
 
 " Completion
 inoremap <S-esc> <C-p>
-
-" @end
-
-" @group insert mode controls
-
-" @group movement
-
-" imap <C-n> <right>
-" imap <C-d> <left>
-" imap <C-t> <up>
-" imap <C-h> <down>
-" imap <C-b> <s-left>
-" imap <C-w> <s-right>
-" imap <C-0> <C-[>0i
-" imap <C-_> <C-[>-a
-
-" @end
-
-" @group deletion
-
-" imap <C-M-d> <C-[>dxi
-" imap <C-M-n> <C-[>nxi
-" imap <C-M-w> <C-[>wjwi
-" imap <C-M-b> <C-[>jbi
-" imap <C-M-v> <C-[>jwi
-" imap <C-M-S-v> <C-[>jji
-" cmap <C-M-d> <C-[>dxi
-" cmap <C-M-n> <C-[>nxi
-" cmap <C-M-w> <C-[>wjwi
-" cmap <C-M-b> <C-[>jbi
-" cmap <C-M-v> <C-[>jwi
-" cmap <C-M-S-v> <C-[>jji
-
-" @end
-
-" @end
-
-" @group add blank and spaces
-
-" nmap <Enter> o<ESC>
-" nmap <S-Enter> i<Enter><ESC>
-
-nmap <space> a<space><esc>
-nmap <s-space> a<space><esc>d
 
 " @end
 
@@ -333,8 +254,8 @@ nmap <silent> <s-esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:silent! w<CR>:Chrome
 
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
-nmap <silent> ` :PeepOpen<CR>
-nmap <silent> <right> :NERDTree<CR>
+nmap <silent> <leader>p :PeepOpen<CR>
+nmap <silent> <leader>t :NERDTree<CR>
 "
 " @end
 
@@ -360,18 +281,13 @@ no L N
 no k t
 no <s-k> <s-t>
 
-" finding use for - and _
-" no - :
-" no _ $
-
-" with modifiers
-
-" undo
-" nmap <S-u> <C-r>
-
 " only used for autocomplete
 inoremap <c-t> <up>
 inoremap <c-h> <down>
+
+" bonus
+no <space> a<space><esc>
+no <s-space> i<space><esc>l
 
 " @end
 
@@ -433,35 +349,84 @@ function! BindIndentAction(key)
   exe ":nnoremap " . a:key . "<C-n> :normal ^hmmt<CR> :call IndentEnd()<CR> :normal t<CR> :normal " . a:key . "'m<CR>"
 endfunction
 
-nnoremap <C-h> :call IndentEnd()<CR>
-nnoremap <C-t> :call IndentStart()<CR>
-nnoremap <C-d> :call IndentOuter()<CR>
-nnoremap <C-n> :call IndentInner()<CR>
+nnoremap g> :call IndentEnd()<CR>
+nnoremap g< :call IndentStart()<CR>
+" nnoremap <C-d> :call IndentOuter()<CR>
+" nnoremap <C-n> :call IndentInner()<CR>
 
-autocmd VimEnter * call BindIndentAction('j')
-autocmd VimEnter * call BindIndentAction('y')
-autocmd VimEnter * call BindIndentAction('<')
-autocmd VimEnter * call BindIndentAction('>')
+" nmap ]] :call IndentEnd()<CR>
+" nmap [[ :call IndentStart()<CR>
+" nmap [] :call IndentOuter()<CR>
+" nmap ][ :call IndentInner()<CR>
+
+" @end
+
+" @group better indents
+
+" http://vim.wikia.com/wiki/Indent_text_object
+" Changes to allow blank lines in blocks, and
+" Top level blocks (zero indent) separated by two or more blank lines.
+" Usage: source <thisfile> in pythonmode and
+" Press: vai, vii to select outer/inner python blocks by indetation.
+" Press: vii, yii, dii, cii to select/yank/delete/change an indented block.
+onoremap ai :<C-u>call IndTxtObj(0,0)<CR>
+onoremap ii :<C-u>call IndTxtObj(1,0)<CR>
+vnoremap ai <Esc>:call IndTxtObj(0,0)<CR><Esc>gv
+vnoremap ii <Esc>:call IndTxtObj(1,0)<CR><Esc>gv
+" nnoremap gai :<C-u>call IndTxtObj(0,0)<CR>vv
+" nnoremap gii :<C-u>call IndTxtObj(1,0)<CR>vv
+" nnoremap gAi :<C-u>call IndTxtObj(0,1)<CR>vv
+" nnoremap gIi :<C-u>call IndTxtObj(1,1)<CR>vv
+
+function! IndTxtObj(inner,reverse)
+  let curcol = col(".")
+  let curline = line(".")
+  let lastline = line("$")
+  let i = indent(line("."))
+  if getline(".") !~ "^\\s*$"
+    let p = line(".") - 1
+    let pp = line(".") - 2
+    let nextblank = getline(p) =~ "^\\s*$"
+    let nextnextblank = getline(pp) =~ "^\\s*$"
+    while p > 0 && ((i == 0 && (!nextblank || (pp > 0 && !nextnextblank))) || (i > 0 && ((indent(p) >= i && !(nextblank && a:inner)) || (nextblank && !a:inner))))
+      -
+      let p = line(".") - 1
+      let pp = line(".") - 2
+      let nextblank = getline(p) =~ "^\\s*$"
+      let nextnextblank = getline(pp) =~ "^\\s*$"
+    endwhile
+    normal! 0V
+    call cursor(curline, curcol)
+    let p = line(".") + 1
+    let pp = line(".") + 2
+    let nextblank = getline(p) =~ "^\\s*$"
+    let nextnextblank = getline(pp) =~ "^\\s*$"
+    while p <= lastline && ((i == 0 && (!nextblank || pp < lastline && !nextnextblank)) || (i > 0 && ((indent(p) >= i && !(nextblank && a:inner)) || (nextblank && !a:inner))))
+      +
+      let p = line(".") + 1
+      let pp = line(".") + 2
+      let nextblank = getline(p) =~ "^\\s*$"
+      let nextnextblank = getline(pp) =~ "^\\s*$"
+    endwhile
+    normal! $
+  endif
+  if(a:inner == 0)
+    echo('not inner')
+    normal hoto
+  endif
+  if(a:reverse)
+    normal o_
+  endif
+endfunction
 
 " @end
 
 " @group bubbling
 
-no <c-m-t> :m-2<cr>
-no <c-m-h> :m+<cr>
-no <c-m-n> <<
-no <c-m-s> >>
-
-" @end
-
-" @group session
-
-set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-
-function! Clear()
-  echo 'Session cleared'
-  :silent !rm ~/.vim_session
-endfunction
+" no <c-m-t> :m-2<cr>
+" no <c-m-h> :m+<cr>
+" no <c-m-n> <<
+" no <c-m-s> >>
 
 " @end
 
@@ -485,11 +450,12 @@ let g:syntastic_mode_map = {
 
 " @end
 
-" @group buffers and windows
-
-nmap <up> :topleft new #<CR>
-nmap <down> :botright new #<cr>
-nmap <tab> <C-w>w
+" @group sections
+"
+map [[ ?{<CR>w99[{
+map ][ /}<CR>b99]}
+map ]] h0[[%/{<CR>
+map [] t$][%?}<CR>
 
 " @end
 
@@ -512,5 +478,21 @@ nnoremap <silent> <leader>=c :Gcommit<CR>
 nnoremap <silent> <leader>=b :Gblame<CR>
 nnoremap <silent> <leader>=l :Glog<CR>
 nnoremap <silent> <leader>=p :Git push<CR>
+
+" @end
+
+" @group disable stuff
+
+" map <LeftMouse> <Nop>
+" map <RightMouse> <Nop>
+
+" @end
+
+" @group arrows
+
+nmap <right> >>
+nmap <left> <<
+nmap <up> jjtP
+nmap <down> jjp
 
 " @end

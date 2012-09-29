@@ -10,7 +10,7 @@ endif
 
 let g:colors_name = "Handcrafted"
 
-hi Cursor  guifg=NONE guibg=#4e5a61 gui=NONE
+hi Cursor  guifg=NONE guifg=#ffffff guibg=#6d7a81 gui=NONE
 hi Visual  guifg=NONE guibg=#2a312e gui=NONE
 hi CursorLine guifg=NONE guibg=#0b1114 gui=NONE
 hi CursorColumn  guifg=NONE guibg=NONE gui=NONE
