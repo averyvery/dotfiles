@@ -1,26 +1,26 @@
 [[=]] Todo =
 
 [[TODAY:]]
-  - Shure FCC stuff
-  - Mason & Dixon
+  - Review the PRweb EE install
+  - Come up with questions, a section list document
   - Pay Rogers bill
-  - [[ShureCleanup]]
-  - [[RailsComponents]]
-  - Make. Some. Goals.
 
 THIS WEEK:
-  - better gamertag???
+  - http://day9.tv/
+  - Make. Some. Goals.
   - tank icons
-  - reply to chris
+  - vectorize the RISK logo
+  - [[RailsComponents]]
+  - [[ShureCleanup]]
 
 PROFDEV
   - finish vim book - 135
-  - addy JS patterns
 
 MAYBE
   - Reply to Steph
   - http://socket.io/
   - http://martinsikora.com/nodejs-and-websocket-simple-chat-tutorial
+  - addy JS patterns
 
 = Notes =
 

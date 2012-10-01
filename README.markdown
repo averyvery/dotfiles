@@ -16,3 +16,4 @@ Run the symlink commands:
     ln -s ~/dotfiles/ack/ackrc ~/.ackrc
     ln -s ~/dotfiles/Speakable\ Items  ~/Library/Speech/
     ln -s ~/dotfiles/KeyRemap4MacBook ~/Library/Application\ Support/KeyRemap4MacBook
+    ln -s ~/dotfiles/ctags ~/.ctags

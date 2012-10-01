@@ -40,3 +40,7 @@ Thumbs.db
 # Just for WWF #
 ######################
 paperclip.yml
+
+# Tags #
+######################
+tags

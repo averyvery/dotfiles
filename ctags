@@ -1,0 +1,8 @@
+-R
+--exclude=.git
+--exclude=log
+--verbose=yes
+--langdef=scss
+--langmap=scss:.scss
+--regex-scss=/^[ \t]*([^\t {][^{]{1,100})(\t| )*\{/| \1/d,definition/
+--regex-scss=/^[ \t]*[@]mixin ([^ (]+).*/\1/m,mixing/

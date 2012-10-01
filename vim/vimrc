@@ -496,3 +496,9 @@ nmap <up> jjtP
 nmap <down> jjp
 
 " @end
+
+" @group tags
+
+autocmd BufWritePost *.js call system("ctags -R")
+
+" @end
