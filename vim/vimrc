@@ -64,6 +64,7 @@ set nocompatible
 set modelines=0
 set encoding=utf-8
 set history=5000
+set spell
 " set wildmode=longest:full
 " set wildmenu
 set ttyfast
