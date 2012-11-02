@@ -1,26 +1,43 @@
 [[=]] Todo =
 
-[[TODAY:]]
-  - Review the PRweb EE install
-  - Come up with questions, a section list document
-  - Pay Rogers bill
+IN ORDER:
 
-THIS WEEK:
-  - http://day9.tv/
-  - Make. Some. Goals.
-  - tank icons
-  - vectorize the RISK logo
-  - [[RailsComponents]]
-  - [[ShureCleanup]]
+  - do a code review
+  - FED action items
+  - https://vl.basecamphq.com/projects/10397179-html5-animation-with-js/posts/68881207/comments
+    - https://read.amazon.com/?asin=B006JPPK9Q
+  - reply to dora
+  - shure isotope stuff - find better way to lode this code
+  - http://shop.oreilly.com/product/0636920015956.do
+  - how to learn servers better - ask pat to start a thread? go through a book?
+  - move draftbar out of vendor, find better org for this stuff
+  - play a slower speed of light
+  - http://www.unblock-us.com/get-email?url=http%3A%2F%2Fsongza.com%2Flisten%2Fsoft-and-synthy-progressive-trance-songza%2F
+  - vimgolf?
+  - [[ChristmasShopping]] - make sure to tell mele's mom what i'm getting
+  - [[GaSuperTool]]
+  - http://www.teamliquid.net/forum/viewmessage.php?topic_id=290848
+  - http://starcraft2terranstrategies.com/terran-vs-protoss-early-scouting-with-a-purpose
+  - community service days? community service, in general?
+  - NEW PASSWORDS, DUMMY
+
+WORK GOALS FOR THE YEAR:
+  - Learn basic C
+    - http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
+  - Learn Objective C
+    - http://cocoadevcentral.com/d/learn_objectivec/
+    - http://mobile.tutsplus.com/tutorials/iphone/learn-objective-c-day-1/
+  - Make a simple game
+    - http://www.raywenderlich.com/352/how-to-make-a-simple-iphone-game-with-cocos2d-tutorial
+  - Write:
+    - [[GameIdeas]]
+      - http://www.cocos2d-iphone.org/
+      - http://www.cocos2d-iphone.org/wiki/doku.php/resources:iphone_recommended_reading
 
 PROFDEV
-  - finish vim book - 135
-
-MAYBE
-  - Reply to Steph
-  - http://socket.io/
-  - http://martinsikora.com/nodejs-and-websocket-simple-chat-tutorial
-  - addy JS patterns
+  - http://regex.learncodethehardway.org/book/learn-regex-the-hard-wayli3.html#x4-40000.1
+  - Blog
+    - [[WhatDevsDontKnowAboutGa]]
 
 = Notes =
 
@@ -29,8 +46,9 @@ Laoo,rpe1
 
 = Pages =
 
-- [[BrowserTesting]]
-- [[TossStarts]]
+- [[PRWebDocs]]
+- [[SeedMicroclassOutline]]
+- [[MoviesToWatch]]
 - [[VimNotes]]
 - [[ToRead]]
 - [[AboutMe]]
@@ -39,3 +57,4 @@ Laoo,rpe1
 - [[SixObstaclesToMeditation]]
 - [[GathasToLearn]]
 - [[JobCriteria]]
+- [[StuffIWant]]

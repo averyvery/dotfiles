@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/genutils'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 
 " file management
 Bundle 'tpope/vim-fugitive'
@@ -29,6 +30,7 @@ Bundle 'vim-scripts/vimwiki'
 Bundle 'averyvery/vim-scratch'
 
 " languages
+Bundle 'drslump/vim-syntax-js'
 Bundle 'averyvery/sparkup', {'rtp': 'vim/'}
 Bundle 'skammer/vim-css-color'
 Bundle 'sickill/vim-pasta'
@@ -160,11 +162,14 @@ endfunction
 
 " @group visuals
 
+set guifont=Source\ Code\ Pro:h14
 set guifont=Ubuntu\ Mono:h14
 
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
 
+colorscheme birds-of-paradise
+colorscheme tomorrow_night_eighties
 colorscheme handcrafted
 
 call Pl#Theme#RemoveSegment('mode_indicator')
@@ -192,7 +197,7 @@ set tabstop=2
 set smartindent
 
 " Invisibles
-set listchars=tab:\>-,trail:~,extends:↳,precedes:↵
+set listchars=tab:\s\s,trail:~,extends:↳,precedes:↵
 
 autocmd BufWinEnter,BufNewFile * set list
 
@@ -221,9 +226,6 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsListSnippets = '<m-tab>'
-
-" Completion
-inoremap <S-esc> <C-p>
 
 " @end
 
@@ -292,21 +294,24 @@ no <s-space> i<space><esc>l
 
 " @end
 
-" @group indenting and folding
+" @group indenting
 
 set foldmethod=marker
 set foldmarker=@group,@end
 set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
-" set foldclose=all
+set foldlevel=0
+au BufWinEnter,BufNewFile *.js set foldlevel=1
 
 let g:indent_guides_auto_colors = 0
 autocmd BufWinEnter,BufNewFile * :IndentGuidesEnable
 
 " Folds
-nmap <M-h> zj
-nmap <M-t> zk
-nmap <M-d> zc
-nmap <M-n> zo
+nmap <c-h> zj
+nmap <c-t> zk
+nmap <c-d> zc
+nmap <c-n> zo
+nmap <c-m-d> zC
+nmap <c-m-n> zO
 
 " Adapted from http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
 function! MoveIndent(forward, out, in)
@@ -359,6 +364,38 @@ nnoremap g< :call IndentStart()<CR>
 " nmap [[ :call IndentStart()<CR>
 " nmap [] :call IndentOuter()<CR>
 " nmap ][ :call IndentInner()<CR>
+
+" @end
+
+" @group folding
+
+fu! CustomFoldText()
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " "
+    let foldLevelStr = repeat("...", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("- %.d", float2nr((foldSize*1.0)/lineCount*100)) . "% "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+endf
+
+set foldtext=CustomFoldText()
+
+" from https://github.com/drslump/vim-syntax-js
+let g:syntax_js=['function', 'return', 'this', 'prototype', 'proto']
+au FileType javascript setl foldmethod=syntax foldlevel=2
+au FileType javascript setl conceallevel=2 concealcursor=c
 
 " @end
 
@@ -501,5 +538,26 @@ nmap <down> jjp
 " @group tags
 
 autocmd BufWritePost *.js call system("ctags -R")
+
+" @end
+
+" @group surround
+
+let g:surround_no_mappings = 1
+
+nmap js  <Plug>Dsurround
+nmap cs  <Plug>Csurround
+nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
+xmap S   <Plug>VSurround
+xmap gS  <Plug>VgSurround
+if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
+  imap    <C-S> <Plug>Isurround
+endif
+imap      <C-G>s <Plug>Isurround
+imap      <C-G>S <Plug>ISurround
 
 " @end

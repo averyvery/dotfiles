@@ -34,7 +34,7 @@ hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi IndentGuidesEven  guifg=#24353d guibg=#0b1114 ctermbg=3
 hi IndentGuidesOdd guifg=#152025 guibg=#0b1114 ctermbg=4
 
-hi Normal  guifg=#ffffff guibg=#111a1e gui=NONE
+hi Normal  guifg=#ffffff guibg=#152126 gui=NONE
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE
 hi Character  guifg=#da6665 guibg=NONE gui=NONE
 hi Conditional  guifg=#e4a246 guibg=NONE gui=NONE
@@ -131,3 +131,5 @@ hi cssValueLength  guifg=#da6665 guibg=NONE gui=NONE
 hi cssCommonAttr  guifg=#eb939a guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
 
+" Conceals
+hi Conceal guifg=#00bdec guibg=#152126
