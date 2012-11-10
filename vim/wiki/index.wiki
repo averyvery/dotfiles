@@ -1,25 +1,34 @@
 [[=]] Todo =
 
-IN ORDER:
+  - check out prweb
+   - create loginz
+   - upgrade each install
+     - http://expressionengine.com/user_guide/installation/upgrade_from_1.x.html
+   - [[PRWebMsmReasoning]]
+   - set up staging?
+ - review https://github.com/greypants/blockblaster-bootstrap
+ - http://soundcloud.com/zomboy/nsdvol28
+ - https://diy.org/skills/gamer
+ - shure
+   - images need default heights oh my gawd
+ - devot-ee freebie stuff
+ - twitch tv ipod touch
+ - http://wiki.teamliquid.net/starcraft2/Lone_Star_Clash_2
+ - spec [[GaSuperTool]]
+ - http://www.codeproject.com/Articles/485747/The-Complete-Guide-to-Building-HTML5-games-with-Ca
+ - http://harthur.github.com/brain/
 
-  - do a code review
-  - FED action items
-  - https://vl.basecamphq.com/projects/10397179-html5-animation-with-js/posts/68881207/comments
-    - https://read.amazon.com/?asin=B006JPPK9Q
-  - reply to dora
-  - shure isotope stuff - find better way to lode this code
-  - http://shop.oreilly.com/product/0636920015956.do
-  - how to learn servers better - ask pat to start a thread? go through a book?
-  - move draftbar out of vendor, find better org for this stuff
+ - play kathy http://apps.facebook.com/wordswithfriends/?fb_source=notification&ref=notif&notif_t=app_notification
+ - actually get an indent-wise movement working
+
   - play a slower speed of light
-  - http://www.unblock-us.com/get-email?url=http%3A%2F%2Fsongza.com%2Flisten%2Fsoft-and-synthy-progressive-trance-songza%2F
-  - vimgolf?
   - [[ChristmasShopping]] - make sure to tell mele's mom what i'm getting
+  - tell parents what to get me for christmas
+
+  - https://read.amazon.com/?asin=B006JPPK9Q
+  - move draftbar out of vendor, find better org for this stuff
   - [[GaSuperTool]]
-  - http://www.teamliquid.net/forum/viewmessage.php?topic_id=290848
-  - http://starcraft2terranstrategies.com/terran-vs-protoss-early-scouting-with-a-purpose
   - community service days? community service, in general?
-  - NEW PASSWORDS, DUMMY
 
 WORK GOALS FOR THE YEAR:
   - Learn basic C

@@ -70,8 +70,10 @@ set spell
 " set wildmode=longest:full
 " set wildmenu
 set ttyfast
+set ttyscroll=3
 set virtualedit=onemore
 set invmmta
+set synmaxcol=200 " prevent syntax highlighting on long lines
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 set scrolloff=5
@@ -197,7 +199,7 @@ set tabstop=2
 set smartindent
 
 " Invisibles
-set listchars=tab:\s\s,trail:~,extends:↳,precedes:↵
+set listchars=tab:→\ ,trail:~,extends:↳,precedes:↵
 
 autocmd BufWinEnter,BufNewFile * set list
 
@@ -537,7 +539,7 @@ nmap <down> jjp
 
 " @group tags
 
-autocmd BufWritePost *.js call system("ctags -R")
+autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 " @end
 
