@@ -201,6 +201,7 @@ bindkey -v
 bindkey -M vicmd "d" vi-backward-char
 bindkey -M vicmd "n" vi-forward-char
 bindkey -M vicmd ",," vi-movement-mode
+alias mvim='open -a MacVim'
 
 # Autoload screen if we aren't in it.  (Thanks Fjord!)
 # if [[ $STY = '' ]] then screen -xR; fi
@@ -321,3 +322,5 @@ bindkey -M vicmd ",," vi-movement-mode
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # @end
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -1,52 +1,54 @@
-[[=]] Todo =
+ [[=]] Todo =
 
-  - check out prweb
-   - create loginz
-   - upgrade each install
-     - http://expressionengine.com/user_guide/installation/upgrade_from_1.x.html
-   - [[PRWebMsmReasoning]]
-   - set up staging?
- - review https://github.com/greypants/blockblaster-bootstrap
- - http://soundcloud.com/zomboy/nsdvol28
- - https://diy.org/skills/gamer
- - shure
-   - images need default heights oh my gawd
- - devot-ee freebie stuff
- - twitch tv ipod touch
- - http://wiki.teamliquid.net/starcraft2/Lone_Star_Clash_2
- - spec [[GaSuperTool]]
- - http://www.codeproject.com/Articles/485747/The-Complete-Guide-to-Building-HTML5-games-with-Ca
- - http://harthur.github.com/brain/
+TODAY:
+- talk to tommy
+- rent car for Jan 25 - Feb 3
+- [[Shure]]
+  - [[LandingPages]]
+  - PR code reviews
+  - ga microclass - god
+  - refactor 'col' to use border-sizing
+  - should pic be helper?
+  - better product icon setup?
+  - [[ClassingSystem]]
+- [[PRWEBUpgrading]]
+  - french matrix fields don't work?
+  - conditional database
+  - After upgrade:
+    - Upgrade each install
+    - Honeepot
+    - Try to increment all indexes
+  - better system for landing pages?
+- _haq - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
 
- - play kathy http://apps.facebook.com/wordswithfriends/?fb_source=notification&ref=notif&notif_t=app_notification
- - actually get an indent-wise movement working
+PERSONAL
+- mele's resume
 
-  - play a slower speed of light
-  - [[ChristmasShopping]] - make sure to tell mele's mom what i'm getting
-  - tell parents what to get me for christmas
+PROF DEV
+- https://github.com/mattn/zencoding-vim/blob/master/autoload/zencoding.vim
+- http://meme-meme.org/post/38087160985/productivity-for-the-21st-century-procrastination#.UM4_anPjkgM
+- http://addyosmani.github.com/backbone-fundamentals/
+- https://read.amazon.com/?asin=B006JPPK9Q
+- http://teamtreehouse.com/library
 
-  - https://read.amazon.com/?asin=B006JPPK9Q
-  - move draftbar out of vendor, find better org for this stuff
-  - [[GaSuperTool]]
-  - community service days? community service, in general?
+MOVING
+- http://www.youtube.com/watch?v=b8zO_DV09QE&t=0m31s
+- [[BoulderPlaces]]
 
 WORK GOALS FOR THE YEAR:
-  - Learn basic C
-    - http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
-  - Learn Objective C
-    - http://cocoadevcentral.com/d/learn_objectivec/
-    - http://mobile.tutsplus.com/tutorials/iphone/learn-objective-c-day-1/
-  - Make a simple game
-    - http://www.raywenderlich.com/352/how-to-make-a-simple-iphone-game-with-cocos2d-tutorial
-  - Write:
-    - [[GameIdeas]]
-      - http://www.cocos2d-iphone.org/
-      - http://www.cocos2d-iphone.org/wiki/doku.php/resources:iphone_recommended_reading
-
-PROFDEV
-  - http://regex.learncodethehardway.org/book/learn-regex-the-hard-wayli3.html#x4-40000.1
-  - Blog
-    - [[WhatDevsDontKnowAboutGa]]
+- Learn Backbone
+  - [[BackBoneGame]]
+- Learn basic C
+- http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
+- Learn Objective C
+  - http://cocoadevcentral.com/d/learn_objectivec/
+  - http://mobile.tutsplus.com/tutorials/iphone/learn-objective-c-day-1/
+- Make a simple game
+  - http://www.raywenderlich.com/352/how-to-make-a-simple-iphone-game-with-cocos2d-tutorial
+- Write:
+  - [[GameIdeas]]
+    - http://www.cocos2d-iphone.org/
+    - http://www.cocos2d-iphone.org/wiki/doku.php/resources:iphone_recommended_reading
 
 = Notes =
 

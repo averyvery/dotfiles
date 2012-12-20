@@ -41,6 +41,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'averyvery/vim-indent-object'
 
 " searching
 Bundle 'mileszs/ack.vim'
@@ -66,7 +67,7 @@ set nocompatible
 set modelines=0
 set encoding=utf-8
 set history=5000
-set spell
+" set spell
 " set wildmode=longest:full
 " set wildmenu
 set ttyfast
@@ -252,14 +253,14 @@ function! Reload()
   endif
 endfunction
 
-let g:returnApp = "Google Chrome Canary"
-
 nmap <silent> <esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:w<CR>
 nmap <silent> <s-esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:silent! w<CR>:ChromeReload<CR>
 
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
+let NERDTreeMapOpenInTabSilent='\T'
 nmap <silent> <leader>p :PeepOpen<CR>
+nmap <silent> <leader>P :tabnew<CR>:PeepOpen<CR>
 nmap <silent> <leader>t :NERDTree<CR>
 "
 " @end
@@ -277,6 +278,10 @@ no S 0wc$
 
 " deletion
 no j d
+
+" end/start of line
+no - $
+no _ 0
 
 " search
 no l n
@@ -315,57 +320,10 @@ nmap <c-n> zo
 nmap <c-m-d> zC
 nmap <c-m-n> zO
 
-" Adapted from http://vim.wikia.com/wiki/Back_and_forth_between_indented_lines_again
-function! MoveIndent(forward, out, in)
-  let line = line('.')
-  let column = col('.')
-  let lastline = line('$')
-  let indent = indent(line)
-  let stepvalue = a:forward ? 1 : -1
-  while (line > 0 && line <= lastline)
-    let line = line + stepvalue
-    if (a:out && indent(line) < indent || a:in && indent(line) > indent || indent(line) == indent && !a:out && !a:in)
-      if (strlen(getline(line)) > 0)
-        exe line
-        exe "normal " column . "|"
-        return
-      endif
-    endif
-  endwhile
-endfunction
-
-function! IndentEnd()
-  call MoveIndent(1, 0, 0)
-endfunction
-
-function! IndentStart()
-  call MoveIndent(0, 0, 0)
-endfunction
-
-function! IndentOuter()
-  call MoveIndent(0, 1, 0)
-endfunction
-
-function! IndentInner()
-  call MoveIndent(1, 0, 1)
-endfunction
-
-function! BindIndentAction(key)
-  exe ":nnoremap " . a:key . "<C-h> :normal ^mm<CR> :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
-  exe ":nnoremap " . a:key . "<C-t> :normal ^mm<CR> :call IndentStart()<CR> :normal " . a:key . "'m<CR>"
-  exe ":nnoremap " . a:key . "<C-d> :call IndentOuter()<CR> :normal ^mm<CR> :call IndentEnd()<CR> :normal " . a:key . "'m<CR>"
-  exe ":nnoremap " . a:key . "<C-n> :normal ^hmmt<CR> :call IndentEnd()<CR> :normal t<CR> :normal " . a:key . "'m<CR>"
-endfunction
-
-nnoremap g> :call IndentEnd()<CR>
-nnoremap g< :call IndentStart()<CR>
-" nnoremap <C-d> :call IndentOuter()<CR>
-" nnoremap <C-n> :call IndentInner()<CR>
-
-" nmap ]] :call IndentEnd()<CR>
-" nmap [[ :call IndentStart()<CR>
-" nmap [] :call IndentOuter()<CR>
-" nmap ][ :call IndentInner()<CR>
+nmap gai hvaiovv_
+nmap gaI tvaivv_
+nmap gii hviiovv_
+nmap giI tviivv_
 
 " @end
 
@@ -539,7 +497,7 @@ nmap <down> jjp
 
 " @group tags
 
-autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
+" autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 " @end
 

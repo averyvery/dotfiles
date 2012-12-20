@@ -16,6 +16,24 @@ snippet . "attr"
 ${1}="${2}"
 endsnippet
 
+snippet doctype "doctype"
+<!doctype html>
+endsnippet
+
+snippet page "page"
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+  </head>
+  <body>
+    ${2}
+  </body>
+</html>
+endsnippet
+
 snippet div "div"
 <div ${1}>
   ${2}
