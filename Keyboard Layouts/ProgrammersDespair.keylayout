@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.3 on 2012-11-16 at 15:10 (PST)-->
-<!--Last edited by Ukelele version 2.2.4 on 2012-12-19 at 20:22 (PST)-->
+<!--Last edited by Ukelele version 2.2.4 on 2012-12-28 at 18:31 (PST)-->
 <keyboard group="126" id="-14897" name="Programmer's Despair" maxout="1">
     <layouts>
         <layout first="0" last="0" modifiers="f4" mapSet="a14"/>
@@ -126,18 +126,18 @@
             <key code="15" output="p"/>
             <key code="16" output="f"/>
             <key code="17" action="14"/>
-            <key code="18" output="{"/>
-            <key code="19" output="["/>
+            <key code="18" output="["/>
+            <key code="19" output="{"/>
             <key code="20" output="("/>
             <key code="21" output="&#x003C;"/>
             <key code="22" output="$"/>
             <key code="23" output="="/>
             <key code="24" output="~"/>
-            <key code="25" output="]"/>
+            <key code="25" output="}"/>
             <key code="26" output="&#x003E;"/>
             <key code="27" output="+"/>
             <key code="28" output=")"/>
-            <key code="29" output="}"/>
+            <key code="29" output="]"/>
             <key code="30" output="&#x0022;"/>
             <key code="31" output="r"/>
             <key code="32" output="g"/>
@@ -150,7 +150,7 @@
             <key code="39" output="-"/>
             <key code="40" output="t"/>
             <key code="41" output="s"/>
-            <key code="42" output="#"/>
+            <key code="42" output="/"/>
             <key code="43" output="w"/>
             <key code="44" output="z"/>
             <key code="45" output="b"/>
@@ -233,8 +233,8 @@
             <key code="10" output="±"/>
             <key code="11" output="X"/>
             <key code="12" output="&#x0026;"/>
-            <key code="13" output="\"/>
-            <key code="14" output="/"/>
+            <key code="13" output="!"/>
+            <key code="14" output="?"/>
             <key code="15" output="P"/>
             <key code="16" output="F"/>
             <key code="17" action="13"/>
@@ -250,10 +250,10 @@
             <key code="27" output="^"/>
             <key code="28" output="4"/>
             <key code="29" output="8"/>
-            <key code="30" output="?"/>
+            <key code="30" output="#"/>
             <key code="31" output="R"/>
             <key code="32" output="G"/>
-            <key code="33" output="!"/>
+            <key code="33" output="\"/>
             <key code="34" output="C"/>
             <key code="35" output="L"/>
             <key code="36" output="&#x000D;"/>

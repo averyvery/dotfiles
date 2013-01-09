@@ -19,6 +19,8 @@ Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/genutils'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'vim-scripts/delimitMate.vim'
+Bundle 'ervandew/supertab'
 
 " file management
 Bundle 'tpope/vim-fugitive'
@@ -243,7 +245,6 @@ set incsearch
 set showmatch
 set hlsearch
 
-" map <silent> <esc> :w<CR>:mksession! ~/.vim_session<CR>:silent! %s/\s\+$//<CR>:w<CR>
 " not really working
 function! Reload()
   echo &filetype
@@ -253,8 +254,23 @@ function! Reload()
   endif
 endfunction
 
-nmap <silent> <esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:w<CR>
-nmap <silent> <s-esc> :silent! w<CR>:silent! %s/\s\+$//<CR>:silent! w<CR>:ChromeReload<CR>
+let g:returnApp = "Google Chrome"
+
+" http://vimcasts.org/episodes/tidying-whitespace/
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+nmap <silent> <esc> :silent! w<CR>:silent! call <SID>StripTrailingWhitespaces()<CR>:w<CR>
+nmap <silent> <s-esc> :silent! w<CR>:silent! <SID>StripTrailingWhitespaces()<CR>:silent! w<CR>:ChromeReload<CR>
 
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
@@ -278,10 +294,6 @@ no S 0wc$
 
 " deletion
 no j d
-
-" end/start of line
-no - $
-no _ 0
 
 " search
 no l n
