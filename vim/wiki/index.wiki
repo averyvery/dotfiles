@@ -1,33 +1,45 @@
 [[=]] Todo =
 
-NOW:
-- [[PRWEBUpgrading]]
-  - http://frservice.prweb.new/combien-ca-coute/ has broken codes on it
-- https://docs.google.com/a/viget.com/document/d/1HrDYEv5kfridoAWVKYt-XgcTtpxq2NGdwvNw8LFSKak/edit#
-- remove space trimming from vim
-- plan my workday. how much time to spend on X v Y? what are my actual professional development goals? how much time should i spend just catching up v. coding?
-- to do system - go back to a queue?
-- https://github.com/vigetlabs/launchpad/pull/1/files
+- It looks like selected_items doesn't allow you to have groups with the same names
+- [258] Reason Block: Create It ---- matrix relationships need to be fucking updated
+- seems like matrix+playa relationships aren't working?
+- M10o93H7pQ09L8X1t49cHY01Z5j4TT91fGfr issue seems related to tags not being parsed? Make sure templates are being loaded from files. Make sure characters didn't get messed up during the import
+- exp_nsm_addon_settings has some weird serialized data - doesn't seem to be important
+ - shouldn't matrix data be filling columns ABOVE 44? answer is yes
+- fix playa
+  - why does exp_playa_relationships have zeroes in parent_col, parent_row_id, parent_var_id?
+- upgrade:
+  - http://www.solspace.com/docs/super_search/change_log/#v2.0.5
+- shouldn't the following "fields" actually be shown?
+  - status
+  - revisions
+  - categories
+  - url title
+  - nsm better meta
+  - channel
+  - status
+  - author
+  - options
+  - expiration date
 
-TODAY:
-- pay dad
-- money order for 2k?
-- thank-you cards
+
+
+
+- https://workflowy.com/shared/da537e4b-73fa-f8c7-64ed-3fb2526db98b/
+- http://addyosmani.github.com/basket.js/
 - [[TestingMicroclass]]
+- [[PRWEBUpgrading]]
+  - figure out the new_global_vars in the config
+  - entry versioning?
+  - http://frservice.prweb.new/combien-ca-coute/ has broken codes on it
 - ga microclass - god
 - [[Shure]]
+  - what does registration do for mobile?
+  - what does the nav landing page link look like in ES?
   - refactor 'col' to use border-sizing
   - better product icon setup?
   - [[ClassingSystem]]
 - [[HaqLibrary]] - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
-- http://ev8.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ATKTLDR%3ACOL13%3APC021013%3A&linkID=tktldr&shopperContext=&pc=&caller=&appCode=&groupCode=CON&cgc
-
-PERSONAL
-- mele's resume
-
-PROF DEV
-- uglify this keyword?
-- http://addyosmani.github.com/backbone-fundamentals/
 
 MOVING
 - [[Moving]]

@@ -90,6 +90,8 @@ set backspace=indent,eol,start
 set guioptions=Acer
 set ruler         " Display info on current position
 set laststatus=2  " Always show status line
+set loaded_matchparen=1 "tip from here http://vim.1045645.n5.nabble.com/Vim-is-too-slow-with-syntax-highlighting-td1171424.html
+" also, try :NoMatchParen
 
 filetype plugin on
 
@@ -133,7 +135,7 @@ autocmd InsertLeave * setlocal timeoutlen=500
 
 " @group leader
 
-let mapleader="\\"
+let mapleader="\<s-space>"
 
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
@@ -491,22 +493,6 @@ nnoremap <silent> <leader>=p :Git push<CR>
 
 " @end
 
-" @group disable stuff
-
-" map <LeftMouse> <Nop>
-" map <RightMouse> <Nop>
-
-" @end
-
-" @group arrows
-
-nmap <right> >>
-nmap <left> <<
-nmap <up> jjtP
-nmap <down> jjp
-
-" @end
-
 " @group tags
 
 " autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
@@ -531,5 +517,30 @@ if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
 endif
 imap      <C-G>s <Plug>Isurround
 imap      <C-G>S <Plug>ISurround
+
+" @end
+
+" @group window commands
+
+nmap <left> :vs<CR><c-w>w:b#<CR>
+nmap <right> :wincmd w<CR>
+nmap <up> :split<CR><c-w>w:b#<CR>
+nmap <down> :wincmd w<CR>
+" nmap <s-left>
+" nmap <s-right>
+nmap <s-up> <c-w>t<c-w>H
+nmap <s-down> <c-w>t<c-w>K
+
+" @end
+
+" @group ex mode
+
+nmap ! :!
+
+" @end
+
+" @group git
+
+nmap <leader>s :Gstatus<CR><c-w>t<c-w>H
 
 " @end

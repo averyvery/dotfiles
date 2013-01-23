@@ -166,6 +166,7 @@ source $ZSH/oh-my-zsh.sh
   alias getpath='pwd|tr -d "\r\n"|pbcopy'
   alias ping='ping -oq'
   alias ipcp='ipconfig getifaddr en1 | pbcopy'
+  alias be='bundle exec'
 
   # misc
   alias restartfonts="atsutil databases -removeUser && atsutil server -shutdown && atsutil server -ping"

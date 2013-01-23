@@ -22,12 +22,6 @@
     <identifier>private.correct_shift_keys</identifier>
 
     <autogen>--KeyToKey-- KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_1, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_2, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_3, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_4, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_5, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_6, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
 
     <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
     <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
@@ -44,10 +38,6 @@
     <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
     <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
 
-    <autogen>--KeyToKey-- KeyCode::KEY_7, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_8, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_9, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
-    <autogen>--KeyToKey-- KeyCode::KEY_0, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
     <autogen>--KeyToKey-- KeyCode::EQUAL, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
     <autogen>--KeyToKey-- KeyCode::MINUS, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
 
