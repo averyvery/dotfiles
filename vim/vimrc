@@ -376,20 +376,19 @@ au FileType javascript setl conceallevel=2 concealcursor=c
 
 " @group better indents
 
+" I really wish this worked the way I wanted it to
+
 " http://vim.wikia.com/wiki/Indent_text_object
 " Changes to allow blank lines in blocks, and
 " Top level blocks (zero indent) separated by two or more blank lines.
 " Usage: source <thisfile> in pythonmode and
 " Press: vai, vii to select outer/inner python blocks by indetation.
 " Press: vii, yii, dii, cii to select/yank/delete/change an indented block.
+
 onoremap ai :<C-u>call IndTxtObj(0,0)<CR>
 onoremap ii :<C-u>call IndTxtObj(1,0)<CR>
 vnoremap ai <Esc>:call IndTxtObj(0,0)<CR><Esc>gv
 vnoremap ii <Esc>:call IndTxtObj(1,0)<CR><Esc>gv
-" nnoremap gai :<C-u>call IndTxtObj(0,0)<CR>vv
-" nnoremap gii :<C-u>call IndTxtObj(1,0)<CR>vv
-" nnoremap gAi :<C-u>call IndTxtObj(0,1)<CR>vv
-" nnoremap gIi :<C-u>call IndTxtObj(1,1)<CR>vv
 
 function! IndTxtObj(inner,reverse)
   let curcol = col(".")
@@ -436,10 +435,8 @@ endfunction
 
 " @group bubbling
 
-" no <c-m-t> :m-2<cr>
-" no <c-m-h> :m+<cr>
-" no <c-m-n> <<
-" no <c-m-s> >>
+no <c-m-t> :m-2<cr>
+no <c-m-h> :m+<cr>
 
 " @end
 
@@ -464,22 +461,11 @@ let g:syntastic_mode_map = {
 " @end
 
 " @group sections
-"
+
 map [[ ?{<CR>w99[{
 map ][ /}<CR>b99]}
 map ]] h0[[%/{<CR>
 map [] t$][%?}<CR>
-
-" @end
-
-" @group grep
-
-function! Grep()
-  let file = input('filetype: ')
-  execute 'normal :vimgrep // **/*.' . file . '<left><left><left><left><left><left><left><left>'
-endfunction
-
-" nmap <leader>g :call Grep()<CR>
 
 " @end
 
@@ -496,6 +482,7 @@ nnoremap <silent> <leader>=p :Git push<CR>
 
 " @group tags
 
+" wow this was annoying
 " autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 " @end
@@ -527,8 +514,6 @@ nmap <left> :vs<CR><c-w>w:b#<CR>
 nmap <right> :wincmd w<CR>
 nmap <up> :split<CR><c-w>w:b#<CR>
 nmap <down> :wincmd w<CR>
-" nmap <s-left>
-" nmap <s-right>
 nmap <s-up> <c-w>t<c-w>H
 nmap <s-down> <c-w>t<c-w>K
 
