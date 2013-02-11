@@ -46,7 +46,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'averyvery/vim-indent-object'
 
 " searching
-Bundle 'mileszs/ack.vim'
+Bundle 'averyvery/ack.vim'
 Bundle 'averyvery/vim-browsereload-mac'
 
 " keep vim indent guides LAST. It messes stuff up
@@ -171,6 +171,8 @@ endfunction
 
 set guifont=Source\ Code\ Pro:h14
 set guifont=Ubuntu\ Mono:h14
+set guifont=Ubuntu\ Mono:h16
+set linespace=3
 
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
@@ -228,10 +230,9 @@ autocmd BufNewFile,BufRead *.c setlocal expandtab tabstop=4 shiftwidth=4
 
 " @group expansion and completion
 
-let g:sparkupExecuteMapping = '<c-a>'
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:sparkupExecuteMapping = '<s-tab>'
+let g:UltiSnipsExpandTrigger = '<s-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<s-tab>'
 let g:UltiSnipsListSnippets = '<m-tab>'
 
 " @end
@@ -535,7 +536,8 @@ nmap <s-down> <c-w>t<c-w>K
 
 " @group ex mode
 
-nmap ! :!
+nmap ! q:i!
+nmap & q:i
 
 " @end
 

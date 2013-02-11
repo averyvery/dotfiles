@@ -2,7 +2,7 @@
 "
 " Author: Douglas Morato <dfamorato@gmail.com>
 "
-" Note: 
+" Note:
 " Based on the monokai theme for vim and textmate.
 " Based on the darkmate theme orm vim by  YearOfMoo Matias Niemelä <matias@yearofmoo.com>
 "
@@ -11,7 +11,7 @@
 "Clear all previous settings
 hi clear
 
-"set background as dark 
+"set background as dark
 set background=dark
 
 " reset syntax coloring
@@ -22,7 +22,7 @@ endif
 " Line and Columns
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
-set cursorline 
+set cursorline
 
 " Try to set Font
 set guifont=Monaco:h12
@@ -33,7 +33,7 @@ let g:colors_name="dfamorato"
 
 " Main Colors and data types and syntax elements
 hi Normal             guibg=#232323 ctermbg=235   guifg=#FFFFFF ctermfg=15  gui=none
-hi Visual		      guifg=#FFFFFF ctermfg=15    guibg=#555753 ctermbg=240 gui=none 
+hi Visual		      guifg=#FFFFFF ctermfg=15    guibg=#555753 ctermbg=240 gui=none
 hi String             guifg=#96ff00 ctermfg=118                             gui=none
 hi Delimiter          guifg=#96ff00 ctermfg=118                             gui=none
 hi Boolean            guifg=#ff44cc ctermfg=206                             gui=none
@@ -56,9 +56,10 @@ hi Float              guifg=#AE81FF
 hi ColorColumn        guibg=#FF9900  ctermbg=42
 
 " Cursor settings
-hi CursorLine         guibg=#000000 ctermbg=0  
-hi Cursor          guifg=#000000 guibg=#F8F8F0
-hi lCursor      guibg=#aaaaaa
+hi CursorLine         guibg=#000000 ctermbg=0
+hi CursorLineNr       ctermfg=250   guibg=#000000
+hi Cursor             guifg=#000000 guibg=#F8F8F0
+hi lCursor            guibg=#aaaaaa
 
 
 " Vim Stuff
@@ -160,7 +161,7 @@ hi xmlAttribPunct   guifg=#cccaa9                   gui=bold
 hi xmlEqual         guifg=#cccaa9                   gui=bold
 hi xmlCdata         guifg=#bf0945                   gui=bold
 hi xmlCdataCdata    guifg=#ac1446   guibg=#232526010c   gui=none
-hi xmlCdataStart    guifg=#bf0945                   gui=bold 
+hi xmlCdataStart    guifg=#bf0945                   gui=bold
 hi xmlCdataEnd      guifg=#bf0945                   gui=bold
 
 " Vim Stuff

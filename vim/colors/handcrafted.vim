@@ -26,6 +26,7 @@ hi Directory  guifg=#da6665 guibg=NONE gui=NONE
 
 hi Folded  guifg=#39515c guibg=#111a1e gui=NONE
 hi LineNr  guifg=#395159 guibg=#111a1e gui=NONE
+hi CursorLineNr  guifg=#395159 guibg=#111a1e gui=NONE
 hi Comment  guifg=#39515c guibg=#111a1e gui=italic
 hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE

@@ -1,48 +1,29 @@
 [[=]] Todo =
 
-- It looks like selected_items doesn't allow you to have groups with the same names
-- [258] Reason Block: Create It ---- matrix relationships need to be fucking updated
-- seems like matrix+playa relationships aren't working?
-- M10o93H7pQ09L8X1t49cHY01Z5j4TT91fGfr issue seems related to tags not being parsed? Make sure templates are being loaded from files. Make sure characters didn't get messed up during the import
-- exp_nsm_addon_settings has some weird serialized data - doesn't seem to be important
- - shouldn't matrix data be filling columns ABOVE 44? answer is yes
-- fix playa
-  - why does exp_playa_relationships have zeroes in parent_col, parent_row_id, parent_var_id?
-- upgrade:
-  - http://www.solspace.com/docs/super_search/change_log/#v2.0.5
-- shouldn't the following "fields" actually be shown?
-  - status
-  - revisions
-  - categories
-  - url title
-  - nsm better meta
-  - channel
-  - status
-  - author
-  - options
-  - expiration date
+- clear cache - https://github.com/vigetlabs/shure/tree/clear_cache
+- https://vl.basecamphq.com/projects/10563481-clever-world/posts/72436493/comments
+- region selector has a "close" button that floats over asia
+  - grab x from registration
+  - remember to translate shit!
+- why does sites/index have the sites--body class?
+- logo mixin?
 
+- twitter/facebook meta data in the head?
+- https://github.com/Valloric/YouCompleteMe
 
+- shure header
+- landing page
+- rebase landing page build from landing_pages
+- /home - caching issue?
 
-
-- https://workflowy.com/shared/da537e4b-73fa-f8c7-64ed-3fb2526db98b/
-- http://addyosmani.github.com/basket.js/
 - [[TestingMicroclass]]
-- [[PRWEBUpgrading]]
-  - figure out the new_global_vars in the config
-  - entry versioning?
-  - http://frservice.prweb.new/combien-ca-coute/ has broken codes on it
-- ga microclass - god
+- [[GaMicroclass]]
 - [[Shure]]
-  - what does registration do for mobile?
-  - what does the nav landing page link look like in ES?
   - refactor 'col' to use border-sizing
   - better product icon setup?
   - [[ClassingSystem]]
 - [[HaqLibrary]] - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
 
-MOVING
-- [[Moving]]
 
 WORK GOALS:
 - http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
