@@ -74,12 +74,13 @@ set history=5000
 " set wildmenu
 set ttyfast
 set ttyscroll=3
-set virtualedit=onemore
+set virtualedit=all
 set invmmta
 set synmaxcol=200 " prevent syntax highlighting on long lines
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 set scrolloff=5
+set iskeyword+=- " dashes don't divide word
 set nocompatible
 set lazyredraw
 set wrap
@@ -133,29 +134,6 @@ autocmd InsertLeave * setlocal timeoutlen=500
 
 " @end
 
-" @group leader
-
-let mapleader="\<s-space>"
-
-nmap <leader>u :GundoToggle<CR>
-nmap <leader>w :w !sudo tee %<Enter>
-nmap <leader>g :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
-nmap <leader>a :Ack --type=
-nmap <leader>s :SyntasticCheck<CR>
-nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
-
-nmap <silent> <leader>b :BufExplorer<CR>
-nmap <leader>c :topleft cwindow<CR>
-
-function! Load()
-  echo 'Session loaded'
-  source ~/.vim_session
-endfunction
-
-nmap <leader>o :call Load()<CR>
-
-" @end
-
 " @group session
 
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
@@ -190,9 +168,6 @@ call Pl#Theme#RemoveSegment('filetype')
 " @end
 
 " @group reference
-
-nmap <leader>s :Scratch<CR>
-nmap <backspace> :e ~/dotfiles/vim/wiki/index.wiki<CR>
 
 " @end
 
@@ -278,9 +253,6 @@ nmap <silent> <s-esc> :silent! w<CR>:silent! <SID>StripTrailingWhitespaces()<CR>
 let g:NERDTreeWinPos='right'
 let NERDTreeMapOpenInTab='\t'
 let NERDTreeMapOpenInTabSilent='\T'
-nmap <silent> <leader>p :PeepOpen<CR>
-nmap <silent> <leader>P :tabnew<CR>:PeepOpen<CR>
-nmap <silent> <leader>t :NERDTree<CR>
 "
 " @end
 
@@ -310,9 +282,31 @@ no <s-k> <s-t>
 inoremap <c-t> <up>
 inoremap <c-h> <down>
 
-" bonus
-no <space> a<space><esc>
-no <s-space> i<space><esc>l
+" @end
+
+" @group programmer's delight
+
+noremap 7 [
+noremap 5 {
+noremap 3 (
+noremap 1 <
+noremap 9 =
+noremap 0 $
+noremap 2 >
+noremap 4 )
+noremap 6 }
+noremap 8 }
+
+noremap [ 7
+noremap { 5
+noremap ( 3
+noremap < 1
+noremap = 9
+noremap $ 0
+noremap > 2
+noremap ) 4
+noremap } 6
+noremap } 8
 
 " @end
 
@@ -469,17 +463,6 @@ map [] t$][%?}<CR>
 
 " @end
 
-" @group fugitive
-
-nnoremap <silent> <leader>=s :Gstatus<CR>
-nnoremap <silent> <leader>=d :Gdiff<CR>
-nnoremap <silent> <leader>=c :Gcommit<CR>
-nnoremap <silent> <leader>=b :Gblame<CR>
-nnoremap <silent> <leader>=l :Glog<CR>
-nnoremap <silent> <leader>=p :Git push<CR>
-
-" @end
-
 " @group tags
 
 " wow this was annoying
@@ -526,8 +509,42 @@ nmap & q:i
 
 " @end
 
-" @group git
+" @group leader shortcuts
 
-nmap <leader>s :Gstatus<CR><c-w>t<c-w>H
+let mapleader="\<space>"
+
+nmap <leader>u :GundoToggle<CR>
+nmap <leader>w :w !sudo tee %<Enter>
+nmap <leader>a :Ack
+nmap <leader>v :tabe $MYVIMRC<CR>
+nmap <leader>s :SyntasticCheck<CR>
+nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
+
+nmap <silent> <leader>b :BufExplorer<CR>
+nmap <leader>c :topleft cwindow<CR>
+
+function! Load()
+  echo 'Session loaded'
+  source ~/.vim_session
+endfunction
+
+nmap <leader>o :call Load()<CR>
+
+nmap <leader>s :Scratch<CR>
+nmap <leader>w :e ~/dotfiles/vim/wiki/index.wiki<CR>
+
+nnoremap <silent> <leader>=g :Gstatus<CR>
+nnoremap <silent> <leader>=d :Gdiff<CR>
+nnoremap <silent> <leader>=c :Gcommit<CR>
+nnoremap <silent> <leader>=b :Gblame<CR>
+nnoremap <silent> <leader>=l :Glog<CR>
+nnoremap <silent> <leader>=p :Git push<CR>
+
+nmap <leader>g :Gstatus<CR><c-w>t<c-w>H
+
+nmap <silent> <leader>p :PeepOpen<CR>
+nmap <silent> <leader>P :tabnew<CR>:PeepOpen<CR>
+nmap <silent> <leader>t :NERDTree<CR>
+nmap <silent> <leader>f :set invfu<CR>
 
 " @end

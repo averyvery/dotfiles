@@ -1,41 +1,37 @@
 [[=]] Todo =
 
-- clear cache - https://github.com/vigetlabs/shure/tree/clear_cache
-- https://vl.basecamphq.com/projects/10563481-clever-world/posts/72436493/comments
-- region selector has a "close" button that floats over asia
-  - grab x from registration
-  - remember to translate shit!
-- why does sites/index have the sites--body class?
-- logo mixin?
+310 per day
+puma stuff
+- clever_world_integration branch
+- script/server
+- http://heathermuety.dropmark.com/106874
+- http://heathermuety.dropmark.com/106874/1560979
+- notes:
+  - back button is not smart, just goes up
+  - back button click will always slide back
+  - gallery is a fade effect
+  - going forward, there's an option for a special transition
+  - going back is always a left slide
 
-- twitter/facebook meta data in the head?
-- https://github.com/Valloric/YouCompleteMe
-
-- shure header
-- landing page
-- rebase landing page build from landing_pages
-- /home - caching issue?
-
-- [[TestingMicroclass]]
-- [[GaMicroclass]]
 - [[Shure]]
-  - refactor 'col' to use border-sizing
-  - better product icon setup?
+  - mobile landing page
+  - videotracker: cannot read "displayName" of undefined (line 19)
+  - height accessor
+  - combine the video partials?
+  - vector fallback for logo?
+  - use @extend for the basic transition()
+  - use logo elsewhere (mobile site)
+  - height accessor on pics
   - [[ClassingSystem]]
+- [[GaMicroclass]]
 - [[HaqLibrary]] - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
 
 
 WORK GOALS:
 - http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
-- Learn Objective C
-  - http://cocoadevcentral.com/d/learn_objectivec/
-  - http://mobile.tutsplus.com/tutorials/iphone/learn-objective-c-day-1/
 - Make a simple game
-  - http://www.raywenderlich.com/352/how-to-make-a-simple-iphone-game-with-cocos2d-tutorial
 - Write:
   - [[GameIdeas]]
-    - http://www.cocos2d-iphone.org/
-    - http://www.cocos2d-iphone.org/wiki/doku.php/resources:iphone_recommended_reading
 
 = Notes =
 
@@ -57,3 +53,4 @@ Laoo,rpe1
 - [[JobCriteria]]
 - [[StuffIWant]]
 - [[GitTips]]
+- [[WildResearchSite]]
