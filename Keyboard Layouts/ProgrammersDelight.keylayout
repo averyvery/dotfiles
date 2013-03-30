@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.3 on 2012-11-16 at 15:10 (PST)-->
-<!--Last edited by Ukelele version 2.2.4 on 2013-02-13 at 14:45 (PST)-->
+<!--Last edited by Ukelele version 2.2.4 on 2013-03-21 at 20:58 (MDT)-->
 <keyboard group="126" id="-14897" name="Programmer's Delight" maxout="1">
     <layouts>
         <layout first="0" last="0" modifiers="f4" mapSet="a14"/>
@@ -239,17 +239,17 @@
             <key code="16" output="F"/>
             <key code="17" action="13"/>
             <key code="18" output="["/>
-            <key code="19" output="{"/>
-            <key code="20" output="("/>
-            <key code="21" output="&#x003C;"/>
+            <key code="19" output="]"/>
+            <key code="20" output="{"/>
+            <key code="21" output="}"/>
             <key code="22" output="$"/>
             <key code="23" output="="/>
             <key code="24" output="`"/>
-            <key code="25" output="}"/>
-            <key code="26" output="&#x003E;"/>
+            <key code="25" output="&#x003C;"/>
+            <key code="26" output="("/>
             <key code="27" output="^"/>
             <key code="28" output=")"/>
-            <key code="29" output="]"/>
+            <key code="29" output="&#x003E;"/>
             <key code="30" output="#"/>
             <key code="31" output="R"/>
             <key code="32" output="G"/>

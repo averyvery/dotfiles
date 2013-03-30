@@ -1,28 +1,8 @@
 [[=]] Todo =
 
-310 per day
-puma stuff
-- clever_world_integration branch
-- script/server
-- http://heathermuety.dropmark.com/106874
-- http://heathermuety.dropmark.com/106874/1560979
-- notes:
-  - back button is not smart, just goes up
-  - back button click will always slide back
-  - gallery is a fade effect
-  - going forward, there's an option for a special transition
-  - going back is always a left slide
+- [[ShureMeetingNotes]]
+- [[PumaNotes]]
 
-- [[Shure]]
-  - mobile landing page
-  - videotracker: cannot read "displayName" of undefined (line 19)
-  - height accessor
-  - combine the video partials?
-  - vector fallback for logo?
-  - use @extend for the basic transition()
-  - use logo elsewhere (mobile site)
-  - height accessor on pics
-  - [[ClassingSystem]]
 - [[GaMicroclass]]
 - [[HaqLibrary]] - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
 

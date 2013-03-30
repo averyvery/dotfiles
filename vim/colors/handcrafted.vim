@@ -36,6 +36,8 @@ hi IndentGuidesEven  guifg=#24353d guibg=#0b1114 ctermbg=3
 hi IndentGuidesOdd guifg=#152025 guibg=#0b1114 ctermbg=4
 
 hi Normal  guifg=#ffffff guibg=#152126 gui=NONE
+hi SignColumn  guifg=#39515c guibg=#111a1e gui=NONE
+
 hi Boolean  guifg=#da6665 guibg=NONE gui=NONE
 hi Character  guifg=#da6665 guibg=NONE gui=NONE
 hi Conditional  guifg=#e4a246 guibg=NONE gui=NONE

@@ -38,12 +38,14 @@ Bundle 'skammer/vim-css-color'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
+Bundle 'walm/jshint.vim'
 
 " tools
 Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'averyvery/vim-indent-object'
+" Bundle 'airblade/vim-gitgutter'
 
 " searching
 Bundle 'averyvery/ack.vim'
@@ -92,6 +94,7 @@ set guioptions=Acer
 set ruler         " Display info on current position
 set laststatus=2  " Always show status line
 set loaded_matchparen=1 "tip from here http://vim.1045645.n5.nabble.com/Vim-is-too-slow-with-syntax-highlighting-td1171424.html
+syntax sync minlines=200 "tip from http://vim.wikia.com/wiki/Fix_syntax_highlighting
 " also, try :NoMatchParen
 
 filetype plugin on
@@ -281,32 +284,6 @@ no <s-k> <s-t>
 " only used for autocomplete
 inoremap <c-t> <up>
 inoremap <c-h> <down>
-
-" @end
-
-" @group programmer's delight
-
-noremap 7 [
-noremap 5 {
-noremap 3 (
-noremap 1 <
-noremap 9 =
-noremap 0 $
-noremap 2 >
-noremap 4 )
-noremap 6 }
-noremap 8 }
-
-noremap [ 7
-noremap { 5
-noremap ( 3
-noremap < 1
-noremap = 9
-noremap $ 0
-noremap > 2
-noremap ) 4
-noremap } 6
-noremap } 8
 
 " @end
 
@@ -518,6 +495,7 @@ nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>a :Ack
 nmap <leader>v :tabe $MYVIMRC<CR>
 nmap <leader>s :SyntasticCheck<CR>
+nmap <leader>j :JSHint<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 
 nmap <silent> <leader>b :BufExplorer<CR>
@@ -531,7 +509,7 @@ endfunction
 nmap <leader>o :call Load()<CR>
 
 nmap <leader>s :Scratch<CR>
-nmap <leader>w :e ~/dotfiles/vim/wiki/index.wiki<CR>
+nmap <leader>k :e ~/dotfiles/vim/wiki/index.wiki<CR>
 
 nnoremap <silent> <leader>=g :Gstatus<CR>
 nnoremap <silent> <leader>=d :Gdiff<CR>
