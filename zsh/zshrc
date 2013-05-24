@@ -125,6 +125,7 @@ source $ZSH/oh-my-zsh.sh
 
   # git shortcuts
   alias git-wtf="git checkout master && git pull origin master && git checkout work && git rebase master && git checkout master && git merge work && git push origin master && git checkout work"
+  alias glo='git log --pretty=format:"%h%x09%an%x09%s"'
 
 # @end
 

@@ -19,3 +19,4 @@ Run the symlink commands:
     ln -s ~/dotfiles/KeyRemap4MacBook ~/Library/Application\ Support/KeyRemap4MacBook
     ln -s ~/dotfiles/ctags ~/.ctags
     ln -s ~/dotfiles/Keyboard\ Layouts ~/Library/
+    ln -s ~/dotfiles/iTerm/com.googlecode.iterm2.plist ~/Library/Preferences
