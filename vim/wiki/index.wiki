@@ -1,36 +1,67 @@
-[[=]] Todo =
+[[=]] Dire =
 
-- [[ShureMeetingNotes]]
-- [[PumaNotes]]
+- Schedule FED meeting for next week, or once I get more info
+- Cancel BMO
+  - Write a letter to bmo detailing all three accounts, and the balance
+  - include debit card number and my full name
+  - mention that they are joint accounts
+  - Write my current address
+  - fax to 604 221 2860
+- [[BasicsOfBuildoutMicroclass]]
+- [[JSFrameworkMicroCLass]]
+- http://vimeo.com/60885578
 
-- [[GaMicroclass]]
-- [[HaqLibrary]] - https://vl.basecamphq.com/projects/2354488-marketing/posts/69944732/comments
+
+[[=]] Work =
+
+- [[QuarkGames]]
+- Photoshop, illustrator crash course?
+- https://vl.basecamphq.com/projects/11190801-client-side-frameworks-class/posts/76589803/comments#238105537
+- Play with vim tags
+- swap "hear" with "respond", take off hubot
+- http://evanhahn.com/understanding-express-js/?utm_source=javascriptweekly&utm_medium=email
+- https://gist.github.com/mrmrs/5726252
+
+- http://stackoverflow.com/questions/380379/how-to-add-lines-to-a-vim-register-without-overwriting-it
+- http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
+- http://www.youtube.com/watch?v=4udR30JYenA
+- http://www.youtube.com/watch?v=m3svKOdZijA
 
 
-WORK GOALS:
-- http://c.learncodethehardway.org/book/learn-c-the-hard-waych17.html
-- Make a simple game
-- Write:
-  - [[GameIdeas]]
+[[=]] Home =
 
-= Notes =
+- invite someone to dinner
+- http://calendar.dailycamera.com/boulder_co/events/show/332377283-washed-out
+- http://calendar.dailycamera.com/denver_co/events/show/326436903-animal-collective-with-dan-deacon
+- [[StuffToDoInCO]]
+- Yearbook committee
+- Think about more social clubz
+- Get Scott Pilgrim, the book
+- [[WildResearch]]
+- [[BlairBirthday]]
+- Vacation?
 
-Virtual Box password:
-Laoo,rpe1
+
+[[=]] Goals =
+
+- [[VigetYearbook]]
+- [[RunningGoal]]
+- [[MentalGoal]]
+- [[CareerGoal]]
+
+
+[[=]] Blog Posts =
+
+- [[DevToolFaceoff]]
+- [[IntroToOOJs]]
+- [[DoYouNeedACodeStyleGuide]]
+- GlobbingAndYou
+
 
 = Pages =
 
-- [[PRWebDocs]]
-- [[SeedMicroclassOutline]]
+- [[ProfDevIdeas]]
+- [[StuffIWant]]
+- [[ToRead]]
 - [[MoviesToWatch]]
 - [[VimNotes]]
-- [[ToRead]]
-- [[AboutMe]]
-- [[PersonalValues]]
-- [[MeditationInstruction]]
-- [[SixObstaclesToMeditation]]
-- [[GathasToLearn]]
-- [[JobCriteria]]
-- [[StuffIWant]]
-- [[GitTips]]
-- [[WildResearchSite]]

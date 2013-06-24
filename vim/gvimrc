@@ -1,8 +1,8 @@
 if has("gui_macvim")
 	" macmenu &File.New\ Tab key=<nop>
-  macmenu &File.New\ Window key=<nop>
-  macmenu &Edit.Paste key=<nop>
-  macmenu &Edit.Copy key=<nop>
+  macmenu File.New\ Window key=<nop>
+  macmenu Edit.Paste key=<nop>
+  macmenu Edit.Copy key=<nop>
 
   " remap cmd + w to close tab
   " map <D-w> :clo<CR>

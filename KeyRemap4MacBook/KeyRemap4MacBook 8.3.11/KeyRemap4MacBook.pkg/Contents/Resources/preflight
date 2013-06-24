@@ -1,0 +1,42 @@
+#!/bin/sh
+# -*- Mode: shell-script -*-
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin; export PATH
+
+# ----------------------------------------
+# unload before install
+for f in /Library/LaunchDaemons/org.pqrs.KeyRemap4MacBook.* /Library/LaunchAgents/org.pqrs.KeyRemap4MacBook.*; do
+    [ -f $f ] && launchctl unload $f 2> /dev/null
+done
+
+startup="/Library/StartupItems/KeyRemap4MacBook/KeyRemap4MacBook"
+[ -f "$startup" ] && "$startup" stop
+
+startup="/Applications/KeyRemap4MacBook/scripts/startup.sh"
+[ -f "$startup" ] && "$startup" stop
+
+startup="/Library/org.pqrs/KeyRemap4MacBook/scripts/startup.sh"
+[ -f "$startup" ] && "$startup" stop
+
+startup="/Applications/KeyRemap4MacBook.app/Contents/Library/scripts/startup.sh"
+[ -f "$startup" ] && "$startup" stop
+
+# ----------------------------------------
+# uninstall
+rm -rf /Library/StartupItems/KeyRemap4MacBook
+rm -rf /Applications/KeyRemap4MacBook
+rm -rf /Applications/KeyRemap4MacBook.app
+rm -rf /Library/org.pqrs/KeyRemap4MacBook
+rmdir /Library/org.pqrs 2>/dev/null
+
+rm -rf /Library/PreferencePanes/KeyRemap4MacBook.prefPane
+
+rm -f /Library/LaunchAgents/org.pqrs.KeyRemap4MacBook.*
+rm -f /Library/LaunchDaemons/org.pqrs.KeyRemap4MacBook.*
+
+# Don't remove uninstaller because
+# this script is also called from uninstaller and
+# we need to keep KeyRemap4MacBookUninstaller.icns while uninstaller is running.
+# rm -rf /tmp/KeyRemap4MacBook_uninstaller.*
+
+exit 0

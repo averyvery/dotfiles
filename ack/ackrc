@@ -4,3 +4,11 @@ html=.haml
 erb=.erb
 --type-add
 css=.sass,.scss
+--type-add
+js=.coffee
+--ignore-dir=.git
+--ignore-dir=.svn
+--ignore-dir=.idea
+--ignore-dir=node_modules
+--ignore-dir=tmp
+--ignore-dir=gems

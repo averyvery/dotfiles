@@ -26,25 +26,33 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shemerey/vim-peepopen'
+Bundle 'jtaby/Waldo'
 
 " apps
 Bundle 'vim-scripts/vimwiki'
 Bundle 'averyvery/vim-scratch'
 
 " languages
+Bundle 'scrooloose/syntastic'
 Bundle 'drslump/vim-syntax-js'
-Bundle 'averyvery/sparkup', {'rtp': 'vim/'}
+Bundle 'mattn/zencoding-vim'
 Bundle 'skammer/vim-css-color'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'walm/jshint.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 " tools
+Bundle 'vim-scripts/AutoTag'
+Bundle 'vim-scripts/taglist.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'averyvery/vim-indent-object'
+Bundle 'vim-scripts/Align'
+Bundle 'skwp/greplace.vim'
+Bundle 'mhinz/vim-signify'
 " Bundle 'airblade/vim-gitgutter'
 
 " searching
@@ -52,7 +60,7 @@ Bundle 'averyvery/ack.vim'
 Bundle 'averyvery/vim-browsereload-mac'
 
 " keep vim indent guides LAST. It messes stuff up
-Bundle 'nathanaelkane/vim-indent-guides'
+" Bundle 'nathanaelkane/vim-indent-guides'
 
 " Brief help
 " :BundleList        - list configured bundles
@@ -71,14 +79,11 @@ set nocompatible
 set modelines=0
 set encoding=utf-8
 set history=5000
-" set spell
-" set wildmode=longest:full
-" set wildmenu
 set ttyfast
 set ttyscroll=3
-set virtualedit=all
+" set virtualedit=all
 set invmmta
-set synmaxcol=200 " prevent syntax highlighting on long lines
+set synmaxcol=150 " prevent syntax highlighting on long lines
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 set scrolloff=5
@@ -120,7 +125,7 @@ autocmd BufWinEnter,BufNewFile * let g:UltiSnipsSnippetDirectories=['snippets']
 
 set relativenumber
 set numberwidth=1
-autocmd BufLeave * setlocal nonumber norelativenumber
+" autocmd BufLeave * setlocal nonumber norelativenumber
 autocmd BufEnter * setlocal number relativenumber
 
 " @end
@@ -195,23 +200,23 @@ autocmd BufNewFile,BufRead *.scss setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.js setlocal noexpandtab
 autocmd BufNewFile,BufRead *.json setlocal noexpandtab
 autocmd BufNewFile,BufRead *.css.sass set filetype=rb
-autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
-autocmd BufNewFile,BufRead *.html.php setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
-autocmd BufNewFile,BufRead *.html.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
-autocmd BufNewFile,BufRead *.erb setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
-autocmd BufNewFile,BufRead *.html setlocal filetype=html noexpandtab shiftwidth=1 tabstop=1
+autocmd BufNewFile,BufRead *.mobile.erb setlocal filetype=html noexpandtab
+autocmd BufNewFile,BufRead *.php setlocal filetype=html noexpandtab
+autocmd BufNewFile,BufRead *.html.erb setlocal filetype=html noexpandtab
+autocmd BufNewFile,BufRead *.erb setlocal filetype=html noexpandtab
+autocmd BufNewFile,BufRead *.html setlocal filetype=html noexpandtab
 autocmd BufEnter * if &filetype == "" | setlocal expandtab shiftwidth=2 | endif
 autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.c setlocal expandtab tabstop=4 shiftwidth=4
 
 " @end
 
 " @group expansion and completion
 
-let g:sparkupExecuteMapping = '<s-tab>'
-let g:UltiSnipsExpandTrigger = '<s-tab>'
-let g:UltiSnipsJumpForwardTrigger = '<s-tab>'
-let g:UltiSnipsListSnippets = '<m-tab>'
+" let g:UltiSnipsExpandTrigger = '<s-tab>'
+" let g:UltiSnipsJumpForwardTrigger = '<s-tab>'
+" let g:UltiSnipsListSnippets = '<m-tab>'
 
 " @end
 
@@ -295,8 +300,8 @@ set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:\ ,diff:-
 set foldlevel=0
 au BufWinEnter,BufNewFile *.js set foldlevel=1
 
-let g:indent_guides_auto_colors = 0
-autocmd BufWinEnter,BufNewFile * :IndentGuidesEnable
+" let g:indent_guides_auto_colors = 0
+" autocmd BufWinEnter,BufNewFile * :IndentGuidesEnable
 
 " Folds
 nmap <c-h> zj
@@ -406,8 +411,8 @@ endfunction
 
 " @group bubbling
 
-no <c-m-t> :m-2<cr>
-no <c-m-h> :m+<cr>
+no bt :m-2<cr>
+no b2 :m+<cr>
 
 " @end
 
@@ -421,7 +426,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings = 1
 
 " http://stackoverflow.com/questions/4579300/vimgrep-and-the-quickfix-window-in-macvim
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
@@ -437,13 +442,6 @@ map [[ ?{<CR>w99[{
 map ][ /}<CR>b99]}
 map ]] h0[[%/{<CR>
 map [] t$][%?}<CR>
-
-" @end
-
-" @group tags
-
-" wow this was annoying
-" autocmd BufWritePost,FileWritePost *.js call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 " @end
 
@@ -494,7 +492,7 @@ nmap <leader>u :GundoToggle<CR>
 nmap <leader>w :w !sudo tee %<Enter>
 nmap <leader>a :Ack
 nmap <leader>v :tabe $MYVIMRC<CR>
-nmap <leader>s :SyntasticCheck<CR>
+nmap <leader>c :SyntasticCheck<CR>
 nmap <leader>j :JSHint<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
 
@@ -511,18 +509,41 @@ nmap <leader>o :call Load()<CR>
 nmap <leader>s :Scratch<CR>
 nmap <leader>k :e ~/dotfiles/vim/wiki/index.wiki<CR>
 
-nnoremap <silent> <leader>=g :Gstatus<CR>
-nnoremap <silent> <leader>=d :Gdiff<CR>
-nnoremap <silent> <leader>=c :Gcommit<CR>
-nnoremap <silent> <leader>=b :Gblame<CR>
-nnoremap <silent> <leader>=l :Glog<CR>
-nnoremap <silent> <leader>=p :Git push<CR>
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
 
-nmap <leader>g :Gstatus<CR><c-w>t<c-w>H
+nmap <leader>G :Gstatus<CR><c-w>t<c-w>H
 
 nmap <silent> <leader>p :PeepOpen<CR>
-nmap <silent> <leader>P :tabnew<CR>:PeepOpen<CR>
+nmap <silent> <leader>pp :PeepOpen<CR>
+nmap <silent> <leader>pt :tabnew<CR>:PeepOpen<CR>
+nmap <silent> <leader>pv :vs<CR><c-w><c-w>:PeepOpen<CR>
+nmap <silent> <leader>ps :split<CR><c-w><c-w>:PeepOpen<CR>
 nmap <silent> <leader>t :NERDTree<CR>
-nmap <silent> <leader>f :set invfu<CR>
+" nmap <silent> <leader>f :set invfu<CR>
+nmap <silent> <leader>l :TlistToggle<CR>
+
+" @end
+
+" @group shame
+
+" needed for some reason
+autocmd BufEnter * imap <s-tab> <c-y>,
+
+" http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+nmap cp :let @+=expand("%:p")<CR>
+
+nmap <BS> :b#<CR>
+
+nmap <leader>c call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
+
+" autocmd VimEnter * :e ~/dotfiles/vim/wiki/index.wiki
+
+nmap <CR> o<esc>
+nmap <S-CR> O<esc>
 
 " @end

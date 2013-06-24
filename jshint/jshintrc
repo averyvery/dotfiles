@@ -72,6 +72,7 @@
     "shadow"        : false,    // Allows re-define variables later in code e.g. `var x=1; x=2;`.
     "sub"           : false,    // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
     "supernew"      : false,    // Tolerate `new function () { ... };` and `new Object;`.
+    "strict"        : false,    // Require the "use strict"; pragma.
     "validthis"     : false,    // Tolerate strict violations when the code is running in strict mode and you use this in a non-constructor function.
 
     // == Environments ====================================================
@@ -111,9 +112,7 @@
 
     "maxerr"        : 100,      // Maximum errors before stopping.
     "predef"        : [         // Extra globals.
-        //"exampleVar",
-        //"anotherCoolGlobal",
-        //"iLoveDouglas"
+      "_"
     ],
     "indent"        : 4         // Specify indentation spacing
 }
