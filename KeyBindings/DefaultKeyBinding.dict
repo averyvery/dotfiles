@@ -1,5 +1,13 @@
 {
 
+	/* Temp */
+
+  /*
+    "\U007F" = "moveLeft:";
+    "^\U007F" = "deleteBackward:";
+  */
+
+
 	/* Non-destructive */
   /*
 	"^d" = "moveLeft:";

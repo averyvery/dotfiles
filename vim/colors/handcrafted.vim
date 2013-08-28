@@ -32,8 +32,8 @@ hi NonText  guifg=#1e2d33 guibg=#111a1e gui=NONE
 hi SpecialKey  guifg=#1e2d33 guibg=#111a1e gui=NONE
 
 " Ident Guides
-hi IndentGuidesEven  guifg=#24353d guibg=#0b1114 ctermbg=3
-hi IndentGuidesOdd guifg=#152025 guibg=#0b1114 ctermbg=4
+hi IndentGuidesEven guifg=#25353b guibg=#1b282d
+hi IndentGuidesOdd guifg=#19262b guibg=#111a1e
 
 hi Normal  guifg=#ffffff guibg=#152126 gui=NONE
 hi SignColumn  guifg=#39515c guibg=#111a1e gui=NONE

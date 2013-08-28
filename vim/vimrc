@@ -21,6 +21,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'ervandew/supertab'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " file management
 Bundle 'tpope/vim-fugitive'
@@ -44,16 +45,16 @@ Bundle 'walm/jshint.vim'
 Bundle 'kchmck/vim-coffee-script'
 
 " tools
-Bundle 'vim-scripts/AutoTag'
-Bundle 'vim-scripts/taglist.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'averyvery/vim-indent-object'
 Bundle 'vim-scripts/Align'
 Bundle 'skwp/greplace.vim'
-Bundle 'mhinz/vim-signify'
-" Bundle 'airblade/vim-gitgutter'
+Bundle 'Shougo/unite.vim'
+Bundle 'arecarn/frisk'
+" Bundle 'mhinz/vim-signify' so slow!!!
+" Bundle 'airblade/vim-gitgutter' so slow!!!
 
 " searching
 Bundle 'averyvery/ack.vim'
@@ -79,9 +80,10 @@ set nocompatible
 set modelines=0
 set encoding=utf-8
 set history=5000
+set undolevels=5000
 set ttyfast
 set ttyscroll=3
-" set virtualedit=all
+set virtualedit=all
 set invmmta
 set synmaxcol=150 " prevent syntax highlighting on long lines
 set noeb vb t_vb=
@@ -90,6 +92,7 @@ set scrolloff=5
 set iskeyword+=- " dashes don't divide word
 set nocompatible
 set lazyredraw
+set nowrap
 set wrap
 set showbreak=--->\  " prefix for soft-wrapped lines (no actual line break character)
 set clipboard=unnamed
@@ -158,13 +161,12 @@ endfunction
 set guifont=Source\ Code\ Pro:h14
 set guifont=Ubuntu\ Mono:h14
 set guifont=Ubuntu\ Mono:h16
+set guifont=Ubuntu\ Mono:h18
 set linespace=3
 
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
 
-colorscheme birds-of-paradise
-colorscheme tomorrow_night_eighties
 colorscheme handcrafted
 
 call Pl#Theme#RemoveSegment('mode_indicator')
@@ -194,6 +196,7 @@ set listchars=tab:→\ ,trail:~,extends:↳,precedes:↵
 autocmd BufWinEnter,BufNewFile * set list
 
 autocmd BufNewFile,BufRead *.css setlocal filetype=css noexpandtab
+autocmd BufNewFile,BufRead *.sass setlocal noexpandtab
 autocmd BufNewFile,BufRead *.css.php setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.less setlocal filetype=css noexpandtab
 autocmd BufNewFile,BufRead *.scss setlocal filetype=css noexpandtab
@@ -409,13 +412,6 @@ endfunction
 
 " @end
 
-" @group bubbling
-
-no bt :m-2<cr>
-no b2 :m+<cr>
-
-" @end
-
 " @group syntastic & jshint
 
 set statusline+=%#warningmsg#
@@ -534,16 +530,26 @@ nmap <silent> <leader>l :TlistToggle<CR>
 " needed for some reason
 autocmd BufEnter * imap <s-tab> <c-y>,
 
+" indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+
+
 " http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
 nmap cp :let @+=expand("%:p")<CR>
 
 nmap <BS> :b#<CR>
 
-nmap <leader>c call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
+" nmap <leader>c call system("/usr/local/Cellar/ctags/5.8/bin/ctags")
 
 " autocmd VimEnter * :e ~/dotfiles/vim/wiki/index.wiki
 
 nmap <CR> o<esc>
 nmap <S-CR> O<esc>
 
+" bubbling
+no gbt :m-2<cr>
+no gb2 :m+<cr>
+
 " @end
+

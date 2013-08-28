@@ -1,45 +1,73 @@
+[[=]] Pomodoros =
+
+
+- with extends
+  - 32kb gzipped to 4.8kb
+  - 38.1kb gzipped to 4.7kb
+
+- Deploy to staging
+
+8am
+'Maricio' should be there
+2575 Pearl St #240
+Boulder, CO 80302
+303 442 2910
+
+3 story red brick building, metal roof
+walk up pearl towards work, right on 26, left - elevator, suite 240
+
+
 [[=]] Dire =
 
-- Schedule FED meeting for next week, or once I get more info
-- Cancel BMO
-  - Write a letter to bmo detailing all three accounts, and the balance
-  - include debit card number and my full name
-  - mention that they are joint accounts
-  - Write my current address
-  - fax to 604 221 2860
-- [[BasicsOfBuildoutMicroclass]]
-- [[JSFrameworkMicroCLass]]
-- http://vimeo.com/60885578
+- how much space does extending size, with gzipping?
+- http://www.kidney.org/transplantation/livingdonors/anonymousdonation.cfm
+- https://vl.basecamphq.com/projects/1775090-directors/posts/78890933/comments
+- WCS tickets
+  - wait, textures shouldn't be halved, right?
+  - hovers:
+    - should use cardboard background on black
+    - images should get a 30% black screen
+  - hamburger should become X
+  - petition needs to have a success message
+    - when user comes back from success, the red block will be open with a thank you
+    - on success, form is permanently changed to a "share" state for a week
+  - mobile
+    - form at the top of every page, hide it on chapters + add the sticky button
+  - desktop
+    - shows on overview and home, hides on chapter
 
 
 [[=]] Work =
 
-- [[QuarkGames]]
-- Photoshop, illustrator crash course?
-- https://vl.basecamphq.com/projects/11190801-client-side-frameworks-class/posts/76589803/comments#238105537
-- Play with vim tags
-- swap "hear" with "respond", take off hubot
-- http://evanhahn.com/understanding-express-js/?utm_source=javascriptweekly&utm_medium=email
-- https://gist.github.com/mrmrs/5726252
-
-- http://stackoverflow.com/questions/380379/how-to-add-lines-to-a-vim-register-without-overwriting-it
-- http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
-- http://www.youtube.com/watch?v=4udR30JYenA
-- http://www.youtube.com/watch?v=m3svKOdZijA
+- Offsite in a month and a half
+- Team recruiting goals?
+- https://help.github.com/articles/dealing-with-line-endings
+- Rails Rumble?
+- Backbone class? more frameworks? a day or two to dedicate to learning?
+- Issues with dev:
+  - the Basecamp post
+  - passwords/vigesafe
+  - testing for fuck's sake
+- FED/dev summit
+- Backbone class?
+- [[ChronicleNotes]]
+- [[FEDLeadership]]
 
 
 [[=]] Home =
 
-- invite someone to dinner
-- http://calendar.dailycamera.com/boulder_co/events/show/332377283-washed-out
-- http://calendar.dailycamera.com/denver_co/events/show/326436903-animal-collective-with-dan-deacon
-- [[StuffToDoInCO]]
-- Yearbook committee
-- Think about more social clubz
-- Get Scott Pilgrim, the book
-- [[WildResearch]]
-- [[BlairBirthday]]
-- Vacation?
+- thank-you cards
+- bunny riven
+- http://www.theguardian.com/lifeandstyle/2004/nov/07/foodanddrink.features11
+- http://www.nerdist.com/2013/03/you-made-it-weird-137-jon-hamm/
+- [[VigetYearbook]]
+- [[IdealWeek]]
+
+
+[[=]] Learning =
+
+- https://www.coursera.org/course/proglang
+- http://learningthreejs.com/blog/2013/08/02/how-to-do-a-procedural-city-in-100lines/
 
 
 [[=]] Goals =
@@ -50,17 +78,8 @@
 - [[CareerGoal]]
 
 
-[[=]] Blog Posts =
-
-- [[DevToolFaceoff]]
-- [[IntroToOOJs]]
-- [[DoYouNeedACodeStyleGuide]]
-- GlobbingAndYou
-
-
 = Pages =
 
-- [[ProfDevIdeas]]
 - [[StuffIWant]]
 - [[ToRead]]
 - [[MoviesToWatch]]

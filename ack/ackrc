@@ -1,5 +1,7 @@
 --type-add
 html=.haml
+--type-add
+html=.hbs
 --type-set
 erb=.erb
 --type-add

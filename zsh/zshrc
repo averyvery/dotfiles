@@ -122,6 +122,8 @@ source $ZSH/oh-my-zsh.sh
   alias pull='git pull'
   alias merge='git merge'
   alias status='git status'
+  alias u='grunt'
+  alias reseed='rake db:drop && rake db:create && rake db:migrate && rake db:seed && rails s'
 
   # git shortcuts
   alias git-wtf="git checkout master && git pull origin master && git checkout work && git rebase master && git checkout master && git merge work && git push origin master && git checkout work"
@@ -327,3 +329,4 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/ # Add RVM to PATH for scripting
 PATH=$PATH:/Applications/Android/platform-tools/:/Applications/Android/tools/
+PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS
