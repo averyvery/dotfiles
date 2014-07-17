@@ -1,0 +1,95 @@
+= Interviews =
+
+- Expectations around tracking time
+- Long-term goals
+- Current interests
+
+
+= Annual Reviews =
+
+- file new > from template > 'manager'
+- barn:
+  - does draft of template
+  - draft the review BEFORE the self-review
+  - pulls peer reviews into tabs
+  - pulls up spreadsheet summary
+  - pull quotes and put them into spots that they fit into (not always matching from the original review)
+  - things to work on: write a point, mayyyybe include a constructive quote
+  - try to pick reviews that agree with each other, don't confuse person
+  - "3 or 4 key improvements they can make; focus on those"
+  - then, go back through and write the lead-in comments for each section
+  - then the summary
+  - then the goals
+  - opening: key accomplishments:
+    - grab goals from last year and mention those
+    - add prof dev
+    - speaking
+    - etc
+  - include salary recommendation maybe (but, usually, keep it blank and just discuss how much of a raise they deserve)
+  - on-track for seniority a year away from now
+- we want to promote you to senior this time next year, or sooner
+  - lay out what we want to happen between now and then
+  - look at Dan's review and steal some ideas for my own - https://drive.google.com/a/viget.com/folderview?id=0B-o_XA-7QyE9bUk0X2g1VEZvTnc&usp=sharing&tid=0B-o_XA-7QyE9NzhiZjk2MjktZTk1ZC00NDliLThmNzktMjc5YzI2ZWIzNGNk
+- Share + paste review with reviewee afterwards
+
+
+
+= Half-year Reviews =
+
+- just bring the summary and goals page
+- print out the hours chart (khanh's doc)
+- print out reaper report
+
+
+= All Reviews =
+
+- Follow up with meeting notes
+
+
+
+Example:
+
+I had lunch with Todd today. It was a good chat. Most of the conversation centered around MassGen and the general struggles we're facing as we approach larger projects with more politically charged and dysfunctional stakeholder groups.
+
+The quick version:
+
+ • 8.9 hrs/day and 89% utilization for the past six months. Time report and charts are attached.
+ • As we know, MassGen has indeed been demoralizing and tough. Motivation and fulfillment levels for Todd are pretty low.
+ • Some professional dev time lately is helping him to get amped back up.
+ • He's ok with working on MassGen phase two. Knows we can't leave them hanging, thankful that they're happy with our work.
+ • With that said, he reiterated that a product-focused project to balance with MassGen work would be ideal. If not product-ish, just something smallish with some interesting problems to solve and the potential for innovation.
+ • He's not looking around at other jobs, it's not nearly that bad. He's dedicated, just needs to get inspired right now through non-Mass-Gen avenues.
+ • Happy with Viget and the UX team and Fox as UX Director. Proud of how we're growing.
+
+
+
+= Hours =
+
+var weekend_days = 0;
+var weekend_hours = 0;
+var dts = document.getElementsByClassName('dt-group');
+var getDayFromString = function(date) {
+  var splitDate = date.split('/');
+  var myDate = new Date();
+
+  myDate.setMonth(parseInt(splitDate[0], 10) - 1);
+  myDate.setDate(parseInt(splitDate[1], 10));
+  myDate.setFullYear(parseInt(splitDate[2], 10));
+
+  return myDate.getDay();
+};
+
+for (var i = 0; i < dts.length; i++) {
+  var td = dts[i].getElementsByTagName('td')[0];
+  var date = td.childNodes[0].data.trim();
+  var day = getDayFromString(date);
+
+  if(day == 6 || day == 0) {
+    dts[i].style.border = 'red 3px solid';
+    weekend_days++;
+    weekend_hours += parseInt(dts[i].getElementsByClassName('dt-hours')[0].childNodes[0].data.trim() * 100, 10) / 100;
+  }
+}
+
+console.log('Weekend days: ' + weekend_days);
+console.log('Weekend hours: ' + weekend_hours);
