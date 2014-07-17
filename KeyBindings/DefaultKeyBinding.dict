@@ -41,7 +41,7 @@
   */
 	"^b" = "moveWordLeft:";
 	"^w" = "moveWordRight:";
-  "^0" = "moveToBeginningOfLine:";
+  "^|" = "moveToBeginningOfLine:";
 	"^$" = "moveToEndOfLine:";
 
 	/* Selecting */
@@ -49,8 +49,8 @@
 	"^N" = "moveRightAndModifySelection:";
 	"^B" = "moveWordLeftAndModifySelection:";
 	"^W" = "moveWordRightAndModifySelection:";
-	"^)" = "moveToBeginningOfLineAndModifySelection:";
-  "^\\$" = "moveToEndOfLineAndModifySelection:";
+	"^0" = "moveToBeginningOfLineAndModifySelection:";
+  "^\\^" = "moveToEndOfLineAndModifySelection:";
 
 	/* Deleting */
 	"^~d" = "deleteBackward:";

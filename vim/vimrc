@@ -28,6 +28,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shemerey/vim-peepopen'
 Bundle 'jtaby/Waldo'
+Bundle 'ReekenX/vim-rename2'
 
 " apps
 Bundle 'vim-scripts/vimwiki'
@@ -53,6 +54,7 @@ Bundle 'vim-scripts/Align'
 Bundle 'skwp/greplace.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'arecarn/frisk'
+Bundle 'matze/vim-move'
 " Bundle 'mhinz/vim-signify' so slow!!!
 " Bundle 'airblade/vim-gitgutter' so slow!!!
 
@@ -111,9 +113,10 @@ filetype plugin on
 autocmd BufWinEnter,BufNewFile * silent tab
 
 " http://www.reddit.com/r/vim/comments/t1lhc/cursorcolumn_cursorline_slowdown/
-autocmd CursorHold * setlocal cursorline cursorcolumn
-autocmd CursorMoved,InsertEnter *
-  \ if &l:cursorline | setlocal nocursorline nocursorcolumn | endif
+" autocmd CursorHold * setlocal cursorline cursorcolumn
+" autocmd CursorMoved,InsertEnter *
+" \ if &l:cursorline | setlocal nocursorline nocursorcolumn | endif
+set cursorline
 
 set undofile
 set undodir=~/.vim/tmp/undo//
@@ -168,6 +171,7 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_stl_path_style = 'relative'
 
 colorscheme handcrafted
+colorscheme birds-of-paradise-modified
 
 call Pl#Theme#RemoveSegment('mode_indicator')
 call Pl#Theme#RemoveSegment('scrollpercent')
@@ -256,6 +260,9 @@ function! <SID>StripTrailingWhitespaces()
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
+     let save_cursor = getpos(".")
+    :silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
 endfunction
 
 nmap <silent> <esc> :silent! w<CR>:silent! call <SID>StripTrailingWhitespaces()<CR>:w<CR>
@@ -491,6 +498,7 @@ nmap <leader>v :tabe $MYVIMRC<CR>
 nmap <leader>c :SyntasticCheck<CR>
 nmap <leader>j :JSHint<CR>
 nmap <leader><esc> :bufdo bdelete<CR>:echo 'Buffers cleared'<CR>
+nmap <leader>n :call NVIM_init()<CR>
 
 nmap <silent> <leader>b :BufExplorer<CR>
 nmap <leader>c :topleft cwindow<CR>
@@ -531,8 +539,8 @@ nmap <silent> <leader>l :TlistToggle<CR>
 autocmd BufEnter * imap <s-tab> <c-y>,
 
 " indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 0
 
 
 " http://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
@@ -547,9 +555,21 @@ nmap <BS> :b#<CR>
 nmap <CR> o<esc>
 nmap <S-CR> O<esc>
 
-" bubbling
-no gbt :m-2<cr>
-no gb2 :m+<cr>
+let g:move_map_keys = 0
+
+vmap <A-t> <Plug>MoveBlockDown
+vmap <A-h> <Plug>MoveBlockUp
+nmap <A-t> <Plug>MoveLineUp
+nmap <A-h> <Plug>MoveLineDown
 
 " @end
 
+" @group coffeescript
+
+" autocmd BufNewFile,BufRead *.coffee syntax match coffeeConceal ": ()->" conceal cchar=→
+autocmd BufNewFile,BufRead *.coffee syntax match coffeeConceal "define" conceal cchar=→
+autocmd BufNewFile,BufRead *.coffee syntax match coffeeConceal "@$" conceal cchar=$
+hi def link coffeeConceal SpecialChar
+set conceallevel=2
+
+" @end

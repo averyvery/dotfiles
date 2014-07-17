@@ -112,8 +112,6 @@ source $ZSH/oh-my-zsh.sh
     git checkout master; merge $branch; push; checkout $branch;
   }
 
-  alias dcommit='git svn dcommit'
-  alias svnrebase='git svn rebase'
   alias checkout='git checkout'
   alias co='git checkout'
   alias rebase='git rebase'
@@ -128,6 +126,9 @@ source $ZSH/oh-my-zsh.sh
   # git shortcuts
   alias git-wtf="git checkout master && git pull origin master && git checkout work && git rebase master && git checkout master && git merge work && git push origin master && git checkout work"
   alias glo='git log --pretty=format:"%h%x09%an%x09%s"'
+  alias gpm='git push origin master'
+  alias gp='git push'
+  alias gac='g a && g commit -m '
 
 # @end
 
@@ -163,7 +164,9 @@ source $ZSH/oh-my-zsh.sh
 # @group aliases
 
   #commands
+  alias video='sudo killall AppleCameraAssistant'
   alias flush='dscacheutil -flushcache'
+  alias restart='sudo apachectl restart'
   alias h='history'
   alias c='clear'
   alias getpath='pwd|tr -d "\r\n"|pbcopy'
@@ -191,9 +194,9 @@ source $ZSH/oh-my-zsh.sh
 
 # @end
 
-# @group ruby
+# @group rvm
 
-	[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # @end
 
@@ -327,6 +330,32 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # @end
 
+# Submit PR for current branch against master
+pr () {
+  local repo=`git remote -v | grep -m 1 "(push)" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
+  local branch=`git name-rev --name-only HEAD`
+  echo "... creating pull request for branch \"$branch\" in \"$repo\""
+  open https://github.com/$repo/pull/new/$branch
+}
+
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/ # Add RVM to PATH for scripting
 PATH=$PATH:/Applications/Android/platform-tools/:/Applications/Android/tools/
 PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS
+
+# Speed up Ruby
+export RUBY_GC_MALLOC_LIMIT=90000000
+export RUBY_FREE_MIN=200000
+
+cd Sites
+
+ANDROID_HOME=/usr/local/opt/android-sdk
+
+HOMEBREW_GITHUB_API_TOKEN=6ec139fe39e8341881e87357c3f495d67dc6c12a
+
+gz () {
+  gzip -c $1 | wc -c
+}
+
+boil () {
+  git clone git@github.com:h5bp/html5-boilerplate.git $1
+}

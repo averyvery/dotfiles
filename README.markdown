@@ -9,6 +9,7 @@ Run the symlink commands:
     ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
     ln -s ~/dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
     ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+    ln -s ~/dotfiles/emacs ~/.emacs.d
     ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
     ln -s ~/dotfiles/vim ~/.vim
     ln -s ~/dotfiles/KeyBindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
