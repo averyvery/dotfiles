@@ -359,3 +359,10 @@ gz () {
 boil () {
   git clone git@github.com:h5bp/html5-boilerplate.git $1
 }
+
+whatport () {
+  lsof -i :$1
+}
+
+ulimit -n 16384
+ulimit -u 2048

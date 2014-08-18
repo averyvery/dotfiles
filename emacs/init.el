@@ -130,6 +130,9 @@ by Prelude.")
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/src")
 
+(setq prelude-whitespace nil)
+(setq prelude-clean-whitespace-on-save nil)
+
 (load "src/my_system")
 (load "src/my_evil")
 (load "src/my_matching")

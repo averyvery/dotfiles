@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/07/16 18:50:33 /Users/davery/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/08/13 16:39:18 /Users/davery/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -19,4 +19,5 @@
   ("file-exists" "test -e")
   ("uid-integer" 0)
   ("~root" "/var/root")
-  ("ls" "/bin/ls")))
+  ("ls" "/bin/ls")
+  ("trash" nil)))

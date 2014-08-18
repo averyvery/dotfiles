@@ -8,6 +8,8 @@
 (require 'sass-mode)
 (require 'js2-mode)
 
+(electric-pair-mode 1)
+
 (defun sass-indent-p ()
   "Return t if the current line can have lines nested beneath it."
   (unless (or (looking-at "^.* :.*$")
@@ -32,12 +34,20 @@
 (add-hook 'html-mode-hook 'tabs)
 (add-hook 'php-mode-hook 'tabs)
 (add-hook 'js2-mode-hook 'tabs)
-(add-hook 'css-mode-hook 'tabs)
-(add-hook 'sass-mode-hook 'tabs)
+;; (add-hook 'css-mode-hook 'tabs)
+;; (add-hook 'sass-mode-hook 'tabs)
+
+(defun no-flycheck ()
+  (setq flycheck-mode nil)
+)
+(add-hook 'html-mode-hook 'no-flycheck)
 
 (defun coffee-tabs ()
-	(setq coffee-indent-tabs-mode t)
-  (setq indent-tabs-mode t)
+  ;; (setq coffee-indent-tabs-mode t)
+  ;; (setq indent-tabs-mode t)
+  ;; (setq coffee-tab-width 2)
+  (setq coffee-indent-tabs-mode nil)
+  (setq indent-tabs-mode nil)
   (setq coffee-tab-width 2)
 )
 (add-hook 'coffee-mode-hook 'coffee-tabs)
@@ -72,9 +82,7 @@
 	(define-key evil-normal-state-local-map "o" 'evil-coffee-open-below)
 	(define-key evil-normal-state-local-map "O" 'evil-coffee-open-above)))
 
-(add-hook 'scss-mode-hook 'rainbow-mode)
-(add-hook 'scss-mode-hook 'scss-tabs)
-(add-hook 'prelude-scss-mode-hook 'rainbow-mode)
+;; (add-hook 'prelude-scss-mode-hook 'rainbow-mode)
 (add-hook 'prelude-scss-mode-hook 'scss-tabs)
 
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . html-mode))
