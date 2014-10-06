@@ -7,13 +7,15 @@
 (require 'evil)
 (evil-mode 1)
 (evil-leader/set-leader "<SPC>")
-(evil-leader/set-key "x" 'execute-extended-command)
+(evil-leader/set-key "x" 'smex)
+(evil-leader/set-key "X" 'smex-major-mode-commands)
 (evil-leader/set-key "e" (lambda () (interactive) (elscreen-create) (find-file "~/.emacs.d/init.el")))
 (evil-leader/set-key "/" 'comment-dwim)
 (evil-leader/set-key "d" 'dired)
 (evil-leader/set-key "r" 'replace-string)
 (evil-leader/set-key "t" 'tabify)
 (evil-leader/set-key "T" 'untabify)
+(evil-leader/set-key "a" 'align-regexp)
 
 ;; dvorak
 (define-key evil-normal-state-map "j" 'evil-delete)

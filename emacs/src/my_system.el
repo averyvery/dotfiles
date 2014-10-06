@@ -7,4 +7,7 @@
 (setq ring-bell-function 'ignore)
 (setq create-lockfiles nil)
 
+(require 'smooth-scroll)
+(smooth-scroll-mode t)
+
 (require 'magit)

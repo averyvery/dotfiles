@@ -129,6 +129,7 @@ source $ZSH/oh-my-zsh.sh
   alias gpm='git push origin master'
   alias gp='git push'
   alias gac='g a && g commit -m '
+  alias gas='g a && g commit -m "squash me" && git rebase -i HEAD~2'
 
 # @end
 

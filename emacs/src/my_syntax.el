@@ -30,10 +30,10 @@
   (setq tab-width 2)
   (setq indent-tabs-mode t)
 )
-(add-hook 'web-mode-hook 'tabs)
-(add-hook 'html-mode-hook 'tabs)
-(add-hook 'php-mode-hook 'tabs)
-(add-hook 'js2-mode-hook 'tabs)
+;; (add-hook 'web-mode-hook 'tabs)
+;; (add-hook 'html-mode-hook 'tabs)
+;; (add-hook 'php-mode-hook 'tabs)
+;; (add-hook 'js2-mode-hook 'tabs)
 ;; (add-hook 'css-mode-hook 'tabs)
 ;; (add-hook 'sass-mode-hook 'tabs)
 
@@ -58,9 +58,9 @@
 )
 (add-hook 'sass-mode-hook 'sass-tweaks)
 
-(defun scss-tabs ()
-  (local-set-key (kbd "RET") 'newline-and-indent)
-)
+;; (defun scss-tabs ()
+;;   (local-set-key (kbd "RET") 'newline-and-indent)
+;; )
 
 ;; https://github.com/XuHaoJun/emacs.d/blob/master/prog/lng/setup-coffee-mode.el
 (add-hook 'coffee-mode-hook (lambda ()
@@ -83,7 +83,7 @@
 	(define-key evil-normal-state-local-map "O" 'evil-coffee-open-above)))
 
 ;; (add-hook 'prelude-scss-mode-hook 'rainbow-mode)
-(add-hook 'prelude-scss-mode-hook 'scss-tabs)
+;; (add-hook 'prelude-scss-mode-hook 'scss-tabs)
 
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . html-mode))
@@ -107,14 +107,12 @@
 
   "A list of keywords to replace."
   (font-lock-add-keywords nil '(("\\(function\\)"            (0 (replace-with "ƒ")))))
-  (font-lock-add-keywords nil '(("\\(\\.prototype\\.\\)"     (0 (replace-with "…")))))
+  (font-lock-add-keywords nil '(("\\(\\.prototype\\.\\)"     (0 (replace-with "::")))))
   (font-lock-add-keywords nil '(("\\(this\\.\\)"             (0 (replace-with "@")))))
-  (font-lock-add-keywords nil '(("\\(module.exports =\\)"    (0 (replace-with "⇇")))))
+  (font-lock-add-keywords nil '(("\\(module.exports =\\)"    (0 (replace-with "^")))))
   (font-lock-add-keywords nil '(("\\(var \\)"                (0 (replace-with "+")))))
-  (font-lock-add-keywords nil '(("\\(for \\)"                (0 (replace-with "↺ ")))))
-  (font-lock-add-keywords nil '(("\\(while \\)"              (0 (replace-with "↻ ")))))
-  (font-lock-add-keywords nil '(("\\(.each\\)"               (0 (replace-with "⤮")))))
-  (font-lock-add-keywords nil '(("\\(return\\)"              (0 (replace-with "↩")))))
+  (font-lock-add-keywords nil '(("\\(return\\)"              (0 (replace-with "<=")))))
+  (font-lock-add-keywords nil '(("\\(console.log\\)"         (0 (replace-with "?")))))
 
   (font-lock-add-keywords nil '(("\\('\\)"           1 '(:foreground "#6d5e52") t)))
   (font-lock-add-keywords nil '(("\\(;\\)"           1 '(:foreground "#6d5e52") t)))
