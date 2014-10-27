@@ -195,12 +195,6 @@ source $ZSH/oh-my-zsh.sh
 
 # @end
 
-# @group rvm
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# @end
-
 # @group vim
 
 function s { killall SCREEN; local dir=`pwd`; cd ~; screen -S main -L; cd $dir; }
@@ -331,6 +325,12 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # @end
 
+# @group rbenv
+
+
+
+# @end
+
 # Submit PR for current branch against master
 pr () {
   local repo=`git remote -v | grep -m 1 "(push)" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
@@ -339,7 +339,7 @@ pr () {
   open https://github.com/$repo/pull/new/$branch
 }
 
-PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin/ # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/share/npm/bin/
 PATH=$PATH:/Applications/Android/platform-tools/:/Applications/Android/tools/
 PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS
 
@@ -365,5 +365,5 @@ whatport () {
   lsof -i :$1
 }
 
-ulimit -n 16384
-ulimit -u 2048
+# ulimit -n 16384
+# ulimit -u 2048

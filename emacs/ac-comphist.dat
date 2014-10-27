@@ -1,2050 +1,2224 @@
-((("spline" .
-   [1 0 0 0 0 0])
-  ("flags" .
-   [1 0 0 0 0])
-  ("line" .
-   [3 0 0 0])
-  ("lineColor" .
-   [1 0 0 0 0 0 0 0 0])
-  ("enabled" .
-   [2 0 0 0 0 0 0])
-  ("<=" .
-   [1 0])
-  ("stopAddLoop" .
-   [3 0 0 0 0 0 0 0 0 0 0])
-  ("--" .
-   [2 0])
-  ("addloop" .
-   [1 0 0 0 0 0 0])
-  ("pendingItemCount" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("dataUrl" .
-   [3 0 0 0 0 0 0])
-  ("FOR" .
-   [1 0 0])
-  ("bar" .
-   [1 0 0])
-  ("present" .
-   [1 0 0 0 0 0 0])
-  ("unsetLoop" .
-   [1 0 0 0 0 0 0 0 0])
-  ("animatedNumber" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("classes" .
-   [1 0 0 0 0 0 0])
-  ("cancelAnimationFrame" .
-   [0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("calls" .
-   [1 0 0 0 0])
-  ("already" .
-   [1 0 0 0 0 0 0])
-  ("renderedNumber" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("does" .
+((("hasCustomSelect" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("12px" .
    [1 0 0 0])
-  ("previousNumber" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("getNow" .
-   [3 0 0 0 0 0])
-  ("animationStartTime" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("how" .
-   [1 0 0])
-  ("base" .
-   [1 0 0 0])
-  ("returns" .
-   [1 0 0 0 0 0 0])
-  ("renderNumber" .
-   [4 0 0 0 0 0 0 0 0 0 0 0])
-  ("out" .
-   [1 0 0])
-  ("right" .
-   [1 0 0 0 0])
-  ("tickNumber" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("getInterimNumber" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("interimNumber" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("requestAnimationFrame" .
-   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("animationId" .
-   [4 0 0 0 0 1 0 0 0 0 0])
-  ("An" .
-   [1 0])
-  ("stepAnimation" .
-   [4 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("animated-number--decreasing" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("adds" .
-   [1 0 0 0])
-  ("addIncreasingClass" .
-   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
-  ("updateNumber" .
+  ("customSelect" .
    [3 0 0 0 0 0 0 0 0 0 0 0])
-  ("increasing" .
-   [9 0 0 0 0 0 0 0 0 0])
-  ("sets" .
-   [2 0 0 0])
-  ("Model" .
-   [2 0 0 0 0])
-  ("appendImage" .
-   [4 0 0 0 0 0 0 0 0 0 0])
-  ("fires" .
+  ("updatePositionInContainer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("stuck" .
    [1 0 0 0 0])
-  ("avatar" .
-   [2 0 0 0 0 0])
-  ("resources" .
+  ("$elem" .
+   [1 0 0 0 0])
+  ("unstick" .
+   [1 0 0 0 0 0 0])
+  ("breakpoints" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("SHURE" .
+   [3 0 0 0 0])
+  ("Impact" .
+   [0 0 0 1 0 0])
+  ("no-repeat" .
    [1 0 0 0 0 0 0 0 0])
-  ("fallback" .
-   [1 0 0 0 0 0 0 0])
-  ("appendFallback" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("appendImg" .
-   [3 0 0 0 0 0 0 0 0])
-  ("loadAvatar" .
-   [2 0 0 0 0 0 0 1 0 0])
-  ("setDefaults" .
+  ("$light-gray" .
    [1 0 0 0 0 0 0 0 0 0 0])
-  ("avatarUrl" .
-   [2 0 0 0 0 0 0 0 0])
-  ("loadableAvator" .
+  ("-9999px" .
+   [1 0 0 0 0 0 0])
+  ("uppercase" .
+   [1 0 0 0 0 0 0 0 0])
+  ("spinner" .
+   [1 0 0 0 0 0 0])
+  ("js2-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("green" .
+   [3 0 0 0 0])
+  ("loaderWrapper" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cloud" .
+   [1 0 0 0 0])
+  ("pendingItem" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("byTimeRef" .
+   [1 0 0 0 0 0 0 0 0])
+  ("getPreviousHour" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getCurrentHour" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("timeRef" .
+   [1 0 0 0 0 0 0])
+  ("upcomingVolume" .
    [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("loadableAvatar" .
-   [5 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("blank-tab" .
-   [2 0 0 0 0 0 0 0 0])
-  ("elscreen-create" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("new-tab" .
-   [1 0 0 0 0 0 0])
-  ("projectile-recentf" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("essentially" .
+  ("yAxis" .
+   [1 0 0 0 0])
+  ("getChartMax" .
    [1 0 0 0 0 0 0 0 0 0 0])
-  ("saw" .
-   [1 0 0])
-  ("When" .
-   [1 0 0 0])
-  ("though" .
-   [1 0 0 0 0 0])
-  ("even" .
-   [1 0 0 0])
-  ("Club" .
-   [1 0 0 0])
-  ("Fight" .
-   [1 0 0 0 0])
-  ("think" .
-   [1 0 0 0 0])
-  ("Hudsucker" .
-   [1 0 0 0 0 0 0 0 0])
-  ("was" .
-   [1 0 0])
-  ("seen" .
-   [1 0 0 0])
-  ("some" .
-   [1 0 0 0])
-  ("Maybe" .
-   [1 0 0 0 0])
-  ("going" .
-   [2 0 0 0 0])
-  ("watched" .
-   [1 0 0 0 0 0 0])
-  ("Akira" .
-   [4 0 0 0 0])
-  ("it." .
-   [1 0 0])
-  ("had" .
-   [1 0 0])
-  ("Jurassic" .
-   [1 0 0 0 0 0 0 0])
-  ("any" .
-   [2 0 0])
-  ("Darko" .
-   [1 0 0 0 0])
-  ("Donnie" .
-   [1 0 0 0 0 0])
-  ("nothing" .
-   [1 0 0 0 0 0 0])
-  ("make" .
-   [3 0 0 0])
-  ("character" .
-   [1 0 0 0 0 0 0 0 0])
-  ("The" .
-   [2 0 0])
-  ("completely" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("casually" .
-   [1 0 0 0 0 0 0 0])
-  ("n" .
-   [1])
-  ("level" .
-   [1 0 0 0 0])
-  ("tone" .
-   [1 0 0 0])
-  ("Primer" .
-   [4 0 0 0 0 0])
-  ("put" .
-   [1 0 0])
-  ("Alien" .
-   [3 0 0 0 0])
-  ("me" .
-   [1 0])
-  ("c" .
-   [2])
-  ("Scott" .
-   [2 0 0 0 0])
-  ("just" .
-   [7 0 0 0])
-  ("i" .
-   [2])
-  ("about" .
-   [1 0 0 0 0])
-  ("movie" .
-   [10 0 0 0 0])
-  ("list" .
-   [2 0 0 0])
-  ("really" .
-   [4 0 0 0 0 0])
-  ("first" .
-   [6 0 0 0 0])
-  ("months" .
-   [1 0 0 0 0 0])
-  ("extend" .
-   [1 0 0 0 0 0])
-  ("updateDates" .
+  ("getMax" .
+   [2 0 0 0 0 0])
+  ("increaseLatestPoint" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("addNewPoint" .
    [1 0 0 0 0 0 0 0 0 0 0])
-  ("onBeforeClose" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ISODate" .
-   [1 0 0 0 0 0 0])
-  ("prettyDate" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("tenMinutes" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("random" .
-   [1 0 0 0 0 0])
-  ("formatAmount" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("number" .
-   [9 0 0 0 0 0])
-  ("ui" .
-   [10 0])
-  ("amountLoop" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("itemMax" .
-   [1 0 0 0 0 0 0])
-  ("walkPendingData" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("loop" .
-   [3 0 0 0])
-  ("returnValue" .
-   [6 0 0 0 0 0 0 0 0 0 0])
-  ("beforeEach" .
-   [7 0 0 0 0 0 0 0 0 0])
-  ("toHaveBeenCalledWith" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("toEqual" .
-   [5 0 0 0 0 0 0])
-  ("singleStep" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("step" .
-   [1 0 0 0])
-  ("diff" .
-   [3 0 0 0])
-  ("getAmountStep" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("->" .
-   [27 0])
-  ("previousAmount" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("preivous" .
-   [1 0 0 0 0 0 0 0])
-  ("current" .
-   [5 0 0 0 0 0 0])
-  ("ticksElapsed" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("ticksPerSecond" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("maxTicks" .
-   [1 0 0 0 0 0 0 0])
-  ("ticks" .
-   [2 0 0 0 0])
-  ("tickAmount" .
-   [4 0 0 0 0 0 0 0 0 0])
-  ("tickMultiplier" .
+  ("updateNumber++" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("amount" .
-   [3 0 0 0 0 0])
-  ("fetch" .
-   [3 0 0 0 0])
-  ("loader" .
-   [2 0 0 0 0 0])
-  ("retry" .
-   [1 0 0 0 0])
-  ("toHaveBeenCalled" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
-  ("expect" .
-   [13 0 0 0 0 0])
-  ("error" .
-   [5 0 0 0 0])
-  ("createSpy" .
-   [2 0 0 0 0 0 0 0 0])
-  ("jasmine" .
-   [2 0 0 0 0 0 0])
-  ("spyOn" .
-   [10 0 0 0 0])
-  ("git" .
-   [1 0 0])
-  ("count" .
-   [1 0 0 0 0])
-  ("toggleMuted" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("muted" .
-   [1 0 0 0 0])
-  ("setInterval" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("t" .
-   [3])
-  ("this.fader" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("volume" .
-   [7 0 0 0 0 0])
-  ("up" .
-   [4 0])
-  ("set-face-foreground" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("should" .
-   [1 0 0 0 0 0])
-  ("gender_name" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  (":gender" .
-   [1 0 0 0 0 0 0])
-  ("gender" .
-   [2 0 0 0 0 0])
-  ("flycheck-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("no-flycheck" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("+opacity" .
-   [1 0 0 0 0 0 0 0])
-  ("-wide" .
-   [2 0 0 0 0])
-  ("div" .
-   [1 0 0])
-  ("margin-top" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("signInButtons" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("for" .
-   [6 0 0])
-  ("js" .
-   [1 0])
-  ("feds" .
-   [1 0 0 0])
-  ("project_index" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("php" .
-   [3 0 0])
-  ("untabify" .
-   [2 0 0 0 0 0 0 0])
-  ("tabify" .
-   [2 0 0 0 0 0])
-  ("fed_pto" .
-   [2 0 0 0 0 0 0])
-  ("fed" .
-   [3 0 0])
-  ("fed_hours" .
-   [1 0 0 0 0 0 0 0 0])
-  ("fed_names" .
-   [1 0 0 0 0 0 0 0 0])
-  ("project_hours" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("fed_index" .
-   [2 0 0 0 0 0 0 0 0])
-  ("hours" .
-   [9 0 0 0 0])
-  ("hours_data" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("output" .
-   [3 0 0 0 0 0])
-  ("rainbow-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("css" .
-   [2 0 0])
-  ("svg" .
-   [1 0 0])
-  ("titles" .
-   [2 0 0 0 0 0])
-  ("names" .
-   [2 0 0 0 0])
-  ("mouse" .
-   [2 0 0 0 0])
-  ("comments" .
-   [2 0 0 0 0 0 0 0])
-  ("y0" .
-   [4 0])
-  ("endDate" .
-   [3 0 0 0 0 0 0])
-  ("startDate" .
-   [6 0 0 0 0 0 0 0 0])
-  ("date" .
-   [18 0 0 0])
-  ("getPercentageFromDate" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("increment" .
-   [4 0 0 0 0 0 0 0 0])
-  ("dates" .
-   [2 0 0 0 0])
-  ("length:" .
-   [1 0 0 0 0 0 0])
-  (":uglifier" .
-   [1 0 0 0 0 0 0 0 0])
-  ("removeChild" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("videoContainer" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("100" .
-   [3 0 0])
-  ("createSuccessMessage" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("$field" .
-   [1 0 0 0 0 0])
-  ("reposition" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("bindEvents" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("createForm" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("action" .
-   [2 0 0 0 0 0])
-  ("RequestAccessModal" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("VS" .
-   [1 0])
-  ("file" .
-   [2 0 0 0])
-  ("youTube" .
-   [3 0 0 0 0 0 0])
-  ("break" .
-   [1 0 0 0 0])
-  ("parentMethod" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("offsetHeight" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("resetAll" .
-   [1 0 0 0 0 0 0 0])
-  ("instances" .
-   [1 0 0 0 0 0 0 0 0])
-  ("Video" .
-   [3 0 0 0 0])
-  ("replace-string" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("resize" .
-   [3 0 0 0 0 0])
-  ("imageEl" .
-   [1 0 0 0 0 0 0])
-  ("newImageWider" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("deviceChange" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("firstTime" .
-   [1 0 0 0 0 0 0 0 0])
-  ("newImage" .
-   [4 0 0 0 0 0 0 0])
-  ("type" .
-   [3 0 0 0])
-  ("min" .
-   [3 0 0])
-  ("Math" .
-   [2 0 0 0])
-  ("win" .
-   [1 0 0])
-  ("roundWidth" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("updateWidth" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("find" .
-   [4 0 0 0])
-  ("dppx" .
-   [1 0 0 0])
-  ("imageData" .
-   [1 0 0 0 0 0 0 0 0])
-  ("ddpx" .
-   [1 0 0 0])
-  ("device" .
-   [14 0 0 0 0 0])
-  ("imageBlockEls" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("CC" .
-   [7 0])
-  ("when" .
-   [5 0 0 0])
-  ("comment" .
-   [1 0 0 0 0 0 0])
-  ("comment-region" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("statusCode" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("cta" .
-   [1 0 0])
-  ("aliasMatchCol" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("numRows" .
-   [1 0 0 0 0 0 0])
-  ("they" .
-   [1 0 0 0])
-  ("_fromRow" .
-   [1 0 0 0 0 0 0 0])
-  ("column" .
-   [3 0 0 0 0 0])
-  ("emailSent" .
-   [1 0 0 0 0 0 0 0 0])
-  ("numberCol" .
-   [0 0 0 1 0 0 0 0 0])
-  ("rows" .
-   [2 0 0 0])
-  ("back" .
-   [9 0 0 0])
-  ("aliasesCol" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("_getBack" .
-   [1 0 0 0 0 0 0 0])
-  ("_getFront" .
-   [4 0 0 0 0 0 0 0 0])
-  ("getRange" .
-   [2 0 0 0 0 0 0 0])
-  ("sentCol" .
-   [2 0 0 0 0 0 0])
-  ("dataStartRow" .
-   [8 0 0 0 0 0 0 1 0 0 0 0])
-  ("front" .
-   [6 0 0 0 0])
-  ("emailSentString" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("aliasFrom" .
-   [1 0 0 0 0 0 0 0 0])
-  ("aliasMatch" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("row" .
-   [14 0 0])
-  ("aliasIndicator" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("aliases" .
-   [5 0 0 0 0 0 0])
-  ("email" .
-   [6 0 0 0 0])
-  ("message" .
-   [4 0 0 0 0 0 0])
-  ("subject" .
-   [6 0 0 0 0 0 0])
-  ("emailAddress" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("_sendEmail" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("_getSheet" .
-   [3 0 0 0 0 0 0 0 0])
-  ("sendEmail" .
-   [1 0 0 0 0 0 0 0 0])
-  ("interfaceFirstCol" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("config" .
-   [22 0 0 0 0 0])
-  ("sendEmails" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("forEach" .
-   [3 0 0 1 0 0 0])
-  ("alias" .
-   [10 0 0 0 0])
-  ("but" .
-   [4 0 0])
-  ("over" .
-   [1 0 0 0])
-  ("writeAliases" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("getBackSheet" .
-   [5 0 0 0 0 0 0 0 0 0 0 0])
-  ("clearColumn8" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("getSheet" .
-   [2 0 0 0 0 0 0 0])
-  ("window-width" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("lt-ie9" .
-   [1 0 0 0 0 0])
-  ("environment-embedded" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("app" .
-   [1 0 0])
-  ("site" .
-   [1 0 0 0])
-  ("padding-bottom" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("hidden" .
-   [3 0 0 0 0 0])
-  ("background-position" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("png" .
-   [1 0 0])
-  ("image-url" .
-   [1 0 0 0 0 0 0 0 0])
-  ("background-image" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("url" .
-   [8 0 0])
-  ("logo" .
-   [2 0 0 0])
-  ("ease-in" .
-   [2 0 0 0 0 0 0])
-  ("ease-in-out" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("border-color" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("+transition" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("ease-out" .
-   [4 0 0 0 0 0 0 0])
-  ("-2px" .
-   [1 0 0 0])
-  ("-" .
-   [1])
-  ("-100%" .
-   [1 0 0 0 0])
-  ("transform" .
-   [2 0 0 0 0 0 0 0 0])
-  ("+transform-origin" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("0s" .
-   [4 0])
-  ("translate" .
-   [4 0 0 0 0 0 0 0 0])
-  ("scale" .
-   [2 0 0 0 0])
-  ("+transform" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("$dark-gray" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("$purple" .
-   [3 0 0 0 0 0 0])
-  ("$green" .
-   [3 0 0 0 0 0])
-  ("-20px" .
-   [1 0 0 0 0])
-  ("margin" .
-   [2 0 0 0 0 0])
-  ("$cornflower" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("border-radius" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("50%" .
-   [2 0 0])
-  ("nth-child" .
-   [3 0 0 0 0 0 0 0 0])
-  ("li" .
-   [2 0])
-  ("after" .
-   [5 0 0 0 0])
-  ("-7px" .
-   [1 0 0 0])
-  ("-10" .
-   [4 0 0])
-  ("margin-bottom" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("$dark-blue" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("5px" .
-   [5 0 0])
-  ("admirer" .
-   [1 0 0 0 0 0 0])
-  ("bff" .
-   [1 0 0])
-  ("crush" .
-   [1 0 0 0 0])
-  ("language" .
-   [1 0 0 0 0 0 0 0])
-  ("$div" .
-   [1 0 0 0])
-  ("$dl" .
-   [1 0 0])
-  ("not" .
-   [11 0 0])
-  ("like" .
-   [6 0 0 0])
-  ("that" .
-   [6 0 0 0])
-  ("$header" .
-   [1 0 0 0 0 0 0])
-  ("$countdown" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("timeLeft" .
-   [1 0 0 0 0 0 0 0])
-  ("today" .
-   [1 0 0 0 0])
-  ("getTime" .
-   [4 0 0 0 0 0 0])
-  ("offset" .
-   [1 0 0 0 0 0])
-  ("Date" .
-   [16 0 0 0])
-  ("$inner" .
-   [2 0 0 0 0 0])
-  ("coffee-indent-tabs-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [3 0 0 0])
-  ("$color--blue" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("isTag" .
-   [0 0 0 2 0])
-  ("isTouchDevice" .
-   [1 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("Global" .
-   [3 0 0 0 1 0])
-  ("fm" .
-   [3 0])
-  ("repo" .
-   [2 0 0 0])
-  ("res" .
-   [3 0 0])
-  ("id" .
-   [2 0])
-  ("issues" .
-   [2 0 0 0 0 0])
-  ("shortTitle" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("getPinterestDescription" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("join" .
-   [3 0 0 0])
-  ("toLowerCase" .
-   [1 0 0 0 0 1 0 0 0 0 0])
-  ("title" .
-   [5 0 0 0 0])
-  ("pinterestDescription" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("twitterDescription" .
-   [2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("string" .
-   [7 0 0 0 0 0])
-  ("womens2014" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("dsg" .
-   [3 0 0])
-  ("twitterUri" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("com" .
-   [4 0 0])
-  ("http" .
-   [3 0 0 0])
-  ("twitterUrl" .
-   [11 0 0 0 1 0 0 0 0 0])
-  ("shareRoot" .
-   [1 0 0 0 0 0 0 0 0])
-  ("shareImage" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("assetPath" .
-   [2 0 0 0 0 0 0 0 0])
-  ("encodeURIComponent" .
-   [0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0])
-  ("attrs" .
-   [13 0 0 0 0])
-  ("root" .
-   [7 0 0 0])
-  ("shareUrl" .
-   [1 0 0 0 0 0 0 0])
-  ("share" .
-   [3 0 0 0 0])
-  ("nextIndex" .
-   [3 0 0 0 0 0 0 0 0])
-  ("restartIfIndex" .
-   [0 0 0 0 0 0 0 0 0 2 0 0 0 0])
-  ("end" .
-   [3 0 0])
-  ("dispatch" .
-   [1 0 0 0 0 0 0 0])
-  ("inDirection" .
-   [0 0 0 1 0 0 0 0 0 0 0])
-  ("goToNextCategory" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("isAudio" .
-   [0 0 0 0 0 1 0])
-  ("audio" .
-   [3 0 0 0 0])
-  ("clobber" .
-   [1 0 0 0 0 0 0])
-  ("isAttemptToPlay" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("name" .
-   [2 0 0 0])
-  ("options" .
-   [3 0 0 0 0 0 0])
-  ("shouldPlay" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("navInactive" .
-   [0 0 0 0 0 1 0 0 0 0 0])
-  ("ido-select-text" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("do" .
-   [2 0])
-  ("image" .
-   [20 0 0 0 0])
-  ("load" .
-   [1 0 0 0])
-  ("mouseout" .
-   [1 0 0 0 0 0 0 0])
-  ("keydown" .
-   [1 0 0 0 0 0 0])
-  ("styles" .
-   [3 0 0 0 0 0])
-  ("activeClassName" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("bullseyes" .
-   [1 0 0 0 0 0 0 0 0])
-  ("hideBullseyes" .
+  ("setupDemoData" .
    [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("showBullseyes" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("hide" .
-   [3 0 0 0])
-  ("toggleClass" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("NavigationView" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cell" .
-   [1 0 0 0])
-  ("stop" .
-   [7 0 0 0])
-  ("now" .
-   [4 0 0])
-  ("by" .
-   [2 0])
-  ("is" .
-   [6 0])
-  ("what" .
-   [3 0 0 0])
-  ("pointer" .
-   [4 0 0 0 0 0 0])
-  ("structure/cursor-video-pause" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("default" .
-   [7 0 0 0 0 0 0])
-  ("none" .
-   [9 0 0 0])
-  ("invoke" .
-   [1 0 0 0 0 0])
-  ("removing" .
-   [3 0 0 0 0 0 0 0])
-  ("shown" .
-   [2 0 0 0 0])
-  ("creating" .
-   [1 0 0 0 0 0 0 0])
-  ("show" .
-   [4 0 0 0])
-  ("preloaded" .
-   [6 0 0 0 0 0 0 0 0])
-  ("createChildViews" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("callback" .
-   [4 0 0 0 0 0 0 0])
-  ("fadeOut" .
-   [1 0 0 0 0 0 0])
-  ("closePreloader" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("PitcherPreloader" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("preloader" .
-   [13 0 0 0 0 0 0 0 0])
-  ("//" .
-   [5 0])
-  ("z-index" .
-   [4 0 0 0 0 0 0])
-  ("relative" .
-   [4 0 0 1 0 0 0 0])
-  ("a" .
-   [5])
-  ("inline-block" .
+  ("getStartTime" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("before" .
-   [2 0 0 0 0 0])
-  ("line-height" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("15px" .
-   [6 0 0 0])
-  ("font-size" .
-   [1 0 0 0 0 0 0 0 0])
-  ("block" .
-   [2 0 0 0 0])
-  ("delete-and-balance-other-windows" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("delete-other-frames" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("delete-frame" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("<SPC>" .
-   [2 0 0 0 0])
-  ("org-store-link" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("evil-leader/set-key" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("global-color-identifiers-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("move-line-up" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("move-line-down" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("auto-complete-mode" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("content" .
-   [2 0 0 0 1 0 0])
-  ("underscore" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("nav" .
-   [2 0 0])
-  ("dmp" .
-   [2 0 0])
-  ("methodName" .
+  ("twoDaysAgo" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("globalNav" .
-   [1 0 0 0 0 0 0 0 0])
-  ("close" .
-   [1 0 0 0 0])
-  ("global" .
-   [1 0 0 0 0 0])
-  ("toggle" .
-   [3 0 0 0 0 0])
-  ("triggering" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("globalnav" .
-   [1 0 0 0 0 0 0 0 0])
-  ("listenTo" .
-   [3 0 0 0 0 0 0 0])
-  ("vent" .
-   [5 0 0 0])
-  ("cantransition" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("mouseinuse" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("iframe" .
-   [4 0 0 0 0 0])
-  ("videoStartTimer" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("controller" .
-   [1 0 0 0 0 0 0 0 0 1])
-  ("startTime" .
-   [1 0 0 0 0 0 0 0 0])
-  ("bindUIElements" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("removeClasses" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("functon" .
-   [1 0 0 0 0 0 0])
-  ("removeClass" .
-   [5 0 0 0 0 0 0 0 0 0 0])
-  ("showView" .
-   [1 0 0 0 0 0 0 0])
-  ("swapViews" .
-   [1 0 0 0 0 0 0 0 0])
-  ("cleanUp" .
-   [1 0 0 0 0 0 0])
-  ("finishShow" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("all" .
-   [1 0 0])
-  ("on" .
-   [7 0])
-  ("from" .
-   [2 0 0 0])
-  ("finishTransition" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("else" .
-   [15 0 0 0])
-  ("clearClasses" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("false" .
-   [17 0 0 0 0])
-  ("inProgress" .
-   [6 0 0 0 0 0 0 0 0 0])
-  ("transitionTimer" .
-   [6 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("clearTimeout" .
-   [5 0 0 0 0 0 0 0 0 0 0 0])
-  ("reset" .
-   [10 0 0 0 0])
-  ("complete" .
-   [2 0 0 0 0 0 0 0])
-  ("true" .
-   [17 0 0 0])
-  ("transition" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("newView" .
-   [5 0 0 0 0 0 0])
-  ("to" .
-   [13 0])
-  ("sibling" .
-   [1 0 0 0 0 0 0])
-  ("setupTransition" .
-   [1 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("mouseover" .
-   [1 0 0 0 0 0 0 0 0])
-  ("split-window-bottom" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("currentView" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("model" .
-   [29 0 0 0 0])
-  ("view" .
-   [28 0 0 0])
-  ("siblingClass" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("Marionette" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("Backbone" .
-   [5 0 0 1 0 0 0 0])
-  ("ItemView" .
-   [1 0 0 0 0 0 0 0])
-  ("link" .
-   [4 0 0 0])
-  ("initting" .
-   [1 0 0 0 0 0 0 0])
-  ("it" .
-   [17 0])
-  ("Category" .
-   [2 0 0 0 0 0 0 0])
-  ("tagName" .
-   [2 0 0 0 0 0 0])
-  ("onRender" .
-   [7 0 0 0 0 0 0 0])
-  ("initialize" .
-   [6 0 0 1 1 0 0 0 0 1])
-  ("org-open-at-point" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ido-exit-minibuffer" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ido-display-file" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ido-prev-match" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ido-next-match" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("into" .
+  ("with" .
    [1 0 0 0])
-  ("no" .
-   [3 0])
-  ("instore" .
-   [4 0 0 0 0 0 0])
-  ("addClass" .
-   [8 0 0 0 0 0 0 0])
-  ("class" .
-   [1 0 0 0 0])
-  ("attr" .
-   [8 0 0 0])
-  ("html" .
-   [17 0 0 0])
-  ("the" .
-   [11 0 0])
-  ("undefined" .
-   [3 0 0 0 0 0 0 0 0])
-  ("if" .
-   [36 0])
-  ("slug" .
-   [19 0 0 0])
-  ("sl" .
-   [2 0])
-  ("highlight" .
-   [2 0 0 0 0 0 0 0 0])
-  ("ig" .
-   [1 0])
-  ("parent" .
-   [7 0 0 0 0 0])
-  ("call" .
+  ("updates" .
+   [1 0 0 0 0 0 0])
+  ("behavior" .
+   [1 0 0 0 0 0 0 0])
+  ("demo" .
    [1 0 0 0])
-  ("alert" .
-   [13 0 0 0 0])
-  ("foo" .
-   [11 0 0])
-  ("parseMacro" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("actualResult" .
-   [3 0 0 0 1 0 0 0 0 0 0 0])
-  ("log" .
-   [200 0 0])
-  ("addPrettyResults" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setVars" .
-   [2 0 0 0 0 0 0])
-  ("processResults" .
+  ("setting" .
+   [1 0 0 0 0 0 0])
+  ("probably" .
+   [1 0 0 0 0 0 0 0])
+  ("updateChartMax" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("tryTest" .
-   [1 0 0 0 0 0 0])
-  ("$el" .
-   [18 0 0])
-  ("el" .
-   [16 0])
-  ("new" .
-   [28 0 0])
-  ("push" .
-   [4 0 0 0])
-  ("description" .
-   [7 0 0 0 0 0 0 0 0 0 0])
-  ("Test" .
-   [2 0 0 0])
-  ("prototype" .
-   [5 0 0 0 0 0 0 0 0])
-  ("tester" .
-   [1 0 0 0 0 0])
-  ("MacroTester" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("tpl" .
-   [1 0 0])
-  ("return" .
-   [43 0 0 0 0 0])
-  ("define" .
-   [1 0 0 0 0 0])
-  ("have" .
-   [1 0 0 0])
-  ("you" .
-   [5 0 0])
-  ("input" .
+  ("-----" .
    [1 0 0 0 0])
-  ("$input" .
-   [2 0 0 0 0 0])
-  ("textarea" .
-   [4 0 0 0 0 0 0 0])
-  ("appendTo" .
-   [6 0 0 0 0 0 0 0])
-  ("testScript" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("$button" .
-   [4 0 0 0 0 0 0])
-  ("$h2" .
-   [1 0 0])
-  ("getMacro" .
-   [2 0 0 0 0 0 0 0])
-  ("setup" .
-   [0 0 0 1 0])
-  ("console" .
-   [208 0 0 0 0 0 0])
-  ("path" .
-   [3 0 0 0])
-  ("require" .
-   [2 0 0 0 0 0 0])
-  ("buildDom" .
-   [2 0 0 0 0 0 0 0])
-  ("fetchMacro" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("data" .
-   [24 0 0 0])
-  ("getData" .
-   [4 0 0 0 0 0 0])
-  ("this" .
-   [159 0 0 0])
-  ("macroTester" .
-   [2 0 0 0 0 0 2 0 0 0 0])
-  ("$this" .
-   [2 0 0 0 0])
-  ("$col2" .
-   [2 0 0 0 0])
-  ("col" .
-   [1 0 0])
-  ("append" .
-   [8 0 0 0 0 0])
-  ("$col1" .
-   [3 0 0 0 0])
-  ("$row" .
-   [1 0 0 0])
-  ("txt" .
-   [3 0 0])
-  ("var" .
-   [65 0 0])
-  ("test" .
-   [13 0 0 0])
-  ("text" .
-   [18 0 0 0])
-  ("macroPath" .
-   [2 0 0 0 0 0 0 0 0])
-  ("macro" .
-   [24 0 0 0 0])
-  ("macros" .
-   [2 0 0 0 0 0])
-  ("sp-show-pair-mismatch-face" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("function" .
-   [124 0 1 0 1 0 0 0])
-  ("yas-indent-line" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("insert-two-links" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("newline" .
-   [2 0 0 0 0 0 0])
-  ("evil-previous-line" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("insert-tab" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("nil" .
-   [4 0 0])
-  ("video" .
-   [16 0 0 0 0])
-  ("trigger" .
-   [6 0 0 0 0 0 0])
-  ("command" .
-   [3 0 0 0 0 0 0])
-  ("navTitle" .
-   [1 0 0 0 0 0 0 0])
-  ("set" .
-   [13 0 0])
-  ("position" .
-   [10 0 0 0 0 1 1 0])
-  ("get" .
-   [35 0 0])
-  ("modes" .
-   [4 0 0 0 0])
-  ("isInStore" .
-   [2 0 0 0 0 0 0 0 0])
-  ("OpenerModel" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("magit" .
-   [1 0 0 0 0])
-  ("clickPaused" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("softPaused" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("pausing" .
-   [1 0 0 0 0 0 0])
-  ("focus" .
-   [8 0 0 0 0])
-  ("split-window-right" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("ido-complete" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("theme" .
-   [1 0 0 0 0])
-  ("let" .
-   [1 0 0])
-  ("countdown" .
-   [2 0 0 0 0 0 0 0 0])
-  ("document" .
-   [6 0 0 0 0 0 0 0])
-  ("querySelector" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("template" .
-   [9 0 0 0 0 0 0 0])
-  ("innerHTML" .
-   [3 0 0 0 0 1 0 0 0])
-  ("Countdown" .
-   [1 0 0 0 0 0 0 0 0])
-  ("start" .
-   [3 0 0 0 0])
-  ("render" .
-   [6 0 0 0 0 0])
-  ("setTimeout" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("bind" .
-   [12 0 0 0])
-  ("bindAll" .
-   [4 0 0 0 0 0 0])
-  ("update" .
-   [6 0 0 0 0 0])
-  ("setLoop" .
-   [4 0 0 0 0 0 0])
-  ("time" .
-   [57 0 0 0])
-  ("apply" .
-   [4 0 0 0 0])
-  ("arguments" .
-   [4 0 0 0 0 0 0 0 0])
-  ("small" .
-   [1 0 0 0 0])
-  ("getSize" .
-   [1 0 0 0 0 0 0])
-  ("change" .
-   [4 0 0 0 0 0])
-  ("changing" .
-   [2 0 0 0 0 0 0 0])
-  ("changed" .
-   [1 0 0 0 0 0 0])
-  ("remove" .
-   [22 0 0 0 0 0])
-  ("add" .
-   [10 0 0])
-  ("defer" .
-   [5 0 0 0 0])
-  ("delay" .
-   [11 0 0 0 0])
-  ("direction" .
-   [4 0 0 0 0 0 0 0 0])
-  ("delta" .
-   [7 0 0 0 0])
-  ("max" .
-   [10 0 0])
-  ("nextTime" .
-   [1 0 0 0 0 0 0 0])
-  ("nextSize" .
-   [1 0 0 0 0 0 0 0])
-  ("<pre>" .
-   [1 0 0 0 0])
-  ("</pre>" .
-   [1 0 0 0 0 0])
-  ("sendNewUrl" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("console.log" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("pageView" .
-   [1 0 0 0 0 0 0 0])
-  ("setupAnimation" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("navigator" .
-   [1 0 0 0 0 0 0 0 0])
-  ("constructor" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("Navigator" .
-   [2 0 0 0 0 0 0 0 0])
-  ("productCategories" .
-   [3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("segments" .
-   [6 0 0 0 0 0 0 0])
-  ("length" .
-   [24 0 0 0 0 0])
-  ("collection" .
-   [28 0 0 0 0 0 0 0 0 1])
-  ("Foo" .
-   [2 0 0])
-  ("getSegments" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("hash" .
-   [10 0 0 0])
-  ("findWhere" .
-   [2 0 0 0 0 0 0 0 0])
-  ("next" .
-   [6 0 0 0])
-  ("category" .
-   [15 0 0 0 0 0 0 2])
-  ("prev" .
-   [1 0 0 0])
-  ("previous" .
-   [16 0 0 0 0 0 0 0])
-  ("Three" .
-   [1 0 0 0 0])
-  ("product" .
-   [13 0 0 0 0 0 0])
-  ("indexOf" .
-   [1 0 0 0 0 0 0])
-  ("last" .
-   [2 0 0 0])
-  ("at" .
-   [4 0])
-  ("index" .
-   [17 0 0 0 0])
-  ("products" .
-   [9 0 0 0 0 0 0 0])
-  ("three" .
-   [3 0 0 0 0])
-  ("two" .
-   [3 0 0])
-  ("one" .
-   [2 0 0])
-  ("Collection" .
-   [1 0 0 0 0 0 0 0 0 1])
-  ("product_one" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("product_one_a" .
+  ("checksPerHour" .
    [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("testCollection" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("parentCategory" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("nextCategory" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("previousCategory" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("getCategory" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("loopAround" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("newIndex" .
-   [3 0 0 0 0 0 0 0])
-  ("nextProduct" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("getSibling" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("getSiblingAndLoop" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0])
-  ("getProduct" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("each" .
-   [13 0 0 0])
-  ("item" .
-   [19 0 0 0])
-  ("models" .
-   [2 0 0 0 0 0])
-  ("window" .
-   [12 0 0 0 0 0])
-  ("categories" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("www" .
-   [2 0 0])
-  ("key" .
-   [10 0 0])
-  ("json" .
-   [2 0 0 0])
-  ("toJSON" .
-   [4 0 0 0 0 0])
-  ("logic" .
-   [0 0 0 3 0])
-  ("jsonData" .
-   [5 0 0 0 0 0 0 0])
-  ("jsonCategory" .
-   [0 0 0 0 0 0 0 1 0 0 0 0])
-  ("absolute" .
-   [11 0 0 0 0 0 0 0])
-  ("top" .
-   [6 0 0])
-  ("left" .
-   [7 0 0 0])
-  ("bottom" .
+  ("passed" .
    [1 0 0 0 0 0])
-  ("$textarea" .
-   [2 0 0 0 0 0 0 0 0])
-  ("value" .
-   [12 0 0 0 0])
-  ("JSON" .
-   [3 0 0 0])
-  ("stringify" .
-   [1 0 0 0 0 0 0 0 0])
-  ("body" .
-   [5 0 0 0])
-  ("display" .
-   [5 0 0 0 0 0 0])
-  ("attributes" .
-   [4 0 0 0 0 0 0 0 0 0])
-  ("delete" .
-   [1 0 0 0 0 0])
-  ("null" .
-   [3 0 0 0])
-  ("in" .
-   [6 0])
-  ("page" .
-   [4 0 0 0])
-  ("off" .
-   [2 0 0])
-  ("Class" .
-   [1 0 0 0 0])
-  ("removed" .
-   [1 0 0 0 0 0 0])
-  ("transitioning" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("every" .
-   [1 0 0 0 0])
-  ("element" .
-   [1 0 0 0 0 0 0])
-  ("originalTitle" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("newTitle" .
-   [5 0 0 0 0 0 0 0])
-  ("ready" .
-   [5 0 0 0 0])
-  ("indexTime" .
-   [1 0 0 0 0 0 0 0 0])
-  ("currentTime" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("hover" .
-   [4 0 0 0 0])
-  ("hoverTooLong" .
+  ("we" .
+   [1 0])
+  ("outOfChartMax" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("outOfRange" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("round" .
+   [2 0 0 0 0])
+  ("updateHeight" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("linger" .
+  ("setMax" .
    [1 0 0 0 0 0])
-  ("mousemove" .
-   [4 0 0 0 0 0 0 0 0])
-  ("mouseenter" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("unhover" .
-   [1 0 0 0 0 0 0])
-  ("hoverTimer" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("rehoverAfterLinger" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("play" .
-   [4 0 0 0])
-  ("button" .
-   [2 0 0 0 0 0])
-  ("QRCode" .
-   [1 0 0 0 0 0])
-  ("View" .
-   [2 0 0 0])
-  ("Product" .
-   [1 0 0 0 0 0 0])
-  ("sass-tweaks" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("yas-minor-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [3 0 0])
-  ("prelude" .
-   [0 0 0 0 0 0 1])
-  ("ace-jump-word-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("environment" .
-   [8 0 0 1 0 0 0 0 0 0 0])
-  ("browser" .
-   [1 0 0 0 0 0 0])
-  ("ratio" .
-   [8 0 0 0 0])
-  ("switchInstoreOrientation" .
-   [0 0 0 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("$html" .
-   [1 0 0 0 0])
-  ("setDimensions" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("width" .
-   [29 0 0 0 0])
-  ("height" .
-   [16 0 0 0 0 0])
-  ("jquery" .
-   [1 0 0 0 0 0])
-  ("windmove-right" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("delete-window" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("delete-other-windows" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("event" .
-   [3 0 0 0 0])
-  ("click" .
-   [3 0 0 0 0])
-  ("rangeslider" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("user" .
-   [5 0 0 0])
-  ("useRangeSlider" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("state" .
-   [2 0 0 0 0])
-  ("used" .
-   [1 0 0 0])
-  ("cursor" .
-   [3 0 0 0 0 0])
-  ("-32" .
-   [3 0 0])
-  ("auto" .
-   [2 0 0 0])
-  ("events" .
-   [2 0 0 0 0 0])
-  ("pauseOrPlay" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("playing" .
-   [2 0 0 0 0 0 0])
-  ("pauseVideo" .
-   [6 0 0 0 0 0 0 0 0 0])
-  ("playVideo" .
-   [5 0 0 0 0 0 0 0 0])
-  ("sw" .
-   [1 0])
-  ("delayPause" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("pause" .
-   [1 0 0 0 0])
-  ("stopChecks" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("startChecks" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("structure/cursor-video-pause-ie" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("border" .
-   [4 0 0 0 0 0])
-  ("25px" .
-   [1 0 0 0])
-  ("fff" .
-   [8 0 0])
-  ("solid" .
-   [2 0 0 0 0])
-  ("img" .
-   [8 0 0])
-  ("padding" .
-   [3 0 0 0 0 0 0])
-  ("20px" .
-   [5 0 0 0])
-  ("40px" .
-   [5 0 0 0])
-  ("background" .
-   [6 0 0 0 0 0 0 0 0 0])
-  ("define-key" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("evil-normal-state-map" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("<RET>" .
-   [1 0 0 0 0])
-  ("open-emacs" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("ido-better-flex" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("100%" .
-   [11 0 0 0])
-  ("30px" .
-   [7 0 0 0])
-  ("50px" .
-   [8 0 0 0])
-  ("35px" .
-   [1 0 0 0])
-  ("rgba" .
-   [4 0 0 0])
-  ("1px" .
-   [1 0 0])
-  ("GibsonLight" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("10px" .
-   [5 0 0 0])
-  ("100px" .
-   [4 0 0 0 0])
-  ("box-shadow" .
-   [4 0 0 0 0 0 0 0 0 0])
-  ("images" .
-   [3 0 0 0 0 0])
-  ("p" .
-   [2])
-  ("modal-close" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("blink" .
-   [8 0 0 0 0])
-  ("form" .
-   [2 0 0 0])
-  ("opacity" .
-   [8 0 0 0 0 0 0])
-  ("marquee" .
-   [8 0 0 0 0 0 0])
-  ("3px" .
-   [5 0 0])
-  ("blanchedalmond" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("getTheGif" .
-   [3 0 0 0 0 0 0 0 0])
-  ("style" .
-   [5 0 0 0 0])
-  ("backgroundImage" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("innerText" .
-   [1 0 0 0 0 0 0 0 0])
-  ("gif" .
-   [3 0 0])
-  ("setTheGif" .
-   [1 0 0 0 0 0 0 0 0])
-  ("isTheGifLegit" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("checkTheGif" .
-   [0 0 0 0 0 1 0 0 0 0 0])
-  ("xmlhttp" .
-   [3 0 0 1 0 0 0])
-  ("readyState" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("hasLogged" .
-   [2 0 0 0 0 0 0 0 0])
-  ("clear" .
-   [2 0 0 0 0])
-  ("-webkit-transform" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("-webkit-filter" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("world" .
-   [1 0 0 0 0])
-  ("token" .
-   [2 0 0 0 0])
-  ("becomes" .
-   [1 0 0 0 0 0 0])
-  ("second" .
-   [1 0 0 0 0 0])
-  ("here" .
-   [1 0 0 0])
-  ("be" .
-   [1 0])
-  ("backpointer" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("touchPlay" .
-   [1 0 0 0 0 0 0 0 0])
-  ("player" .
-   [2 0 0 0 0 0])
-  ("ta" .
-   [1 0])
-  ("adding" .
-   [1 0 0 0 0 0])
-  ("tap" .
-   [1 0 0])
-  ("act" .
-   [1 0 0])
-  ("listeners" .
-   [1 0 0 0 0 0 0 0 0])
-  ("yt" .
-   [3 0])
-  ("videoId" .
-   [1 0 0 0 0 0 0])
-  ("src" .
-   [6 0 0])
-  ("browserCanAutoplay" .
-   [1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0])
-  ("don" .
-   [2 0 0])
-  ("fmVideo" .
-   [2 0 0 0 0 0 0])
-  ("iframeblocker" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("self" .
-   [2 0 0 0])
-  ("parse" .
-   [1 0 0 0 0])
-  ("stripTags" .
-   [2 0 0 0 0 0 0 0 0])
-  ("str" .
-   [2 0 0])
-  ("coffee-tabs" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("follow-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("windmove-left" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("size" .
-   [9 0 0 0])
-  ("font" .
-   [1 0 0 0])
-  ("red" .
-   [2 0 0])
-  ("sqrt" .
-   [3 0 0 0])
-  ("className" .
-   [5 0 0 0 0 0 0 0 0])
-  ("rainbow" .
-   [2 0 0 0 0 0 0])
-  ("bubble" .
-   [4 0 0 0 0 0])
-  ("nodes" .
-   [4 0 0 0 0])
-  ("d3" .
-   [12 0])
-  ("select" .
-   [9 0 0 0 0 0])
-  ("node" .
-   [8 0 0 0])
-  ("color" .
-   [6 0 0 0 0])
-  ("children" .
-   [5 0 0 0 0 0 0 0])
-  ("wonderful" .
-   [1 0 0 0 0 0 0 0 0])
-  ("and" .
-   [21 0 0])
-  ("being" .
-   [1 0 0 0 0])
-  ("DSGJSErrors" .
-   [0 0 0 0 0 0 0 1 0 0 0])
-  ("shouldTrack" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("ruby" .
-   [1 0 0 0])
-  ("folder" .
-   [2 0 0 0 0 0])
-  ("getPosterPath" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("$link-height" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("$title-height" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("comment-dwim" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("rgbValues" .
-   [1 0 0 0 0 0 0 0 0])
-  ("darkValues" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("darkColor" .
-   [1 0 0 0 0 0 0 0 0])
-  ("map" .
-   [2 0 0])
-  ("debounce" .
-   [2 0 0 0 0 0 0 0])
-  ("buttons" .
-   [1 0 0 0 0 0 0])
-  ("scss" .
-   [1 0 0 0])
-  ("sass" .
-   [2 0 0 0])
-  ("goto-line" .
-   [1 0 0 0 0 0 0 0 0])
-  ("href=" .
-   [1 0 0 0 0])
-  ("style=" .
-   [1 0 0 0 0 0])
-  ("placeholder" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("labelText" .
-   [1 0 0 0 0 0 0 0 0])
-  ("success" .
-   [2 0 0 0 0 0 0])
-  ("sendRequest" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("renderBase" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("renderLabel" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("renderField" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("proxy" .
-   [1 0 0 0 0])
-  ("closeOnEscape" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("which" .
-   [1 0 0 0 0])
-  ("stopPropagation" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("windowWidth" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("getMaxLeft" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("maxLeft" .
-   [1 0 0 0 0 0 0])
-  ("important" .
-   [9 0 0 0 0 0 0 0 0])
-  ("span" .
-   [2 0 0 0])
-  ("14px" .
-   [2 0 0 0])
-  ("&" .
-   [1])
-  ("2em" .
-   [1 0 0])
-  ("32px" .
-   [4 0 0 0])
-  ("16px" .
-   [1 0 0 0])
-  ("-40px" .
-   [1 0 0 0 0])
-  ("labels" .
-   [2 0 0 0 0 0])
-  ("label" .
-   [8 0 0 0 0])
-  ("isFED" .
-   [2 0 0 0 0])
-  ("BUTTON_HEIGHT" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("username" .
-   [1 0 0 0 0 0 0 0])
-  ("rect" .
-   [4 0 0 0])
-  ("graph" .
-   [10 0 0 0 0])
-  ("selectAll" .
-   [1 0 0 0 0 0 0 0 0])
-  ("enter" .
-   [1 0 0 0 0])
-  ("as" .
-   [2 0])
-  ("filter" .
-   [1 0 0 0 0 0])
-  ("group" .
-   [4 0 0 0 0])
-  ("ar" .
-   [1 0])
-  ("targetGroup" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("source" .
-   [1 0 0 0 0 0])
-  ("$path" .
-   [2 0 0 0 0])
-  ("hi" .
-   [1 0])
-  ("indent-according-to-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("modules" .
-   [1 0 0 0 0 0 0])
-  ("coffee" .
-   [1 0 0 0 0 0])
-  ("context" .
-   [1 0 0 0 0 0 0])
-  ("siteFunctionality" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("$context" .
-   [2 0 0 0 0 0 0 0])
-  ("custom" .
-   [1 0 0 0 0 0])
-  ("150px" .
-   [1 0 0 0 0])
-  ("overflow" .
-   [2 0 0 0 0 0 0 0])
-  ("outline" .
-   [1 0 0 0 0 0 0])
-  ("15s" .
-   [1 0 0])
-  ("border-bottom" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("2px" .
-   [3 0 0])
-  ("6px" .
-   [1 0 0])
-  ("form__terms-wrapper" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("-textarea" .
-   [1 0 0 0 0 0 0 0 0])
-  ("scrollbars" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("scrollArea" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("ScrollArea" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("wrapper" .
-   [3 0 0 0 0 0 0])
-  ("stopScroll" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("doScroll" .
-   [1 0 0 0 0 0 0 0])
-  ("timer" .
-   [1 0 0 0 0])
-  ("$scroller" .
-   [5 0 0 0 0 0 0 0 0])
-  ("bindScrollbar" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("bindScrollbarEvents" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("smex" .
-   [1 0 0 0])
-  ("smex-major-mode-commands" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("apiRouter" .
-   [1 0 0 0 0 0 0 0 0])
-  ("htmlRouter" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("request" .
-   [1 0 0 0 0 0 0])
-  ("unless" .
-   [1 0 0 0 0 0])
-  ("moment" .
+  ("newMax" .
    [5 0 0 0 0 0])
-  ("bus" .
-   [6 0 0])
-  ("match" .
-   [5 0 0 0 0])
-  ("times" .
-   [16 0 0 0 0])
-  ("slice" .
-   [3 0 0 0 0])
-  ("minutes" .
+  ("counter" .
    [2 0 0 0 0 0 0])
-  ("busTime" .
-   [1 0 0 0 0 0 0])
-  ("parsedTime" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("meridian" .
-   [1 0 0 0 0 0 0 0])
-  ("then" .
-   [2 0 0 0])
-  ("latest" .
-   [1 0 0 0 0 0])
-  ("milliseconds" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("millisecond" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("unix" .
-   [4 0 0 0])
-  ("format" .
-   [3 0 0 0 0 0])
-  ("mm" .
-   [1 0])
-  ("pr" .
-   [2 0])
-  ("rspv" .
-   [1 0 0 0])
-  ("rsvp" .
-   [3 0 0 0])
-  ("stopPromises" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("stopHtml" .
-   [3 0 0 0 0 0 0 0])
-  ("tr" .
-   [2 0])
-  ("first-child" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("stopTimes" .
+  ("setCounterMax" .
+   [6 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("updateMax" .
    [1 0 0 0 0 0 0 0 0])
-  ("route" .
-   [3 0 0 0 0])
-  ("destination" .
-   [5 0 0 0 0 0 0 0 0 0 0])
-  ("stopName" .
+  ("pad" .
+   [1 0 0])
+  ("getVertMargin" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getMargin" .
+   [1 0 0 0 0 0 0 0 0])
+  ("chart" .
+   [6 0 0 0 0])
+  ("getLabelColor" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getLineColor" .
+   [3 0 0 0 0 0 0 0 0 0 0 0])
+  ("fullscreen" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("series" .
+   [6 0 0 0 0 0])
+  ("updating" .
+   [2 0 0 0 0 0 0 0])
+  ("UPDATING" .
    [1 0 0 0 0 0 0 0])
-  ("sortBy" .
-   [1 0 0 0 0 0])
-  ("<br>" .
+  ("unColorGraph" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("decreasing" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("colorGraph" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("or" .
+   [1 0])
+  ("words" .
+   [3 0 0 0 0])
+  ("generate" .
+   [2 0 0 0 0 0 0 0])
+  ("draw" .
+   [4 0 0 0])
+  ("exit" .
+   [1 0 0 0])
+  ("applyTextTransition" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("applyTextTreatment" .
+   [1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("baseFontSize" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("fontRange" .
+   [1 0 0 0 0 0 0 0 0])
+  ("maxFontSize" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("word" .
    [2 0 0 0])
-  ("mma" .
-   [1 0 0])
-  ("departures" .
-   [7 0 0 0 0 0 0 0 0 0])
-  ("td" .
-   [3 0])
-  ("stops" .
-   [2 0 0 0 0])
-  ("urls" .
-   [2 0 0 0])
-  ("pnr" .
-   [1 0 0])
-  ("pnrs" .
+  ("channel" .
+   [1 0 0 0 0 0 0])
+  ("newClassName" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("hour" .
+   [13 0 0 0])
+  ("hourly" .
+   [3 0 0 0 0 0])
+  ("summary" .
+   [3 0 0 0 0 0 0])
+  ("weather" .
+   [4 0 0 0 0 0 0])
+  ("truncate" .
+   [1 0 0 0 0 0 0 0])
+  ("attendees" .
+   [2 0 0 0 0 0 0 0 0])
+  ("<hr>" .
+   [1 0 0 0])
+  ("+=" .
+   [2 0])
+  ("meetups" .
+   [3 0 0 0 0 0 0])
+  ("results" .
+   [2 0 0 0 0 0 0])
+  ("nextMeetup" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("response" .
+   [6 0 0 0 0 0 0 0])
+  ("open" .
    [1 0 0 0])
   ("meetup" .
    [2 0 0 0 0 0])
-  ("open" .
+  ("pnrs" .
    [1 0 0 0])
-  ("response" .
-   [6 0 0 0 0 0 0 0])
-  ("nextMeetup" .
-   [5 0 0 0 0 0 0 0 0 0])
-  ("results" .
-   [2 0 0 0 0 0 0])
-  ("meetups" .
-   [3 0 0 0 0 0 0])
-  ("+=" .
-   [2 0])
-  ("<hr>" .
-   [1 0 0 0])
-  ("attendees" .
-   [2 0 0 0 0 0 0 0 0])
-  ("truncate" .
-   [1 0 0 0 0 0 0 0])
-  ("weather" .
-   [4 0 0 0 0 0 0])
-  ("summary" .
-   [3 0 0 0 0 0 0])
-  ("hourly" .
-   [3 0 0 0 0 0])
-  ("hour" .
-   [6 0 0 0])
-  ("newClassName" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("channel" .
-   [1 0 0 0 0 0 0])
-  ("word" .
+  ("pnr" .
+   [1 0 0])
+  ("urls" .
    [2 0 0 0])
-  ("maxFontSize" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("fontRange" .
-   [1 0 0 0 0 0 0 0 0])
-  ("baseFontSize" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("applyTextTreatment" .
-   [1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("applyTextTransition" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("exit" .
-   [1 0 0 0])
-  ("draw" .
-   [1 0 0 0])
-  ("generate" .
-   [2 0 0 0 0 0 0 0])
-  ("words" .
+  ("stops" .
    [2 0 0 0 0])
-  ("or" .
-   [1 0])
-  ("colorGraph" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("decreasing" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("unColorGraph" .
+  ("td" .
+   [3 0])
+  ("departures" .
+   [7 0 0 0 0 0 0 0 0 0])
+  ("mma" .
+   [1 0 0])
+  ("<br>" .
+   [2 0 0 0])
+  ("sortBy" .
+   [1 0 0 0 0 0])
+  ("stopName" .
+   [1 0 0 0 0 0 0 0])
+  ("destination" .
+   [5 0 0 0 0 0 0 0 0 0 0])
+  ("route" .
+   [3 0 0 0 0])
+  ("stopTimes" .
+   [1 0 0 0 0 0 0 0 0])
+  ("first-child" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("tr" .
+   [2 0])
+  ("stopHtml" .
+   [3 0 0 0 0 0 0 0])
+  ("stopPromises" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("UPDATING" .
+  ("rsvp" .
+   [3 0 0 0])
+  ("rspv" .
+   [1 0 0 0])
+  ("pr" .
+   [2 0])
+  ("mm" .
+   [1 0])
+  ("format" .
+   [3 0 0 0 0 0])
+  ("unix" .
+   [4 0 0 0])
+  ("millisecond" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("milliseconds" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("latest" .
+   [1 0 0 0 0 0])
+  ("then" .
+   [4 0 0 0])
+  ("meridian" .
    [1 0 0 0 0 0 0 0])
-  ("updating" .
+  ("parsedTime" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("busTime" .
+   [1 0 0 0 0 0 0])
+  ("minutes" .
+   [2 0 0 0 0 0 0])
+  ("slice" .
+   [3 0 0 0 0])
+  ("times" .
+   [16 0 0 0 0])
+  ("match" .
+   [5 0 0 0 0])
+  ("bus" .
+   [6 0 0])
+  ("moment" .
+   [5 0 0 0 0 0])
+  ("unless" .
+   [1 0 0 0 0 0])
+  ("request" .
+   [1 0 0 0 0 0 0])
+  ("htmlRouter" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("apiRouter" .
+   [1 0 0 0 0 0 0 0 0])
+  ("smex-major-mode-commands" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("smex" .
+   [1 0 0 0])
+  ("bindScrollbarEvents" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bindScrollbar" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$scroller" .
+   [5 0 0 0 0 0 0 0 0])
+  ("timer" .
+   [1 0 0 0 0])
+  ("doScroll" .
    [1 0 0 0 0 0 0 0])
-  ("series" .
-   [5 0 0 0 0 0])))
+  ("stopScroll" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("wrapper" .
+   [3 0 0 0 0 0 0])
+  ("ScrollArea" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("scrollArea" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("scrollbars" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("-textarea" .
+   [1 0 0 0 0 0 0 0 0])
+  ("form__terms-wrapper" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("6px" .
+   [1 0 0])
+  ("2px" .
+   [3 0 0])
+  ("border-bottom" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("15s" .
+   [1 0 0])
+  ("outline" .
+   [1 0 0 0 0 0 0])
+  ("overflow" .
+   [2 0 0 0 0 0 0 0])
+  ("150px" .
+   [1 0 0 0 0])
+  ("custom" .
+   [1 0 0 0 0 0])
+  ("$context" .
+   [2 0 0 0 0 0 0 0])
+  ("siteFunctionality" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("context" .
+   [1 0 0 0 0 0 0])
+  ("coffee" .
+   [1 0 0 0 0 0])
+  ("modules" .
+   [1 0 0 0 0 0 0])
+  ("indent-according-to-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("hi" .
+   [1 0])
+  ("$path" .
+   [2 0 0 0 0])
+  ("source" .
+   [1 0 0 0 0 0])
+  ("targetGroup" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("ar" .
+   [1 0])
+  ("group" .
+   [4 0 0 0 0])
+  ("filter" .
+   [2 0 0 0 0 0])
+  ("as" .
+   [2 0])
+  ("enter" .
+   [1 0 0 0 0])
+  ("selectAll" .
+   [1 0 0 0 0 0 0 0 0])
+  ("graph" .
+   [10 0 0 0 0])
+  ("rect" .
+   [4 0 0 0])
+  ("username" .
+   [1 0 0 0 0 0 0 0])
+  ("BUTTON_HEIGHT" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("isFED" .
+   [2 0 0 0 0])
+  ("label" .
+   [8 0 0 0 0])
+  ("labels" .
+   [2 0 0 0 0 0])
+  ("-40px" .
+   [1 0 0 0 0])
+  ("16px" .
+   [1 0 0 0])
+  ("32px" .
+   [4 0 0 0])
+  ("2em" .
+   [1 0 0])
+  ("&" .
+   [1])
+  ("14px" .
+   [2 0 0 0])
+  ("span" .
+   [2 0 0 0])
+  ("important" .
+   [11 0 0 0 0 0 0 0 0])
+  ("maxLeft" .
+   [1 0 0 0 0 0 0])
+  ("getMaxLeft" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("windowWidth" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("stopPropagation" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("which" .
+   [2 0 0 0 0])
+  ("closeOnEscape" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("proxy" .
+   [1 0 0 0 0])
+  ("renderField" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("renderLabel" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("renderBase" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("sendRequest" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("success" .
+   [2 0 0 0 0 0 0])
+  ("labelText" .
+   [1 0 0 0 0 0 0 0 0])
+  ("placeholder" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("style=" .
+   [1 0 0 0 0 0])
+  ("href=" .
+   [1 0 0 0 0])
+  ("goto-line" .
+   [1 0 0 0 0 0 0 0 0])
+  ("sass" .
+   [2 0 0 0])
+  ("scss" .
+   [1 0 0 0])
+  ("buttons" .
+   [1 0 0 0 0 0 0])
+  ("debounce" .
+   [2 0 0 0 0 0 0 0])
+  ("map" .
+   [3 0 0])
+  ("darkColor" .
+   [1 0 0 0 0 0 0 0 0])
+  ("darkValues" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("rgbValues" .
+   [1 0 0 0 0 0 0 0 0])
+  ("comment-dwim" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("$title-height" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$link-height" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("getPosterPath" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("folder" .
+   [2 0 0 0 0 0])
+  ("ruby" .
+   [1 0 0 0])
+  ("shouldTrack" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("DSGJSErrors" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("being" .
+   [1 0 0 0 0])
+  ("and" .
+   [22 0 0])
+  ("wonderful" .
+   [1 0 0 0 0 0 0 0 0])
+  ("children" .
+   [5 0 0 0 0 0 0 0])
+  ("color" .
+   [6 0 0 0 0])
+  ("node" .
+   [8 0 0 0])
+  ("select" .
+   [9 0 0 0 0 0])
+  ("d3" .
+   [12 0])
+  ("nodes" .
+   [4 0 0 0 0])
+  ("bubble" .
+   [4 0 0 0 0 0])
+  ("rainbow" .
+   [2 0 0 0 0 0 0])
+  ("className" .
+   [5 0 0 0 0 0 0 0 0])
+  ("sqrt" .
+   [3 0 0 0])
+  ("red" .
+   [2 0 0])
+  ("font" .
+   [1 0 0 0])
+  ("size" .
+   [9 0 0 0])
+  ("windmove-left" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("follow-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("coffee-tabs" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("str" .
+   [2 0 0])
+  ("stripTags" .
+   [2 0 0 0 0 0 0 0 0])
+  ("parse" .
+   [1 0 0 0 0])
+  ("self" .
+   [2 0 0 0])
+  ("iframeblocker" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fmVideo" .
+   [2 0 0 0 0 0 0])
+  ("don" .
+   [2 0 0])
+  ("browserCanAutoplay" .
+   [1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0])
+  ("src" .
+   [6 0 0])
+  ("videoId" .
+   [1 0 0 0 0 0 0])
+  ("yt" .
+   [3 0])
+  ("listeners" .
+   [1 0 0 0 0 0 0 0 0])
+  ("act" .
+   [1 0 0])
+  ("tap" .
+   [1 0 0])
+  ("adding" .
+   [1 0 0 0 0 0])
+  ("ta" .
+   [1 0])
+  ("player" .
+   [2 0 0 0 0 0])
+  ("touchPlay" .
+   [1 0 0 0 0 0 0 0 0])
+  ("backpointer" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("be" .
+   [2 0])
+  ("here" .
+   [1 0 0 0])
+  ("second" .
+   [1 0 0 0 0 0])
+  ("becomes" .
+   [1 0 0 0 0 0 0])
+  ("token" .
+   [2 0 0 0 0])
+  ("world" .
+   [1 0 0 0 0])
+  ("-webkit-filter" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("-webkit-transform" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("clear" .
+   [2 0 0 0 0])
+  ("hasLogged" .
+   [2 0 0 0 0 0 0 0 0])
+  ("readyState" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("xmlhttp" .
+   [3 0 0 1 0 0 0])
+  ("checkTheGif" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("isTheGifLegit" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setTheGif" .
+   [1 0 0 0 0 0 0 0 0])
+  ("gif" .
+   [3 0 0])
+  ("innerText" .
+   [1 0 0 0 0 0 0 0 0])
+  ("backgroundImage" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("style" .
+   [5 0 0 0 0])
+  ("getTheGif" .
+   [3 0 0 0 0 0 0 0 0])
+  ("blanchedalmond" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("3px" .
+   [5 0 0])
+  ("marquee" .
+   [8 0 0 0 0 0 0])
+  ("opacity" .
+   [8 0 0 0 0 0 0])
+  ("form" .
+   [2 0 0 0])
+  ("blink" .
+   [8 0 0 0 0])
+  ("modal-close" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("p" .
+   [2])
+  ("images" .
+   [3 0 0 0 0 0])
+  ("box-shadow" .
+   [4 0 0 0 0 0 0 0 0 0])
+  ("100px" .
+   [4 0 0 0 0])
+  ("10px" .
+   [7 0 0 0])
+  ("GibsonLight" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("1px" .
+   [1 0 0])
+  ("rgba" .
+   [4 0 0 0])
+  ("35px" .
+   [1 0 0 0])
+  ("50px" .
+   [8 0 0 0])
+  ("30px" .
+   [7 0 0 0])
+  ("100%" .
+   [12 0 0 0])
+  ("ido-better-flex" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("open-emacs" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("<RET>" .
+   [1 0 0 0 0])
+  ("evil-normal-state-map" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("background" .
+   [6 0 0 0 0 0 0 0 0 0])
+  ("40px" .
+   [5 0 0 0])
+  ("20px" .
+   [5 0 0 0])
+  ("padding" .
+   [3 0 0 0 0 0 0])
+  ("img" .
+   [8 0 0])
+  ("solid" .
+   [2 0 0 0 0])
+  ("fff" .
+   [8 0 0])
+  ("25px" .
+   [1 0 0 0])
+  ("border" .
+   [4 0 0 0 0 0])
+  ("structure/cursor-video-pause-ie" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("startChecks" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("stopChecks" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("pause" .
+   [1 0 0 0 0])
+  ("delayPause" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("sw" .
+   [1 0])
+  ("playVideo" .
+   [5 0 0 0 0 0 0 0 0])
+  ("pauseVideo" .
+   [6 0 0 0 0 0 0 0 0 0])
+  ("playing" .
+   [2 0 0 0 0 0 0])
+  ("pauseOrPlay" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("events" .
+   [2 0 0 0 0 0])
+  ("auto" .
+   [5 0 0 0])
+  ("-32" .
+   [3 0 0])
+  ("cursor" .
+   [3 0 0 0 0 0])
+  ("used" .
+   [2 0 0 0])
+  ("state" .
+   [2 0 0 0 0])
+  ("useRangeSlider" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("user" .
+   [5 0 0 0])
+  ("rangeslider" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("click" .
+   [4 0 0 0 0])
+  ("event" .
+   [3 0 0 0 0])
+  ("delete-other-windows" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("delete-window" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("windmove-right" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("jquery" .
+   [3 0 0 0 0 0])
+  ("height" .
+   [20 0 0 0 0 0])
+  ("width" .
+   [32 0 0 0 0])
+  ("setDimensions" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$html" .
+   [1 0 0 0 0])
+  ("switchInstoreOrientation" .
+   [0 0 0 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ratio" .
+   [8 0 0 0 0])
+  ("browser" .
+   [1 0 0 0 0 0 0])
+  ("environment" .
+   [8 0 0 1 0 0 0 0 0 0 0])
+  ("ace-jump-word-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("prelude" .
+   [0 0 0 0 0 0 1])
+  ("kbd" .
+   [3 0 0])
+  ("yas-minor-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sass-tweaks" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("Product" .
+   [1 0 0 0 0 0 0])
+  ("View" .
+   [2 0 0 0])
+  ("QRCode" .
+   [1 0 0 0 0 0])
+  ("button" .
+   [2 0 0 0 0 0])
+  ("play" .
+   [4 0 0 0])
+  ("rehoverAfterLinger" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("hoverTimer" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("unhover" .
+   [1 0 0 0 0 0 0])
+  ("mouseenter" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("mousemove" .
+   [4 0 0 0 0 0 0 0 0])
+  ("linger" .
+   [1 0 0 0 0 0])
+  ("hoverTooLong" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("hover" .
+   [4 0 0 0 0])
+  ("currentTime" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("indexTime" .
+   [1 0 0 0 0 0 0 0 0])
+  ("ready" .
+   [5 0 0 0 0])
+  ("newTitle" .
+   [5 0 0 0 0 0 0 0])
+  ("originalTitle" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("element" .
+   [1 0 0 0 0 0 0])
+  ("every" .
+   [1 0 0 0 0])
+  ("transitioning" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("removed" .
+   [1 0 0 0 0 0 0])
+  ("Class" .
+   [1 0 0 0 0])
+  ("off" .
+   [2 0 0])
+  ("page" .
+   [4 0 0 0])
+  ("in" .
+   [6 0])
+  ("null" .
+   [3 0 0 0])
+  ("delete" .
+   [1 0 0 0 0 0])
+  ("attributes" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("display" .
+   [5 0 0 0 0 0 0])
+  ("body" .
+   [6 0 0 0])
+  ("stringify" .
+   [1 0 0 0 0 0 0 0 0])
+  ("JSON" .
+   [3 0 0 0])
+  ("value" .
+   [12 0 0 0 0])
+  ("$textarea" .
+   [2 0 0 0 0 0 0 0 0])
+  ("bottom" .
+   [2 0 0 0 0 0])
+  ("left" .
+   [9 0 0 0])
+  ("top" .
+   [6 0 0])
+  ("absolute" .
+   [11 0 0 0 0 0 0 0])
+  ("jsonCategory" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("jsonData" .
+   [5 0 0 0 0 0 0 0])
+  ("logic" .
+   [0 0 0 3 0])
+  ("toJSON" .
+   [4 0 0 0 0 0])
+  ("json" .
+   [2 0 0 0])
+  ("key" .
+   [10 0 0])
+  ("www" .
+   [2 0 0])
+  ("categories" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("window" .
+   [15 0 0 0 0 0])
+  ("models" .
+   [3 0 0 0 0 0])
+  ("item" .
+   [21 0 0 0])
+  ("each" .
+   [13 0 0 0])
+  ("getProduct" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("getSiblingAndLoop" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0])
+  ("getSibling" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("nextProduct" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("newIndex" .
+   [3 0 0 0 0 0 0 0])
+  ("loopAround" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("getCategory" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("previousCategory" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("nextCategory" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("parentCategory" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("testCollection" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("product_one_a" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("product_one" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("Collection" .
+   [1 0 0 0 0 0 0 0 0 1])
+  ("one" .
+   [2 0 0])
+  ("two" .
+   [3 0 0])
+  ("three" .
+   [3 0 0 0 0])
+  ("products" .
+   [9 0 0 0 0 0 0 0])
+  ("index" .
+   [17 0 0 0 0])
+  ("at" .
+   [4 0])
+  ("last" .
+   [2 0 0 0])
+  ("indexOf" .
+   [1 0 0 0 0 0 0])
+  ("product" .
+   [13 0 0 0 0 0 0])
+  ("Three" .
+   [1 0 0 0 0])
+  ("previous" .
+   [16 0 0 0 0 0 0 0])
+  ("prev" .
+   [1 0 0 0])
+  ("category" .
+   [15 0 0 0 0 0 0 2])
+  ("next" .
+   [6 0 0 0])
+  ("findWhere" .
+   [2 0 0 0 0 0 0 0 0])
+  ("hash" .
+   [10 0 0 0])
+  ("getSegments" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("Foo" .
+   [2 0 0])
+  ("collection" .
+   [29 0 0 0 0 0 0 0 0 1])
+  ("length" .
+   [24 0 0 0 0 0])
+  ("segments" .
+   [6 0 0 0 0 0 0 0])
+  ("productCategories" .
+   [3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("Navigator" .
+   [2 0 0 0 0 0 0 0 0])
+  ("constructor" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("navigator" .
+   [1 0 0 0 0 0 0 0 0])
+  ("setupAnimation" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pageView" .
+   [1 0 0 0 0 0 0 0])
+  ("console.log" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("sendNewUrl" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("</pre>" .
+   [1 0 0 0 0 0])
+  ("<pre>" .
+   [1 0 0 0 0])
+  ("nextSize" .
+   [1 0 0 0 0 0 0 0])
+  ("nextTime" .
+   [1 0 0 0 0 0 0 0])
+  ("max" .
+   [24 0 0])
+  ("delta" .
+   [7 0 0 0 0])
+  ("direction" .
+   [4 0 0 0 0 0 0 0 0])
+  ("delay" .
+   [11 0 0 0 0])
+  ("defer" .
+   [5 0 0 0 0])
+  ("add" .
+   [10 0 0])
+  ("remove" .
+   [22 0 0 0 0 0])
+  ("changed" .
+   [1 0 0 0 0 0 0])
+  ("changing" .
+   [2 0 0 0 0 0 0 0])
+  ("change" .
+   [4 0 0 0 0 0])
+  ("getSize" .
+   [1 0 0 0 0 0 0])
+  ("small" .
+   [3 0 0 0 0])
+  ("arguments" .
+   [4 0 0 0 0 0 0 0 0])
+  ("apply" .
+   [4 0 0 0 0])
+  ("time" .
+   [57 0 0 0])
+  ("setLoop" .
+   [4 0 0 0 0 0 0])
+  ("update" .
+   [8 0 0 0 0 0])
+  ("bindAll" .
+   [4 0 0 0 0 0 0])
+  ("bind" .
+   [14 0 0 0])
+  ("setTimeout" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("render" .
+   [6 0 0 0 0 0])
+  ("start" .
+   [3 0 0 0 0])
+  ("Countdown" .
+   [1 0 0 0 0 0 0 0 0])
+  ("innerHTML" .
+   [3 0 0 0 0 1 0 0 0])
+  ("template" .
+   [9 0 0 0 0 0 0 0])
+  ("querySelector" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("document" .
+   [6 0 0 0 0 0 0 0])
+  ("countdown" .
+   [2 0 0 0 0 0 0 0 0])
+  ("let" .
+   [1 0 0])
+  ("theme" .
+   [1 0 0 0 0])
+  ("ido-complete" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("split-window-right" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("focus" .
+   [8 0 0 0 0])
+  ("pausing" .
+   [1 0 0 0 0 0 0])
+  ("softPaused" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("clickPaused" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("magit" .
+   [1 0 0 0 0])
+  ("OpenerModel" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("isInStore" .
+   [2 0 0 0 0 0 0 0 0])
+  ("modes" .
+   [4 0 0 0 0])
+  ("get" .
+   [37 0 0])
+  ("position" .
+   [10 0 0 0 0 1 1 0])
+  ("set" .
+   [16 0 0])
+  ("navTitle" .
+   [1 0 0 0 0 0 0 0])
+  ("command" .
+   [3 0 0 0 0 0 0])
+  ("trigger" .
+   [7 0 0 0 0 0 0])
+  ("video" .
+   [16 0 0 0 0])
+  ("nil" .
+   [5 0 0])
+  ("insert-tab" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("evil-previous-line" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("newline" .
+   [2 0 0 0 0 0 0])
+  ("insert-two-links" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("yas-indent-line" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("function" .
+   [124 0 1 0 1 0 0 0])
+  ("sp-show-pair-mismatch-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("macros" .
+   [2 0 0 0 0 0])
+  ("macro" .
+   [24 0 0 0 0])
+  ("macroPath" .
+   [2 0 0 0 0 0 0 0 0])
+  ("text" .
+   [18 0 0 0])
+  ("test" .
+   [13 0 0 0])
+  ("var" .
+   [66 0 0])
+  ("txt" .
+   [3 0 0])
+  ("$row" .
+   [1 0 0 0])
+  ("$col1" .
+   [3 0 0 0 0])
+  ("append" .
+   [8 0 0 0 0 0])
+  ("col" .
+   [1 0 0])
+  ("$col2" .
+   [2 0 0 0 0])
+  ("$this" .
+   [2 0 0 0 0])
+  ("macroTester" .
+   [2 0 0 0 0 0 2 0 0 0 0])
+  ("this" .
+   [159 0 0 0])
+  ("getData" .
+   [4 0 0 0 0 0 0])
+  ("data" .
+   [29 0 0 0])
+  ("fetchMacro" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("buildDom" .
+   [2 0 0 0 0 0 0 0])
+  ("require" .
+   [2 0 0 0 0 0 0])
+  ("path" .
+   [3 0 0 0])
+  ("console" .
+   [232 0 0 0 0 0 0])
+  ("setup" .
+   [0 0 0 1 0])
+  ("getMacro" .
+   [2 0 0 0 0 0 0 0])
+  ("$h2" .
+   [1 0 0])
+  ("$button" .
+   [4 0 0 0 0 0 0])
+  ("testScript" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("appendTo" .
+   [6 0 0 0 0 0 0 0])
+  ("textarea" .
+   [4 0 0 0 0 0 0 0])
+  ("$input" .
+   [2 0 0 0 0 0])
+  ("input" .
+   [1 0 0 0 0])
+  ("you" .
+   [5 0 0])
+  ("have" .
+   [1 0 0 0])
+  ("define" .
+   [1 0 0 0 0 0])
+  ("return" .
+   [43 0 0 0 0 0])
+  ("tpl" .
+   [1 0 0])
+  ("MacroTester" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("tester" .
+   [1 0 0 0 0 0])
+  ("prototype" .
+   [5 0 0 0 0 0 0 0 0])
+  ("Test" .
+   [2 0 0 0])
+  ("description" .
+   [7 0 0 0 0 0 0 0 0 0 0])
+  ("push" .
+   [4 0 0 0])
+  ("new" .
+   [28 0 0])
+  ("el" .
+   [16 0])
+  ("$el" .
+   [18 0 0])
+  ("tryTest" .
+   [1 0 0 0 0 0 0])
+  ("processResults" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setVars" .
+   [2 0 0 0 0 0 0])
+  ("addPrettyResults" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("log" .
+   [227 0 0])
+  ("actualResult" .
+   [3 0 0 0 1 0 0 0 0 0 0 0])
+  ("parseMacro" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("foo" .
+   [11 0 0])
+  ("alert" .
+   [13 0 0 0 0])
+  ("call" .
+   [1 0 0 0])
+  ("parent" .
+   [9 0 0 0 0 0])
+  ("ig" .
+   [1 0])
+  ("highlight" .
+   [2 0 0 0 0 0 0 0 0])
+  ("sl" .
+   [2 0])
+  ("slug" .
+   [19 0 0 0])
+  ("if" .
+   [41 0])
+  ("undefined" .
+   [3 0 0 0 0 0 0 0 0])
+  ("the" .
+   [11 0 0])
+  ("html" .
+   [19 0 0 0])
+  ("attr" .
+   [8 0 0 0])
+  ("class" .
+   [1 0 0 0 0])
+  ("addClass" .
+   [8 0 0 0 0 0 0 0])
+  ("instore" .
+   [4 0 0 0 0 0 0])
+  ("no" .
+   [3 0])
+  ("into" .
+   [1 0 0 0])
+  ("ido-next-match" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-prev-match" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-display-file" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-exit-minibuffer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-open-at-point" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("initialize" .
+   [7 0 0 1 1 0 0 0 0 1])
+  ("onRender" .
+   [8 0 0 0 0 0 0 0])
+  ("tagName" .
+   [2 0 0 0 0 0 0])
+  ("Category" .
+   [2 0 0 0 0 0 0 0])
+  ("it" .
+   [18 0])
+  ("initting" .
+   [1 0 0 0 0 0 0 0])
+  ("link" .
+   [4 0 0 0])
+  ("ItemView" .
+   [1 0 0 0 0 0 0 0])
+  ("Backbone" .
+   [5 0 0 1 0 0 0 0])
+  ("Marionette" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("siblingClass" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("view" .
+   [30 0 0 0])
+  ("model" .
+   [32 0 0 0 0])
+  ("currentView" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("split-window-bottom" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("mouseover" .
+   [1 0 0 0 0 0 0 0 0])
+  ("setupTransition" .
+   [1 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("sibling" .
+   [1 0 0 0 0 0 0])
+  ("to" .
+   [14 0])
+  ("newView" .
+   [5 0 0 0 0 0 0])
+  ("transition" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("true" .
+   [17 0 0 0])
+  ("complete" .
+   [2 0 0 0 0 0 0 0])
+  ("reset" .
+   [10 0 0 0 0])
+  ("clearTimeout" .
+   [5 0 0 0 0 0 0 0 0 0 0 0])
+  ("transitionTimer" .
+   [6 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("inProgress" .
+   [6 0 0 0 0 0 0 0 0 0])
+  ("false" .
+   [18 0 0 0 0])
+  ("clearClasses" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("else" .
+   [22 0 0 0])
+  ("finishTransition" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("from" .
+   [2 0 0 0])
+  ("on" .
+   [10 0])
+  ("all" .
+   [2 0 0])
+  ("finishShow" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("cleanUp" .
+   [1 0 0 0 0 0 0])
+  ("swapViews" .
+   [1 0 0 0 0 0 0 0 0])
+  ("showView" .
+   [1 0 0 0 0 0 0 0])
+  ("removeClass" .
+   [5 0 0 0 0 0 0 0 0 0 0])
+  ("functon" .
+   [1 0 0 0 0 0 0])
+  ("removeClasses" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bindUIElements" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("startTime" .
+   [2 0 0 0 0 0 0 0 0])
+  ("controller" .
+   [1 0 0 0 0 0 0 0 0 1])
+  ("videoStartTimer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("iframe" .
+   [4 0 0 0 0 0])
+  ("mouseinuse" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("cantransition" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("vent" .
+   [5 0 0 0])
+  ("listenTo" .
+   [4 0 0 0 0 0 0 0])
+  ("globalnav" .
+   [1 0 0 0 0 0 0 0 0])
+  ("triggering" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("toggle" .
+   [3 0 0 0 0 0])
+  ("global" .
+   [1 0 0 0 0 0])
+  ("close" .
+   [1 0 0 0 0])
+  ("globalNav" .
+   [1 0 0 0 0 0 0 0 0])
+  ("methodName" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("dmp" .
+   [2 0 0])
+  ("nav" .
+   [2 0 0])
+  ("underscore" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("content" .
+   [5 0 0 1 1 0 0])
+  ("auto-complete-mode" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("move-line-down" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("move-line-up" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-color-identifiers-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("evil-leader/set-key" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-store-link" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("<SPC>" .
+   [2 0 0 0 0])
+  ("delete-frame" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("delete-other-frames" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("delete-and-balance-other-windows" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("block" .
+   [3 0 0 0 0])
+  ("font-size" .
+   [1 0 0 0 0 0 0 0 0])
+  ("15px" .
+   [6 0 0 0])
+  ("line-height" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("before" .
+   [2 0 0 0 0 0])
+  ("inline-block" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("a" .
+   [5])
+  ("relative" .
+   [5 0 0 1 0 0 0 0])
+  ("z-index" .
+   [4 0 0 0 0 0 0])
+  ("//" .
+   [5 0])
+  ("preloader" .
+   [13 0 0 0 0 0 0 0 0])
+  ("PitcherPreloader" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("closePreloader" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fadeOut" .
+   [1 0 0 0 0 0 0])
+  ("callback" .
+   [4 0 0 0 0 0 0 0])
+  ("createChildViews" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("preloaded" .
+   [6 0 0 0 0 0 0 0 0])
+  ("show" .
+   [5 0 0 0])
+  ("creating" .
+   [1 0 0 0 0 0 0 0])
+  ("shown" .
+   [2 0 0 0 0])
+  ("removing" .
+   [3 0 0 0 0 0 0 0])
+  ("invoke" .
+   [1 0 0 0 0 0])
+  ("none" .
+   [10 0 0 0])
+  ("default" .
+   [7 0 0 0 0 0 0])
+  ("structure/cursor-video-pause" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pointer" .
+   [4 0 0 0 0 0 0])
+  ("what" .
+   [3 0 0 0])
+  ("is" .
+   [8 0])
+  ("by" .
+   [3 0])
+  ("now" .
+   [4 0 0])
+  ("stop" .
+   [7 0 0 0])
+  ("cell" .
+   [1 0 0 0])
+  ("NavigationView" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("toggleClass" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("hide" .
+   [3 0 0 0])
+  ("showBullseyes" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("hideBullseyes" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bullseyes" .
+   [1 0 0 0 0 0 0 0 0])
+  ("activeClassName" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("styles" .
+   [3 0 0 0 0 0])
+  ("keydown" .
+   [1 0 0 0 0 0 0])
+  ("mouseout" .
+   [1 0 0 0 0 0 0 0])
+  ("load" .
+   [1 0 0 0])
+  ("image" .
+   [20 0 0 0 0])
+  ("do" .
+   [2 0])
+  ("ido-select-text" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("navInactive" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("shouldPlay" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("options" .
+   [5 0 0 0 0 0 0])
+  ("name" .
+   [2 0 0 0])
+  ("isAttemptToPlay" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("clobber" .
+   [1 0 0 0 0 0 0])
+  ("audio" .
+   [3 0 0 0 0])
+  ("isAudio" .
+   [0 0 0 0 0 1 0])
+  ("goToNextCategory" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("inDirection" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("dispatch" .
+   [1 0 0 0 0 0 0 0])
+  ("end" .
+   [3 0 0])
+  ("restartIfIndex" .
+   [0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("nextIndex" .
+   [3 0 0 0 0 0 0 0 0])
+  ("share" .
+   [3 0 0 0 0])
+  ("shareUrl" .
+   [1 0 0 0 0 0 0 0])
+  ("root" .
+   [7 0 0 0])
+  ("attrs" .
+   [13 0 0 0 0])
+  ("encodeURIComponent" .
+   [0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0])
+  ("assetPath" .
+   [2 0 0 0 0 0 0 0 0])
+  ("shareImage" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("shareRoot" .
+   [1 0 0 0 0 0 0 0 0])
+  ("twitterUrl" .
+   [11 0 0 0 1 0 0 0 0 0])
+  ("http" .
+   [3 0 0 0])
+  ("com" .
+   [4 0 0])
+  ("twitterUri" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("dsg" .
+   [3 0 0])
+  ("womens2014" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("string" .
+   [7 0 0 0 0 0])
+  ("twitterDescription" .
+   [2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("pinterestDescription" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("title" .
+   [5 0 0 0 0])
+  ("toLowerCase" .
+   [1 0 0 0 0 1 0 0 0 0 0])
+  ("join" .
+   [3 0 0 0])
+  ("getPinterestDescription" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("shortTitle" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("issues" .
+   [2 0 0 0 0 0])
+  ("id" .
+   [2 0])
+  ("res" .
+   [3 0 0])
+  ("repo" .
+   [2 0 0 0])
+  ("fm" .
+   [3 0])
+  ("Global" .
+   [3 0 0 0 1 0])
+  ("isTouchDevice" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("isTag" .
+   [0 0 0 2 0])
+  ("$color--blue" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [4 0 0 0])
+  ("coffee-indent-tabs-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$inner" .
+   [2 0 0 0 0 0])
+  ("Date" .
+   [16 0 0 0])
+  ("offset" .
+   [1 0 0 0 0 0])
+  ("getTime" .
+   [4 0 0 0 0 0 0])
+  ("today" .
+   [1 0 0 0 0])
+  ("timeLeft" .
+   [1 0 0 0 0 0 0 0])
+  ("$countdown" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("$header" .
+   [1 0 0 0 0 0 0])
+  ("that" .
+   [6 0 0 0])
+  ("like" .
+   [6 0 0 0])
+  ("not" .
+   [12 0 0])
+  ("$dl" .
+   [1 0 0])
+  ("$div" .
+   [1 0 0 0])
+  ("language" .
+   [1 0 0 0 0 0 0 0])
+  ("crush" .
+   [1 0 0 0 0])
+  ("bff" .
+   [1 0 0])
+  ("admirer" .
+   [1 0 0 0 0 0 0])
+  ("5px" .
+   [5 0 0])
+  ("$dark-blue" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("margin-bottom" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("-10" .
+   [4 0 0])
+  ("-7px" .
+   [1 0 0 0])
+  ("after" .
+   [5 0 0 0 0])
+  ("li" .
+   [2 0])
+  ("nth-child" .
+   [3 0 0 0 0 0 0 0 0])
+  ("50%" .
+   [4 0 0])
+  ("border-radius" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("$cornflower" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("margin" .
+   [2 0 0 0 0 0])
+  ("-20px" .
+   [1 0 0 0 0])
+  ("$green" .
+   [3 0 0 0 0 0])
+  ("$purple" .
+   [3 0 0 0 0 0 0])
+  ("$dark-gray" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("+transform" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("scale" .
+   [2 0 0 0 0])
+  ("translate" .
+   [4 0 0 0 0 0 0 0 0])
+  ("0s" .
+   [4 0])
+  ("+transform-origin" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("transform" .
+   [2 0 0 0 0 0 0 0 0])
+  ("-100%" .
+   [1 0 0 0 0])
+  ("-" .
+   [1])
+  ("-2px" .
+   [1 0 0 0])
+  ("ease-out" .
+   [4 0 0 0 0 0 0 0])
+  ("+transition" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("border-color" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ease-in-out" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("ease-in" .
+   [2 0 0 0 0 0 0])
+  ("logo" .
+   [2 0 0 0])
+  ("url" .
+   [8 0 0])
+  ("background-image" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("image-url" .
+   [1 0 0 0 0 0 0 0 0])
+  ("png" .
+   [1 0 0])
+  ("background-position" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("hidden" .
+   [3 0 0 0 0 0])
+  ("padding-bottom" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("site" .
+   [1 0 0 0])
+  ("app" .
+   [1 0 0])
+  ("environment-embedded" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("lt-ie9" .
+   [1 0 0 0 0 0])
+  ("window-width" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("getSheet" .
+   [2 0 0 0 0 0 0 0])
+  ("clearColumn8" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("getBackSheet" .
+   [5 0 0 0 0 0 0 0 0 0 0 0])
+  ("writeAliases" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("over" .
+   [1 0 0 0])
+  ("but" .
+   [4 0 0])
+  ("alias" .
+   [10 0 0 0 0])
+  ("forEach" .
+   [3 0 0 1 0 0 0])
+  ("sendEmails" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("config" .
+   [22 0 0 0 0 0])
+  ("interfaceFirstCol" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sendEmail" .
+   [1 0 0 0 0 0 0 0 0])
+  ("_getSheet" .
+   [3 0 0 0 0 0 0 0 0])
+  ("_sendEmail" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("emailAddress" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("subject" .
+   [6 0 0 0 0 0 0])
+  ("message" .
+   [4 0 0 0 0 0 0])
+  ("email" .
+   [6 0 0 0 0])
+  ("aliases" .
+   [5 0 0 0 0 0 0])
+  ("aliasIndicator" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("row" .
+   [14 0 0])
+  ("aliasMatch" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("aliasFrom" .
+   [1 0 0 0 0 0 0 0 0])
+  ("emailSentString" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("front" .
+   [6 0 0 0 0])
+  ("dataStartRow" .
+   [8 0 0 0 0 0 0 1 0 0 0 0])
+  ("sentCol" .
+   [2 0 0 0 0 0 0])
+  ("getRange" .
+   [2 0 0 0 0 0 0 0])
+  ("_getFront" .
+   [4 0 0 0 0 0 0 0 0])
+  ("_getBack" .
+   [1 0 0 0 0 0 0 0])
+  ("aliasesCol" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("back" .
+   [9 0 0 0])
+  ("rows" .
+   [2 0 0 0])
+  ("numberCol" .
+   [0 0 0 1 0 0 0 0 0])
+  ("emailSent" .
+   [1 0 0 0 0 0 0 0 0])
+  ("column" .
+   [3 0 0 0 0 0])
+  ("_fromRow" .
+   [1 0 0 0 0 0 0 0])
+  ("they" .
+   [1 0 0 0])
+  ("numRows" .
+   [1 0 0 0 0 0 0])
+  ("aliasMatchCol" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cta" .
+   [1 0 0])
+  ("statusCode" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("comment-region" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("comment" .
+   [1 0 0 0 0 0 0])
+  ("when" .
+   [5 0 0 0])
+  ("CC" .
+   [7 0])
+  ("imageBlockEls" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("device" .
+   [14 0 0 0 0 0])
+  ("ddpx" .
+   [1 0 0 0])
+  ("imageData" .
+   [1 0 0 0 0 0 0 0 0])
+  ("dppx" .
+   [1 0 0 0])
+  ("find" .
+   [4 0 0 0])
+  ("updateWidth" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("roundWidth" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("win" .
+   [1 0 0])
+  ("Math" .
+   [2 0 0 0])
+  ("min" .
+   [3 0 0])
+  ("type" .
+   [4 0 0 0])
+  ("newImage" .
+   [4 0 0 0 0 0 0 0])
+  ("firstTime" .
+   [1 0 0 0 0 0 0 0 0])
+  ("deviceChange" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("newImageWider" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("imageEl" .
+   [1 0 0 0 0 0 0])
+  ("resize" .
+   [3 0 0 0 0 0])
+  ("replace-string" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Video" .
+   [3 0 0 0 0])
+  ("instances" .
+   [1 0 0 0 0 0 0 0 0])
+  ("resetAll" .
+   [1 0 0 0 0 0 0 0])
+  ("offsetHeight" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("parentMethod" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("break" .
+   [1 0 0 0 0])
+  ("youTube" .
+   [3 0 0 0 0 0 0])
+  ("file" .
+   [2 0 0 0])
+  ("VS" .
+   [1 0])
+  ("RequestAccessModal" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("action" .
+   [2 0 0 0 0 0])
+  ("createForm" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("bindEvents" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("reposition" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("$field" .
+   [1 0 0 0 0 0])
+  ("createSuccessMessage" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("100" .
+   [3 0 0])
+  ("videoContainer" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("removeChild" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  (":uglifier" .
+   [1 0 0 0 0 0 0 0 0])
+  ("length:" .
+   [1 0 0 0 0 0 0])
+  ("dates" .
+   [2 0 0 0 0])
+  ("increment" .
+   [4 0 0 0 0 0 0 0 0])
+  ("getPercentageFromDate" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("date" .
+   [18 0 0 0])
+  ("startDate" .
+   [6 0 0 0 0 0 0 0 0])
+  ("endDate" .
+   [3 0 0 0 0 0 0])
+  ("y0" .
+   [4 0])
+  ("comments" .
+   [2 0 0 0 0 0 0 0])
+  ("mouse" .
+   [2 0 0 0 0])
+  ("names" .
+   [2 0 0 0 0])
+  ("titles" .
+   [2 0 0 0 0 0])
+  ("svg" .
+   [1 0 0])
+  ("css" .
+   [2 0 0])
+  ("rainbow-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("output" .
+   [4 0 0 0 0 0])
+  ("hours_data" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("hours" .
+   [10 0 0 0 0])
+  ("fed_index" .
+   [2 0 0 0 0 0 0 0 0])
+  ("project_hours" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fed_names" .
+   [1 0 0 0 0 0 0 0 0])
+  ("fed_hours" .
+   [1 0 0 0 0 0 0 0 0])
+  ("fed" .
+   [3 0 0])
+  ("fed_pto" .
+   [2 0 0 0 0 0 0])
+  ("tabify" .
+   [2 0 0 0 0 0])
+  ("untabify" .
+   [2 0 0 0 0 0 0 0])
+  ("php" .
+   [3 0 0])
+  ("project_index" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("feds" .
+   [1 0 0 0])
+  ("js" .
+   [1 0])
+  ("for" .
+   [7 0 0])
+  ("signInButtons" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("margin-top" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("div" .
+   [1 0 0])
+  ("-wide" .
+   [2 0 0 0 0])
+  ("+opacity" .
+   [1 0 0 0 0 0 0 0])
+  ("no-flycheck" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("flycheck-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("gender" .
+   [2 0 0 0 0 0])
+  (":gender" .
+   [1 0 0 0 0 0 0])
+  ("gender_name" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("should" .
+   [2 0 0 0 0 0])
+  ("set-face-foreground" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("up" .
+   [4 0])
+  ("volume" .
+   [9 0 0 0 0 0])
+  ("this.fader" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("t" .
+   [3])
+  ("setInterval" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("muted" .
+   [1 0 0 0 0])
+  ("toggleMuted" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("count" .
+   [1 0 0 0 0])
+  ("git" .
+   [1 0 0])
+  ("spyOn" .
+   [10 0 0 0 0])
+  ("jasmine" .
+   [2 0 0 0 0 0 0])
+  ("createSpy" .
+   [2 0 0 0 0 0 0 0 0])
+  ("error" .
+   [5 0 0 0 0])
+  ("expect" .
+   [13 0 0 0 0 0])
+  ("toHaveBeenCalled" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("retry" .
+   [1 0 0 0 0])
+  ("loader" .
+   [3 0 0 0 0 0])
+  ("fetch" .
+   [3 0 0 0 0])
+  ("amount" .
+   [3 0 0 0 0 0])
+  ("tickMultiplier" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tickAmount" .
+   [4 0 0 0 0 0 0 0 0 0])
+  ("ticks" .
+   [2 0 0 0 0])
+  ("maxTicks" .
+   [1 0 0 0 0 0 0 0])
+  ("ticksPerSecond" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ticksElapsed" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("current" .
+   [5 0 0 0 0 0 0])
+  ("preivous" .
+   [1 0 0 0 0 0 0 0])
+  ("previousAmount" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("->" .
+   [39 0])
+  ("getAmountStep" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("diff" .
+   [3 0 0 0])
+  ("step" .
+   [1 0 0 0])
+  ("singleStep" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("toEqual" .
+   [5 0 0 0 0 0 0])
+  ("toHaveBeenCalledWith" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("beforeEach" .
+   [7 0 0 0 0 0 0 0 0 0])
+  ("returnValue" .
+   [6 0 0 0 0 0 0 0 0 0 0])
+  ("loop" .
+   [3 0 0 0])
+  ("walkPendingData" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("itemMax" .
+   [1 0 0 0 0 0 0])
+  ("amountLoop" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("ui" .
+   [11 0])
+  ("number" .
+   [9 0 0 0 0 0])
+  ("formatAmount" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("random" .
+   [1 0 0 0 0 0])
+  ("tenMinutes" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("prettyDate" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("ISODate" .
+   [1 0 0 0 0 0 0])
+  ("onBeforeClose" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("updateDates" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("extend" .
+   [1 0 0 0 0 0])
+  ("months" .
+   [1 0 0 0 0 0])
+  ("first" .
+   [6 0 0 0 0])
+  ("really" .
+   [4 0 0 0 0 0])
+  ("list" .
+   [2 0 0 0])
+  ("movie" .
+   [10 0 0 0 0])
+  ("about" .
+   [1 0 0 0 0])
+  ("i" .
+   [2])
+  ("just" .
+   [7 0 0 0])
+  ("Scott" .
+   [2 0 0 0 0])
+  ("c" .
+   [2])
+  ("me" .
+   [1 0])
+  ("Alien" .
+   [3 0 0 0 0])
+  ("put" .
+   [1 0 0])
+  ("Primer" .
+   [4 0 0 0 0 0])
+  ("tone" .
+   [1 0 0 0])
+  ("level" .
+   [1 0 0 0 0])
+  ("n" .
+   [1])
+  ("casually" .
+   [1 0 0 0 0 0 0 0])
+  ("completely" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("The" .
+   [2 0 0])
+  ("character" .
+   [1 0 0 0 0 0 0 0 0])
+  ("make" .
+   [3 0 0 0])
+  ("nothing" .
+   [1 0 0 0 0 0 0])
+  ("Donnie" .
+   [1 0 0 0 0 0])
+  ("Darko" .
+   [1 0 0 0 0])
+  ("any" .
+   [2 0 0])
+  ("Jurassic" .
+   [1 0 0 0 0 0 0 0])
+  ("had" .
+   [1 0 0])
+  ("it." .
+   [1 0 0])
+  ("Akira" .
+   [4 0 0 0 0])
+  ("watched" .
+   [1 0 0 0 0 0 0])
+  ("going" .
+   [2 0 0 0 0])
+  ("Maybe" .
+   [1 0 0 0 0])
+  ("some" .
+   [1 0 0 0])
+  ("seen" .
+   [1 0 0 0])
+  ("was" .
+   [1 0 0])
+  ("Hudsucker" .
+   [1 0 0 0 0 0 0 0 0])
+  ("think" .
+   [1 0 0 0 0])
+  ("Fight" .
+   [1 0 0 0 0])
+  ("Club" .
+   [1 0 0 0])
+  ("even" .
+   [1 0 0 0])
+  ("though" .
+   [1 0 0 0 0 0])
+  ("When" .
+   [1 0 0 0])
+  ("saw" .
+   [1 0 0])
+  ("essentially" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("projectile-recentf" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("new-tab" .
+   [1 0 0 0 0 0 0])
+  ("elscreen-create" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("blank-tab" .
+   [2 0 0 0 0 0 0 0 0])
+  ("loadableAvatar" .
+   [5 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("loadableAvator" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("avatarUrl" .
+   [2 0 0 0 0 0 0 0 0])
+  ("setDefaults" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("loadAvatar" .
+   [2 0 0 0 0 0 0 1 0 0])
+  ("appendImg" .
+   [3 0 0 0 0 0 0 0 0])
+  ("appendFallback" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fallback" .
+   [1 0 0 0 0 0 0 0])
+  ("resources" .
+   [1 0 0 0 0 0 0 0 0])
+  ("avatar" .
+   [2 0 0 0 0 0])
+  ("fires" .
+   [1 0 0 0 0])
+  ("appendImage" .
+   [4 0 0 0 0 0 0 0 0 0 0])
+  ("Model" .
+   [2 0 0 0 0])
+  ("sets" .
+   [2 0 0 0])
+  ("increasing" .
+   [9 0 0 0 0 0 0 0 0 0])
+  ("updateNumber" .
+   [4 0 0 0 0 0 0 0 0 0 0 0])
+  ("addIncreasingClass" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
+  ("adds" .
+   [3 0 0 0])
+  ("animated-number--decreasing" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("stepAnimation" .
+   [4 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("An" .
+   [1 0])
+  ("animationId" .
+   [4 0 0 0 0 1 0 0 0 0 0])
+  ("requestAnimationFrame" .
+   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("interimNumber" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getInterimNumber" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tickNumber" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("right" .
+   [3 0 0 0 0])
+  ("out" .
+   [1 0 0])
+  ("renderNumber" .
+   [4 0 0 0 0 0 0 0 0 0 0 0])
+  ("returns" .
+   [1 0 0 0 0 0 0])
+  ("base" .
+   [1 0 0 0])
+  ("how" .
+   [1 0 0])
+  ("animationStartTime" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getNow" .
+   [3 0 0 0 0 0])
+  ("previousNumber" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("does" .
+   [1 0 0 0])
+  ("renderedNumber" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("already" .
+   [1 0 0 0 0 0 0])
+  ("calls" .
+   [1 0 0 0 0])
+  ("cancelAnimationFrame" .
+   [0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("classes" .
+   [1 0 0 0 0 0 0])
+  ("animatedNumber" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("unsetLoop" .
+   [1 0 0 0 0 0 0 0 0])
+  ("present" .
+   [1 0 0 0 0 0 0])
+  ("bar" .
+   [1 0 0])
+  ("FOR" .
+   [1 0 0])
+  ("dataUrl" .
+   [5 0 0 0 0 0 0])
+  ("pendingItemCount" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("addloop" .
+   [1 0 0 0 0 0 0])
+  ("--" .
+   [2 0])
+  ("stopAddLoop" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("<=" .
+   [1 0])
+  ("enabled" .
+   [2 0 0 0 0 0 0])
+  ("lineColor" .
+   [1 0 0 0 0 0 0 0 0])
+  ("line" .
+   [3 0 0 0])
+  ("flags" .
+   [1 0 0 0 0])
+  ("spline" .
+   [1 0 0 0 0 0])
+  ("ADDING" .
+   [2 0 0 0 0 0])
+  ("reverse" .
+   [1 0 0 0 0 0 0])
+  ("Trend" .
+   [1 0 0 0 0])
+  ("chartRegion" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("setSeries" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Visualisation" .
+   [1 0 0 0 2 0 0 0 0 0 0 0 0])
+  ("animateNumberOnChange" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("assets" .
+   [2 0 0 0 0 0])
+  ("bundle" .
+   [3 0 0 0 0 0])
+  ("application" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("script" .
+   [1 0 0 0 0 0])
+  ("head" .
+   [1 0 0 0])
+  ("markup" .
+   [1 0 0 0 0 0])
+  ("client" .
+   [2 0 0 0 0 0])
+  ("set-face-attribute" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("js2-warning" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  (":underline" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("js2-error" .
+   [1 0 0 0 0 0 0 0 0])
+  ("slideshow" .
+   [2 0 0 0 0 0 0 0 0])
+  ("desktop" .
+   [1 0 0 0 0 0 0])
+  ("plugin" .
+   [1 0 0 0 0 0])
+  ("plugins" .
+   [1 0 0 0 0 0 0])
+  ("facet" .
+   [1 0 0 0 0])
+  ("fn" .
+   [2 0])
+  ("respondTo" .
+   [1 0 0 0 0 0 0 0 0])
+  ("respondPast" .
+   [1 0 0 0 0 0 0 0 0 0 0])))

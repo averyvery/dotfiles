@@ -8,8 +8,6 @@
 (require 'sass-mode)
 (require 'js2-mode)
 
-(setq css-indent-offset 2)
-
 (electric-pair-mode 1)
 
 (defun sass-indent-p ()

@@ -46,3 +46,30 @@
   (define-key ido-completion-map (kbd "C-j") 'ido-select-text)
   ;; (define-key ido-completion-map (kbd "ESC") 'ido-exit-minibuffer)
 ))
+
+(defun delete-current-file (&optional φno-backup-p)
+  "Delete the file associated with the current buffer.
+
+Also close the current buffer.  If no file is associated, just close buffer.
+
+A backup file is created with filename appended “~‹date time stamp›~”. Existing file of the same name is overwritten. If the file is not associated with buffer, the backup file name starts with “xx_”.
+
+When called with `universal-argument', don't create backup."
+  (interactive "P")
+  (let* (
+         (fName (buffer-file-name))
+         (bufferIsFile-p (if (null fName) nil t ))
+         (backupName (concat fName "~" (format-time-string "%Y%m%d_%H%M%S") "~")))
+    (if bufferIsFile-p
+        (progn
+          (save-buffer fName)
+          (if φno-backup-p
+              nil
+            (copy-file fName backupName t))
+          (delete-file fName)
+          (message "deleted and backup created at 「%s」." backupName))
+      (progn
+        (if φno-backup-p
+            nil
+          (write-region (point-min) (point-max) (concat "xx_~" (format-time-string "%Y%m%d_%H%M%S") "~")))))
+    (kill-buffer (current-buffer))))

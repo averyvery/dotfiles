@@ -116,6 +116,11 @@
    `(flyspell-incorrect ((t (:underline ,red-6))))
    `(flyspell-duplicate ((t (:underline ,red-6))))
 
+   ;; js2-mode
+   `(js2-error ((t (:underline nil))))
+
+   `(js2-warning ((t (:underline nil))))
+
    ;; magit
    `(magit-diff-add ((t (:foreground ,green-2))))
    `(magit-diff-del ((t (:foreground ,red-7))))

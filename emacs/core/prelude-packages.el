@@ -47,7 +47,8 @@
     ;; dash
     diminish
     ;; elisp-slime-nav
-    epl expand-region flycheck
+    epl expand-region
+    ;; flycheck
     gitconfig-mode gitignore-mode grizzl
     guru-mode projectile
     magit move-text rainbow-mode

@@ -131,9 +131,9 @@ This functions should be added to the hooks of major modes for programming."
                             (run-hooks 'prelude-prog-mode-hook)))
 
 ;; enable on-the-fly syntax checking
-(if (fboundp 'global-flycheck-mode)
-    (global-flycheck-mode +1)
-  (add-hook 'prog-mode-hook 'flycheck-mode))
+;; (if (fboundp 'global-flycheck-mode)
+    ;; (global-flycheck-mode +1)
+  ;; (add-hook 'prog-mode-hook 'flycheck-mode))
 
 (provide 'prelude-programming)
 ;;; prelude-programming.el ends here

@@ -43,3 +43,5 @@ paperclip.yml
 # Tags #
 ######################
 tags
+vendor/bundle
+.DS_Store
