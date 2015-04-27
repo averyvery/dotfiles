@@ -1,1 +1,2 @@
+export PATH="/usr/local/share/python:node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/npm/bin/:/usr/local/share/npm/bin/:/Applications/Android/platform-tools/:/Applications/Android/tools/:/Applications/LibreOffice.app/Contents/MacOS:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.node/bin"
 eval "$(rbenv init - zsh)"

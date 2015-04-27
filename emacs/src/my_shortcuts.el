@@ -7,6 +7,8 @@
 (global-set-key (kbd "H-s") 'save-buffer)
 (global-set-key (kbd "H-a") 'mark-whole-buffer)
 
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 (defun follow-me ()
   (split-window-right)
   (windmove-right)

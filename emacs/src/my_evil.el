@@ -12,10 +12,12 @@
 (evil-leader/set-key "e" (lambda () (interactive) (elscreen-create) (find-file "~/.emacs.d/init.el")))
 (evil-leader/set-key "/" 'comment-dwim)
 (evil-leader/set-key "d" 'dired)
-(evil-leader/set-key "r" 'replace-string)
+(evil-leader/set-key "r" 'query-replace)
+(evil-leader/set-key "R" 'projectile-replace)
 (evil-leader/set-key "t" 'tabify)
 (evil-leader/set-key "T" 'untabify)
 (evil-leader/set-key "a" 'align-regexp)
+(evil-leader/set-key "i" 'indent-region)
 
 ;; dvorak
 (define-key evil-normal-state-map "j" 'evil-delete)

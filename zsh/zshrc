@@ -188,9 +188,8 @@ source $ZSH/oh-my-zsh.sh
   }
 # @end
 
-# @group paths
+# @group editor
 
-  export PATH=":/usr/local/share/python:node_modules:/usr/local/bin:/usr/local/sbin:/opt/subversion/bin:$PATH"
   export EDITOR='mvim -w'
 
 # @end
@@ -327,7 +326,7 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # @group rbenv
 
-
+source $HOME/.zshenv
 
 # @end
 
@@ -338,10 +337,6 @@ pr () {
   echo "... creating pull request for branch \"$branch\" in \"$repo\""
   open https://github.com/$repo/pull/new/$branch
 }
-
-PATH=$PATH:/usr/local/share/npm/bin/
-PATH=$PATH:/Applications/Android/platform-tools/:/Applications/Android/tools/
-PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS
 
 # Speed up Ruby
 export RUBY_GC_MALLOC_LIMIT=90000000
@@ -367,3 +362,5 @@ whatport () {
 
 # ulimit -n 16384
 # ulimit -u 2048
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

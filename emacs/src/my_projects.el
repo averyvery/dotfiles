@@ -8,6 +8,7 @@
 (evil-leader/set-key "F" 'projectile-find-file)
 (evil-leader/set-key "f" 'projectile-recentf)
 (evil-leader/set-key "p" 'projectile-switch-project)
+(evil-leader/set-key "P" 'projectile-kill-buffers)
 (evil-leader/set-key "g" 'projectile-grep)
 (evil-leader/set-key "G" 'find-grep-dired)
 (global-set-key (kbd "H-o") 'find-file)
@@ -31,8 +32,8 @@
 ;; buffers
 (require 'uniquify)
 (setq
-  uniquify-buffer-name-style 'forward
-  uniquify-separator ":")
+ uniquify-buffer-name-style 'forward
+ uniquify-separator ":")
 
 
 ;; (define-key ido-completion-map (kbd "C-h") 'ido-next-match)

@@ -2,8 +2,9 @@
 
 ;;; Code
 (load "elscreen" "ElScreen" t)
+
 (elscreen-start)
-(global-set-key (kbd "H-T") (lambda () (interactive) (elscreen-create) (projectile-switch-project)))
+
 
 (defun blank-tab ()
   (split-window-right)
@@ -13,9 +14,17 @@
   (windmove-left)
 )
 
-(blank-tab)
+;; (blank-tab)
+(global-set-key (kbd "H-T") (lambda () (interactive) (elscreen-clone) (delete-other-windows)))
+(global-set-key (kbd "H-t") (lambda () (interactive) (elscreen-clone) (delete-other-windows) (projectile-find-file)))
 
-(global-set-key (kbd "H-t") (lambda () (interactive) (elscreen-create) (blank-tab)))
+(evil-leader/set-key "T" (lambda () (interactive) (elscreen-clone) (delete-other-windows)))
+(evil-leader/set-key "t" (lambda () (interactive) (elscreen-clone) (delete-other-windows) (projectile-find-file)))
+
+(evil-leader/set-key "s" (lambda () (interactive) (elscreen-create) (blank-tab)))
+
+(evil-leader/set-key "ww" 'elscreen-kill)
+
 (global-set-key (kbd "H-w") 'elscreen-kill)
 (global-set-key (kbd "H-5") 'elscreen-previous)
 (global-set-key (kbd "H-6") 'elscreen-next)

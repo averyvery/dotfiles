@@ -30,4 +30,5 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
+(add-hook 'html-mode-hook 'auto-complete-mode)
 (setq ac-disable-faces nil)

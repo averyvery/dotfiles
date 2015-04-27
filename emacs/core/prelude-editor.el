@@ -375,7 +375,7 @@ indent yanked text (with prefix arg don't indent)."
 (diminish 'undo-tree-mode)
 
 ;; enable winner-mode to manage window configurations
-(winner-mode +1)
+;; (winner-mode +1)
 
 (provide 'prelude-editor)
 

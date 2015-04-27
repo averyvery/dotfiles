@@ -3,11 +3,32 @@
 ;;; Code:
 (load "src/my_theme")
 
+;; tiny face
+(set-face-attribute 'default nil :font "Ubuntu Mono 18" :height 125)
+
+(set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 115)
+(setq-default line-spacing 8)
+
+;; (set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 120)
+;; (setq-default line-spacing 8)
+
+;; (set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 125)
+;; (setq-default line-spacing 8)
+
+;; (set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 130)
+;; (setq-default line-spacing 9)
+
+;; (set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 140)
+;; (setq-default line-spacing 10)
+
+;; (set-face-attribute 'default nil :font "InputMonoNarrow ExLight" :height 150)
+;; (setq-default line-spacing 11)
+
 ;; laptop face
 ;; (set-face-attribute 'default nil :font "Ubuntu Mono 18" :height 140)
 
 ;; home face
-(set-face-attribute 'default nil :font "Ubuntu Mono 18" :height 155)
+;; (set-face-attribute 'default nil :font "Ubuntu Mono 18" :height 155)
 
 ;; work face
 ;; (set-face-attribute 'default nil :font "Ubuntu Mono 18" :height 180)
@@ -30,7 +51,6 @@
       ;; 'default nil
       ;; :height (window-width-to-font-size (window-body-width window))))))
 
-(setq-default line-spacing 6)
 
 ;; nyan nyan
 (require 'rainbow-delimiters)
@@ -63,6 +83,8 @@
 
 ;; (add-hook 'js2-mode-hook 'pretty-minor-characters)
 (add-hook 'css-mode-hook 'pretty-minor-characters)
+(add-hook 'css-mode-hook 'rainbow-mode)
+(add-hook 'sass-mode-hook 'rainbow-mode)
 
 ;; whitespace
 (require 'whitespace)

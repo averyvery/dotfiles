@@ -2,9 +2,10 @@
 
 ;;; Code
 
-(require 'flx-ido)
 ;; (require 'ido-better-flex)
 ;; (ido-better-flex/enable)
+
+(require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
