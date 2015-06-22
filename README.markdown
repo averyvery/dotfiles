@@ -10,7 +10,6 @@ Run the symlink commands:
     ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
     ln -s ~/dotfiles/zsh/oh-my-zsh ~/.oh-my-zsh
     ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-    ln -s ~/dotfiles/emacs ~/.emacs.d
     ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
     ln -s ~/dotfiles/vim ~/.vim
     ln -s ~/dotfiles/KeyBindings/DefaultKeyBinding.dict ~/Library/Keybindings/DefaultKeyBinding.dict
@@ -22,3 +21,5 @@ Run the symlink commands:
     ln -s ~/dotfiles/ctags ~/.ctags
     ln -s ~/dotfiles/Keyboard\ Layouts ~/Library/
     ln -s ~/dotfiles/iTerm/com.googlecode.iterm2.plist ~/Library/Preferences
+    ln -s ~/dotfiles/emacs/private ~/.emacs.d/private
+    ln -s ~/dotfiles/emacs/.spacemacs ~/.spacemacs
