@@ -32,6 +32,8 @@
 ;; (evil-leader/set-key "G" 'find-grep-dired)
 ;; (evil-leader/set-key "b" 'buffer-menu)
 
+(evil-leader/set-key "m" 'minimap-mode)
+
 
 ;; tabs and windows
 

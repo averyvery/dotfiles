@@ -19,6 +19,8 @@
     less-css-mode
     scss-mode
     sass-mode
+    textile-mode
+    sublimity
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -71,6 +73,32 @@ which require an initialization must be listed explicitly in the list.")
       (add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
       (add-hook 'sass-mode-hook (lambda () (rainbow-mode 1)))
     ))
+  )
+
+(defun averyvery/init-textile-mode ()
+  (use-package textile-mode
+    :init
+    (progn
+      (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+      )
+    )
+  )
+
+(defun averyvery/init-sublimity ()
+  (use-package sublimity
+    :init
+    (progn
+      (require 'sublimity)
+      (require 'sublimity-map)
+      (require 'sublimity-attractive)
+      (sublimity-mode 1)
+      (sublimity-attractive-hide-fringes)
+      (add-hook 'sublimity-map-setup-hook
+          (lambda ()
+            (setq line-spacing 0)
+            (buffer-face-mode)))
+      )
+    )
   )
 
 (defun averyvery/init-color-identifiers-mode ()

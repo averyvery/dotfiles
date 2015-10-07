@@ -216,6 +216,7 @@ before layers configuration."
   (add-hook 'js2-mode-hook 'disable-goto-address)
   (add-hook 'html-mode-hook 'disable-goto-address)
 
+  (add-to-list 'auto-mode-alist '("\\.erb$" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.region$" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.block$" . html-mode))
   (add-to-list 'auto-mode-alist '("\\.jsp$" . html-mode))
@@ -235,6 +236,11 @@ before layers configuration."
   (add-hook 'find-file-hook 'sudo-edit-on-etc-files)
 
   (load "~/.emacs.d/private/move-text/move-text.el")
+
+  (custom-set-faces
+   '(helm-selection ((t (:background "#081a11")))) ;; Face used by ido for highlighting subdirs in the alternatives.
+   '(helm-match ((t (:foreground "#9adb47" :background "#081a11")))) ;; Face used by ido for highlighting subdirs in the alternatives.
+  )
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
