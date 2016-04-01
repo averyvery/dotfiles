@@ -89,10 +89,11 @@ which require an initialization must be listed explicitly in the list.")
     :init
     (progn
       (require 'sublimity)
-      (require 'sublimity-map)
       (require 'sublimity-attractive)
       (sublimity-mode 1)
       (sublimity-attractive-hide-fringes)
+      (setq sublimity-attractive-centering-width 174)
+      (add-hook 'prog-mode-hook 'sublimity-attractive-hide-fringes)
       (add-hook 'sublimity-map-setup-hook
           (lambda ()
             (setq line-spacing 0)

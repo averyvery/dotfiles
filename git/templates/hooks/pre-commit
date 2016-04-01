@@ -1,3 +1,3 @@
 #!/bin/sh
 
-afplay ~/dotfiles/git/sound/awaiting > /dev/null 2>&1 &#!/bin/sh -v 6
+afplay ~/dotfiles/git/sound/awaiting.wav -v 0.5 > /dev/null 2>&1 &#!/bin/sh -v 6
