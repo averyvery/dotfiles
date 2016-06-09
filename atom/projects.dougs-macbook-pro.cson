@@ -1,0 +1,35 @@
+client:
+  title: "Client | Havenly"
+  paths: [
+    "/Volumes/Havenly/vagrantbox/src/client"
+  ]
+api:
+  title: "API | Havenly"
+  paths: [
+    "/Volumes/Havenly/vagrantbox/src/api"
+  ]
+app:
+  title: "App | Havenly"
+  paths: [
+    "/Volumes/Havenly/vagrantbox/src/app"
+  ]
+cms:
+  title: "CMS | Havenly"
+  paths: [
+    "/Volumes/Havenly/vagrantbox/src/cms"
+  ]
+domainmodel:
+  title: "Domain Model | Havenly"
+  paths: [
+    "/Volumes/Havenly/vagrantbox/src/domain-model"
+  ]
+fish:
+  title: "Fish"
+  paths: [
+    "/Users/averyavery/.config/fish"
+  ]
+vagrant:
+  title: "Vagrant Stuff"
+  paths: [
+    "/Users/averyavery/Documents/Work/vagrant stuff"
+  ]

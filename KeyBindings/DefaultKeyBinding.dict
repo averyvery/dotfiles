@@ -9,7 +9,7 @@
 
 
 	/* Non-destructive */
-  /*
+    /*
 	"^d" = "moveLeft:";
 	"^n" = "moveRight:";
 	"^t" = "moveUp:";
@@ -41,7 +41,7 @@
   */
 	"^b" = "moveWordLeft:";
 	"^w" = "moveWordRight:";
-  "^|" = "moveToBeginningOfLine:";
+    "^|" = "moveToBeginningOfLine:";
 	"^$" = "moveToEndOfLine:";
 
 	/* Selecting */

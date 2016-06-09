@@ -1,9 +1,0 @@
-[[file:ideal-life.org][Ideal Life]]
-[[Gathas]]
-[[file:fed-leadership.org][FED Leadership]]
-[[file:fed-offsite.org][FED Offsite]]
-[[file:interview-questions.org][Interview Questions]]
-[[file:z-index-blog-post.org][Z-Index Blog Post]]
-[[file:pm-interview-qs.org][PM Interview Questions]]
-
-[[file:frames.org][Frames]]

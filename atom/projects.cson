@@ -1,0 +1,15 @@
+havenly_app:
+  title: "Havenly App"
+  paths: [
+    "/Volumes/Havenly/havenly/src/havenly"
+  ]
+havenly_api:
+  title: "Havenly API"
+  paths: [
+    "/Volumes/Havenly/havenly/src/api"
+  ]
+havenly_cms:
+  title: "Havenly CMS"
+  paths: [
+    "/Volumes/Havenly/havenly/src/cms"
+  ]

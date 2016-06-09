@@ -1,0 +1,63 @@
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'd': 'vim-mode:move-left'
+  'n': 'vim-mode:move-right'
+  'h': 'vim-mode:move-down'
+  't': 'vim-mode:move-up'
+  'l': 'vim-mode:repeat-search'
+  'L': 'vim-mode:repeat-search-backwards'
+  'j': 'vim-mode:delete'
+  'J': 'vim-mode:delete-to-last-character-of-line'
+  'k': 'vim-mode:till'
+  'K': 'vim-mode:till-backwards'
+  'space w space': 'zen:toggle'
+  'space w v': 'pane:split-right-and-copy-active-item'
+  'space w h': 'pane:split-down-and-copy-active-item'
+  'space w n': 'window:focus-pane-on-right'
+  'space w d': 'window:focus-pane-on-left'
+  'space o': 'advanced-open-file:toggle'
+  'space s': 'sort-lines:sort'
+  ':': 'command-palette:toggle'
+  'space space': 'easy-motion-redux:words_starting'
+  'space g': 'git-time-machine:toggle'
+  'ctrl-alt-h': 'editor:move-line-down'
+  'ctrl-alt-t': 'editor:move-line-up'
+  'space f': 'tree-view:reveal-active-file'
+  ',': 'trailing-semicolon:comma'
+  '!': 'trailing-semicolon:semicolon'
+
+  'space t d': 'pane:show-previous-item'
+  'space t n': 'pane:show-next-item'
+  'space p': 'fuzzy-finder:toggle-file-finder'
+
+  'space c': 'lcov-info:toggle'
+
+'atom-text-editor.vim-mode.normal-mode':
+  'escape': 'core:save'
+
+'.platform-darwin .tree-view':
+  'space f': 'tree-view:toggle'
+
+'atom-text-editor.vim-mode.insert-mode':
+  'shift-tab': 'emmet:interactive-expand-abbreviation'
+  'shift-enter': 'emmet:expand-abbreviation-with-tab'
+
+  'tab': 'unset!'
+  'tab': 'autocomplete-plus:confirm'
+
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on OS X and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * https://atom.io/docs/latest/hacking-atom-debugging#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson

@@ -1,0 +1,48 @@
+"*":
+  Zen:
+    fullscreen: false
+  "autocomplete-plus":
+    autoActivationDelay: 33
+    maxVisibleSuggestions: 20
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
+    wrapSelectionsInBrackets: false
+  core:
+    allowPendingPaneItems: false
+    closeEmptyWindows: false
+    disabledPackages: [
+      "atom-alignment"
+      "quick-jump"
+      "swackets"
+      "grammar-token-limit"
+    ]
+    themes: [
+      "one-dark-ui"
+      "gruvbox"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+    preferredLineLength: 100
+    scrollSensitivity: 55
+    tabType: "soft"
+  "exception-reporting":
+    userId: "9216cd6c-f498-e1d3-fdf4-14f8186e9909"
+  "project-manager":
+    environmentSpecificProjects: true
+  swackets:
+    colors: [
+      "#f9f5d7"
+      "#7c6f64"
+      "#fbf1c7"
+      "#665c54"
+      "#f2e5bc"
+      "#504945"
+      "#ebdbb2"
+      "#3c3836"
+    ]
+    syntax: "Parentheses"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false

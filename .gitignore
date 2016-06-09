@@ -11,3 +11,6 @@ vim/bundle
 vim/wiki
 !vim/bundle/UltiSnips.vim/UltiSnips
 !vim/bundle/vim-comments/
+
+atom/local-history
+atom/packages
