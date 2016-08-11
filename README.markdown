@@ -9,5 +9,4 @@ Run the symlink commands:
     ln -s ~/dotfiles/iTerm/com.googlecode.iterm2.plist ~/Library/Preferences
     ln -s ~/dotfiles/fish-config ~/.config
     ln -s ~/dotfiles/atom ~/.atom
-
     ln -s ~/dotfiles/gitconfig ~/.gitconfig

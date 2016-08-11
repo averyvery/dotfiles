@@ -22,6 +22,7 @@
   'ctrl-alt-h': 'editor:move-line-down'
   'ctrl-alt-t': 'editor:move-line-up'
   'space f': 'tree-view:reveal-active-file'
+  'space a': 'align-regexp:align-selection',
   ',': 'trailing-semicolon:comma'
   '!': 'trailing-semicolon:semicolon'
 

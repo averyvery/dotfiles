@@ -33,7 +33,7 @@ alias sshv 'cd /Volumes/Havenly/vagrantbox; and vagrant ssh'
 alias up 'cd /Volumes/Havenly/vagrantbox; and vagrant up; and echo ""; and figlet -f "Doom" "Yap that fool!"; and echo ""; and vagrant ssh'
 alias down 'cd /Volumes/Havenly/vagrantbox; and vagrant halt'
 
-alias pull_all 'cd /Volumes/Havenly/vagrantbox/src/api; and git pull upstream master; and cd /Volumes/Havenly/vagrantbox/src/app; and git pull upstream master; and cd /Volumes/Havenly/vagrantbox/src/cms; and git pull upstream master'
+alias pull_all 'cd /Volumes/Havenly/vagrantbox/src/api; and git pull upstream master; and cd /Volumes/Havenly/vagrantbox/src/app; and git checkout tmp; and git pull upstream master; and cd /Volumes/Havenly/vagrantbox/src/cms; and git pull upstream master'
 
 alias ni 'npm install'
 alias nis 'npm install --save --save-exact'

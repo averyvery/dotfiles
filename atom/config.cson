@@ -16,6 +16,9 @@
       "quick-jump"
       "swackets"
       "grammar-token-limit"
+      "atom-keyboard-macros-vim"
+      "pigments"
+      "indent-guide-improved"
     ]
     themes: [
       "one-dark-ui"
@@ -29,6 +32,29 @@
     tabType: "soft"
   "exception-reporting":
     userId: "9216cd6c-f498-e1d3-fdf4-14f8186e9909"
+  fonts:
+    fontFamily: "Meslo"
+    preview: '''
+      Reloading page behavior:
+      
+      - Login at https://rewrite.havenly.local/
+      - Browse to https://rewrite.havenly.local/rooms/765/profile
+      - At 32 min, I reloaded both pages:
+        - https://rewrite.havenly.local/rooms/765/profile redirected me to http://rewrite.havenly.local/users/login
+        - https://rewrite.havenly.local/ did not, showed a logged-in state. Clicked any link prompted login
+      
+      No reload behavior:
+      
+      - Login at https://rewrite.havenly.local/
+      - Browse to https://rewrite.havenly.local/rooms/765/profile
+      - XX min
+        - https://rewrite.havenly.local/rooms/765/profile
+      - XX min
+        - https://rewrite.havenly.local/rooms/765/profile
+      
+    '''
+  "local-history":
+    daysLimit: 365
   "project-manager":
     environmentSpecificProjects: true
   swackets:

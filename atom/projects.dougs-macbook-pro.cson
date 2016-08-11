@@ -29,7 +29,7 @@ fish:
     "/Users/averyavery/.config/fish"
   ]
 vagrant:
-  title: "Vagrant Stuff"
+  title: "Dotfiles"
   paths: [
-    "/Users/averyavery/Documents/Work/vagrant stuff"
+    "/Users/averyavery/dotfiles"
   ]

@@ -1,21 +1,16 @@
-# Your snippets
-#
-# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
-# expand the prefix into a larger code block with templated values.
-#
-# You can create a new snippet in this file by typing "snip" and then hitting
-# tab.
-#
-# An example CoffeeScript snippet to expand log to console.log:
-#
-# '.source.coffee':
-#   'Console log':
-#     'prefix': 'log'
-#     'body': 'console.log $1'
-#
-# Each scope (e.g. '.source.coffee' above) can only be declared once.
-#
-# This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the
-# Atom Flight Manual:
-# https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.source.js':
+  'inspect':
+    'prefix': 'inspect'
+    'body': 'console.log(require(\'util\').inspect($1, { depth: 50, breakLength: 30 }));$2'
+  'import':
+    'prefix': 'import'
+    'body': 'import $1 from \'$2\';$3'
+  'log':
+    'prefix': 'log'
+    'body': 'console.log($1);$2'
+  'log(===)':
+    'prefix': 'equal log'
+    'body': 'console.log(\'==========\')$1'
+  'log(---)':
+    'prefix': 'bar log'
+    'body': 'console.log(\'----------\')$1'

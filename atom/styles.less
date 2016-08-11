@@ -46,3 +46,15 @@ atom-text-editor::shadow .cursor {
     color: #6B6158 !important;
   }
 }
+
+// https://discuss.atom.io/t/use-the-gutter-without-enabling-linenumbers/2461
+.editor, atom-text-editor::shadow {
+  .line-numbers {
+    width: 2px;
+    min-width: 2px;
+    overflow: hidden;
+    .line-number {
+      width: 100px;
+    }
+  }
+}
