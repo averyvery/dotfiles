@@ -1,0 +1,37 @@
+" Remember to do this when installing!!!! https://github.com/XVimProject/XVim2/blob/master/SIGNING_Xcode.md
+
+" @group leader
+
+let mapleader=" "
+
+" @group dvorak
+
+" search
+noremap l n
+noremap L N
+
+" movement
+noremap d h
+noremap h j
+" noremap <S-h> 10j
+noremap t k
+" noremap <S-t> 10k
+noremap n l
+" noremap S 0wc$
+noremap 0 ^
+
+" sort
+noremap <space>s :sort<cr>
+
+" deletion
+noremap j d
+
+" 'til
+noremap k t
+noremap <s-k> <s-t>
+
+" @group settings
+
+
+set noexpandtab
+set clipboard=unnamed

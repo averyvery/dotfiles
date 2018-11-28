@@ -1,0 +1,22 @@
+[user]
+	name = Doug Avery
+	email = averyquery@gmail.com
+[pull]
+	rebase = true
+[alias]
+    a = add -A
+    b = branch
+    p = push
+    ch = checkout
+    c = commit
+    a = add -all
+    f = fetch
+    s = status
+    m = merge
+    r = rebase
+    ri = rebase --interactive
+    rss = reset --soft HEAD~1
+    rsh = reset --hard
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	editor = atom --wait
