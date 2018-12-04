@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1Password 6</key>
+	<string>file:///Applications/1Password%206.app/</string>
+	<key>Activity Monitor</key>
+	<string>file:///Applications/Utilities/Activity%20Monitor.app/</string>
+	<key>AirPort Utility</key>
+	<string>file:///Applications/Utilities/AirPort%20Utility.app/</string>
+	<key>Android Studio</key>
+	<string>file:///Applications/Android%20Studio.app/</string>
+	<key>App Store</key>
+	<string>file:///Applications/App%20Store.app/</string>
+	<key>Atom</key>
+	<string>file:///Applications/Atom.app/</string>
+	<key>Audio MIDI Setup</key>
+	<string>file:///Applications/Utilities/Audio%20MIDI%20Setup.app/</string>
+	<key>Automator</key>
+	<string>file:///Applications/Automator.app/</string>
+	<key>BetterTouchTool</key>
+	<string>file:///Applications/BetterTouchTool.app/</string>
+	<key>BirdFontNonCommercial</key>
+	<string>file:///Applications/BirdFontNonCommercial.app/</string>
+	<key>Bluetooth File Exchange</key>
+	<string>file:///Applications/Utilities/Bluetooth%20File%20Exchange.app/</string>
+	<key>Books</key>
+	<string>file:///Applications/Books.app/</string>
+	<key>Boot Camp Assistant</key>
+	<string>file:///Applications/Utilities/Boot%20Camp%20Assistant.app/</string>
+	<key>BrowserStack Local</key>
+	<string>file:///Users/dougavery/Applications/Chrome%20Apps.localized/Profile%202%20mfiddfehmfdojjfdpfngagldgaaafcfo.app/</string>
+	<key>Butler</key>
+	<string>file:///Applications/Butler.app/</string>
+	<key>Calculator</key>
+	<string>file:///Applications/Calculator.app/</string>
+	<key>Calendar</key>
+	<string>file:///Applications/Calendar.app/</string>
+	<key>Charles</key>
+	<string>file:///Applications/Charles.app/</string>
+	<key>Chess</key>
+	<string>file:///Applications/Chess.app/</string>
+	<key>ColorSync Utility</key>
+	<string>file:///Applications/Utilities/ColorSync%20Utility.app/</string>
+	<key>Console</key>
+	<string>file:///Applications/Utilities/Console.app/</string>
+	<key>Contacts</key>
+	<string>file:///Applications/Contacts.app/</string>
+	<key>Contexts</key>
+	<string>file:///Applications/Contexts.app/</string>
+	<key>Cyberduck</key>
+	<string>file:///Applications/Cyberduck.app/</string>
+	<key>Dashboard</key>
+	<string>file:///Applications/Dashboard.app/</string>
+	<key>Dictionary</key>
+	<string>file:///Applications/Dictionary.app/</string>
+	<key>Digital Color Meter</key>
+	<string>file:///Applications/Utilities/Digital%20Color%20Meter.app/</string>
+	<key>Disk Utility</key>
+	<string>file:///Applications/Utilities/Disk%20Utility.app/</string>
+	<key>DwellClick</key>
+	<string>file:///Applications/DwellClick.app/</string>
+	<key>FaceTime</key>
+	<string>file:///Applications/FaceTime.app/</string>
+	<key>Figma</key>
+	<string>file:///Applications/Figma.app/</string>
+	<key>Finder</key>
+	<string>file://localhost/System/Library/CoreServices/Finder.app/</string>
+	<key>Firefox</key>
+	<string>file:///Applications/Firefox.app/</string>
+	<key>Font Book</key>
+	<string>file:///Applications/Font%20Book.app/</string>
+	<key>GIMP-2.10</key>
+	<string>file:///Applications/GIMP-2.10.app/</string>
+	<key>GarageBand</key>
+	<string>file:///Applications/GarageBand.app/</string>
+	<key>Google Chrome</key>
+	<string>file:///Applications/Google%20Chrome.app/</string>
+	<key>Grapher</key>
+	<string>file:///Applications/Utilities/Grapher.app/</string>
+	<key>Home</key>
+	<string>file:///Applications/Home.app/</string>
+	<key>Image Capture</key>
+	<string>file:///Applications/Image%20Capture.app/</string>
+	<key>Inkscape</key>
+	<string>file:///Applications/Inkscape.app/</string>
+	<key>IntelliJ IDEA CE</key>
+	<string>file:///Applications/IntelliJ%20IDEA%20CE.app/</string>
+	<key>Kap</key>
+	<string>file:///Applications/Kap.app/</string>
+	<key>Keychain Access</key>
+	<string>file:///Applications/Utilities/Keychain%20Access.app/</string>
+	<key>Keynote</key>
+	<string>file:///Applications/Keynote.app/</string>
+	<key>Launchpad</key>
+	<string>file:///Applications/Launchpad.app/</string>
+	<key>Mail</key>
+	<string>file:///Applications/Mail.app/</string>
+	<key>Maps</key>
+	<string>file:///Applications/Maps.app/</string>
+	<key>Messages</key>
+	<string>file:///Applications/Messages.app/</string>
+	<key>Migration Assistant</key>
+	<string>file:///Applications/Utilities/Migration%20Assistant.app/</string>
+	<key>Mindful Mynah</key>
+	<string>file:///Applications/Mindful%20Mynah.app/</string>
+	<key>Mission Control</key>
+	<string>file:///Applications/Mission%20Control.app/</string>
+	<key>News</key>
+	<string>file:///Applications/News.app/</string>
+	<key>Notes</key>
+	<string>file:///Applications/Notes.app/</string>
+	<key>Numbers</key>
+	<string>file:///Applications/Numbers.app/</string>
+	<key>Pages</key>
+	<string>file:///Applications/Pages.app/</string>
+	<key>Photo Booth</key>
+	<string>file:///Applications/Photo%20Booth.app/</string>
+	<key>Photos</key>
+	<string>file:///Applications/Photos.app/</string>
+	<key>Preview</key>
+	<string>file:///Applications/Preview.app/</string>
+	<key>QuickTime Player</key>
+	<string>file:///Applications/QuickTime%20Player.app/</string>
+	<key>Realm Browser</key>
+	<string>file:///Applications/Realm%20Browser.app/</string>
+	<key>Reminders</key>
+	<string>file:///Applications/Reminders.app/</string>
+	<key>Safari</key>
+	<string>file:///Applications/Safari.app/</string>
+	<key>Screenshot</key>
+	<string>file:///Applications/Utilities/Screenshot.app/</string>
+	<key>Script Editor</key>
+	<string>file:///Applications/Utilities/Script%20Editor.app/</string>
+	<key>Siri</key>
+	<string>file:///Applications/Siri.app/</string>
+	<key>Spotify</key>
+	<string>file:///Applications/Spotify.app/</string>
+	<key>Stickies</key>
+	<string>file:///Applications/Stickies.app/</string>
+	<key>Stocks</key>
+	<string>file:///Applications/Stocks.app/</string>
+	<key>System Information</key>
+	<string>file:///Applications/Utilities/System%20Information.app/</string>
+	<key>System Preferences</key>
+	<string>file:///Applications/System%20Preferences.app/</string>
+	<key>Telephone</key>
+	<string>file:///Applications/Telephone.app/</string>
+	<key>Terminal</key>
+	<string>file:///Applications/Utilities/Terminal.app/</string>
+	<key>TextEdit</key>
+	<string>file:///Applications/TextEdit.app/</string>
+	<key>Time Machine</key>
+	<string>file:///Applications/Time%20Machine.app/</string>
+	<key>Touch Bar Piano</key>
+	<string>file:///Applications/Touch%20Bar%20Piano.app/</string>
+	<key>VirtualBox</key>
+	<string>file:///Applications/VirtualBox.app/</string>
+	<key>Voice Memos</key>
+	<string>file:///Applications/VoiceMemos.app/</string>
+	<key>VoiceOver Utility</key>
+	<string>file:///Applications/Utilities/VoiceOver%20Utility.app/</string>
+	<key>XQuartz</key>
+	<string>file:///Applications/Utilities/XQuartz.app/</string>
+	<key>Xcode</key>
+	<string>file:///Applications/Xcode.app/</string>
+	<key>iMovie</key>
+	<string>file:///Applications/iMovie.app/</string>
+	<key>iTerm</key>
+	<string>file:///Applications/iTerm.app/</string>
+	<key>iTunes</key>
+	<string>file:///Applications/iTunes.app/</string>
+</dict>
+</plist>

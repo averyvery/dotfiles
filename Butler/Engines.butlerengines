@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Children</key>
+	<array>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>Encoding</key>
+				<integer>134217984</integer>
+				<key>URL Prefix</key>
+				<string>http://www.google.com/search?q=</string>
+				<key>URL Suffix</key>
+				<string>&amp;ie=UTF-8&amp;oe=UTF-8</string>
+			</dict>
+			<key>Title</key>
+			<string>Google</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>Encoding</key>
+				<integer>134217984</integer>
+				<key>URL Prefix</key>
+				<string>http://images.google.com/images?q=</string>
+				<key>URL Suffix</key>
+				<string>&amp;ie=UTF-8&amp;oe=UTF-8</string>
+			</dict>
+			<key>Title</key>
+			<string>- Google Images</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>Encoding</key>
+				<integer>134217984</integer>
+				<key>URL Prefix</key>
+				<string>http://groups.google.com/groups?q=</string>
+				<key>URL Suffix</key>
+				<string>&amp;ie=UTF-8&amp;oe=UTF-8</string>
+			</dict>
+			<key>Title</key>
+			<string>- Google Groups</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>Encoding</key>
+				<integer>134217984</integer>
+				<key>URL Prefix</key>
+				<string>http://www.google.com/search?q=</string>
+				<key>URL Suffix</key>
+				<string>&amp;ie=UTF-8&amp;oe=UTF-8</string>
+			</dict>
+			<key>Title</key>
+			<string>- Google Directory</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>Separator</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>URL Prefix</key>
+				<string>http://www.teoma.com/search.asp?t=</string>
+			</dict>
+			<key>Title</key>
+			<string>Teoma</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>URL Prefix</key>
+				<string>http://search.yahoo.com/bin/search?p=</string>
+			</dict>
+			<key>Title</key>
+			<string>Yahoo</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Additional Settings</key>
+			<dict>
+				<key>URL Prefix</key>
+				<string>http://www.hotbot.com/default.asp?prov=Inktomi&amp;ps=&amp;loc=searchbox&amp;tab=web&amp;query=</string>
+			</dict>
+			<key>Title</key>
+			<string>Hotbot</string>
+			<key>Type</key>
+			<string>Engine</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>Separator</string>
+		</dict>
+		<dict>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.reuters.com/newsSearchResultsHome.jhtml?qtype=a&amp;position=1&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>Reuters</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://search.cnn.com/cnn/search?&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>CNN</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://newssearch.bbc.co.uk/cgi-bin/search/results.pl?scope=newsifs&amp;tab=news&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>BBC News</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://search.foxnews.com/_1_UDTEK042RBNHU__info.foxnws/dog/results?otmpl=dog/webresults.htm&amp;qkw=</string>
+						<key>URL Suffix</key>
+						<string>&amp;qcat=web&amp;qk=20&amp;top=1&amp;start=&amp;ver=22100&amp;nextPageNum=&amp;fastSearch=</string>
+					</dict>
+					<key>Title</key>
+					<string>Fox News</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>Encoding</key>
+						<integer>134217984</integer>
+						<key>URL Prefix</key>
+						<string>http://news.google.com/news?hl=en&amp;btnG=Search+News&amp;q=</string>
+						<key>URL Suffix</key>
+						<string>&amp;ie=UTF-8&amp;oe=UTF-8</string>
+					</dict>
+					<key>Title</key>
+					<string>Google News</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.altavista.com/news/search?nc=0&amp;nr=0&amp;ns=0&amp;nd=0&amp;avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>AltaVista News</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Money</string>
+					<key>Type</key>
+					<string>Comment</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.economist.com/search/search.cfm?qr=</string>
+						<key>URL Suffix</key>
+						<string>&amp;area=5&amp;Submit2=Go</string>
+					</dict>
+					<key>Title</key>
+					<string>Economist</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.reuters.com/financeQuoteLookup.jhtml?qtype=sym&amp;qcat=sbox&amp;infotype=info&amp;ticker=</string>
+					</dict>
+					<key>Title</key>
+					<string>Stock Quotes</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+			</array>
+			<key>Launch Group</key>
+			<false/>
+			<key>Title</key>
+			<string>News</string>
+			<key>Type</key>
+			<string>Container</string>
+		</dict>
+		<dict>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://dictionary.reference.com/search?q=</string>
+					</dict>
+					<key>Title</key>
+					<string>Dictionary.com</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://thesaurus.reference.com/search?q=</string>
+					</dict>
+					<key>Title</key>
+					<string>- Dictionary.com Thesaurus</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</string>
+					</dict>
+					<key>Title</key>
+					<string>Webster</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.webster.com/cgi-bin/thesaurus?book=Thesaurus&amp;va=</string>
+					</dict>
+					<key>Title</key>
+					<string>- Webster Thesaurus</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>English ←→ German</string>
+					<key>Type</key>
+					<string>Comment</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://dict.leo.org/?search=</string>
+					</dict>
+					<key>Title</key>
+					<string>LEO Dictionary</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://dict.tu-chemnitz.de/dings.cgi?lang=en&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>TU Chemnitz Dictionary</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+			</array>
+			<key>Launch Group</key>
+			<false/>
+			<key>Title</key>
+			<string>Dictionaries</string>
+			<key>Type</key>
+			<string>Container</string>
+		</dict>
+		<dict>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.macupdate.com/search.php?keywords=</string>
+					</dict>
+					<key>Title</key>
+					<string>MacUpdate</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.versiontracker.com/mp/new_search.m?productDB=mac&amp;mode=Quick&amp;OS_Filter=MacOSX&amp;search=</string>
+						<key>URL Suffix</key>
+						<string>&amp;x=0&amp;y=0</string>
+					</dict>
+					<key>Title</key>
+					<string>VersionTracker</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.macosxhints.com/search.php?query=</string>
+						<key>URL Suffix</key>
+						<string>&amp;keyType=all&amp;datestart=&amp;dateend=&amp;topic=0&amp;type=stories&amp;author=&amp;mode=search</string>
+					</dict>
+					<key>Title</key>
+					<string>Mac OS X Hints</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.macfixit.com/search.php?mode=search&amp;type=stories&amp;platform=Mac+OSX&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>MacFixIt</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.picosearch.com/cgi-bin/ts.pl?index=162990&amp;calln=3&amp;doc0=0&amp;query=</string>
+						<key>URL Suffix</key>
+						<string>&amp;psel=all&amp;search=Search&amp;opt=ALL</string>
+					</dict>
+					<key>Title</key>
+					<string>MacInTouch</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Children</key>
+					<array>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://developer.apple.com/cgi-bin/search.pl?q=</string>
+							</dict>
+							<key>Title</key>
+							<string>Apple Developer</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://cocoa.mamasam.com/search/results.php?words=</string>
+							</dict>
+							<key>Title</key>
+							<string>Mamasam: Cocoa</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://www.mysql.com/udmsearch/index.php?q=</string>
+							</dict>
+							<key>Title</key>
+							<string>MySQL</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://www.php.net/manual-lookup.php?pattern=</string>
+							</dict>
+							<key>Title</key>
+							<string>PHP</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://search.python.org/query.html?qt=</string>
+							</dict>
+							<key>Title</key>
+							<string>Python</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+					</array>
+					<key>Launch Group</key>
+					<false/>
+					<key>Title</key>
+					<string>Developer</string>
+					<key>Type</key>
+					<string>Container</string>
+				</dict>
+				<dict>
+					<key>Children</key>
+					<array>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://search.wired.com/wnews/default.asp?query=</string>
+							</dict>
+							<key>Title</key>
+							<string>Wired</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Type</key>
+							<string>Separator</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://slashdot.org/search.pl?op=stories&amp;author=&amp;tid=&amp;section=&amp;sort=1&amp;query=</string>
+							</dict>
+							<key>Title</key>
+							<string>Slashdot</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://slashdot.org/search.pl?op=comments&amp;author=&amp;tid=&amp;section=&amp;sort=1&amp;query=</string>
+							</dict>
+							<key>Title</key>
+							<string>- Slashdot Comments</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://slashdot.org/search.pl?op=users&amp;author=&amp;tid=&amp;section=&amp;sort=1&amp;query=</string>
+							</dict>
+							<key>Title</key>
+							<string>- Slashdot Users</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://slashdot.org/search.pl?op=polls&amp;author=&amp;tid=&amp;section=&amp;sort=1&amp;query=</string>
+							</dict>
+							<key>Title</key>
+							<string>- Slashdot Polls</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+						<dict>
+							<key>Additional Settings</key>
+							<dict>
+								<key>URL Prefix</key>
+								<string>http://slashdot.org/search.pl?op=journals&amp;author=&amp;tid=&amp;section=&amp;sort=1&amp;query=</string>
+							</dict>
+							<key>Title</key>
+							<string>- Slashdot Journals</string>
+							<key>Type</key>
+							<string>Engine</string>
+						</dict>
+					</array>
+					<key>Launch Group</key>
+					<false/>
+					<key>Title</key>
+					<string>Other</string>
+					<key>Type</key>
+					<string>Container</string>
+				</dict>
+			</array>
+			<key>Launch Group</key>
+			<false/>
+			<key>Title</key>
+			<string>Computers</string>
+			<key>Type</key>
+			<string>Container</string>
+		</dict>
+		<dict>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://froogle.google.com/froogle?q=</string>
+						<key>URL Suffix</key>
+						<string>&amp;btnG=Search+Froogle</string>
+					</dict>
+					<key>Title</key>
+					<string>Froogle</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://castle.pricewatch.com/s/search.asp?s=</string>
+					</dict>
+					<key>Title</key>
+					<string>Pricewatch</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.amazon.com/exec/obidos/search-handle-url/index%3Dblended&amp;field-keywords%3D</string>
+					</dict>
+					<key>Title</key>
+					<string>Amazon</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://shop.barnesandnoble.com/booksearch/results.asp?WRD=</string>
+					</dict>
+					<key>Title</key>
+					<string>Barnes &amp; Noble</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://search.ebay.com/search/search.dll?cgiurl=http%3A%2F%2Fcgi.ebay.com%2Fws%2F&amp;krd=1&amp;from=R8&amp;MfcISAPICommand=GetResult&amp;ht=1&amp;SortProperty=MetaEndSort&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>eBay</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://search-desc.ebay.com/search/search.dll?cgiurl=http%3A%2F%2Fcgi.ebay.com%2Fws%2F&amp;MfcISAPICommand=GetResult&amp;ht=1&amp;from=R7&amp;ebaytag1=ebayreg&amp;search_option=1&amp;srchdesc=y&amp;exclude=&amp;category0=&amp;minPrice=&amp;maxPrice=&amp;ebaytag1code=0&amp;st=&amp;SortProperty=MetaEndSort&amp;query=</string>
+					</dict>
+					<key>Title</key>
+					<string>- eBay Descriptions</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>itms://phobos.apple.com/WebObjects/MZSearch.woa/wa/advancedSearchResults?artistTerm=</string>
+					</dict>
+					<key>Title</key>
+					<string>iTunes Music Store: Artist</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+			</array>
+			<key>Launch Group</key>
+			<false/>
+			<key>Title</key>
+			<string>Shopping</string>
+			<key>Type</key>
+			<string>Container</string>
+		</dict>
+		<dict>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://altavista.com/web/results?kgs=0&amp;kls=1&amp;avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>AltaVista</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.altavista.com/image/results?pg=q&amp;stype=simage&amp;imgset=2&amp;avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>- AltaVista Images</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.altavista.com/audio/results?pg=q&amp;stype=saudio&amp;audset=2&amp;avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>- AltaVista Audio</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.altavista.com/video/results?pg=q&amp;stype=svideo&amp;vidset=2&amp;avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>- AltaVista Video</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.altavista.com/dir/results?avkw=qtrp&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>- AltaVista Directory</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.fedex.com/cgi-bin/tracking?action=track&amp;language=english&amp;last_action=alttrack&amp;ascend_header=1&amp;cntry_code=us&amp;initial=x&amp;mps=y&amp;tracknumbers=</string>
+					</dict>
+					<key>Title</key>
+					<string>FedEx Tracking</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.weather.com/search/search?where=</string>
+					</dict>
+					<key>Title</key>
+					<string>Weather.com</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.gracenote.com/music/search.html?f=artist&amp;f=disc&amp;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>Gracenote (CDDB)</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Separator</string>
+				</dict>
+				<dict>
+					<key>Additional Settings</key>
+					<dict>
+						<key>URL Prefix</key>
+						<string>http://www.imdb.com/find?tt=on;nm=on;mx=20;q=</string>
+					</dict>
+					<key>Title</key>
+					<string>Internet Movie Database</string>
+					<key>Type</key>
+					<string>Engine</string>
+				</dict>
+			</array>
+			<key>Launch Group</key>
+			<false/>
+			<key>Title</key>
+			<string>Miscellaneous</string>
+			<key>Type</key>
+			<string>Container</string>
+		</dict>
+	</array>
+	<key>Launch Group</key>
+	<false/>
+	<key>PM Resource ID</key>
+	<dict>
+		<key>Root</key>
+		<true/>
+		<key>Type</key>
+		<string>Butler Search Engines</string>
+		<key>Version</key>
+		<real>1</real>
+	</dict>
+	<key>Title</key>
+	<string></string>
+	<key>Type</key>
+	<string>Search Engines</string>
+</dict>
+</plist>
