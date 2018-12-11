@@ -18,6 +18,8 @@
 	<string>file:///Applications/Utilities/Audio%20MIDI%20Setup.app/</string>
 	<key>Automator</key>
 	<string>file:///Applications/Automator.app/</string>
+	<key>Backup and Sync from Google</key>
+	<string>file:///Applications/Backup%20and%20Sync.app/</string>
 	<key>BetterTouchTool</key>
 	<string>file:///Applications/BetterTouchTool.app/</string>
 	<key>BirdFontNonCommercial</key>

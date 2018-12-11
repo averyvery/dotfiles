@@ -1,0 +1,110 @@
+1544541757.920002|usage|loading todays usage|
+1544541757.942532|ASL|[Crashlytics] Version 3.10.8 (131)|
+1544541757.954912|short|init|
+1544541757.997918|LIC|idate 2018-11-26 21:18:41 +0000|
+1544541758.006888|short|register disable hotkeys|
+1544541758.008919|short|register disable hotkeys|
+1544541758.065561|LAUNCH|DIDLaunch|
+1544541758.109797|xw|is trusted|
+1544541758.142089|short|call sharedInstance3|
+1544541758.151989|ASL|currently visible 1 0|
+1544541758.154194|CONTAINER|touchbar rect: {{0, 0}, {0, 0}}|
+1544541759.194386|LIC|trial|
+1544541759.197874|webserver|init|
+1544541759.198663|START|TB VISIBLE 1|
+1544541759.198711|START|TB FORCED HIDDEN 0|
+1544541760.220375|SLEEP|FORCESHOWAFTERSLEEP2|
+1544541760.220427|TB|present touch bar for mode 1|
+1544541760.220443|TB|show touchbar 1|
+1544541760.270971|TB|present touch bar for mode 1|
+1544541760.271010|TB|show touchbar 1|
+1544541760.271449|TB|present touch bar for mode 1|
+1544541760.271479|TB|show touchbar 1|
+1544541760.284315|TB|present touch bar for mode 1|
+1544541760.284354|TB|show touchbar 1|
+1544541760.293051|short|register disable hotkeys|
+1544541760.337048|M|mt_stop2|
+1544541760.338334|M|register touchbar mbp trackpad|
+1544541760.338364|M|register internal trackpad|
+1544541760.338388|STDEV||
+1544541760.425835|TB|present touch bar for mode 1|
+1544541760.425875|TB|show touchbar 1|
+1544541760.438303|TB|present touch bar for mode 1|
+1544541760.438334|TB|show touchbar 1|
+1544541760.442483|ASL|[Crashlytics:Crash] Warning: NSApplicationCrashOnExceptions is not set. This will result in poor top-level uncaught exception reporting.|
+1544541760.530098|SLEEP|FORCESHOWAFTERSLEEP3|
+1544541760.530144|TB|present touch bar for mode 1|
+1544541760.530159|TB|show touchbar 1|
+1544541760.844373|ASL|Bonjour Service Published: domain(local.) type(_bttremote._tcp.) name(Doug’s MacBook Pro) port(55470)|
+1544541762.367415|TB|present touch bar for mode 1|
+1544541762.367464|TB|show touchbar 1|
+1544541762.368029|TB|present touch bar for mode 1|
+1544541762.368060|TB|show touchbar 1|
+1544541866.904055|LIC|trial|
+1544541986.360279|ASL|*** WARNING: Method userSpaceScaleFactor in class NSView is deprecated on 10.7 and later. It should not be used in new applications. Use convertRectToBacking: instead. |
+1544542006.025833|TB|present touch bar for mode 1|
+1544542006.025862|TB|show touchbar 1|
+1544542015.788970|TB|present touch bar for mode 1|
+1544542015.788996|TB|show touchbar 1|
+1544542017.820995|TB|present touch bar for mode 1|
+1544542017.821020|TB|show touchbar 1|
+1544542094.516731|TB|present touch bar for mode 1|
+1544542094.516787|TB|show touchbar 1|
+1544542185.505408|TB|present touch bar for mode 1|
+1544542185.505438|TB|show touchbar 1|
+1544542248.690050|usage|loading todays usage|
+1544542248.703334|ASL|[Crashlytics] Version 3.10.8 (131)|
+1544542248.709533|short|init|
+1544542248.717788|LIC|idate 2018-11-26 21:18:41 +0000|
+1544542248.729312|LIC|closing previous instance of BetterTouchTool relaunch|
+1544542248.731721|short|register disable hotkeys|
+1544542248.732712|short|register disable hotkeys|
+1544542248.753807|LAUNCH|DIDLaunch|
+1544542248.772390|xw|is trusted|
+1544542248.790966|short|call sharedInstance3|
+1544542248.797306|ASL|currently visible 1 0|
+1544542248.798338|CONTAINER|touchbar rect: {{0, 0}, {0, 0}}|
+1544542249.301965|LIC|trial|
+1544542249.303709|webserver|init|
+1544542249.303830|START|TB VISIBLE 1|
+1544542249.303849|START|TB FORCED HIDDEN 0|
+1544542250.285798|LIC|trial|
+1544542250.420039|SLEEP|FORCESHOWAFTERSLEEP2|
+1544542250.420071|TB|present touch bar for mode 1|
+1544542250.420082|TB|show touchbar 1|
+1544542250.445393|TB|present touch bar for mode 1|
+1544542250.445459|TB|show touchbar 1|
+1544542250.445936|TB|present touch bar for mode 1|
+1544542250.445958|TB|show touchbar 1|
+1544542250.459391|TB|present touch bar for mode 1|
+1544542250.459415|TB|show touchbar 1|
+1544542250.459704|TB|present touch bar for mode 1|
+1544542250.459724|TB|show touchbar 1|
+1544542250.490116|TB|present touch bar for mode 1|
+1544542250.490142|TB|show touchbar 1|
+1544542250.492333|short|register disable hotkeys|
+1544542250.510031|M|mt_stop2|
+1544542250.510942|M|register touchbar mbp trackpad|
+1544542250.510989|M|register internal trackpad|
+1544542250.511109|STDEV||
+1544542250.667942|SLEEP|FORCESHOWAFTERSLEEP3|
+1544542250.667969|TB|present touch bar for mode 1|
+1544542250.668008|TB|show touchbar 1|
+1544542250.757103|ASL|[Crashlytics:Crash] Warning: NSApplicationCrashOnExceptions is not set. This will result in poor top-level uncaught exception reporting.|
+1544542251.058401|ASL|[Fabric] failed to download settings Error Domain=FABNetworkError Code=-6 "(null)" UserInfo={retryLimit=1, NSErrorFailingURLStringKey=https://settings.crashlytics.com/spi/v2/platforms/mac/apps/com.hegenberg.BetterTouchTool/settings?build_version=968&display_version=2.660&instance=aee19e037c491f32aa656d512c3484f3ed12f94e&source=1}|
+1544542251.096191|ASL|Bonjour Service Published: domain(local.) type(_bttremote._tcp.) name(Doug’s MacBook Pro) port(55470)|
+1544542252.584178|TB|present touch bar for mode 1|
+1544542252.584243|TB|show touchbar 1|
+1544542252.584749|TB|present touch bar for mode 1|
+1544542252.584785|TB|show touchbar 1|
+1544542331.849394|M|mt_stop2|
+1544542331.849857|M|unregister magic trackpad 2|
+1544542331.851906|M|register touchbar mbp trackpad|
+1544542331.851949|M|register internal trackpad|
+1544542331.852043|STDEV||
+1544542404.162999|MEM|Close window|
+1544542404.183413|MEM|called dealloc on window|
+1544542404.191745|MEM|dealloc wc|
+1544542404.191780|MEM|dealloc2|
+1544542404.195955|short|init|
+1544542404.225496|MEM|dealloc gestureview|
