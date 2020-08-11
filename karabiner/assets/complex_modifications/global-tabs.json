@@ -1,0 +1,40 @@
+{
+  "title": "Bind cmd-: and cmd-; to prev/next tab",
+  "rules": [
+    {
+      "description": "Bind cmd-: and cmd-; to prev/next tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["left_command", "option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["left_command", "option"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
