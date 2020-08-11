@@ -1,0 +1,31 @@
+{
+  "title": "Bind cmd-+ and cmd-- to Kitty's font size changers",
+  "rules": [
+    {
+      "description": "Bind cmd-+ and cmd-- to Kitty's font size changers",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": ["left_shift", "left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_plus",
+              "modifiers": ["left_command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^net\\.kovidgoyal\\.kitty$"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
