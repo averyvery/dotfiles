@@ -15,6 +15,15 @@ alias y 'yarn'
 
 alias pd 'pretty-diff'
 
-cd ~/Code
+cd ~/Code/whimsical
+
+set AWS_VAULT_KEYCHAIN_NAME login
 
 set -U fish_user_paths (yarn global bin) $fish_user_paths
+
+set fish_greeting ""
+
+# function fish_prompt
+  # set_color purple
+  # echo "◇◆ "
+# end

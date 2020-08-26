@@ -1,5 +1,8 @@
 " @group leader
 
+set visualbell
+set noerrorbells
+
 let mapleader=" "
 
 " @group dvorak

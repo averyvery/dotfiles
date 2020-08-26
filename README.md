@@ -13,11 +13,11 @@ ln -s ~/dotfiles/karabiner ~/.config
 ln -s ~/dotfiles/fish ~/.config
 ln -s ~/dotfiles/kitty ~/.config
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/xvimrc ~/.xvimrc
 ln -s ~/dotfiles/ideavimrc ~/.ideavimrc
 
 rm -rf ~/Library/Application\ Support/BetterTouchTool
 ln -s ~/dotfiles/BetterTouchTool ~/Library/Application\ Support
 
+ln -s ~/dotfiles/xvimrc ~/.xvimrc
 ln -s ~/dotfiles/iTerm/com.googlecode.iterm2.plist ~/Library/Preferences
 ``
