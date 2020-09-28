@@ -1,3 +1,5 @@
+" Reload me with :, then `:reload ~/.ideavimrc`
+
 " @group leader
 
 set visualbell
@@ -18,11 +20,11 @@ noremap t k
 noremap n l
 
 " bottom of screen
-noremap <S-h> L
+noremap <s-h> L
 " top of screen
-noremap <S-t> H
+noremap <s-t> H
 " middle of screen
-noremap <S-n> M
+noremap <s-n> M
 
 " sort
 noremap <space>s :sort<cr>
