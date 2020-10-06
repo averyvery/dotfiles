@@ -11,9 +11,6 @@ set noexpandtab
 set clipboard=unnamed
 set visualbell
 set noerrorbells
-set surround
-
-
 
 
 " @group dvorak
@@ -48,7 +45,8 @@ noremap <s-k> <s-t>
 " @group cursive
 " use `:actionlist :cursive` to see a list of all actions
 
-map ! Bi#_<ESC><CR>
+; ugh, noooooo
+map ! Bi#_<esc>
 map <leader>! :action :cursive.actions.paredit/backward-up<CR>I#_<ESC><CR>
 
 map <leader>r :action ReformatCode<CR>
@@ -75,10 +73,12 @@ map <leader>mh :action :cursive.actions.paredit/move-form-up<CR>
 ; map <leader>st :action :cursive.actions.paredit/backward-up<CR>v<CR>%<CR>
 map <leader>pp :action ActivateProjectToolWindow<CR>
 map <leader>ps :action SelectInProjectView<CR>
-map <leader>pr :action RecentFiles<CR>
 
 map <leader>wh :action SplitHorizontally<CR>
 map <leader>wn :action SplitVertically<CR>
+
+map <leader>fn :action NewFile<CR>
+map <leader>fr :action RecentFiles<CR>
 
 
 
