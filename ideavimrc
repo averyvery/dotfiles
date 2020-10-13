@@ -11,6 +11,12 @@ set noexpandtab
 set clipboard=unnamed
 set visualbell
 set noerrorbells
+set easymotion
+set highlightedyank
+set exchange
+
+let g:highlightedyank_highlight_duration = "250"
+let g:highlightedyank_highlight_color = "rgba(79, 58, 118, 255)"
 
 
 " @group dvorak
@@ -45,8 +51,7 @@ noremap <s-k> <s-t>
 " @group cursive
 " use `:actionlist :cursive` to see a list of all actions
 
-; ugh, noooooo
-map ! Bi#_<esc>
+map ! i#_<esc>
 map <leader>! :action :cursive.actions.paredit/backward-up<CR>I#_<ESC><CR>
 
 map <leader>r :action ReformatCode<CR>
@@ -77,10 +82,19 @@ map <leader>ps :action SelectInProjectView<CR>
 map <leader>wh :action SplitHorizontally<CR>
 map <leader>wn :action SplitVertically<CR>
 
+map <leader>fc :action CopyElement<CR>
+map <leader>ff :action RecentFiles<CR>
+map <leader>fm :action Move<CR>
 map <leader>fn :action NewFile<CR>
-map <leader>fr :action RecentFiles<CR>
+map <leader>fr :action RenameFile<CR>
+map <leader>fs :action NewScratchFile<CR>
+map <leader>fy :action $SelectAll<CR>:action $Copy<CR>:action CollapseSelection<CR>
+map <leader>fo :action OpenFile<CR>
+map <leader>fg :action RevealIn<CR>
 
 
+" @group jumping
+map <leader><Space> :action AceAction<CR>
 
 " @group misc
-" noremap <leader>s :sort<cr>
+noremap <leader>s :sort<cr>

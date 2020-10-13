@@ -19,5 +19,6 @@
     rsh = reset --hard
     l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-	editor = code --wait
+    # change this back to code --wait if it doesn't work
+	editor = idea --wait
 	excludesfile = /Users/dougavery/.gitignore
