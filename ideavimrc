@@ -47,6 +47,12 @@ noremap <s-k> <s-t>
 
 
 
+" @group intellij
+
+imap <S-Enter> <ESC>:action HippieCompletion<CR>a
+imap <C-S-Enter> <ESC>:action HippieBackwardCompletion<CR>a
+
+
 
 " @group cursive
 " use `:actionlist :cursive` to see a list of all actions
@@ -91,6 +97,13 @@ map <leader>fs :action NewScratchFile<CR>
 map <leader>fy :action $SelectAll<CR>:action $Copy<CR>:action CollapseSelection<CR>
 map <leader>fo :action OpenFile<CR>
 map <leader>fg :action RevealIn<CR>
+
+" @group repl
+map <leader>rr :action Run<CR>
+map <leader>rc :action :cursive.repl.actions/clear-repl<CR>
+map <leader>re :action :cursive.repl.actions/jump-to-repl<CR>
+map <leader>ro :action :cursive.repl.actions/jump-to-output<CR>
+
 
 
 " @group jumping
