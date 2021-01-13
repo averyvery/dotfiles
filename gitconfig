@@ -9,6 +9,7 @@
     p = push
     ch = checkout
     c = commit
+    cm = commit -m
     a = add -all
     f = fetch
     s = status

@@ -46,13 +46,16 @@ noremap k t
 noremap <s-k> <s-t>
 
 
-
 " @group intellij
 
 imap <S-Enter> <ESC>:action HippieCompletion<CR>a
-imap <C-S-Enter> <ESC>:action HippieBackwardCompletion<CR>a
+imap <S-C-Enter> <ESC>:action HippieBackwardCompletion<CR>a
 
 
+" @group blank lines
+
+map <Enter> o<ESC>t
+map <S-Enter> O<ESC>h
 
 " @group cursive
 " use `:actionlist :cursive` to see a list of all actions
@@ -61,6 +64,8 @@ map ! i#_<esc>
 map <leader>! :action :cursive.actions.paredit/backward-up<CR>I#_<ESC><CR>
 
 map <leader>r :action ReformatCode<CR>
+" map <leader>R :action $SelectAll<CR>:action ReformatCode<CR>
+map <leader>R :action ShowReformatFileDialog<CR>
 
 map <leader>{ :action :cursive.actions.paredit/wrap-curly<CR>
 map <leader>} :action :cursive.actions.paredit/close-curly-and-newline<CR>
@@ -77,8 +82,8 @@ map <leader>dd :action :cursive.actions.paredit/backward<CR>
 map <leader>dt :action :cursive.actions.paredit/backward-up<CR>
 map <leader>dh :action :cursive.actions.paredit/backward-down<CR>
 
-map <leader>mt :action :cursive.actions.paredit/move-form-down<CR>
-map <leader>mh :action :cursive.actions.paredit/move-form-up<CR>
+map <leader>mt :action :cursive.actions.paredit/move-form-up<CR>
+map <leader>mh :action :cursive.actions.paredit/move-form-down<CR>
 
 ; you no work
 ; map <leader>st :action :cursive.actions.paredit/backward-up<CR>v<CR>%<CR>
@@ -99,11 +104,19 @@ map <leader>fo :action OpenFile<CR>
 map <leader>fg :action RevealIn<CR>
 
 " @group repl
-map <leader>rr :action Run<CR>
-map <leader>rc :action :cursive.repl.actions/clear-repl<CR>
-map <leader>re :action :cursive.repl.actions/jump-to-repl<CR>
-map <leader>ro :action :cursive.repl.actions/jump-to-output<CR>
 
+map <leader>xr :action Run<CR>
+map <leader>xc :action :cursive.repl.actions/clear-repl<CR>
+map <leader>xe :action :cursive.repl.actions/jump-to-repl<CR>
+map <leader>xo :action :cursive.repl.actions/jump-to-output<CR>
+
+
+" @group git
+
+map <leader>ga :action Git.Add<CR>
+map <leader>gc :action ToggleCommitUi<CR>
+map <leader>gp :action Git.Commit.And.Push.Executor<CR>
+map <leader>gr :action Git.Reset<CR>
 
 
 " @group jumping
