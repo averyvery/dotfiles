@@ -49,3 +49,8 @@ vendor/bundle
 .tern-port
 
 Vagrantfile
+
+
+# WHIM
+
+**/.clj-kondo/.cache/

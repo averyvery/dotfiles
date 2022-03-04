@@ -1,6 +1,6 @@
 [user]
 	name = Doug Avery
-	email = averyquery@gmail.com
+	email = doug@whimsical.com
 [pull]
 	rebase = true
 [alias]
@@ -23,3 +23,5 @@
     # change this back to code --wait if it doesn't work
 	editor = code --wait
 	excludesfile = /Users/dougavery/.gitignore
+[credential]
+	helper = osxkeychain
