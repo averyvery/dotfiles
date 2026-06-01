@@ -106,8 +106,7 @@
                                     {
                                         "bundle_identifiers": [
                                             "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.mitchellh\\.ghostty$"
+                                            "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -129,8 +128,7 @@
                                     {
                                         "bundle_identifiers": [
                                             "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.apple\\.Safari$",
-                                            "^com\\.mitchellh\\.ghostty$"
+                                            "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -215,48 +213,6 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.apple\\.Safari$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["shift", "control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }

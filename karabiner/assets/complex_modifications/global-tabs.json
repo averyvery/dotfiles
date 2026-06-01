@@ -135,7 +135,7 @@
               "bundle_identifiers": ["^com\\.apple\\.Safari$"]
             }
           ]
-        }
+        },
       ]
     }
   ]

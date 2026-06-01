@@ -108,6 +108,10 @@ map <leader>fo :action OpenFile<CR>
 map <leader>fg :action RevealIn<CR>
 map <leader>ft :action NewFromTemplate<CR>
 
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>gc <Action>(Vcs.Commit.PrimaryCommitActions)
+
+
 map <leader>l /(<CR>Lmo%x`oi#<ESC>nv/(<CR>dx
 map <leader>L /(<CR>L%a)<ESC>d%dxafn<SPACE>[]<SPACE>(<ESC>ddi
 
@@ -124,7 +128,18 @@ map <leader>xo :action :cursive.repl.actions/jump-to-output<CR>
 
 " @group jumping
 " map <leader><Space> :action AceAction<CR>
-map <Space><Space> :action AceAction<CR>
+map <leader><leader> :action AceAction<CR>
 
 " @group misc
 noremap <leader>s :sort<cr>
+
+
+" @group sexp
+nnoremap vaf :action SelectAForm<cr>
+nnoremap vif :action SelectInForm<cr>
+nnoremap jaf :action DeleteAForm<cr>
+nnoremap jif :action DeleteInForm<cr>
+nnoremap yaf :action YankAForm<cr>
+nnoremap yif :action YankInForm<cr>
+nnoremap caf :action ChangeAForm<cr>i
+nnoremap cif :action ChangeInForm<cr>i
