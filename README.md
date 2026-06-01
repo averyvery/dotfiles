@@ -1,8 +1,6 @@
 Setup:
 
 - Move/rename this project's folder to ~/dotfiles
-- Install Butler
-- Install BetterTouchTool
 - Run the symlink commands:
 
 ```bash
@@ -20,4 +18,7 @@ ln -s ~/dotfiles/BetterTouchTool ~/Library/Application\ Support
 
 ln -s ~/dotfiles/xvimrc ~/.xvimrc
 ln -s ~/dotfiles/iTerm/com.googlecode.iterm2.plist ~/Library/Preferences
-``
+
+ln -s ~/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
+ln -s ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
+```

@@ -1,0 +1,100 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "colorize_brackets": true,
+  "minimap": {
+    "max_width_columns": 64,
+    "thumb_border": "full",
+    "thumb": "always",
+    "show": "always"
+  },
+  "git": {
+    "git_gutter": "hide",
+    "enable_diff": true
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "pi-acp": {
+      "type": "registry"
+    },
+  },
+  "format_on_save": "off",
+  "terminal": {
+    "shell": {
+     "program": "/opt/homebrew/bin/fish",
+    },
+  },
+  "project_panel": {
+    "dock": "right",
+    "hide_hidden": true,
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "ui_font_weight": 400, // Font weight in standard CSS units from 100 to 900.
+  "buffer_font_size": 15,
+  "gutter": {
+    "line_numbers": false,
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+  },
+  "autosave": "on_window_change",
+  "languages": {
+    "SCSS": {
+      "tab_size": 2,
+    },
+    "TypeScript": {
+      "use_on_type_format": false, // https://github.com/zed-industries/zed/issues/43752
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "YAML": {
+      "format_on_save": "off",
+      "remove_trailing_whitespace_on_save": true,
+      "ensure_final_newline_on_save": true,
+    },
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Synthwave84",
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      },
+    },
+    "clojure-lsp": {
+      "binary": {
+        "path": "/opt/homebrew/bin/clojure-lsp"
+      },
+    },
+  },
+}

@@ -1,0 +1,126 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Movement
+      "h": "vim::Down",
+      "t": "vim::Up",
+      "d": "vim::Left",
+      "n": "vim::Right",
+      "shift-n": "vim::WindowMiddle",
+
+      // Subword movement
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+
+      // Until
+      "k": ["vim::PushFindForward", { "before": true, "multiline": true }],
+      "shift-k": [
+        "vim::PushFindBackward",
+        { "after": true, "multiline": true },
+      ],
+
+      // Search
+      "l": "vim::HelixSelectNext",
+      "shift-l": "vim::HelixSelectPrevious",
+
+      // Comments
+      ";": "editor::ToggleComments",
+      "#": "editor::ToggleComments",
+
+      // Delete
+      "j": "vim::PushDelete",
+
+      // Not as good as leap motion, but good enough for now
+      "space space": "vim::PushSneak",
+      "space shift-space": "vim::PushSneakBackward",
+
+      // The docks
+      "space d d": "workspace::ToggleLeftDock",
+      "space d n": "workspace::ToggleRightDock",
+
+      // Projects
+      "space p f": "pane::RevealInProjectPanel",
+      "space p p": "projects::OpenRecent",
+
+      // Panes
+      "space w h": "pane::SplitAndMoveDown",
+      "space w n": "pane::SplitAndMoveRight",
+
+      // Map
+      "space m": "editor::ToggleMinimap",
+
+      // File interactions
+      "space f d": "project_panel::Duplicate",
+      "space f f": "editor::RevealInFileManager",
+      "space f n": "workspace::NewFile",
+      "space f o": "workspace::OpenFiles",
+      "space f r": "project_panel::Rename",
+
+      // Sorting and formatting
+      "space s": "editor::SortLinesCaseInsensitive",
+      "space r": "editor::FormatSelections",
+
+      // Git
+      "space g a": "git::Add",
+      "space g b": "git::CheckoutBranch",
+      "space g c": "git::Commit",
+      "space g d": "git_panel::ToggleFocus",
+      "space g l": "git::Blame",
+      "space g p": "git::Push",
+
+      "space a n": [
+        "agent::NewExternalAgentThread",
+        {
+          "agent": {
+            "custom": {
+              "name": "claude-acp",
+            }
+          }
+        }
+      ],
+
+      "space t n": "workspace::NewTerminal",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "j": "vim::VisualDelete",
+    },
+  },
+  {
+    "context": "vim_operator == d",
+    "bindings": {
+      "j": "vim::CurrentLine",
+      "s": "vim::PushDeleteSurrounds",
+      "v": "vim::PushForcedMotion", // "d v"
+      "o": "editor::ToggleSelectedDiffHunks", // "d o"
+      "shift-o": "git::ToggleStaged",
+      "p": "git::Restore", // "d p"
+      "u": "git::StageAndNext", // "d u"
+      "shift-u": "git::UnstageAndNext", // "d shift-u"
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+]
