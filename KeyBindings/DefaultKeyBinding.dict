@@ -1,11 +1,28 @@
 {
-	/* Non-destructive */
-	"^n" = "moveWordLeft:";
-	"^," = "moveWordRight:";
+	/* ctrl-hjkl (and ctrl-shift-hjkl) are arrow keys via Karabiner, so they're not here.
+	   Shifted variants extend the selection, like visual mode. */
 
-	/* Selecting */
-	"^H" = "moveLeftAndModifySelection:";
-	"^L" = "moveRightAndModifySelection:";
+	/* Words: b / w */
+	"^b" = "moveWordLeft:";
 	"^B" = "moveWordLeftAndModifySelection:";
+	"^w" = "moveWordRight:";
 	"^W" = "moveWordRightAndModifySelection:";
+
+	/* Line start / end: 0 / $ (the 4 key, so shift can select) */
+	"^0" = "moveToBeginningOfLine:";
+	"^)" = "moveToBeginningOfLineAndModifySelection:";
+	"^4" = "moveToEndOfLine:";
+	"^$" = "moveToEndOfLineAndModifySelection:";
+
+	/* Document top / bottom: g / G is taken by shift, so g / f */
+	"^g" = "moveToBeginningOfDocument:";
+	"^G" = "moveToBeginningOfDocumentAndModifySelection:";
+	"^f" = "moveToEndOfDocument:";
+	"^F" = "moveToEndOfDocumentAndModifySelection:";
+
+	/* Page up / down: u / d (Cocoa has no half-page) */
+	"^u" = "pageUp:";
+	"^U" = "pageUpAndModifySelection:";
+	"^d" = "pageDown:";
+	"^D" = "pageDownAndModifySelection:";
 }
