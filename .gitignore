@@ -1,3 +1,8 @@
 fish-config/browser-launcher2
 fish-config/menus
 .DS_Store
+karabiner/cagent/
+karabiner/billion-context/
+karabiner/zed/prompts/prompts-library-db.0.mdb/lock.mdb
+fish/fish_variables
+fish/fishd.tmp*
