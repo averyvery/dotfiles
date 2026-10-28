@@ -1,12 +1,11 @@
-**My shell is fish, always. Never assume bash or zsh. Every command you write for me to run must be fish-compatible.**
+**My shell is fish, always. Every command you write for me to run must be fish-compatible.**
 
 # Global Preferences
 
 These apply in every project. An explicit request in a session overrides them.
 
 ## Shell
-- My login shell is fish (`/opt/homebrew/bin/fish`), not bash or zsh. Don't wonder or guess which shell it is; it's fish.
-- If you need to confirm, run `echo $SHELL` or `status fish-path`; don't assume otherwise.
+- My login shell is fish (`/opt/homebrew/bin/fish`). Don't assume bash or zsh.
 - Don't use bash-only syntax in commands I'm asked to run. That includes `export FOO=bar`, `VAR=x cmd`, `$(...)` for command substitution, `&&` chains that depend on bash semantics, heredocs, and `<<<`.
 - Use fish equivalents: `set -x FOO bar`, `cmd; and other`, `(cmd)` for substitution, `begin; ...; end`, and `echo "..." | cmd` instead of here-strings.
 - When a snippet needs to run in bash, wrap it as `bash -c '...'` so it's explicit.
@@ -27,13 +26,13 @@ These apply in every project. An explicit request in a session overrides them.
 - Use width-only media queries (`min-width` / `max-width`). Don't use vertical ones (`min-height`, `max-height`, `orientation`) in CSS or Tailwind variants. Size to viewport height with units like `svh` instead.
 
 ## Planning and design docs
-- For most work that changes code, use the `superpowers:brainstorming` approach: write a spec, then a plan, then implement.
-- Specs, plans, design docs, and notes from this flow are local only. Write them to disk in the project's repo root and leave them untracked. Never stage, commit, or push them, and don't ask whether to check them in.
-- If I ask for a doc to be committed (for example, a review list in `docs/plans/`), that is a deliberate request and this rule doesn't apply to it.
+- For new features and multi-file changes, use the `superpowers:brainstorming` approach: write a spec, then a plan, then implement. Skip it for small, single-file fixes.
+- Specs, plans, design docs, and notes from this flow are local only. Write them to the project's repo root, leave them untracked, and never stage, commit, or push them.
+- An explicit request to commit a doc (e.g. a review list in `docs/plans/`) overrides this.
 
 ## Quick file hosting
 - To publish a local file at `https://dougismycopilot.com/files/<name>`, use `~/Code/websites/dougismycopilot/upload.sh`. Details are in that folder's `CLAUDE.md`.
-- Uploads are public and overwrite existing names. Confirm before uploading anything private.
+- Uploads are public and overwrite existing names. Confirm before uploading anything not meant to be public.
 
 ## Screenshots
-For screenshots of the Viget app, use the existing tool before writing any browser code: `~/code/scripts/viget-craft-astro/screenshots/shots.mjs`. Point it at a dev server with `--base=<origin>` (or `SHOTS_BASE_URL`); it defaults to `http://localhost:4321`.
+- For screenshots of Viget Craft/Astro projects, use the existing tool before writing any browser code: `~/Code/scripts/viget-craft-astro/screenshots/shots.mjs`. Point it at a dev server with `--base=<origin>` (or `SHOTS_BASE_URL`); it defaults to `http://localhost:4321`.
