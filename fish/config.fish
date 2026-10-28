@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/dougavery/.docker/bin"
+# End of Docker Desktop section.
+
 # dvorak party
 alias g 'git'
 alias gac 'git status; and git add --all; and git commit -m'
@@ -20,8 +24,9 @@ alias pd 'pretty-diff'
 
 set fish_greeting ""
 
-set --universal nvm_default_version v26.11.1
+set --universal nvm_default_version v26.12.1
 
 fish_add_path ~/.local/bin
 
-cd ~/Code
+# cd ~/Code
+cd ~/Code/treering-character-extraction
