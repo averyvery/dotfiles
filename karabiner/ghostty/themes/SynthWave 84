@@ -1,0 +1,23 @@
+# SynthWave '84 by Robb Owen (github.com/robb0wen/synthwave-vscode), terminal colors
+palette = 0=#34294f
+palette = 1=#fe4450
+palette = 2=#72f1b8
+palette = 3=#f3e70f
+palette = 4=#03edf9
+palette = 5=#ff7edb
+palette = 6=#03edf9
+palette = 7=#f0eff1
+palette = 8=#848bbd
+palette = 9=#fe4450
+palette = 10=#72f1b8
+palette = 11=#fede5d
+palette = 12=#03edf9
+palette = 13=#ff7edb
+palette = 14=#03edf9
+palette = 15=#ffffff
+background = #262335
+foreground = #ffffff
+cursor-color = #f97e72
+cursor-text = #262335
+selection-background = #413e4e
+selection-foreground = #ffffff
