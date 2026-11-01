@@ -36,3 +36,13 @@ These apply in every project. An explicit request in a session overrides them.
 
 ## Screenshots
 - For screenshots of Viget Craft/Astro projects, use the existing tool before writing any browser code: `~/Code/scripts/viget-craft-astro/screenshots/shots.mjs`. Point it at a dev server with `--base=<origin>` (or `SHOTS_BASE_URL`); it defaults to `http://localhost:4321`.
+
+## Browser (Pi Bridge)
+- Pi Bridge gives Pi access to my own Chrome through the `pi-browser-bridge__browser_*` MCP tools. Use them to see or drive pages in my signed-in browser, such as `http://localhost:5174/...`.
+- Before using them, check the connection with `pi-browser-bridge__browser_get_status`. If it isn't connected, run `/reload` in Pi or `mcp({ connect: "pi-browser-bridge__browser" })`.
+- Pick the connected profile with `profile_id`. There can be more than one, so check `browser_list_profiles` first.
+- Screenshots only work on the active tab. Activate the tab first with `browser_tab_action` (`action: "activate"`). Tell me before switching tabs, since it changes what I'm looking at.
+- If a local page shows "connection refused", the dev server isn't running. Ask me to start it. Don't start it yourself unless I ask.
+
+## QR codes for links
+- Every time I give the user a URL, or open a link for them, show a QR code for it in the reply, right after the link. Use the `qr-code` skill (`uv run ~/Code/scripts/qr-code.py "<URL>"`), and include the URL as text too. This covers apps, previews, output, and dashboards, on the home network or over the internet.

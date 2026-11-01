@@ -27,6 +27,7 @@ set fish_greeting ""
 set --universal nvm_default_version v26.12.1
 
 fish_add_path ~/.local/bin
+fish_add_path ~/.fly/bin
 
 # cd ~/Code
 cd ~/Code/treering-character-extraction
