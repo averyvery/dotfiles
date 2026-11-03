@@ -27,6 +27,7 @@ These apply in every project. An explicit request in a session overrides them.
 
 ## Planning and design docs
 - For new features and multi-file changes, use the `superpowers:brainstorming` approach: write a spec, then a plan, then implement. Skip it for small, single-file fixes.
+- When brainstorming, open each doc you write (spec, plan, design notes) in Zed for me right after writing it: `zed <path>`.
 - Specs, plans, design docs, and notes from this flow are local only. Write them to the project's repo root, leave them untracked, and never stage, commit, or push them.
 - An explicit request to commit a doc (e.g. a review list in `docs/plans/`) overrides this.
 
@@ -46,3 +47,4 @@ These apply in every project. An explicit request in a session overrides them.
 
 ## QR codes for links
 - Every time I give the user a URL, or open a link for them, show a QR code for it in the reply, right after the link. Use the `qr-code` skill (`uv run ~/Code/scripts/qr-code.py "<URL>"`), and include the URL as text too. This covers apps, previews, output, and dashboards, on the home network or over the internet.
+- Print QR codes in the terminal only, as text art, in a code block. Never generate, save, or open a PNG or other image file for a QR code.

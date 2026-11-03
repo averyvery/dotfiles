@@ -31,3 +31,7 @@ fish_add_path ~/.fly/bin
 
 # cd ~/Code
 cd ~/Code/treering-character-extraction
+
+# Ctrl+G opens the prompt in Zed. --wait makes the editor block until the file is closed.
+set -gx EDITOR "zed --wait"
+set -gx VISUAL "zed --wait"
