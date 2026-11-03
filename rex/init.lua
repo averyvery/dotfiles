@@ -1,0 +1,3 @@
+-- Rex config, migrated from Ghostty.
+-- No keybinds were found in the Ghostty config, so Rex's defaults apply.
+-- cmd+k still opens the session picker (kept by your choice).
